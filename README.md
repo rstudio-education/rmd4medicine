@@ -4,15 +4,37 @@ This repo contains materials for the R Markdown for Medicine workshop, to be off
 
 # Abstract
 
+
 Join us for a 90-minute workshop that will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock medical dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
+
  
-The workshop will be 90 minutes and taught on rstudio.cloud, and will focus on three topics:
+The workshop will be 4 hours (with breaks!) and taught on rstudio.cloud, and will focus on three topics:
 
 1. R Markdown basics
 
-1. Adding graphics
+2. Adding graphics
 
-1. Adding tables
+3. Adding tables
+
+## Intended Audience
+
+## Expected Experience
+
+1. R Experience
+
+You have downloaded and used R a bit, and hopefully used the tidyverse packages including ggplot and dplyr. Even better if you have tried out the rmarkdown package and knit a document.
+
+2. RStudio Experience
+
+You have downloaded and used  RStudio, and you are familiar with the various windows, how to install and load packages, and the basics of the Environment, History, Files, Plots, Packages, and Console tabs. You should know the difference between interactive coding in the Console and scripting in the script window. You should know how to create a Project in RStudio, and the advantages of doing so. 
+
+3. Medical Manuscript Experience
+
+We expect that you have collaborated with others on, or written your own medical manuscript at some point, which likely included a Table 1, other tables, plots and graphs, and lots of text and citations.
+
+4. R Markdown Experience
+
+Not much!
 
 
 ## R Markdown basics
