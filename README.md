@@ -5,7 +5,7 @@ This repo contains materials for the R Markdown for Medicine workshop, to be off
 # Abstract
 
 
-Join us for a 90-minute workshop that will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock medical dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
+Join us for a workshop that will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock medical dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
 
  
 The workshop will be 4 hours (with breaks!) and taught on rstudio.cloud, and will focus on three topics:
