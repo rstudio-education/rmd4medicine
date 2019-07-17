@@ -1,51 +1,114 @@
-# R Markdown for Medicine: From Data to Manuscript
+R Markdown for Medicine: <br>From Data to Manuscript
+================
 
-This repo contains materials for the R Markdown for Medicine workshop, to be offered at the [R/Medicine 2019 conference](https://r-medicine.com/). 
+### [R/Medicine 2019 conference](https://r-medicine.com/)
 
-# Abstract
+-----
 
+🗓 September 12, 2019  
+🕗 08:00am - 12:00pm  
+📍 Boston, MA  
+✅ [Register](https://cvent.me/en41V)
 
-Join us for a workshop that will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock medical dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
+-----
 
- 
-The workshop will be 4 hours (with breaks!) and taught on rstudio.cloud, and will focus on three topics:
+## Overview
 
-1. R Markdown basics
+In this four-hour workshop, I will take you on a tour of how to get from
+data to manuscript using R Markdown. Starting with a mock medical
+dataset, we’ll use R Markdown to combine prose, R code, and figures and
+tables created with R code into a nicely formatted and reproducible
+final manuscript.
 
-2. Adding graphics
+## Learning objectives
 
-3. Adding tables
+\[ADD LEARNING OBJECTIVES\]
 
-## Intended Audience
+## Is this course for me?
 
-## Expected Experience
+This introductory workshop is targeted at people who work in the medical
+field who either don’t know or currently use R Markdown, or perhaps know
+the basics but aren’t sure how R Markdown can fit into their research
+workflow. No prior experience with R Markdown is required.
 
-1. R Experience
+  - Have you written or collaborated on a medical manuscript to submit
+    for publication to a peer-reviewed journal? Are you familiar with
+    common components of a medical manuscript like a “Table One”, other
+    summary tables, plots, text and citations?
 
-You have downloaded and used R a bit, and hopefully used the tidyverse packages including ggplot and dplyr. Even better if you have tried out the rmarkdown package and knit a document.
+  - Have you downloaded and used R a bit? Can you install and load
+    packages?
+    
+      - *Bonus:* have you used `tidyverse` packages like `ggplot2` and
+        `dplyr`?
 
-2. RStudio Experience
+  - Have you used R with the RStudio Integrated Development Environment
+    (IDE)? Are you familiar with the various “panes” and “tabs”? For
+    instance, can you quickly find all objects in your current global
+    environment, and can you send R code from a source file (.R, .Rmd)
+    to the console?
+    
+      - *Bonus:* Even better, have you have tried to knit 🧶 an R
+        Markdown document to some kind of output format like HTML, PDF,
+        or Word?
 
-You have downloaded and used  RStudio, and you are familiar with the various windows, how to install and load packages, and the basics of the Environment, History, Files, Plots, Packages, and Console tabs. You should know the difference between interactive coding in the Console and scripting in the script window. You should know how to create a Project in RStudio, and the advantages of doing so. 
+## Schedule
 
-3. Medical Manuscript Experience
+| Time          | Activity                                 |
+| :------------ | :--------------------------------------- |
+| 08:00 - 08:50 | Session 1 (`rmarkdown` + `knitr` basics) |
+| 08:50 - 09:00 | 🧘‍♂️ *Break*                             |
+| 09:00 - 09:45 | Session 2 (graphics)                     |
+| 09:45 - 10:00 | 🚴 *Break*                                |
+| 10:00 - 10:50 | Session 3 (data + workflows)             |
+| 10:50 - 11:00 | 🏄 *Break*                                |
+| 11:00 - 11:45 | Session 4 (tables)                       |
+| 11:45 - 12:00 | Wrap-up / Overtime                       |
 
-We expect that you have collaborated with others on, or written your own medical manuscript at some point, which likely included a Table 1, other tables, plots and graphs, and lots of text and citations.
+## Instructor
 
-4. R Markdown Experience
+Alison Hill is a Data Scientist & Professional Educator at RStudio.
+Prior to joining RStudio, Dr. Hill was an Associate Professor and Center
+Director at Oregon Health & Science University in Portland, Oregon,
+where she was an NIH-funded Principal Investigator. Her
+[work](https://profiles.impactstory.org/u/0000-0002-8082-1890) has been
+published in
+[Pediatrics](https://alison.rbind.io/publication/2015-obesity-in-asd-multisite/),
+[Autism
+Research](https://alison.rbind.io/publication/2016-uh-and-um-asd-sli/),
+and [other peer-reviewed
+journals](https://alison.rbind.io/publication/#2).
 
-Not much!
+## Pre-work
 
+Please bring a laptop that has the following installed:
 
-## R Markdown basics
+  - A recent version of R (\>=3.6.0), which is available for free at
+    <https://cloud.r-project.org/>
 
-You'll start with a mock medical dataset, and jump right into an R Markdown project. You'll knit a report to analyze and visualize the data. Along the way, you'll learn about key concepts like YAML, pandoc, markdown, knitr, output options, and output formats- and how you can use all of them in your medical research. 
+  - A recent version of RStudio Desktop (\>=1.2), available for free
+    ([RStudio Desktop Open Source
+    License](https://www.rstudio.com/products/rstudio/download/#download))
 
-## Adding graphics
+  - The R packages we will use, which you can install by connecting to
+    the internet, opening RStudio, and running at the command line:
+    
+    ``` r
+    install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
+                       "skimr", "flextable", "kable", "kableExtra"))
+    ```
 
-You'll take an R Markdown report, and learn how to add graphics to your knitted report. You'll learn `ggplot2` basics around plots and layering, `knitr` code chunk options to improve graphics presentation, and packages for sewing together multiple plots into a multipanel figure. 
+And don’t forget your power cord\!
 
-## Adding tables
+Also, please sign up for a free RStudio Cloud account at
+<https://rstudio.cloud/>. On the day of the workshop, I’ll provide you
+with an RStudio Cloud project that contains all of the course materials.
+We will use the software listed above only as an important backup should
+there be problems with the on-site internet
+connection.
 
-You will learn how to knit a "Table 1" using medical data into an R Markdown document, and how to customize a table to report common summary statistics for studies with multiple arms. 
+-----
 
+[![forthebadge](https://forthebadge.com/images/badges/cc-by.svg)](https://creativecommons.org/licenses/by/4.0/)  
+This work is licensed under a [Creative Commons Attribution 4.0
+International License](https://creativecommons.org/licenses/by/4.0/).
