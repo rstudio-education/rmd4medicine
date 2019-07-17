@@ -29,10 +29,10 @@ This introductory workshop is targeted at people who work in the medical field w
 - Have you written or collaborated on a medical manuscript to submit for publication to a peer-reviewed journal? Are you familiar with common components of a medical manuscript like a "Table One", other summary tables, plots, text and citations?
 
 - Have you downloaded and used R a bit? Can you install and load packages?
-  - *Bonus:* have you used `tidyverse` packages like `ggplot2` and `dplyr`? 
+  - *Even better,* have you used `tidyverse` packages like `ggplot2` and `dplyr`? 
 
 - Have you used R with the RStudio Integrated Development Environment (IDE)? Are you familiar with the various "panes" and "tabs"? For instance, can you quickly find all objects in your current global environment, and can you send R code from a source file (.R, .Rmd) to the console? 
-  - *Bonus:* Even better, have you have tried to knit `r emo::ji("yarn")` an R Markdown document to some kind of output format like HTML, PDF, or Word?
+  - *Even better,* have you tried to knit `r emo::ji("yarn")` an R Markdown document to some kind of output format like HTML, PDF, or Word?
 
 
 ## Schedule

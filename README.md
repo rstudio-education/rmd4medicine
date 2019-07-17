@@ -39,8 +39,8 @@ workflow. No prior experience with R Markdown is required.
   - Have you downloaded and used R a bit? Can you install and load
     packages?
     
-      - *Bonus:* have you used `tidyverse` packages like `ggplot2` and
-        `dplyr`?
+      - *Even better,* have you used `tidyverse` packages like `ggplot2`
+        and `dplyr`?
 
   - Have you used R with the RStudio Integrated Development Environment
     (IDE)? Are you familiar with the various “panes” and “tabs”? For
@@ -48,9 +48,8 @@ workflow. No prior experience with R Markdown is required.
     environment, and can you send R code from a source file (.R, .Rmd)
     to the console?
     
-      - *Bonus:* Even better, have you have tried to knit 🧶 an R
-        Markdown document to some kind of output format like HTML, PDF,
-        or Word?
+      - *Even better,* have you tried to knit 🧶 an R Markdown document
+        to some kind of output format like HTML, PDF, or Word?
 
 ## Schedule
 
