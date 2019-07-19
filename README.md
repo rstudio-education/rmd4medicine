@@ -56,12 +56,12 @@ workflow. No prior experience with R Markdown is required.
 | Time          | Activity                                 |
 | :------------ | :--------------------------------------- |
 | 08:00 - 08:50 | Session 1 (`rmarkdown` + `knitr` basics) |
-| 08:50 - 09:00 | 🧘 *Break*                                |
-| 09:00 - 09:45 | Session 2 (graphics)                     |
-| 09:45 - 10:00 | 🚴 *Break*                                |
+| 08:50 - 09:00 | *Break*                                  |
+| 09:00 - 09:45 | Session 2 (tables)                       |
+| 09:45 - 10:00 | *Break*                                  |
 | 10:00 - 10:50 | Session 3 (data + workflows)             |
-| 10:50 - 11:00 | 🏄 *Break*                                |
-| 11:00 - 11:45 | Session 4 (tables)                       |
+| 10:50 - 11:00 | *Break*                                  |
+| 11:00 - 11:45 | Session 4 (graphics)                     |
 | 11:45 - 12:00 | Wrap-up / Overtime                       |
 
 ## Instructor
@@ -80,30 +80,33 @@ journals](https://alison.rbind.io/publication/#2).
 
 ## Pre-work
 
-Please bring a laptop that has the following installed:
+1.  Sign up for a free RStudio Cloud account at <https://rstudio.cloud/>
+    before the workshop.
 
-  - A recent version of R (\>=3.6.0), which is available for free at
-    <https://cloud.r-project.org/>
-
-  - A recent version of RStudio Desktop (\>=1.2), available for free
-    ([RStudio Desktop Open Source
-    License](https://www.rstudio.com/products/rstudio/download/#download))
-
-  - The R packages we will use, which you can install by connecting to
-    the internet, opening RStudio, and running at the command line:
+2.  Please bring a laptop that has the following installed:
+    
+      - A recent version of R (\>=3.6.0), which is available for free at
+        <https://cloud.r-project.org/>
+      - A recent version of RStudio Desktop (\>=1.2), available for free
+        ([RStudio Desktop Open Source
+        License](https://www.rstudio.com/products/rstudio/download/#download))
+      - The R packages we will use, which you can install by connecting
+        to the internet, opening RStudio, and running at the command
+        line:
+    
+    <!-- end list -->
     
     ``` r
     install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
                        "skimr", "flextable", "kable", "kableExtra"))
     ```
 
-And don’t forget your power cord\!
+3.  Don’t forget your power cord\!
 
-Also, please sign up for a free RStudio Cloud account at
-<https://rstudio.cloud/>. On the day of the workshop, I’ll provide you
-with an RStudio Cloud project that contains all of the course materials.
-We will use the software listed above only as an important backup should
-there be problems with the on-site internet
+On the day of the workshop, I’ll provide you with an RStudio Cloud
+project that contains all of the course materials. We will use the
+software listed above only as an important backup should there be
+problems with the on-site internet
 connection.
 
 -----

@@ -54,20 +54,22 @@ Alison Hill is a Data Scientist & Professional Educator at RStudio. Prior to joi
 
 ## Pre-work
 
-Please bring a laptop that has the following installed:
+1. Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop.
 
-+ A recent version of R (>=3.6.0), which is available for free at https://cloud.r-project.org/
-+ A recent version of RStudio Desktop (>=1.2), available for free ([RStudio Desktop Open Source License](https://www.rstudio.com/products/rstudio/download/#download))
-+ The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:
+1. Please bring a laptop that has the following installed:
 
-  ```{r eval = FALSE}
-  install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
-                     "skimr", "flextable", "kable", "kableExtra"))
-  ```
+    + A recent version of R (>=3.6.0), which is available for free at https://cloud.r-project.org/
+    + A recent version of RStudio Desktop (>=1.2), available for free ([RStudio Desktop Open Source License](https://www.rstudio.com/products/rstudio/download/#download))
+    + The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:
 
-And don't forget your power cord!
+    ```{r eval = FALSE}
+    install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
+                       "skimr", "flextable", "kable", "kableExtra"))
+    ```
 
-Also, please sign up for a free RStudio Cloud account at https://rstudio.cloud/. On the day of the workshop, I'll provide you with an RStudio Cloud project that contains all of the course materials. We will use the software listed above only as an important backup should there be problems with the on-site internet connection.
+1. Don't forget your power cord!
+
+On the day of the workshop, I'll provide you with an RStudio Cloud project that contains all of the course materials. We will use the software listed above only as an important backup should there be problems with the on-site internet connection.
 
 ---
 
