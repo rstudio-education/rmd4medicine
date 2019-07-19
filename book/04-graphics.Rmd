@@ -1,0 +1,18 @@
+# (PART\*) Graphics {-}
+
+
+# Controlling size
+
+`knitr` stuff
+
+# Controlling resolution
+
+`knitr` stuff
+
+# Adding captions & references
+
+`knitr` stuff
+
+# Multi-panel
+
+`cowplot` (tag as a/b/c/d)
