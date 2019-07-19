@@ -56,7 +56,7 @@ workflow. No prior experience with R Markdown is required.
 | Time          | Activity                                 |
 | :------------ | :--------------------------------------- |
 | 08:00 - 08:50 | Session 1 (`rmarkdown` + `knitr` basics) |
-| 08:50 - 09:00 | 🧘‍♂️ *Break*                             |
+| 08:50 - 09:00 | 🧘 *Break*                                |
 | 09:00 - 09:45 | Session 2 (graphics)                     |
 | 09:45 - 10:00 | 🚴 *Break*                                |
 | 10:00 - 10:50 | Session 3 (data + workflows)             |
