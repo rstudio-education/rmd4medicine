@@ -1,0 +1,51 @@
+---
+title: "Minimal Overview Recipe"
+output: html_document
+params:
+  filename: "newco-employees.csv"
+  bar_color: "blue"
+---
+```{r setup, include=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(googlesheets)
+library(lubridate)
+library(glue)
+knitr::opts_chunk$set(echo = TRUE,  warning = FALSE, message = FALSE)
+theme_set(theme_minimal())
+```
+
+## 1. Gathering Data 
+
+This is where we read in tibbles to work with.
+
+```{r Read-Sheet}
+employees <- read_csv(params$filename)
+```
+
+## 2. Preparation of data
+
+This is where we slice and dice the data.
+
+```{r employee-stats, message = FALSE, warning = FALSE}
+print(glue("NewCo currently has {nrow(employees)} employees"))
+glue("The employees tibble has {ncol(employees)} columns")
+
+employees_hired_by_year <- employees %>% 
+  mutate(Year = year(HireDate)) %>% 
+  count(Year, sort = FALSE)
+```
+
+## 3. Presentation of data
+
+This is where we present our data to others.
+
+```{r employees-hired-by-year-graph, message = FALSE, warning = FALSE}
+# First we'll just print out the table
+employees_hired_by_year
+
+# Now let's plot it.
+ggplot(employees_hired_by_year, mapping = aes(x = Year, y = n)) +
+  geom_col(fill = params$bar_color) +
+  scale_x_continuous(breaks = 2008:2020) +
+  labs(title = "Employees Hired By Year")
+```

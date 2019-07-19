@@ -1,0 +1,6 @@
+book_filename: "book"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+edit: https://github.com/rstudio-education/rmd4medicine/book/edit/master/%s

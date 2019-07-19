@@ -1,0 +1,41 @@
+# (PART\*) R Markdown Basics {-}
+
+
+
+
+Aim to build up vocabulary and intuition around (use default output format here, HTML, and knit with button; consider providing a template to use here and publish to RSConnect quick; highlight how chunk naming works like setup chunk and browsability within IDE [ i.e., table of contents on right] plus how fig.path works): 
+
++ metadata (= YAML), → either rmarkdown (for params) or pandoc
++ text (= Markdown), [but inline code is processed by rmarkdown `r`]
++ R code (= knitr), [other code too! Today we use for R, but I do want you to know...]
++ Output (control with knitr code chunk options).
+
+Formative assessments focus on "if I want to change X, what do I search for?"
+Activity: Open a new Rmd file- read through it- knit it. → for each activity, do it first (model), then they do (build up muscle memory for knitting bc they’ll have done it like 50 times throughout workshop)
+
+start with prewritten script and work from there- fill in....
+
+nice warmup activity- get in groups, introduce, work through script, what does it do? Annotate, narrate.
+
+
+# R and RStudio
+
++ Projects
+
+# R Markdown
+
+## Markdown
+
++ Headers
++ Text
++ Lists
++ Hyperlinks
++ Images
+
+## Code
+
++ Code chunks
++ Inline code
++ Chunk options
+
+## How it all works

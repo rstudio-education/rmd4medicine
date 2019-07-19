@@ -1,0 +1,14 @@
+name: "my-website"
+title: "My Website"
+description: |
+  My Website
+output_dir: "workshop"
+new_session: true
+navbar:
+  logo: images/logos/edu-white.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article

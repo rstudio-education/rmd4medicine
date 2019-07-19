@@ -1,0 +1,17 @@
+---
+title: "R Markdown for Medicine"
+description: |
+  Stay tuned! More to come...
+date: '2019-09-14'
+subtitle: A workshop at the 2019 R/Medicine Conference
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+

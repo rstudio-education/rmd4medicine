@@ -1,0 +1,30 @@
+---
+title: "00c-aesthetics-example.Rmd"
+author: "Carl Howe, RStudio"
+date: "4/23/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(googlesheets)
+library(lubridate)
+library(glue)
+library(DT)
+knitr::opts_chunk$set(echo = TRUE,  warning = FALSE, message = FALSE)
+theme_set(theme_minimal())
+```
+
+## Aesthetics plot example
+
+```{r aesthetics}
+
+tbl <- tibble(x = 2, y = 3)
+quartz(width = 6, height = 4, dpi=100)
+ggplot(tbl, mapping = aes(x = x, y = y)) +
+  geom_point(fill = "red", color = "black", shape = 23, size = 6, stroke = 2) + 
+  scale_x_continuous() +
+  scale_y_continuous() +
+  labs(title = "How many aesthetics does this point have?")
+  ggsave("aesthetics.png")
+```

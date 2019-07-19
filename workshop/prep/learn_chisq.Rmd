@@ -1,0 +1,381 @@
+---
+title: "Categorical variable analysis Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r install_missing, include=FALSE}
+if(!require(mosaicData)) {
+  install.packages('mosaicData')
+}
+
+if(!require(titanic)) {
+  install.packages('titanic')
+}
+
+if(!require(arsenal)) {
+  install.packages('arsenal')
+}
+
+if(!require(janitor)) {
+  install.packages('janitor')
+}
+
+if(!require(tidyverse)) {
+  install.packages('tidyverse')
+}
+
+if(!require(magrittr)) {
+  install.packages('magrittr')
+}
+
+if(!require(corrplot)) {
+  install.packages('corrplot')
+}
+```
+
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(janitor)
+library(arsenal)
+library(mosaicData)
+library(titanic)
+library(magrittr)
+library(corrplot)
+titanic_train %<>% filter(Embarked %in% c("S","C", "Q"))
+```
+
+
+## Building Contingency Tables
+
+We often explore categorical variables in a dataset by counting observations by categories. In the simplest example, we count the observations for all of the levels of one categorical variable.
+
+For a simple example, we will count passengers on the Titanic, categorized by their ticket Passenger Class.
+Edit the code below to create a table from the *Pclass* variable in the dataset *titanic_train*
+
+```{r titanic_class, exercise=TRUE}
+titanic_train %>% 
+  select(var) %>% 
+  table()
+```
+
+This gives you a simple table of each level of this variable.
+This categorical variable is *ordinal*, meaning that it has an obvious order, and that this order may have meaning in terms of effects on outcomes, like ticket price, seating comfort, or survival. 
+<br>
+
+Other categorical variables may be *nominal*, in that they have names, but no meaningful order, like a list of continents or countries.
+<br>
+
+A more complex example of a table is a contingency table, in which we count observations categorized by one variable, *contingent* on a 2nd categorical variable. The resulting cell counts are typically displayed in what is called a contingency table.
+<br>
+
+Contingency tables are often used in epidemiology to examine associations between an exposure and an outcome (disease, death) vs. absence of an outcome. These are often referred to as 2x2 tables, with exposed/unexposed as the columns, and disease/no disease as the rows.
+<br>
+
+## R x C tables
+More generally, these are called *r x c* tables, using the convention of n rows by n columns. By convention, rows are always the first dimension, and columns the second dimension.
+
+Let's use the same approach to make a 2 dimensional contingency table from the *titanic_train* data. 
+
+Use the two variables, *Pclass* and *Survived* to make a 3 x 2 contingency table by editing the code below.
+
+```{r contingency2d, exercise=TRUE}
+titanic_train %>% 
+  select(var1, var2) %>% 
+  table()
+
+
+
+```
+
+It seems that the 1st class passengers were more likely to survive than 2nd class passengers, and that the 2nd class passengers were more likely to survive than the 3rd class passengers. We will work in this tutorial toward statistical approaches to test his and other hypotheses about contingency tables.
+<br>
+
+## What is a Table?
+But before we go any further, let's talk about the data structure that results from the *table()* commmand. 
+Table produces (no suprise) a "table" object. If you pipe the above result into *class()*, it will be identified as a "table". {NOTE that you have to hand-type the pipe, as you will be out of the RStudio IDE and the usual keyboard shortcuts won't work}
+This is distinct from a dataframe, and has a couple of particular characteristics that are required for input into several statistical tests. 
+<br>
+A table object is a contingency table consisting of counts of two categorical variables. The levels of the first categorical variable make up the rownames, and the levels of the 2nd categorical variable make up the column names. In each cell is the cell count.
+<br>
+A table is not a dataframe or a tibble. These data structures have distinct columns for each variable. The table tucks one varible (the first categorical variable) into rownames, which are not accessible for tidyverse-style analysis. 
+<br>
+If you want to work with tables in the tidyverse, there are two workarounds. First, you can take the table object, and apply the function *as_tibble()*.
+You can also access the rownames as a variable after using the tibble package command, *rownames_to_column('new_col_name')*.
+
+You can also skip the select command if you use the janitor package command *tabyl*. This allows you to directly call variables from a dataframe to make a contingency table.
+
+Edit the code below to make a 3 x 2 contingency table by *Pclass* and *Sex* with the tabyl function. Run the code chunk to get a contingency table.
+
+Then edit the code by adding a pipe to class().
+Run this and you will see that you have an object that meets the definitions of a tabyl object and a dataframe.
+
+
+```{r tabyl, exercise=TRUE}
+titanic_train %>% 
+  tabyl(Pclass, var2)  
+
+
+```
+
+
+## Two more base R approaches to contingency tables
+
+A third way to make contingency tables in base R is the xtabs function (usually pronounced 'crosstabs'). This allows you to skip the select command when pulling categorical variables from a dataframe to make a contingency table. This approach uses a formula interface, which starts with the tilde character, "~", followed by a list of variables separated by the plus "+" sign.
+
+Run the code below to see an example.
+
+Then add the variable *Pclass* to see what happens when you have 3 variables.
+
+
+```{r xtabs, exercise=TRUE}
+titanic_train %>% 
+  xtabs(~ Survived + Sex, data = .)
+```
+
+A fourth approach, which comes in handy when you have a 3rd or 4th variable, is ftable, which makes flat contingency tables.
+
+Edit the code below to add *Survived* as the 3rd variable in the contingency table
+
+```{r ftable, exercise=TRUE}
+ftable(titanic_train$Pclass,titanic_train$Sex, titanic_train$var3)
+```
+
+## Making Nice Tabyls
+
+You can see some striking imbalances in these data.
+It can be helpful to see these with row and column totals, or percentages.
+This is something that the tabyl function in the janitor package does well, through its pipeable *adorn_* functions.
+
+These generally take the format
+adorn_x(arguments)
+and can be added by piping your tabyl into the next step.
+
+Edit the code below to create a contingency table of the variables Survived and Embarked. The Embarked variable consists of three locations - Southhampton(England), Cherbourg(France), and Queenstown(Ireland) - S, C, and Q.
+
+For row totals, use
+adorn_totals("row")
+
+For column totals, use
+adorn_totals("col")
+
+For both rows and columns, use
+adorn_totals(c("row", "col"))
+
+try adding row totals, then column totals, then both in the code below
+
+```{r margin_totals, exercise=TRUE}
+
+titanic_train %>% 
+  tabyl(rowvar1, colvar2) %>% 
+  adorn_totals("arg")
+```
+
+You can format these nicely for printing with packages like *flextable*, *knitr::kable, and kableExtra*, and *gt*
+<br>
+
+### Adding percentages
+
+Now add row percentages with adorn_percentages("row")
+and format them to one decimal(# digits) with
+adorn_pct_formatting(digits = 1) 
+
+Again, add these to the pipe.
+Then try adding column percentages.
+
+```{r text, exercise=TRUE}
+titanic_train %>% 
+  tabyl(Pclass, Embarked) %>% 
+  adorn_totals("row") %>% 
+  adorn_totals("col") 
+```
+
+
+## A First Chi Squared Test
+
+The Chi Squared test is a very old test from base R, and its standard input is a table, but a janitor tabyl can also work, with one adjustment.
+
+The standard table has the levels of the first categorical variable are the rownames, while the the levels of the second categorical variable are the column names. A tabyl object or dataframe has no rownames, as each variable is in its own column. To make a tabyl or dataframe compatible with the *chisq.test*, you need to convert the first categorical variable into the source of the rownames. This can be done with a function from the tibble package (part of the tidyverse), named *column_to_rownames*
+
+The null hypothesis (Ho) of the chi-squared test is that the two categorical variables are independent. The alternate (Ha) hypothesis is that the categorical variables are associated. 
+
+Edit the code below to test whether the passenger class and Survival are independent, by piping the table into the function, *chisq.test()*.
+
+```{r table_chi, exercise=TRUE}
+titanic_train %>% 
+  select(Pclass, Survived) %>% 
+  table() %>% 
+  function()
+```
+
+This is highly significant, so you can reject Ho, and it looks like Pclass and Survived are significantly associated.
+
+## What a Chi Squared Test is doing Under the Hood
+
+A chi-squared test is a fairly simple computation of the X-squared parameter. For each cell in the table, based on row totals and column totals, the expected nubmer of observations is calculated based on the overall proportions. Once you have an expected value for each cell, you calculate (observed - expected)^2, squared so that this is always a positive value. Then (observed - expected)^2 is divided by the expected value for each cell, and total of this quantity is summed over all cells. This sum is the estimate of the X-squared parameter.
+<br> 
+This can be compared to the chi-squared distribution for a given number of degrees of freedom, and the p value calculated.
+
+The *degrees of freedom* of an r x c table is the product of (r-1) times (c-1). A standard 2x2 table has 1 degree of freedom. A three by 2 table has 2 degrees of freedom.
+
+The output of Pearson's Chi-squared test is three things:
+1. the X-squared parameter
+2. the degrees of freedom (df)
+3. the p-value.
+
+But the chisq.test produces more output that is not shown.
+
+## Running a Chi Squared Test with Tabyl
+
+You can pipe an unadorned  tabyl into the chisq.test.
+Edit the code below to create a contingency table for Survived vs. Pclass and run a Chi-squared test.
+
+You can get more detailed information out of the chi squared test by assigning it (saving it) to a new object, which is a list of all the results. Let's do this with the code below.
+**Edit** the code to add a rightward assignment arrow to the end of the pipe (chisq.test()), and on the line below(not indented), **put the name** of your new object (results).
+This will print out the results.
+<br>
+Then on a line below that, put the object name *results* by itself, to print these out.
+
+<br>
+Note that in "reading" a piped chain of functions out loud, the pipe symbol = "then", and the rightward assignment arrow = "which creates", giving you <br>
+"Take titanic_train, then <br>
+make a tabyl out of Survived and Pclass, then <br>
+run a chi-squared test, which creates <br>
+the results object"
+<br>
+
+```{r tabyl_chi, exercise=TRUE}
+titanic_train %>% 
+  tabyl(var1, var2) %>% 
+  column_to_rownames(var="var1") %>% 
+  chisq.test()
+```
+
+This gives you a list of 9 objects, stored in a list that we named results.
+
+The result of chisq.test() function is a list containing the following components: <br>
+
+1. statistic: the value the chi-squared test statistic.<br>
+2. parameter: the degrees of freedom<br>
+3. p.value: the p-value of the test<br>
+4. method: "Pearson's Chi-squared test"<br>
+5. data name: "." as this was piped in <br>
+6. observed: the observed counts<br>
+7. expected: the expected counts<br>
+8. residuals: the residuals for each cell <br>
+9. stdres: the standardized residuals<br>
+
+You can access these objects with results`$`observed, or results`$`expected. 
+Try this below, and edit the code (by adding '$' then a list object name) to access some of the other objects in this list of chisq_results, like *p.value*.
+
+```{r results, exercise=TRUE}
+# chisq_results$observed
+# round(chisq_results$expected, 1)
+# chisq_results
+# chisq_results
+  
+```
+
+This allows you to access these results and write up the results in a way that is integrated with your text. For example, you could write (with autoinsertion of results):  the *method* test of Passenger Class and Survival was significant, with a Chi-squared statistic of *statistic* with *parameter* degrees of freedom and a p value of *p.value*<br> 
+
+
+
+## The Assumptions of a Chi Squared Test
+
+The Pearson Chi-squared test has two main assumptions:
+<br>
+1. The number of counts in each cell is sufficiently large that the binomial distribution approaches a normal distribution. The rule of thumb for this is having cell counts greater than 5. The *chisq.test()* function will give you a warning if you are close to this. This is an occasion when you might want to use Fisher's exact test instead, though it is computationally demanding with larger N.
+<br>
+2. The categorical variables (including the levels in them) are independent. This is often violated in longitudinal data collection, or pre vs. post studies, when the two levels (pre and post in the same individual, or the same clinic) are clearly related, and not independent. This is an occasion when McNemar's test is useful. 
+
+Note that the rownames can not be a column (variable) of their own. The chisquared test will not work on a tidy dataframe - it needs rownames.
+
+We will work on an example from the HELPrct dataset.
+The main factor variables are: racegrp, satreat, substance, treat, homeless, sex, anysub.
+This was a randomized trial of patients in detox programs for substance abuse, with an intervention to help them connect to primary care for followup.
+Details can be found at https://rdrr.io/cran/mosaicData/man/HELPrct.html 
+
+Look at the structure of the dataset below by running the str function, and then make a 2x2 table by running this chunk.
+
+
+```{r help, exercise=TRUE}
+str(HELPrct)
+
+HELPrct %>% 
+  select(racegrp, substance) %>% 
+  table() 
+
+```
+
+This looks pretty imbalanced.
+Cocaine is hitting the African-American community more than the other listed racial/ethnic groups.
+
+We would like to do a chi-squared test to prove it.
+
+Edit the code below to add a chi-squared test to the pipe.
+
+```{r helpchi, exercise=TRUE}
+HELPrct %>% 
+  select(racegrp, substance) %>% 
+  table() 
+
+```
+
+This looks significant. But you don't know which cells contributed the most to the chi-squared statistic.
+<br>
+
+To get at this, let's save the chisq result to an object, and unpack the residuals.
+
+Edit the code below to add a rightward arrow to create a results object named res_obj,
+
+then on a separate line, call res_obj$residuals to
+get a table of the residuals.
+
+Note that you may want to round these to 2 digits.
+
+```{r helpchiresid, exercise=TRUE}
+HELPrct %>% 
+  select(racegrp, substance) %>% 
+  table() %>% 
+  chisq.test() 
+
+
+```
+
+This gives you a rough idea of where the X-statistic is coming from, with positive and negative deviations.
+
+It can be helpful to visualize these. 
+Edit the corrplot code below to use your results object and plot the residuals.
+
+```{r residplot, exercise=TRUE}
+corrplot(results$residuals, is.cor = FALSE)
+```
+
+Another popular way to visualize these is as the percent contribution to the X-squared statistic.
+
+Edit the code below to produce the percent contribution of **your** results object and visualize this.
+
+```{r pctplot, exercise=TRUE}
+contrib <- 100*chisq$residuals^2/chisq$statistic
+round(contrib, 3)
+corrplot(contrib, is.cor = FALSE)
+```
+
+### Conclusions
+You now have several ways to get from a dataframe to a table with rownames that you can use as an argument for the chisq.test() function.
+
+One pathway:<br>
+dataframe -> select(vars) -> table() -> chisq.test()
+
+2nd pathway:<br>
+dataframe -> tabyl(vars) -> column_to_rownames() -> chisq.test()
+
+3rd pathway:<br>
+dataframe -> xtabs(~ var1 + var2) -> chisq.test()
+
+Once you have the chisq.test, you can save it to a results object, and then extract the pieces you need to write up your results, and you can use the residuals or percent contribution to generate a plot of the results.
+
+Now you are ready to try this out on your own!

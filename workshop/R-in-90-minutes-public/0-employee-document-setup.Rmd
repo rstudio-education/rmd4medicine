@@ -1,0 +1,68 @@
+---
+title: "Google Sheets Setup"
+author: "Carl Howe"
+date: "2/22/2019"
+output: html_document
+params:
+  getsheet: TRUE
+  inputfile:  "employees-05_20_19.csv"
+  outputfile: "employees.csv"
+  excelfile: "employees.xlsx"
+---
+
+```{r setup, include=FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE,  message = FALSE, warning = FALSE)
+library(googlesheets)
+library(tidyverse)
+library(glue)
+library(lubridate)
+library(ggmap)
+library(DT)
+library(writexl)
+```
+
+## Get Employee Data
+
+```{r get-googlesheets,  message = FALSE, warning = FALSE}
+local_location <- params$inputfile
+employees <- read_csv(local_location)
+print(glue("Tibble employees has {nrow(employees)} rows and {ncol(employees)} columns"))
+```
+
+## Edit the sheet to be more pliable by new students
+
+```{r Split out first and last names, message = FALSE, warning = FALSE}
+emp <- employees %>% select(-X7)
+emp <- emp %>% separate(Name, into = c('LastName', 'FirstName'), sep = ", ")
+emp <- emp %>% mutate(HireDate = mdy(`Date of Hire`)) %>% select(-`Date of Hire`)
+emp.save <- emp
+emp
+```
+
+## Add latitude and longitudes for employees
+
+What we discover here is that our employee data is a little inconsistent about locations. Some have the format of city, state, others just have a country name. Further, the country name may be abbreviated (e.g., We use UK instead of United Kingdom). This is a great example of having to clean up data before you can use it.
+
+attendee_locs <- attendees %>% 
+  mutate_geocode(Address, source = "dsk")
+
+
+```{r geocode lat lon data,  message = FALSE, warning = FALSE}
+emp <- emp.save
+emp <- emp %>% mutate(Location = ifelse(Location == "Waterford. CT", "Waterford, CT", Location))
+emp <- emp %>% mutate(Location = ifelse(Location == "Montreal, Québec", "Montreal, QC", Location))
+emp <- emp %>% mutate(Location = ifelse(Location == "Oakville, Ontario", "Oakville, ON", Location))
+emp <- emp %>% mutate(Location = ifelse(Location == "Charlottsville, VA", "Charlottesville, VA", Location))
+emp <- emp %>% mutate(Location = ifelse(Location == "St Claire Shores, MI", "Saint Clair Shores, MI", Location))
+locs <- emp %>% 
+  mutate_geocode(Location, source = "dsk")
+write_csv(locs, params$outputfile)
+write_xlsx(locs, params$excelfile)
+```
+
+
+```{r plot the locations, message = FALSE, warning = FALSE}}
+library(leaflet)
+leaflet() %>% addTiles()  %>%setView(0, 25, zoom = 2) %>% 
+addMarkers(data = locs, lat = ~ lat, lng = ~ lon, group = "Employees", popup = ~ FirstName,  clusterOptions = markerClusterOptions())
+```

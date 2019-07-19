@@ -1,0 +1,7 @@
+# (PART\*) Graphics {-}
+
+# Chunk options for figures
+
++ size
++ captions
++
