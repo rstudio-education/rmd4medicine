@@ -3,15 +3,15 @@
 ["basic-anatomy.html", "Chapter 1 Basic Anatomy", " Chapter 1 Basic Anatomy Aim to build up vocabulary and intuition around (use default output format here, HTML, and knit with button; consider providing a template to use here and publish to RSConnect quick; highlight how chunk naming works like setup chunk and browsability within IDE [ i.e., table of contents on right] plus how fig.path works): metadata (= YAML), → either rmarkdown (for params) or pandoc text (= Markdown), [but inline code is processed by rmarkdown r] R code (= knitr), [other code too! Today we use for R, but I do want you to know…] Output (control with knitr code chunk options). Formative assessments focus on “if I want to change X, what do I search for?” Activity: Open a new Rmd file- read through it- knit it. → for each activity, do it first (model), then they do (build up muscle memory for knitting bc they’ll have done it like 50 times throughout workshop) start with prewritten script and work from there- fill in…. nice warmup activity- get in groups, introduce, work through script, what does it do? Annotate, narrate. "],
 ["r-and-rstudio.html", "Chapter 2 R and RStudio", " Chapter 2 R and RStudio Projects "],
 ["r-markdown.html", "Chapter 3 R Markdown 3.1 Markdown 3.2 Code 3.3 How it all works", " Chapter 3 R Markdown 3.1 Markdown Headers Text Lists Hyperlinks Images 3.2 Code Code chunks Inline code Chunk options 3.3 How it all works "],
-["controlling-size.html", "Chapter 4 Controlling size", " Chapter 4 Controlling size "],
-["controlling-resolution.html", "Chapter 5 Controlling resolution", " Chapter 5 Controlling resolution "],
-["adding-captions-references.html", "Chapter 6 Adding captions &amp; references", " Chapter 6 Adding captions &amp; references "],
-["multi-panel.html", "Chapter 7 Multi-panel", " Chapter 7 Multi-panel "],
+["table-one.html", "Chapter 4 Table one", " Chapter 4 Table one "],
+["markdown-tables.html", "Chapter 5 Markdown tables", " Chapter 5 Markdown tables "],
+["kable-tables.html", "Chapter 6 kable tables", " Chapter 6 kable tables "],
+["flextable.html", "Chapter 7 flextable", " Chapter 7 flextable "],
 ["projects-and-files.html", "Chapter 8 Projects and files", " Chapter 8 Projects and files What goes where "],
 ["using-data.html", "Chapter 9 Using data", " Chapter 9 Using data primarily here package stuff with file paths "],
 ["r-markdown-collections.html", "Chapter 10 R Markdown collections", " Chapter 10 R Markdown collections bookdown::word_document2 "],
-["table-one.html", "Chapter 11 Table one", " Chapter 11 Table one "],
-["markdown-tables.html", "Chapter 12 Markdown tables", " Chapter 12 Markdown tables "],
-["kable-tables.html", "Chapter 13 kable tables", " Chapter 13 kable tables "],
-["flextable.html", "Chapter 14 flextable", " Chapter 14 flextable "]
+["controlling-size.html", "Chapter 11 Controlling size", " Chapter 11 Controlling size knitr stuff "],
+["controlling-resolution.html", "Chapter 12 Controlling resolution", " Chapter 12 Controlling resolution knitr stuff "],
+["adding-captions-references.html", "Chapter 13 Adding captions &amp; references", " Chapter 13 Adding captions &amp; references knitr stuff "],
+["multi-panel.html", "Chapter 14 Multi-panel", " Chapter 14 Multi-panel cowplot (tag as a/b/c/d) "]
 ]
