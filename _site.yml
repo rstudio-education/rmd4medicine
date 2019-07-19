@@ -3,6 +3,7 @@ title: "My Website"
 description: |
   My Website
 output_dir: "workshop"
+exclude: ["book", "prep", "R-in-90-minutes-public"]
 new_session: true
 navbar:
   logo: images/logos/edu-white.png
