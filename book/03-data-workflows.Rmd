@@ -1,0 +1,13 @@
+# (PART\*) Data + Workflows {-}
+
+# Projects and files
+
+What goes where
+
+# Using data
+
+primarily `here` package stuff with file paths
+
+# R Markdown collections
+
+`bookdown::word_document2`

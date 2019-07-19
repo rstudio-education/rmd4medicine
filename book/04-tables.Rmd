@@ -1,0 +1,9 @@
+# (PART\*) Tables {-}
+
+# Table one
+
+# Markdown tables
+
+# kable tables
+
+# flextable

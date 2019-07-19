@@ -1,0 +1,15 @@
+--- 
+title: "R Markdown for Medicine"
+author: 
+- Alison Hill^[RStudio, https://alison.rbind.io/]
+- Peter Higgins^[University of Michigan, https://www.uofmhealth.org/profile/4/peter-doyle-higgins-md-phd]
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+github-repo: rstudio-education/rmd4medicine
+---
+
+# Preface {-}
+
+This is being developed for a workshop in September at the 2019 R/Medicine conference. This book is not intended to be a "stand-alone" or authoritative resource on this top (yet!), nor will it capture all workshop content. This is a book to organize and share ideas and code.

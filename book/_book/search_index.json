@@ -1,0 +1,5 @@
+[
+["projects-and-files.html", "Chapter 6 Projects and files", " Chapter 6 Projects and files What goes where "],
+["using-data.html", "Chapter 7 Using data", " Chapter 7 Using data primarily here package stuff with file paths "],
+["r-markdown-collections.html", "Chapter 8 R Markdown collections", " Chapter 8 R Markdown collections bookdown::word_document2 "]
+]
