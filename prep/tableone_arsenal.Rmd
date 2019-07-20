@@ -2,10 +2,11 @@
 title: "Building Table One for a Clinical Study"
 author: "Peter D.R. Higgins"
 output:
+  word_document: default
   html_document:
     df_print: paged
 editor_options:
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 We will start by loading libraries and data.
@@ -30,7 +31,7 @@ glimpse(mockstudy)
 Let's make a basic Table 1 grouped by arm
 with details on sex and age in each group.
 
-```{r summarize grouped, messages = FALSE}
+```{r summarize grouped, messages = FALSE, results="asis"}
 #summary by groups
 tab1 <- tableby(arm ~ sex + age, data = mockstudy)
 summary(tab1, text=TRUE)

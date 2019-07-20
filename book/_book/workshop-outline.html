@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 R Markdown | R Markdown for Medicine</title>
+  <title>Workshop outline | R Markdown for Medicine</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.11.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 R Markdown | R Markdown for Medicine" />
+  <meta property="og:title" content="Workshop outline | R Markdown for Medicine" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio-education/rmd4medicine" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 R Markdown | R Markdown for Medicine" />
+  <meta name="twitter:title" content="Workshop outline | R Markdown for Medicine" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-and-rstudio.html">
-<link rel="next" href="up-rmd.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="basic-anatomy.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -124,37 +124,65 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-markdown" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> R Markdown</h1>
-<div id="markdown" class="section level2">
-<h2><span class="header-section-number">3.1</span> Markdown</h2>
+<div id="workshop-outline" class="section level1 unnumbered">
+<h1>Workshop outline</h1>
+<ol style="list-style-type: decimal">
+<li>Introduction (~10 min)
+<ul>
+<li>Show “first look” Rmd (has all the things: table one, multi-panel plot, etc)</li>
+<li><em>Your turn</em>
+<ul>
+<li>Get in groups, introduce, KNIT (to HTML)! Read through Rmd + output, what does it do? Annotate, narrate.</li>
+</ul></li>
+</ul></li>
+<li>Session 1: R Markdown Basics (40 min)
+<ul>
+<li>Basic anatomy of this Rmd doc (4 key components) (~5 min)</li>
+<li>Markdown (~10 min)
 <ul>
 <li>Headers</li>
-<li>Text</li>
 <li>Lists</li>
-<li>Hyperlinks</li>
-<li>Images</li>
-</ul>
-</div>
-<div id="code" class="section level2">
-<h2><span class="header-section-number">3.2</span> Code</h2>
+<li>Links and images</li>
+<li>Equations</li>
+<li>Tables</li>
+</ul></li>
+<li>Code (~10 min)
 <ul>
 <li>Code chunks</li>
 <li>Inline code</li>
 <li>Chunk options</li>
-</ul>
+</ul></li>
+<li><em>Your turn</em> (~10 min)</li>
+<li>How it all works (~5 min)</li>
+</ul></li>
+<li>Session 2: Tables (45 min)
+<ul>
+<li>Change the output format to word! (~5 min)</li>
+<li>Make table one with <code>arsenal::tableby()</code> (~20 min):
+<ul>
+<li>remember to point out <code>knitr</code> code chunk options to <code>results=&quot;asis&quot;</code></li>
+<li>grouped by arm with details on sex and age in each group</li>
+<li>ungrouped, with stats on BMI, sex, Age in each group</li>
+<li>control digits</li>
+<li>export table</li>
+</ul></li>
+<li>Consider <code>flextable</code> here?</li>
+<li><em>Your turn</em> (~10 min)</li>
+</ul></li>
+<li></li>
+</ol>
+
 </div>
-<div id="how-it-all-works" class="section level2">
-<h2><span class="header-section-number">3.3</span> How it all works</h2>
-</div>
-</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-and-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="up-rmd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-anatomy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,5 +1,15 @@
 # (PART\*) Tables {-}
 
+# Tables for EDA
+
+## Glimpse
+
+## Skim
+
+## Janitor tabyls
+
+These are fantastic for 2- and 3-way frequency tables. DO NOT MISS the adorn functions. Pipe to `knitr::kable()` for pretty rendering in most output formats.
+
 # Table one
 
 # Markdown tables
@@ -7,3 +17,6 @@
 # kable tables
 
 # flextable
+
+# Up levels {#up-tables}
+

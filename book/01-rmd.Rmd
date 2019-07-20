@@ -39,3 +39,7 @@ nice warmup activity- get in groups, introduce, work through script, what does i
 + Chunk options
 
 ## How it all works
+
+# Up levels {#up-rmd}
+
+## GitHub {#git-rmd}

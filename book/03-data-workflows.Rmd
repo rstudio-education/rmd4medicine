@@ -1,5 +1,7 @@
 # (PART\*) Data + Workflows {-}
 
+This will sort of be where we hopefully get into a bit of a groove
+
 # Projects and files
 
 What goes where
@@ -11,3 +13,7 @@ primarily `here` package stuff with file paths
 # R Markdown collections
 
 `bookdown::word_document2`
+
+# Up levels {#up-flow}
+
+## GitHub {#git-flow}

@@ -13,3 +13,38 @@ github-repo: rstudio-education/rmd4medicine
 # Preface {-}
 
 This is being developed for a workshop in September at the 2019 R/Medicine conference. This book is not intended to be a "stand-alone" or authoritative resource on this top (yet!), nor will it capture all workshop content. This is a book to organize and share ideas and code.
+
+# Workshop outline {-}
+
+1. Introduction (~10 min)
+    + Show "first look" Rmd (has all the things: table one, multi-panel plot, etc)
+    + *Your turn*
+      + Get in groups, introduce, KNIT (to HTML)! Read through Rmd + output, what does it do? Annotate, narrate.
+    
+1. Session 1: R Markdown Basics (40 min)
+    + Basic anatomy of this Rmd doc (4 key components) (~5 min)
+    + Markdown (~10 min)
+      + Headers
+      + Lists
+      + Links and images
+      + Equations
+      + Tables
+    + Code (~10 min)
+      + Code chunks
+      + Inline code
+      + Chunk options
+    + *Your turn* (~10 min)
+    + How it all works (~5 min)
+    
+1. Session 2: Tables (45 min)
+    + Change the output format to word! (~5 min)
+    + Make table one with `arsenal::tableby()` (~20 min):
+        + remember to point out `knitr` code chunk options to `results="asis"`
+        + grouped by arm with details on sex and age in each group
+        + ungrouped, with stats on BMI, sex, Age in each group
+        + control digits
+        + export table
+    + Consider `flextable` here?
+    + *Your turn* (~10 min)
+    
+1. 

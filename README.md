@@ -98,7 +98,7 @@ journals](https://alison.rbind.io/publication/#2).
     
     ``` r
     install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
-                       "skimr", "flextable", "kable", "kableExtra"))
+                       "skimr", "flextable", "arsenal"))
     ```
 
 3.  Don’t forget your power cord\!

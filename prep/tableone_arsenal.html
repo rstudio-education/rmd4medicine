@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Peter D.R. Higgins" />
@@ -1614,18 +1615,6 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -1656,12 +1645,12 @@ $(document).ready(function () {
 library(knitr)
 library(survival)
 library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ───────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
-<pre><code>## ✔ ggplot2 3.1.1.9000     ✔ purrr   0.3.2.9000
-## ✔ tibble  2.1.1          ✔ dplyr   0.8.0.9012
+<pre><code>## ── Attaching packages ───────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.2.0.9000     ✔ purrr   0.3.2.9000
+## ✔ tibble  2.1.3          ✔ dplyr   0.8.3.9000
 ## ✔ tidyr   0.8.3.9000     ✔ stringr 1.4.0     
 ## ✔ readr   1.3.1          ✔ forcats 0.4.0</code></pre>
-<pre><code>## ── Conflicts ──────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ──────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>data(mockstudy)
@@ -1701,16 +1690,68 @@ library(REDCapR)</code></pre>
 <pre class="r"><code>#summary by groups
 tab1 &lt;- tableby(arm ~ sex + age, data = mockstudy)
 summary(tab1, text=TRUE)</code></pre>
-<pre><code>## 
-## 
-## |             | A: IFL (N=428)  | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499)  | p value|
-## |:------------|:---------------:|:-----------------:|:---------------:|:---------------:|-------:|
-## |sex          |                 |                   |                 |                 |   0.190|
-## |-  Male      |   277 (64.7%)   |    411 (59.5%)    |   228 (60.0%)   |   916 (61.1%)   |        |
-## |-  Female    |   151 (35.3%)   |    280 (40.5%)    |   152 (40.0%)   |   583 (38.9%)   |        |
-## |Age in Years |                 |                   |                 |                 |   0.614|
-## |-  Mean (SD) | 59.673 (11.365) |  60.301 (11.632)  | 59.763 (11.499) | 59.985 (11.519) |        |
-## |-  Range     | 27.000 - 88.000 |  19.000 - 88.000  | 26.000 - 85.000 | 19.000 - 88.000 |        |</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="center">A: IFL (N=428)</th>
+<th align="center">F: FOLFOX (N=691)</th>
+<th align="center">G: IROX (N=380)</th>
+<th align="center">Total (N=1499)</th>
+<th align="right">p value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sex</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right">0.190</td>
+</tr>
+<tr class="even">
+<td align="left">- Male</td>
+<td align="center">277 (64.7%)</td>
+<td align="center">411 (59.5%)</td>
+<td align="center">228 (60.0%)</td>
+<td align="center">916 (61.1%)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">- Female</td>
+<td align="center">151 (35.3%)</td>
+<td align="center">280 (40.5%)</td>
+<td align="center">152 (40.0%)</td>
+<td align="center">583 (38.9%)</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">Age in Years</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right">0.614</td>
+</tr>
+<tr class="odd">
+<td align="left">- Mean (SD)</td>
+<td align="center">59.673 (11.365)</td>
+<td align="center">60.301 (11.632)</td>
+<td align="center">59.763 (11.499)</td>
+<td align="center">59.985 (11.519)</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">- Range</td>
+<td align="center">27.000 - 88.000</td>
+<td align="center">19.000 - 88.000</td>
+<td align="center">26.000 - 85.000</td>
+<td align="center">19.000 - 88.000</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="table-1-without-groups" class="section level3">
 <h3>Table 1 without groups</h3>
@@ -1801,7 +1842,7 @@ write2word(tab1, file = 'table1.docx')</code></pre>
   redcap_uri = &quot;https://bbmc.ouhsc.edu/redcap/api/&quot;,  
   token      = &quot;F304DEC3793FECC3B6DEEFF66302CAD3&quot;
 )$data</code></pre>
-<pre><code>## 500 records and 13 columns were read from REDCap in 1 seconds.  The http status code was 200.</code></pre>
+<pre><code>## 500 records and 13 columns were read from REDCap in 1.2 seconds.  The http status code was 200.</code></pre>
 <pre class="r"><code>#assign arms
 fake_df$arm &lt;- c(rep(1,250), rep(2, 250))
 fake_df$race&lt;- as.factor(fake_df$race)</code></pre>
@@ -1850,6 +1891,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

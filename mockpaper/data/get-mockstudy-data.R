@@ -18,8 +18,9 @@ mock_names <- mockstudy %>%
   mutate(race = replace_na(race, "Other")) %>% 
   # note that "Other" gets mapped to "Middle-Eastern, Arabic"
   mutate(ethnicity = case_when(
+    race == "Hispanic" ~ "Hispanic",
     race == "African-Am" ~ "Black (not Hispanic)",
-    race %in% c("Asian", "Hawaii/Pacific") ~ "American Indian or Native Alaskan",
+    race %in% c("Asian", "Hawaii/Pacific") ~ "Asian or Pacific Islander",
     race == "Caucasian" ~ "White (not Hispanic)",
     race == "Native-Am/Alaska" ~ "American Indian or Native Alaskan",
     race == "Other" ~ "Middle-Eastern, Arabic"
@@ -47,8 +48,9 @@ mock_adverse <- mock_names %>%
   mutate(diarrhea = if_else(ae_seed > 0.02 & ae_seed < 0.26, 1, 0)) %>%
   mutate(vomiting = if_else(ae_seed > 0.06 & ae_seed < 0.26, 1, 0)) %>%
   mutate(blood_clot = if_else(ae_seed > 0.13 & ae_seed < 0.18, 1, 0)) %>% 
-  select(-ae_seed)
+  select(-ae_seed) %>% 
+  mutate(fu_stat = as.factor(fu_stat))
 
 write_xlsx(x = mock_adverse, 
-           path = here::here("data/mockstudy_adverse.xlsx"), 
+           path = here::here("mockpaper/data/mockstudy_adverse.xlsx"), 
            col_names = TRUE)

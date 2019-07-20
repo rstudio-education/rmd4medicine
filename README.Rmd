@@ -64,7 +64,7 @@ Alison Hill is a Data Scientist & Professional Educator at RStudio. Prior to joi
 
     ```{r eval = FALSE}
     install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
-                       "skimr", "flextable", "kable", "kableExtra"))
+                       "skimr", "flextable", "arsenal"))
     ```
 
 1. Don't forget your power cord!
