@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans|Vollkorn+SC:400,600|Vollkorn:400,400i,700,700i&display=swap');
+
+:root {
+  --main-accent-color: #383867;
+  --main-link-color: #657abb;
+  --main-body-color: #404040;
+}
+
+body,
+p {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: var(--main-body-color);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.radix-site-nav {
+  font-family: 'Vollkorn SC', sans-serif;
+  color: var(--main-body-color);
+}
+
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--main-accent-color);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+d-article a {
+	color: var(--main-link-color);
+}
+
+d-article a:hover {
+	color: var(--main-accent-color);
+}
+
+.distill-site-header {
+}
+
+.distill-site-footer {
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
