@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Projects and files | R Markdown for Medicine</title>
+  <title>Chapter 3 Whole document metadata | R Markdown for Medicine</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.12.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Projects and files | R Markdown for Medicine" />
+  <meta property="og:title" content="Chapter 3 Whole document metadata | R Markdown for Medicine" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bookdown.org/john/awesome/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio-education/rmd4medicine" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Projects and files | R Markdown for Medicine" />
+  <meta name="twitter:title" content="Chapter 3 Whole document metadata | R Markdown for Medicine" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-2.html">
-<link rel="next" href="importing-data.html">
+<link rel="prev" href="using-r-markdown-in-rstudio.html">
+<link rel="next" href="add-text-with-markdown.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -222,17 +222,103 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projects-and-files" class="section level1">
-<h1><span class="header-section-number">Chapter 14</span> Projects and files</h1>
-<p>What goes where</p>
+<div id="whole-document-metadata" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Whole document metadata</h1>
+<p>You are probably not used to thinking about medical manuscripts as having “metadata”, but all files have metadata. Some is set for you automatically by your software (right-click on a file on your computer and select “Get Info” to see some). Others you may set yourself, like in a document’s filename; think: <code>asd_obesity_2015.Rmd</code>. Other metadata may be present in your directory structure, like:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">Documents/</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">└── <span class="ex">manuscripts/</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">     ├── <span class="ex">autism-treatment-network/</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">     │    ├── <span class="ex">asd_aggression_2014.Rmd</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">     │    ├── <span class="ex">asd_obesity_2015.Rmd</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">     │    └── <span class="ex">asd_mullen_2019.Rmd</span></a></code></pre></div>
+<p>So the file <code>asd_obesity_2015.Rmd</code> was my analysis of data from the Autism Treatment Network for a manuscript on obesity we published in 2015.</p>
+<p>When you start working in R Markdown, we try to store metadata <em>inside</em> the document itself. The place to store it is in what is called the YAML header (sometimes called YAML frontmatter), which is the space at the top of your .Rmd that is fenced in by three dashes as delimiters (<code>---</code>) like this:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="fu">title:</span><span class="at"> A compelling manuscript</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="fu">author:</span><span class="at"> Alison Hill</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="fu">output:</span><span class="at"> html_document</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="ot">---</span></a></code></pre></div>
+<p>What kinds of metadata are useful for medical manuscripts? Think about things you may often add to the header of a Word document you plan to share with other people like collaborators:</p>
+<ul>
+<li>the <strong>author</strong></li>
+<li>the <strong>date</strong> the document was written (or last updated!)</li>
+<li>a <strong>title</strong> (perhaps with a <strong>subtitle</strong>) to frame what the document is all about for the reader</li>
+</ul>
+<p>All of these things are “keys” we can add to an <code>.Rmd</code> document using the YAML header.</p>
+<ul>
+<li>Output options (add a table of contents, theme / extra: make it floating, add code download button)</li>
+<li>Output formats (change the output from <code>html_document</code> to <code>word_document</code> and now “Knit to Word”)</li>
+</ul>
+<div id="all-about-yaml" class="section level2">
+<h2><span class="header-section-number">3.1</span> All about YAML</h2>
+<p>YAML stands for “YAML Ain’t No Markup Language”, and you are not the only one to read that and think “well, that is not very helpful at all.” The most important things to know about YAML are that:</p>
+<ol style="list-style-type: decimal">
+<li><p>You can only have one YAML per .Rmd document (meaning, there is only one source of metadata for the file, which makes sense!).</p></li>
+<li><p>The contents of a YAML are formatted as a series of <code>key: value</code> pairs separated by colons; each key on a new line. In the YAML above, the keys are title, author, and output.</p></li>
+<li><p>Indentation matters.<br />
+   Indentation matters.<br />
+     Indentation matters.</p></li>
+</ol>
+<div class="tip">
+<p>You can “reuse” the content in your YAML in your text too. For example, using R code, <code>rmarkdown::metadata$title</code> will print:</p>
+<p>R Markdown for Medicine</p>
+<p>…in this text, because it is pulling metadata from our book’s <code>title</code> set in the YAML.</p>
+</div>
+</div>
+<div id="changing-output-formats" class="section level2">
+<h2><span class="header-section-number">3.2</span> Changing output formats</h2>
+<p>Let’s focus first on the most important key in our YAML above: the output format. R Markdown comes with a suite of possible <a href="https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats">“output formats”</a> built-in.</p>
+<div class="turn">
+<h3>
+Your turn
+</h3>
+<p><br>
+Change this document’s output format from <code>html_document</code> to <code>word_document</code>.<br>
+Save and 🧶 “Knit to Word”!</p>
+</div>
+</div>
+<div id="adding-output-options" class="section level2">
+<h2><span class="header-section-number">3.3</span> Adding output options</h2>
+<p>In YAML, indentation is used to indicate nesting. Why do you need to indent? Usually, you want to add output options for a given output format. Output options can be set in your YAML, but they must be <em>nested</em> under the output format. The spacing here is <em>critical</em> as you won’t get an error message when you do it wrong- usually your document will “knit” but silently fail.</p>
+<div class="side-by-side">
+<div class="side1">
+<p>On the right, I’ve added some <a href="https://rmarkdown.rstudio.com/docs/reference/html_document.html">options</a> to the <code>html_document</code> format.</p>
+<p>We can give the document a table of contents, and make it a <em>floating</em> table of contents, by setting both option arguments to <code>true</code> (the default is <code>false</code>).</p>
+<p>Try it out to see what this looks like.</p>
+</div>
+<div class="side2">
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="fu">title:</span><span class="at"> A compelling manuscript</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="fu">author:</span><span class="at"> Alison Hill</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">  <span class="fu">html_document:</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">    <span class="fu">toc:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">    <span class="fu">toc_float:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
+</div>
+</div>
+<div class="turn">
+<h3>
+Your turn
+</h3>
+<p><br>
+Word documents can have a table of contents too, but not a floating one. Try adding a <code>toc</code> to your word document output. Save and 🧶 “Knit to Word”!</p>
+</div>
+<div class="tip">
+<p>You can see output options for each output format on the <a href="https://rmarkdown.rstudio.com/docs/reference/">R Markdown reference page</a>. For example, here are the <a href="https://rmarkdown.rstudio.com/docs/reference/word_document.html">options</a> for word documents. When options are set in the YAML, replace <code>=</code> with <code>:</code> with each key-value pair on a new line.</p>
+<p>Watch<br>
+  your<br><br />
+    indentation.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="using-r-markdown-in-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="add-text-with-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

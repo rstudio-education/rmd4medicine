@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans|Anonymous+Pro|Vollkorn+SC:400,600|Vollkorn:400,400i,700,700i&display=swap');
+
+:root {
+  --main-accent-color: #383867;
+  --main-link-color: #657abb;
+  --your-turn-color: #61ac86;
+}
 
 p.caption {
   color: #777;
@@ -7,54 +13,50 @@ p.caption {
 p code {
   white-space: inherit;
 }
+
 pre {
   word-break: normal;
   word-wrap: normal;
+  margin: 0 0 0;
 }
+
 pre code {
   white-space: inherit;
 }
 
-/*  Desiree custom css  */
-
-/* next 3 rules for setting large image at top of each page and pushing book content to appear beneath that */
-
-.hero-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 390px;
-  /*background-image: url("images/books.jpg");*/
-  background-color: #3fb5bd;
+.book .book-body .page-wrapper .page-inner section.normal pre {
+	overflow: auto;
+	word-wrap: normal;
+	margin: 0 0 .5em;
+	padding: .85em 1em;
+	background: #f7f7f7;
 }
 
-.hero-image {
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
+div.sourceCode {
+	overflow: auto;
+	margin-bottom: 1.5em;
 }
-
-.page-inner {
-  padding-top: 440px !important;
-}
-
 
 /* Links */
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #157f8e;
+  color: var(--main-link-color);
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+  color: var(--main-accent-color);
 }
 
 
 /* Body and header text */
 
 .book.font-family-1 {
-  font-family: 'Source Sans Pro', arial, sans-serif;
+  font-family: 'Vollkorn', serif;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Lora', arial, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Vollkorn SC', serif;
+  color: var(--main-accent-color);
 }
 
 
@@ -64,21 +66,36 @@ h1, h2, h3, h4 {
 .book .book-body .page-wrapper .page-inner section.normal h4, 
 .book .book-body .page-wrapper .page-inner section.normal h5, 
 .book .book-body .page-wrapper .page-inner section.normal h6 {
-    margin-top: 2.275em;
-    margin-bottom: 1em;
+  margin-top: 1.1em;
+  margin-bottom: 1em;
 }
 
 .title {
-  font-family: 'Lora';
+  font-family: 'Vollkorn SC', serif;
   font-size: 4em !important;
-  color: #3fb5bd;
+  color: var(--main-accent-color);
   margin-top: 0.275em !important;
   margin-bottom: 0.35em !important;
 }
 
 .subtitle {
-  font-family: 'Lora';
-  color: #0b8d96;
+  font-family: 'Vollkorn SC', serif;
+  color: var(--main-accent-color); 
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p,
+.book .book-body .page-wrapper .page-inner section.normal {
+  color: #404040;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1.1em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal code {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1em;
 }
   
 
@@ -101,9 +118,10 @@ h1, h2, h3, h4 {
 /* try the below with the ~ instead...or just the space?) */
 
 .section.level1 > p:first-of-type:first-letter { /*drop cap for first p beneath level 1 headers only within class .section*/
-  color: #3fb5bd;
+  color: var(--main-accent-color);
   float: left;
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Vollkorn SC', serif;
+  font-weight: 600;
   font-size: 7em;
   line-height: 65px;
   padding-top: 4px;
@@ -136,8 +154,8 @@ h1, h2, h3, h4 {
   border-right: none;
 }
 
-.summary{
-  font-family: 'Source Sans Pro', sans-serif;
+.summary {
+  font-family: 'Vollkorn', serif;
 }
 
 /* all TOC list items, basically */
@@ -150,32 +168,33 @@ h1, h2, h3, h4 {
 }
 
 .summary a:hover {
-  color: #3ea2aad9 !important;
+  color: var(--main-link-color) !important;
 } 
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
-  color: #379fa7 !important;
+  color: var(--main-link-color) !important;
   border-left: solid 4px;
-  border-color: #379fa7;
+  border-color: var(--main-link-color);
   padding-left: 11px !important;
 } 
 
 
 li.appendix span, li.part span { /* for TOC part names */
   margin-top: 1em;
-  color: #000000;
+  color: var(--main-accent-color);
   opacity: .9 !important;
-  text-transform: uppercase;
+  font-family: "Vollkorn SC", serif;
 }
 
 .part + li[data-level=""] { /* grabs first .chapter immediately after .part...but only those ch without numbers */
- text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-style: italic;
 }
 
 
 
 ul.summary > li > a { /* The > selects all the li's which are immediately within the class summary*/
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Vollkorn', serif;
 }
 
 /* The next two rules make the horizontal line go straight across in top navbar */
@@ -216,20 +235,20 @@ ul.summary > li > a { /* The > selects all the li's which are immediately within
 }
 
 .side1 {
-  width: 40%;
+  width: 50%;
 }
 
 .side2 {
-  width: 58%;
+  width: 50%;
   margin-left: 1rem;
   
 }
 /* Sidebar formating --------------------------------------------*/
 /* from r-pkgs.org*/
 
-div.rstudio-tip, div.tip {
-  border: 4px #aed6d963;
-  border-style: dashed solid;
+div.rstudio-tip, div.tip, div.turn {
+  border: 4px #383867BF;
+  border-style: solid;
   padding: 1em;
   margin: 1em 0;
   padding-left: 100px;
@@ -237,8 +256,8 @@ div.rstudio-tip, div.tip {
   background-repeat: no-repeat;
   background-position: 15px center;
   min-height: 120px;
-  color: #2ea8b3;
-  background-color: #fcfcfc;
+  background-color: #657abb33;
+  font-family: Quattrocento Sans, sans-serif;
 }
 
 div.rstudio-tip {
@@ -247,6 +266,20 @@ div.rstudio-tip {
 
 div.tip {
   background-image: url("../images/lightbulb.png");
+}
+
+div.turn {
+  border: 4px var(--your-turn-color) !important;
+  border-style: solid !important;
+  background-image: url("../images/lightbulb.png");
+  background-color: #61ac8633 !important;
+}
+
+/* div turn - text for headers */
+.book .book-body .page-wrapper .page-inner section.normal .turn h3 {
+	margin-top: 0em;
+	margin-bottom: 0em;
+	color: var(--your-turn-color);
 }
 
 /* .book .book-body .page-wrapper .page-inner section.normal is needed
@@ -283,3 +316,6 @@ iframe {
 .iframe-container > iframe {
   border: none;
 }
+
+
+

@@ -1,4 +1,8 @@
-# (PART\*) Graphics {-}
+# (PART) Graphics {-}
+
+# Introduction {-}
+
+Check out a new Rmd file here.
 
 
 # Controlling size
@@ -21,4 +25,4 @@
 
 `cowplot` (tag as a/b/c/d)
 
-# Up levels {#up-graphics}
+# Uplevel {#up-graphics}

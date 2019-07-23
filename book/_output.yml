@@ -1,7 +1,10 @@
 bookdown::gitbook:
+  highlight: tango
   css: assets/style.css
   config:
     toc:
+      collapse: section
+      scroll_highlight: yes
       before: |
         <li><a href="./">rmd4medicine</a></li>
       after: |

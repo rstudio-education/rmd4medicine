@@ -1,0 +1,7 @@
+# (APPENDIX) Appendix {-} 
+
+# Colophon
+
+The CSS for this book is adapted from the CSS developed by Desirée De Leon for the `bookdown` book "`rstudio4edu`: A Handbook for Teaching and Learning with R and RStudio". Our thanks to Desirée for creating such a beautiful `bookdown` style!
+
+All colors derived from [Werner's nomenclature of colors](https://www.c82.net/werner/).

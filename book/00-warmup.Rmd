@@ -1,0 +1,40 @@
+# (PART\*) Warmup {-}
+
+# Introduction {-#warmup-intro}
+
+Welcome! Let's take a look at a few R Markdown documents to get a feel for what we'll be learning today. For this workshop, we'll show you four R Markdown documents, each highlighting a different and distinct stage within a research project. 
+
+```{r render-rmds, include=FALSE, eval = FALSE}
+library(tidyverse)
+paths <- dir_ls(path = here::here("mockpaper"), glob = "*.Rmd")
+files <- paths %>% 
+  path_file() %>% 
+  path_ext_remove()
+callr::r(function(x) purrr::walk(x, ~rmarkdown::render(), args = list(paths)))
+```
+
+## First look
+
+An [exploratory data analysis](../mockpaper/first-look.html)
+
+<div class="iframe-container" style="height: 50vh;">
+<iframe width="1024" height="768" src="../mockpaper/first-look.html" style="-webkit-transform:scale(0.75);-moz-transform-scale(0.75);"></iframe>
+</div>
+
+## First report
+
+A high-level [progress report](../mockpaper/first-report.html)
+
+
+<div class="iframe-container" style="height: 50vh;">
+<iframe width="1024" height="768" src="../mockpaper/first-report.html" style="-webkit-transform:scale(0.75);-moz-transform-scale(0.75);"></iframe>
+</div>
+
+## First draft
+
+A draft [medical manuscript](../mockpaper/first-draft.html)
+
+<div class="iframe-container" style="height: 50vh;">
+<iframe width="1024" height="768" src="../mockpaper/first-draft.html" style="-webkit-transform:scale(0.75);-moz-transform-scale(0.75);"></iframe>
+</div>
+

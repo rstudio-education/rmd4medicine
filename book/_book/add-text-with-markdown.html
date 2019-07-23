@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Projects and files | R Markdown for Medicine</title>
+  <title>Chapter 4 Add text with Markdown | R Markdown for Medicine</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.12.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Projects and files | R Markdown for Medicine" />
+  <meta property="og:title" content="Chapter 4 Add text with Markdown | R Markdown for Medicine" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://bookdown.org/john/awesome/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio-education/rmd4medicine" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Projects and files | R Markdown for Medicine" />
+  <meta name="twitter:title" content="Chapter 4 Add text with Markdown | R Markdown for Medicine" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-2.html">
-<link rel="next" href="importing-data.html">
+<link rel="prev" href="whole-document-metadata.html">
+<link rel="next" href="add-code.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -222,17 +222,125 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projects-and-files" class="section level1">
-<h1><span class="header-section-number">Chapter 14</span> Projects and files</h1>
-<p>What goes where</p>
+<div id="add-text-with-markdown" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Add text with Markdown</h1>
+<div id="headers" class="section level2">
+<h2><span class="header-section-number">4.1</span> Headers</h2>
+<p>Headers are useful for organizing your document into sections, and with Markdown formatting you can have up to 6 types/sizes of headers. Use a <code>#</code> symbol before the label to create a new header.</p>
+<div class="side-by-side">
+<div class="side1">
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu"># HEADER 1</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="fu">## HEADER 2</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="fu">### HEADER 3</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="fu">#### HEADER 4</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="fu">##### HEADER 5</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="fu">###### HEADER 6</span></a></code></pre></div>
+</div>
+<div class="side2">
+<h1>
+Header 1
+</h1>
+<h2>
+Header 2
+</h2>
+<h3>
+Header 3
+</h3>
+<h4>
+Header 4
+</h4>
+<h5>
+Header 5
+</h5>
+<h6>
+Header 6
+</h6>
+</div>
+</div>
+</div>
+<div id="text-images" class="section level2">
+<h2><span class="header-section-number">4.2</span> Text &amp; Images</h2>
+<p>Let’s take a lightly-edited snippet from a <a href="https://www.huffpost.com/entry/post_b_755048">blog post</a> originally published on the Huffington Post in 2010, and show it in raw Markdown (L) and rendered (R).</p>
+<div class="side-by-side">
+<div class="side1">
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb6-1" data-line-number="1">Childhood vaccines are one of the *great </a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">triumphs* of modern medicine. Indeed, </a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">parents whose children are vaccinated </a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">no longer have to worry about their child&#39;s </a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">death or disability from:</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">- <span class="fl">whooping cough, </span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="fl">- polio, </span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="fl">- diphtheria, </span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="fl">- hepatitis, or </span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="fl">- a host of other infections. </span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">Vaccines are the **most cost-effective** </a>
+<a class="sourceLine" id="cb6-14" data-line-number="14">health care interventions there are...</a>
+<a class="sourceLine" id="cb6-15" data-line-number="15">We have three new, extremely effective </a>
+<a class="sourceLine" id="cb6-16" data-line-number="16">vaccines to roll out in developing countries:</a>
+<a class="sourceLine" id="cb6-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb6-18" data-line-number="18">1. <span class="fl">pneumonia</span></a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="fl">1. rotavirus</span></a>
+<a class="sourceLine" id="cb6-20" data-line-number="20"><span class="fl">1. meningitis A</span></a>
+<a class="sourceLine" id="cb6-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb6-22" data-line-number="22">By Ezekiel J. Emanuel, M.D., Ph.D.</a>
+<a class="sourceLine" id="cb6-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb6-24" data-line-number="24"><span class="ot">[Photo:](https://en.wikipedia.org/wiki/Vaccine)</span></a>
+<a class="sourceLine" id="cb6-25" data-line-number="25"></a>
+<a class="sourceLine" id="cb6-26" data-line-number="26">Receiving rubella vaccination, Brazil, 2008.</a>
+<a class="sourceLine" id="cb6-27" data-line-number="27">![](http://bit.ly/VaccineBySandraRugio)</a></code></pre></div>
+</div>
+<div class="side2">
+<p>Childhood vaccines are one of the <em>great
+triumphs</em> of modern medicine. Indeed,
+parents whose children are vaccinated
+no longer have to worry about their child’s
+death or disability from:</p>
+<ul>
+<li>whooping cough,</li>
+<li>polio,</li>
+<li>diphtheria,</li>
+<li>hepatitis, or</li>
+<li>a host of other infections.</li>
+</ul>
+<p>Vaccines are the <strong>most cost-effective</strong>
+health care interventions there are…
+We have three new, extremely effective
+vaccines to roll out in developing countries:</p>
+<ol style="list-style-type: decimal">
+<li>pneumonia</li>
+<li>rotavirus</li>
+<li>meningitis A</li>
+</ol>
+<p>By Ezekiel J. Emanuel, M.D., Ph.D.</p>
+<p><a href="https://en.wikipedia.org/wiki/Vaccine">Photo:</a></p>
+<p>Receiving rubella vaccination, Brazil, 2008.
+<img src="http://bit.ly/VaccineBySandraRugio" /></p>
+</div>
+</div>
+<div class="turn">
+<h3>
+Your turn
+</h3>
+<p><br>
+Try using Markdown formatting to add some <strong>bold</strong> text or <em>italics</em>. <br>
+If this is easy, try creating numbered and unnumbered lists, or adding links or images.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="whole-document-metadata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="add-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
