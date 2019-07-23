@@ -73,9 +73,6 @@ What kinds of metadata are useful for medical manuscripts? Think about things yo
 
 All of these things are "keys" we can add to an `.Rmd` document using the YAML header.
 
-+ Output options (add a table of contents, theme / extra: make it floating, add code download button)
-+ Output formats (change the output from `html_document` to `word_document` and now "Knit to Word")
-
 
 ## All about YAML
 
@@ -185,6 +182,30 @@ Headers are useful for organizing your document into sections, and with Markdown
 </div>
 </div>
 
+
+The RStudio IDE has several features that are nice for R Markdown users. One is the drop-down
+code navigator in the bottom-left of your file editor as shown in Figure \@ref(fig:md-nav) (from the [R for Data Science book](https://r4ds.had.co.nz/)).
+
+```{r md-nav, echo=FALSE, fig.cap="RStudio code navigator", out.width="30%", fig.link='https://r4ds.had.co.nz/', fig.align="center"}
+knitr::include_graphics("https://r4ds.had.co.nz/screenshots/rmarkdown-chunk-nav.png")
+```
+
+As you can see, this uses your Markdown headers to allow you to navigate around your `.Rmd` file. You can also use the RStudio outline pane, as shown in Figure \@ref(fig:md-outline) (from the [RStudio blog](https://rviews.rstudio.com/2016/11/11/easy-tricks-you-mightve-missed/)).
+
+```{r md-outline, echo=FALSE, fig.cap="RStudio outline pane", out.width="80%", fig.link='https://rviews.rstudio.com/2016/11/11/easy-tricks-you-mightve-missed/', fig.align="center"}
+knitr::include_graphics("https://www.rstudio.com/wp-content/uploads/2016/11/tip_outline.gif")
+```
+
+
+
+:::turn
+<h3>Your turn</h3> <br>
+Try using the RStudio code navigator or outline pane to see the outline for `first_look.Rmd` based on the Markdown headers. Use them to navigate to different sections in the document.
+:::
+
+
+
+
 ## Text & Images
 
 Let's take a lightly-edited snippet from a [blog post](https://www.huffpost.com/entry/post_b_755048) originally published on the Huffington Post in 2010, and show it in raw Markdown (L) and rendered (R).
@@ -193,6 +214,8 @@ Let's take a lightly-edited snippet from a [blog post](https://www.huffpost.com/
 <div class = side1>
 
 ```markdown
+# How We Can Save Over 4 Million Children
+
 Childhood vaccines are one of the *great 
 triumphs* of modern medicine. Indeed, 
 parents whose children are vaccinated 
@@ -225,6 +248,8 @@ Receiving rubella vaccination, Brazil, 2008.
 </div>
 
 <div class = side2>
+
+<h4>How We Can Save Over 4 Million Children</h4>
 
 Childhood vaccines are one of the *great 
 triumphs* of modern medicine. Indeed, 
@@ -268,6 +293,13 @@ If this is easy, try creating numbered and unnumbered lists, or adding links or 
 + Add chunks (keyboard shortcut Ctrl + Alt + I (OS X: Cmd + Option + I))
 + Inline code
 + Why name chunks?
+
+  ![](images/rstudio-outline-prefs.png)
+
+:::turn
+<h3>Your turn</h3> <br>
+Try updating your preferences for the [RStudio code outline pane](https://rviews.rstudio.com/2016/11/11/easy-tricks-you-mightve-missed/#code-outline) to include all or only named code chunks, if you like! You can also make the document outline show by default every time you open a file.
+:::
 
 # Use chunk options
 
