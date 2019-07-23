@@ -54,24 +54,11 @@ Alison Hill is a Data Scientist & Professional Educator at RStudio. Prior to joi
 
 ## Pre-work
 
-1. Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop.
-
-1. Please bring a laptop that has the following installed:
-
-    + A recent version of R (>=3.6.0), which is available for free at https://cloud.r-project.org/
-    + A recent version of RStudio Desktop (>=1.2), available for free ([RStudio Desktop Open Source License](https://www.rstudio.com/products/rstudio/download/#download))
-    + The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:
-
-    ```{r eval = FALSE}
-    install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
-                       "skimr", "flextable", "arsenal"))
-    ```
-
-1. Don't forget your power cord!
-
-On the day of the workshop, I'll provide you with an RStudio Cloud project that contains all of the course materials. We will use the software listed above only as an important backup should there be problems with the on-site internet connection.
+```{r child = here::here('prework.Rmd')}
+```
 
 ---
 
 [![forthebadge](https://forthebadge.com/images/badges/cc-by.svg)](https://creativecommons.org/licenses/by/4.0/)  
-This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+This work is licensed under a [Creative Commons Attribution 4.0
+International License](https://creativecommons.org/licenses/by/4.0/).

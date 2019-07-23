@@ -80,10 +80,22 @@ journals](https://alison.rbind.io/publication/#2).
 
 ## Pre-work
 
-1.  Sign up for a free RStudio Cloud account at <https://rstudio.cloud/>
-    before the workshop.
+Welcome to the [R Markdown for
+Medicine](https://rmd4medicine.netlify.com/workshop/) workshop\! We look
+forward to meeting you in person. Before attending the workshop, please
+complete the following prework:
 
-2.  Please bring a laptop that has the following installed:
+<br> <br>
+
+1.  Sign up for a free RStudio Cloud account at <https://rstudio.cloud/>
+    before the workshop. I recommend logging in with an existing Google
+    or GitHub account, if you have one (rather than creating a new
+    account with another password you have to remember).
+
+2.  Complete this [10-minute interactive tutorial on
+    Markdown](https://commonmark.org/help/tutorial/).
+
+3.  Please bring a laptop that has the following installed:
     
       - A recent version of R (\>=3.6.0), which is available for free at
         <https://cloud.r-project.org/>
@@ -97,11 +109,12 @@ journals](https://alison.rbind.io/publication/#2).
     <!-- end list -->
     
     ``` r
-    install.packages(c("rmarkdown", "tidyverse", "janitor", "here", 
-                       "skimr", "flextable", "arsenal"))
+    install.packages(c("rmarkdown", "distill", "bookdown",
+                       "tidyverse", "here", "janitor", "skimr", 
+                       "flextable", "arsenal", "scico", "cowplot"))
     ```
 
-3.  Don’t forget your power cord\!
+4.  Don’t forget your power cord\!
 
 On the day of the workshop, I’ll provide you with an RStudio Cloud
 project that contains all of the course materials. We will use the
