@@ -6,7 +6,7 @@ R Markdown for Medicine: <br>From Data to Manuscript
 -----
 
 🗓 September 12, 2019  
-🕗 08:00am - 12:00pm  
+🕗 01:00pm - 05:00pm  
 📍 Boston, MA  
 ✅ [Register](https://cvent.me/en41V)
 
@@ -55,14 +55,14 @@ workflow. No prior experience with R Markdown is required.
 
 | Time          | Activity                                 |
 | :------------ | :--------------------------------------- |
-| 08:00 - 08:50 | Session 1 (`rmarkdown` + `knitr` basics) |
-| 08:50 - 09:00 | *Break*                                  |
-| 09:00 - 09:45 | Session 2 (tables)                       |
-| 09:45 - 10:00 | *Break*                                  |
-| 10:00 - 10:50 | Session 3 (data + workflows)             |
-| 10:50 - 11:00 | *Break*                                  |
-| 11:00 - 11:45 | Session 4 (graphics)                     |
-| 11:45 - 12:00 | Wrap-up / Overtime                       |
+| 01:00 - 01:50 | Session 1 (`rmarkdown` + `knitr` basics) |
+| 01:50 - 02:00 | *Break*                                  |
+| 02:00 - 02:45 | Session 2 (tables)                       |
+| 02:45 - 03:00 | *Break*                                  |
+| 03:00 - 03:50 | Session 3 (data + workflows)             |
+| 03:50 - 04:00 | *Break*                                  |
+| 04:00 - 04:45 | Session 4 (graphics)                     |
+| 04:45 - 05:00 | Wrap-up / Overtime                       |
 
 ## Instructor
 
