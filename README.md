@@ -24,39 +24,40 @@ final manuscript.
 
 Attendees will learn how to:
 
-1.  Identify the basic anatomy of an R Markdown document. **(session
-    1)**
+1.  Identify the basic anatomy of an R Markdown document. *(session 1)*
 
-2.  Knit an R Markdown document. **(session 1)**
+2.  Knit an R Markdown document. *(session 1)*
 
-3.  Add text, R code, and output to an R Markdown document. **(session
-    1)**
+3.  Add text, R code, and output to an R Markdown document. *(session
+    1)*
 
 4.  Create an exploratory data analysis report with R Markdown.
-    **(session 1)**
+    *(session 1)*
 
-5.  Change the output format of an R Markdown document. **(sessions 2,
-    3, 4)**
+5.  Change the output format of an R Markdown document. *(session 2)*
 
 6.  Use R code to create tables summarizing participants (i.e., a “Table
     One”) and statistical analyses within an R Markdown document.
-    **(session 2)**
+    *(session 2)*
 
 7.  Organize files and set up file paths when working in an R Markdown
-    project. **(session 3)**
+    project. *(session 3)*
 
 8.  Avoid growing pains as your R Markdown project evolves alongside
-    your research project. **(session 3)**
+    your research project. *(session 3)*
 
-9.  Embed figures generated from R code in an R Markdown document,
-    including multi-panel plots. **(session 4)**
+9.  Export your figures and tables to a place you can find on your
+    computer *(session 3)*
 
-10. Control how your figures look using `knitr` code chunk options,
-    captions, and cross-references. **(session 4)**
+10. Embed figures generated from R code in an R Markdown document,
+    including multi-panel plots. *(session 4)*
 
-11. Re-use your figures and tables to generate other research products,
-    including a powerpoint presentation and a standard conference
-    poster. **(wrap-up)**
+11. Control how your figures look using `knitr` code chunk options,
+    captions, and cross-references. *(session 4)*
+
+12. Expand into new output formats like powerpoint presentations,
+    conference posters, etc.- all built with R Markdown as the
+    foundation *(wrap-up)*
 
 ## Is this course for me?
 
