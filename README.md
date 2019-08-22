@@ -15,38 +15,75 @@ R Markdown for Medicine: <br>From Data to Manuscript
 ## Overview
 
 In this four-hour workshop, I will take you on a tour of how to get from
-data to manuscript using R Markdown. Starting with a mock medical
+data to manuscript using R Markdown. Starting with a mock clinical trial
 dataset, we’ll use R Markdown to combine prose, R code, and figures and
 tables created with R code into a nicely formatted and reproducible
 final manuscript.
 
 ## Learning objectives
 
-1. Learn how to take a mock clinical trial dataset and use RMarkdown to create a reproducible manuscript incorporating tables and figures generated in R.
+Attendees will learn how to:
 
-2. Learn how to easily create a Table 1 and incorporate it into your manuscript.
+1.  Identify the basic anatomy of an R Markdown document. **(session
+    1)**
 
-3. Learn how to create a multipanel figure and incorporate it into your manuscript.
+2.  Knit an R Markdown document. **(session 1)**
 
-4. Learn how to re-generate your entire manuscript, including figures and tables, after a change in your dataset.
+3.  Add text, R code, and output to an R Markdown document. **(session
+    1)**
 
-5. Learn how to re-use your figures and tables to easily generate other research products, including a powerpoint presentation and a standard conference poster.
+4.  Create an exploratory data analysis report with R Markdown.
+    **(session 1)**
+
+5.  Change the output format of an R Markdown document. **(sessions 2,
+    3, 4)**
+
+6.  Use R code to create tables summarizing participants (i.e., a “Table
+    One”) and statistical analyses within an R Markdown document.
+    **(session 2)**
+
+7.  Organize files and set up file paths when working in an R Markdown
+    project. **(session 3)**
+
+8.  Avoid growing pains as your R Markdown project evolves alongside
+    your research project. **(session 3)**
+
+9.  Embed figures generated from R code in an R Markdown document,
+    including multi-panel plots. **(session 4)**
+
+10. Control how your figures look using `knitr` code chunk options,
+    captions, and cross-references. **(session 4)**
+
+11. Re-use your figures and tables to generate other research products,
+    including a powerpoint presentation and a standard conference
+    poster. **(wrap-up)**
 
 ## Is this course for me?
 
-This introductory workshop is targeted at people who work in the medical field who either don’t know or currently use R Markdown, or perhaps know the basics but aren’t sure how R Markdown can fit into their research workflow. No prior experience with R Markdown is required.
+This introductory workshop is targeted at people who work in the medical
+field who either don’t know or currently use R Markdown, or perhaps know
+the basics but aren’t sure how R Markdown can fit into their research
+workflow. No prior experience with R Markdown is required.
 
   - Have you written or collaborated on a medical manuscript to submit
     for publication to a peer-reviewed journal? Are you familiar with
-    common components of a medical manuscript like a “Table One”, other summary tables, plots, text and citations?
+    common components of a medical manuscript like a “Table One”, other
+    summary tables, plots, text and citations?
 
-  - Have you downloaded and used R a bit? Can you install and load (library) new packages?
+  - Have you downloaded and used R a bit? Can you install and load
+    packages?
     
-      - *Even better,* have you used `tidyverse` packages like `ggplot2` and `dplyr`?
+      - *Even better,* have you used `tidyverse` packages like `ggplot2`
+        and `dplyr`?
 
-  - Have you used R with the RStudio Integrated Development Environment (IDE)? Are you familiar with the various “panes” and “tabs”? For instance, can you quickly find all objects in your current global environment, and can you send R code from a source file (.R, .Rmd) to the console?
+  - Have you used R with the RStudio Integrated Development Environment
+    (IDE)? Are you familiar with the various “panes” and “tabs”? For
+    instance, can you quickly find all objects in your current global
+    environment, and can you send R code from a source file (.R, .Rmd)
+    to the console?
     
-      - *Even better,* have you tried to knit 🧶 an R Markdown document to some kind of output format like HTML, PDF, or Word?
+      - *Even better,* have you tried to knit 🧶 an R Markdown document
+        to some kind of output format like HTML, PDF, or Word?
 
 ## Schedule
 
@@ -113,11 +150,11 @@ complete the following prework:
 
 4.  Don’t forget your power cord\!
 
-
 On the day of the workshop, I’ll provide you with an RStudio Cloud
 project that contains all of the course materials. We will use the
 software listed above only as an important backup should there be
-problems with the on-site internet connection.
+problems with the on-site internet
+connection.
 
 -----
 

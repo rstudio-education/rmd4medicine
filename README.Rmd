@@ -16,11 +16,33 @@ output: github_document
 
 ## Overview
 
-In this four-hour workshop, I will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock medical dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
+In this four-hour workshop, I will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock clinical trial dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
 
 ## Learning objectives
 
-[ADD LEARNING OBJECTIVES]
+Attendees will learn how to:
+
+1. Identify the basic anatomy of an R Markdown document. **(session 1)**
+
+1. Knit an R Markdown document. **(session 1)**
+
+1. Add text, R code, and output to an R Markdown document. **(session 1)**
+
+1. Create an exploratory data analysis report with R Markdown. **(session 1)**
+
+1. Change the output format of an R Markdown document. **(sessions 2, 3, 4)**
+
+1. Use R code to create tables summarizing participants (i.e., a "Table One") and statistical analyses within an R Markdown document. **(session 2)**
+
+1. Organize files and set up file paths when working in an R Markdown project. **(session 3)**
+
+1. Avoid growing pains as your R Markdown project evolves alongside your research project. **(session 3)**
+
+1. Embed figures generated from R code in an R Markdown document, including multi-panel plots. **(session 4)**
+
+1. Control how your figures look using `knitr` code chunk options, captions, and cross-references. **(session 4)**
+
+1. Re-use your figures and tables to generate other research products, including a powerpoint presentation and a standard conference poster. **(wrap-up)**
 
 ## Is this course for me?
 
