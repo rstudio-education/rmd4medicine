@@ -20,42 +20,45 @@ dataset, we’ll use R Markdown to combine prose, R code, and figures and
 tables created with R code into a nicely formatted and reproducible
 final manuscript.
 
+We’ll work on template R Markdown documents from four different “phases”
+of our mock clinical trial research project: an exploratory data
+analysis, a progress report, a draft manuscript, and a final paper.
+Along the way, we’ll learn about the basics of working with R Markdown
+and how to include tables, data, and graphics.
+
 ## Learning objectives
 
 Attendees will learn how to:
 
 1.  Identify the basic anatomy of an R Markdown document. *(session 1)*
 
-2.  Knit an R Markdown document. *(session 1)*
+2.  Make and knit an R Markdown document. *(session 1)*
 
 3.  Add text, R code, and output to an R Markdown document. *(session
     1)*
 
-4.  Create an exploratory data analysis report with R Markdown.
-    *(session 1)*
+4.  Change the output format of an R Markdown document. *(session 2)*
 
-5.  Change the output format of an R Markdown document. *(session 2)*
-
-6.  Use R code to create tables summarizing participants (i.e., a “Table
+5.  Use R code to create tables summarizing participants (i.e., a “Table
     One”) and statistical analyses within an R Markdown document.
     *(session 2)*
 
-7.  Organize files and set up file paths when working in an R Markdown
+6.  Organize files and set up file paths when working in an R Markdown
     project. *(session 3)*
 
-8.  Avoid growing pains as your R Markdown project evolves alongside
+7.  Avoid growing pains as your R Markdown project evolves alongside
     your research project. *(session 3)*
 
-9.  Export your figures and tables to a place you can find on your
+8.  Export your figures and tables to a place you can find on your
     computer *(session 3)*
 
-10. Embed figures generated from R code in an R Markdown document,
+9.  Embed figures generated from R code in an R Markdown document,
     including multi-panel plots. *(session 4)*
 
-11. Control how your figures look using `knitr` code chunk options,
+10. Control how your figures look using `knitr` code chunk options,
     captions, and cross-references. *(session 4)*
 
-12. Expand into new output formats like powerpoint presentations,
+11. Expand into new output formats like powerpoint presentations,
     conference posters, etc.- all built with R Markdown as the
     foundation *(wrap-up)*
 

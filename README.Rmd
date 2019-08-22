@@ -18,17 +18,17 @@ output: github_document
 
 In this four-hour workshop, I will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock clinical trial dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. 
 
+We'll work on template R Markdown documents from four different "phases" of our mock clinical trial research project: an exploratory data analysis, a progress report, a draft manuscript, and a final paper. Along the way, we'll learn about the basics of working with R Markdown and how to include tables, data, and graphics.
+
 ## Learning objectives
 
 Attendees will learn how to:
 
 1. Identify the basic anatomy of an R Markdown document. *(session 1)*
 
-1. Knit an R Markdown document. *(session 1)*
+1. Make and knit an R Markdown document. *(session 1)*
 
 1. Add text, R code, and output to an R Markdown document. *(session 1)*
-
-1. Create an exploratory data analysis report with R Markdown. *(session 1)*
 
 1. Change the output format of an R Markdown document. *(session 2)*
 
