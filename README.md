@@ -50,7 +50,7 @@ Attendees will learn how to:
     your research project. *(session 3)*
 
 8.  Export your figures and tables to a place you can find on your
-    computer *(session 3)*
+    computer so you can share and re-use them. *(session 3)*
 
 9.  Embed figures generated from R code in an R Markdown document,
     including multi-panel plots. *(session 4)*

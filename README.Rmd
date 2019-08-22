@@ -38,7 +38,7 @@ Attendees will learn how to:
 
 1. Avoid growing pains as your R Markdown project evolves alongside your research project. *(session 3)*
 
-1. Export your figures and tables to a place you can find on your computer *(session 3)*
+1. Export your figures and tables to a place you can find on your computer so you can share and re-use them. *(session 3)*
 
 1. Embed figures generated from R code in an R Markdown document, including multi-panel plots. *(session 4)*
 
