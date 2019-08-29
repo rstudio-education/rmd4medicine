@@ -67,23 +67,9 @@ introduce self
 
 ---
 
-# Pop quiz: 
+```{r child="what-is-rmd.Rmd"}
 
-_(discuss with a neighbor)_
-
-What *is* R Markdown?
-
-1. An authoring framework for data science.
-
-1. A document format (`.Rmd`).
-
-1. An R package named `rmarkdown`.
-
-1. A file format for making dynamic documents with R. 
-
-1. A tool for integrating prose, code, and results.
-
-1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+```
 
 ---
 

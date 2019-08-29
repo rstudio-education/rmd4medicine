@@ -4,7 +4,7 @@
     <title>R Markdown for Medicine</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-08-28" />
+    <meta name="date" content="2019-08-29" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <script>
@@ -49,9 +49,11 @@ class: title-slide, center, middle
 
 # R Markdown for Medicine
 
-## Alison Hill &amp;#183; RStudio
+## 
 
-### <i class="fab  fa-twitter "></i> @apreshill
+### Alison Hill &amp;#183; RStudio
+
+#### <i class="fas  fa-code-branch "></i> alison.rbind.io &amp;#183; <i class="fab  fa-twitter "></i> @apreshill 
 
 &lt;!-- this ends up being the title slide since seal = FALSE--&gt;
 
@@ -75,6 +77,8 @@ class: center, middle
 
 ---
 
+
+
 # What *is* R Markdown?
 
 1. An authoring framework for data science.
@@ -87,7 +91,20 @@ class: center, middle
 
 1. A tool for integrating prose, code, and results.
 
+1. Wizardry.
+
+---
+
+
+
+# How does R Markdown work?
+
+1. 🤷
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
+
 1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
 
 ---
 
@@ -144,8 +161,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();
-setInterval(function() {slideshow.gotoNextSlide();}, 5000);</script>
+})();</script>
 
 <script>
 (function() {

@@ -49,7 +49,7 @@ hero_media = "rmd4med-sq.jpg"
 
 # Note. An optional note to show underneath the links.
 [cta_note]
-  label = 'Register by September 14 @ 9:00am'
+  label = ''
 +++
 
 A four-hour workshop that will take you on a tour of how to get from data to manuscript using [R Markdown](https://rmarkdown.rstudio.com/). You'll learn:

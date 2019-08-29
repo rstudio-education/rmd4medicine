@@ -1,0 +1,17 @@
+---
+output: html_document
+---
+
+# What *is* R Markdown?
+
+1. An authoring framework for data science.
+
+1. A document format (`.Rmd`).
+
+1. An R package named `rmarkdown`.
+
+1. A file format for making dynamic documents with R. 
+
+1. A tool for integrating prose, code, and results.
+
+1. Wizardry.

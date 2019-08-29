@@ -1,0 +1,11 @@
+---
+output: html_document
+---
+
+# How does R Markdown work?
+
+1. `r emo::ji("shrug")`
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.

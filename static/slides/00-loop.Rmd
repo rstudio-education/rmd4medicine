@@ -8,7 +8,7 @@ output:
     seal: false 
     lib_dir: libs
     nature:
-      autoplay: 5000
+      # autoplay: 5000
       highlightStyle: github
       slideNumberFormat: "" 
       highlightLines: true
@@ -40,9 +40,11 @@ class: title-slide, center, middle
 
 # `r rmarkdown::metadata$title`
 
-## `r rmarkdown::metadata$author` &#183; RStudio
+## `r rmarkdown::metadata$subtitle`
 
-### `r icon::fa("twitter")` @apreshill
+### `r rmarkdown::metadata$author` &#183; RStudio
+
+#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
 
 <!-- this ends up being the title slide since seal = FALSE-->
 
@@ -66,19 +68,16 @@ class: center, middle
 
 ---
 
-# What *is* R Markdown?
+```{r child="what-is-rmd.Rmd"}
 
-1. An authoring framework for data science.
+```
 
-1. A document format (`.Rmd`).
+---
 
-1. An R package named `rmarkdown`.
+```{r child="how-rmd-works.Rmd"}
 
-1. A file format for making dynamic documents with R. 
+```
 
-1. A tool for integrating prose, code, and results.
-
-1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
 
 ---
 
