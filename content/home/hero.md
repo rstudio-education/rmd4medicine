@@ -52,9 +52,9 @@ hero_media = "rmd4med-sq.jpg"
   label = 'Register by September 14 @ 9:00am'
 +++
 
-A four-hour workshop that will take you on a tour of how to get from data to manuscript using R Markdown. Starting with a mock clinical trial dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. You'll learn:
+A four-hour workshop that will take you on a tour of how to get from data to manuscript using [R Markdown](https://rmarkdown.rstudio.com/). Starting with a mock clinical trial dataset, we'll use R Markdown to combine prose, R code, and figures and tables created with R code into a nicely formatted and reproducible final manuscript. You'll learn:
 
-+ The basics of R Markdown & `knitr`
-+ How to add and format tables 
-+ Efficient workflows for working with data in R Markdown
-+ How to add and format graphics
++ The basics of [Markdown](https://daringfireball.net/projects/markdown/) & [`knitr`](https://yihui.name/knitr/)
++ How to add tables for different outputs
++ Workflows for working with data
++ How to include and style graphics

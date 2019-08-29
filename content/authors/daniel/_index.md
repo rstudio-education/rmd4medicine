@@ -44,9 +44,6 @@ social:
 - icon: orcid
   icon_pack: ai
   link: http://orcid.org/0000-0003-3857-1741
-- icon: envelope
-  icon_pack: fas
-  link: '#contact'
 user_groups:
 - Teaching Assistants
 ---
