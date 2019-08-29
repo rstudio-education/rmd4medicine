@@ -1,0 +1,88 @@
+---
+title: "R Markdown for Medicine"
+author: Alison Hill
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      autoplay: 5000
+      highlightStyle: github
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: [loop.html, header.html]
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r packages, include=FALSE}
+library(countdown)
+```
+
+
+layout: true
+background-image: url(img/RStudio-Logo-Flat.png)
+background-position: 0% 100%;
+background-size: 10%
+
+<!--put cloud link in footer going across-->
+
+---
+class: title-slide, center, middle
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$author` &#183; RStudio
+
+### `r icon::fa("twitter")` @apreshill
+
+<!-- this ends up being the title slide since seal = FALSE-->
+
+???
+
+---
+
+go here and log in (free):
+cloud link
+
+---
+
+wifi network and password go in footer
+
+---
+class: center, middle
+
+# Do this! `r emo::ji("point_down")`
+
+# https://commonmark.org/help/tutorial/
+
+---
+
+# What *is* R Markdown?
+
+1. An authoring framework for data science.
+
+1. A document format (`.Rmd`).
+
+1. An R package named `rmarkdown`.
+
+1. A file format for making dynamic documents with R. 
+
+1. A tool for integrating prose, code, and results.
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+---
+
+```{r echo = FALSE, fig.cap="Artwork by @allison_horst"}
+knitr::include_graphics("images/rmarkdown_wizards.png")
+```
+

@@ -1,0 +1,15 @@
+# Font style metadata
+name = "alison"
+
+# Optional Google font URL
+google_fonts = "Prata|Muli:400,700|Source+Code+Pro"
+
+# Font families
+heading_font = "Prata"
+body_font = "Muli"
+nav_font = "Muli"
+mono_font = "Source Code Pro"
+
+# Font size
+font_size = "18"
+font_size_small = "16"

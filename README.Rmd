@@ -79,7 +79,7 @@ Alison Hill is a Data Scientist & Professional Educator at RStudio. Prior to joi
 
 ## Pre-work
 
-```{r child = here::here('prework.Rmd')}
+```{r child = here::here('static/prework.Rmd')}
 ```
 
 ---

@@ -1,0 +1,255 @@
+---
+title: "02<br>Outputs & Tables"
+subtitle: "R Markdown for Medicine"
+author: Alison Hill
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow-night-eighties
+      highlightLanguage: ["r", "yaml", "markdown"]
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: header.html  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r packages, include=FALSE}
+library(countdown)
+```
+
+
+```{r echo = FALSE}
+countdown(minutes = 10, update_every = 15)
+```
+
+---
+
+layout: true
+background-image: url(img/RStudio-Logo-Flat.png)
+background-position: 0% 100%;
+background-size: 100%
+
+<!--put cloud link in footer going across-->
+
+---
+class: title-slide, center, middle
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` &#183; RStudio
+
+#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
+
+<!-- this ends up being the title slide since seal = FALSE-->
+
+???
+
+---
+
+go here and log in (free):
+cloud link
+
+---
+
+plot here times knitted so far
+
+---
+
+# Pop quiz: 
+
+_(discuss with a neighbor)_
+
+Which of the following is **NOT** a part of R Markdown basic anatomy?
+
+1. YAML.
+
+1. Text (written in Markdown).
+
+1. Code.
+
+1. Output.
+
+1. 
+
+
+
+---
+
+# Your turn
+
+Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening?
+
+```{r echo = FALSE}
+countdown(minutes = 5)
+```
+
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+</span> 
+
+--
+
+# YAML
+
+--
+
+_"YAML Ain't Markup Language"_
+
+---
+
+acronym not helpful, what does it mean, key: value pairs
+
+think about "metadata"
+
+---
+
+# Your turn: edit the YAML
+
+Add your name as first author
+Change the title to something you might actually write
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">2</strong>
+</span> 
+
+--
+
+# Output options
+
+--
+
+The `output:` key in your YAML
+
+---
+nesting matters
+
+
+---
+
+# Your turn: add an output option
+
+add a toc
+
+make it floating
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">3</strong>
+</span> 
+
+--
+
+# Output formats
+
+--
+
+Indented under the `output:` key in your YAML
+
+---
+
+# Your turn: change the output format
+
+Knit to something else (word?)
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">4</strong>
+</span> 
+
+--
+
+# Tables
+
+---
+
+jen's simplicity versus complexity
+
+also tables from you (usually words) versus tables from R (usually numbers)
+
+for print versus online versus word
+
+for eda versus publication
+
+---
+
+for eda
+
+Janitor
+
+---
+
+online options: DT
+
+---
+
+print + online
+
+gt
+
+---
+
+arsenal (need `knitr` asis options)
+
+---
+
+# Your turn: spruce up the report
+
+pick one table to include?
+
+To exclude, use your `knitr` code chunk options (do not delete!)
+
+add text to frame the table and what it is showing
+
+```{r echo = FALSE}
+countdown(minutes = 5)
+```
+
+---
+class: middle, center
+
+# `r emo::ji("stopwatch")`
+
+# Time for a break!
+
+
+Please be back in 15 minutes.

@@ -1,0 +1,151 @@
+\documentclass[]{elsarticle} %review=doublespace preprint=single 5p=2 column
+%%% Begin My package additions %%%%%%%%%%%%%%%%%%%
+\usepackage[hyphens]{url}
+
+  \journal{An awesome journal} % Sets Journal name
+
+
+\usepackage{lineno} % add
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{graphicx}
+\usepackage{booktabs} % book-quality tables
+%%%%%%%%%%%%%%%% end my additions to header
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\bibliographystyle{elsarticle-harv}
+\usepackage{longtable}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={Short Paper},
+            colorlinks=false,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+\setcounter{secnumdepth}{5}
+% Pandoc toggle for numbering sections (defaults to be off)
+% Pandoc header
+
+
+
+\begin{document}
+\begin{frontmatter}
+
+  \title{Short Paper}
+    \author[RStudio]{Alison Hill, Ph.D.\corref{c1}}
+   \ead{alison@rstudio.com} 
+   \cortext[c1]{Corresponding Author}
+    \author[University of Michigan]{Peter Higgins, MD, Ph.D.}
+   \ead{phiggins@med.umich.edu} 
+  
+      \address[RStudio]{Department, Street, City, State, Zip}
+    \address[University of Michigan]{Department of Internal Medicine, Division of Gastroenterology, 1150 West Medical Center Drive, Ann Arbor, MI 48109}
+  
+  \begin{abstract}
+  This is the abstract.
+  
+  It consists of two paragraphs.
+  \end{abstract}
+  
+ \end{frontmatter}
+
+\emph{Text based on elsarticle sample manuscript, see \url{http://www.elsevier.com/author-schemas/latex-instructions\#elsarticle}}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\hypertarget{background}{%
+\paragraph{Background}\label{background}}
+
+stuff
+
+\hypertarget{objectives}{%
+\paragraph{Objectives}\label{objectives}}
+
+stuff
+
+\hypertarget{hypotheses}{%
+\paragraph{Hypotheses}\label{hypotheses}}
+
+stuff
+
+\begin{itemize}
+\item
+  document style
+\item
+  baselineskip
+\item
+  front matter
+\item
+  keywords and MSC codes
+\item
+  theorems, definitions and proofs
+\item
+  lables of enumerations
+\item
+  citation style and labeling.
+\end{itemize}
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+So many people enrolled. See our table one.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+There are various bibliography styles available. You can select the
+style of your choice in the preamble of this document. These styles are
+Elsevier styles based on standard styles like Harvard and Vancouver.
+Please use BibTeX~to generate your bibliography and include DOIs
+whenever available.
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+Here are two sample references: Feynman and Vernon Jr. (1963; Dirac, 1953).
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Dirac1953888}{}%
+Dirac, P., 1953. The lorentz transformation and absolute time. Physica 19, 888--896. doi:\href{https://doi.org/10.1016/S0031-8914(53)80099-6}{10.1016/S0031-8914(53)80099-6}
+
+\leavevmode\hypertarget{ref-Feynman1963118}{}%
+Feynman, R., Vernon Jr., F., 1963. The theory of a general quantum system interacting with a linear dissipative system. Annals of Physics 24, 118--173. doi:\href{https://doi.org/10.1016/0003-4916(63)90068-X}{10.1016/0003-4916(63)90068-X}
+
+
+\end{document}
+
+

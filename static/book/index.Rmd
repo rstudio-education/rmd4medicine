@@ -1,0 +1,91 @@
+--- 
+title: "R Markdown for Medicine"
+author:
+- Alison Hill^[RStudio, https://alison.rbind.io/]
+- Peter Higgins^[University of Michigan, https://www.uofmhealth.org/profile/4/peter-doyle-higgins-md-phd]
+date: "`r Sys.Date()`"
+documentclass: book
+github-repo: rstudio-education/rmd4medicine
+url: 'https\://bookdown.org/john/awesome/'
+site: bookdown::bookdown_site
+description: This is a minimal example of using the bookdown package to write a book.
+  The output format for this example is bookdown::gitbook.
+---
+
+
+# Preface {-}
+
+This is being developed for a workshop in September at the 2019 R/Medicine conference. This book is not intended to be a "stand-alone" or authoritative resource on this topic (yet!), nor will it capture all workshop content. This is a book to organize and share ideas and code.
+
+# Prework {-}
+
+```{r child = here::here('prework.Rmd'), eval=FALSE}
+```
+
+# Workshop outline {-}
+
+1. Introduction (~10 min)
+    + Phase: `final-paper.Rmd`
+    + Show "final paper" Rmd (has all the things: table one, multi-panel plot, etc)
+    + *Your turn*
+      + Get in groups, introduce, KNIT (to HTML)! Read through Rmd + output, what does it do? Annotate, narrate.
+    
+1. Session: R Markdown Basics (40 min)
+    + Phase: `first-eda.Rmd` (an exploratory data analysis)
+    + Basic anatomy of this Rmd doc (4 key components) (~5 min)
+    + YAML (~5 min)
+    + Markdown (~5 min)
+      + Headers
+      + Lists
+      + Links and images
+      + Equations
+      + Tables
+    + Code (~5 min)
+      + Code chunks
+      + Inline code
+    + Output (~5 min)
+      + Chunk options
+    + How it all fits together (~5 min)
+    + *Your turn* (~10 min)
+      + Change output format in YAML to `distill::distill_article` (note! default global knitr echo = FALSE for this output format!)
+      + Change some code chunks to `include=FALSE`
+      + I have `echo = TRUE` set as a global option; turn this to `FALSE` then set the most critical code chunks to `echo = TRUE`
+      + (Perhaps?) add more meaningful headers and chunk names (then look at in up/down nav and how to show document outline in RStudio)
+    
+1. Session: Tables (45 min)
+    + Phase: `first-progress.Rmd` (a first progress report)
+    + Change the output format to word! (~5 min)
+    + Make table one with `arsenal::tableby()` (~20 min):
+        + remember to point out `knitr` code chunk options to `results="asis"`
+        + grouped by arm with details on sex and age in each group
+        + ungrouped, with stats on BMI, sex, Age in each group
+        + control digits
+        + export table
+    + Consider `flextable` here?
+    + *Your turn* (~10 min)
+    
+1. Session: Data and workflows (50 min)
+    + Phase: `first-draft.Rmd` (a first draft manuscript)
+    
+1. Session: Graphics (45 min)
+    + Phase: `final-paper.Rmd` (a mock paper, based on mock data)
+
+# Uplevels {-}
+
+What are uplevels? The [Urban Dictionary](https://www.urbandictionary.com/define.php?term=Uplevel) gives this definition:
+
+> "Inspired strategic action creating greater capabilities"
+
+We provide uplevels for each workshop section: these are extras we won't be able to cover in the workshop, but are ways that participants can go beyond the workshop materials to see additional ways that they can expand their R Markdown superpowers.
+
+:::rstudio-tip
+Through the book, we highlight specific ways that RStudio can expedite your package development workflow, in specially formatted sections like this.
+:::
+
+:::tip
+RStudio exposes `load_all()` in the *Build* menu, in the *Build* pane via *More > Load All*, and in keyboard shortcuts Ctrl + Shift + L (Windows & Linux) or Cmd + Shift + L (macOS).
+:::
+
+:::turn
+Your turn
+:::

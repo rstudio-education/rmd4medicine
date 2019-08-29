@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>R Markdown for Medicine</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <meta name="date" content="2019-08-28" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <script>
+    // Adapted from https://github.com/gnab/remark/wiki/Configuration#using-javascript-to-create-a-continuously-looping-slideshow
+    // every 8 seconds (change to your desired interval), fire the helper function
+    document.addEventListener("DOMContentLoaded", function() {
+      setInterval(function () {carousel(slideshow)}, 8000);
+      
+      function carousel(varObject) {
+      	var slideCount = varObject.getSlideCount()-1;
+      	var currentSlide = varObject.getCurrentSlideIndex();
+      	// if the slideshow is on the last slide, go back to the first slide; if not, call gotoNextSlide();
+      	if (currentSlide == slideCount) {
+      		varObject.gotoFirstSlide();
+      	}
+      	else { varObject.gotoNextSlide(); }
+      }
+    });
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+layout: true
+background-image: url(img/RStudio-Logo-Flat.png)
+background-position: 0% 100%;
+background-size: 10%
+
+&lt;!--put cloud link in footer going across--&gt;
+
+---
+class: title-slide, center, middle
+
+# R Markdown for Medicine
+
+## Alison Hill &amp;#183; RStudio
+
+### <i class="fab  fa-twitter "></i> @apreshill
+
+&lt;!-- this ends up being the title slide since seal = FALSE--&gt;
+
+???
+
+---
+
+go here and log in (free):
+cloud link
+
+---
+
+wifi network and password go in footer
+
+---
+class: center, middle
+
+# Do this! 👇
+
+# https://commonmark.org/help/tutorial/
+
+---
+
+# What *is* R Markdown?
+
+1. An authoring framework for data science.
+
+1. A document format (`.Rmd`).
+
+1. An R package named `rmarkdown`.
+
+1. A file format for making dynamic documents with R. 
+
+1. A tool for integrating prose, code, and results.
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+---
+
+&lt;div class="figure"&gt;
+&lt;img src="images/rmarkdown_wizards.png" alt="Artwork by @allison_horst" width="5303" /&gt;
+&lt;p class="caption"&gt;Artwork by @allison_horst&lt;/p&gt;
+&lt;/div&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+setInterval(function() {slideshow.gotoNextSlide();}, 5000);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

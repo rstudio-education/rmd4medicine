@@ -1,0 +1,132 @@
+---
+title: "02<br>Tables"
+subtitle: "R Markdown for Medicine"
+author: Alison Hill
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow-night-eighties
+      highlightLanguage: ["r", "yaml", "markdown"]
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: header.html  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r packages, include=FALSE}
+library(countdown)
+```
+
+---
+
+```{r echo = FALSE}
+countdown(minutes = 15, update_every = 15)
+```
+
+---
+
+layout: true
+background-image: url(img/RStudio-Logo-Flat.png)
+background-position: 0% 100%;
+background-size: 100%
+
+<!--put cloud link in footer going across-->
+
+---
+class: title-slide, center, middle
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` &#183; RStudio
+
+#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
+
+<!-- this ends up being the title slide since seal = FALSE-->
+
+???
+
+---
+
+go here and log in (free):
+cloud link
+
+---
+
+plot here times knitted so far
+
+---
+
+# Pop quiz: 
+
+_(discuss with a neighbor)_
+
+What are keys you'll typically want to use in the YAML?
+
+1. The document `title`
+
+1. The document `date`
+
+1. The document `output` format
+
+1. The document's `eval` option
+
+1. The document's `author`
+
+1. The packages used
+
+
+---
+
+R projects
+
+- project organization 
+
+- naming files
+
+---
+
+setup chunk (do this earlier with named chunks in 01)
+
+---
+
+file paths (here)
+
+---
+
+common data import patterns
+
+---
+
+
+change output format to a bookdown one for single docs
+
+---
+
+demo cross references for headers/images (will need knitr include graphics)
+
+---
+
+bibliography
+
+---
+class: middle, center
+
+# `r emo::ji("stopwatch")`
+
+# Time for a break!
+
+
+Please be back in 10 minutes.

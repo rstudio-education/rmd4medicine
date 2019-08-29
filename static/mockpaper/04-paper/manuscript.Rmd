@@ -1,0 +1,84 @@
+---
+title: Short Paper
+author:
+  - name: "Alison Hill, Ph.D."
+    email: alison@rstudio.com
+    affiliation: RStudio
+    footnote: Corresponding Author
+  - name: "Peter Higgins, MD, Ph.D."
+    email: phiggins@med.umich.edu
+    affiliation: University of Michigan
+address:
+  - code: RStudio
+    address: Department, Street, City, State, Zip
+  - code: University of Michigan
+    address: Department of Internal Medicine, Division of Gastroenterology, 1150 West Medical Center Drive, Ann Arbor, MI 48109
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+
+journal: "An awesome journal"
+date: "`r Sys.Date()`"
+bibliography: mybibfile.bib
+#linenumbers: true
+#numbersections: true
+csl: elsevier-harvard.csl
+output:
+  bookdown::pdf_book:
+    base_format: rticles::elsevier_article
+---
+
+_Text based on elsarticle sample manuscript, see [http://www.elsevier.com/author-schemas/latex-instructions#elsarticle](http://www.elsevier.com/author-schemas/latex-instructions#elsarticle)_
+
+
+Introduction
+==========================
+
+#### Background
+
+stuff
+
+#### Objectives
+
+stuff
+
+#### Hypotheses
+
+stuff
+
+-   document style
+
+-   baselineskip
+
+-   front matter
+
+-   keywords and MSC codes
+
+-   theorems, definitions and proofs
+
+-   lables of enumerations
+
+-   citation style and labeling.
+
+Methods
+============
+
+So many people enrolled. See our table one.
+
+Results
+===================
+
+There are various bibliography styles available. You can select the
+style of your choice in the preamble of this document. These styles are
+Elsevier styles based on standard styles like Harvard and Vancouver.
+Please use BibTeX to generate your bibliography and include DOIs
+whenever available.
+
+Discussion
+===================
+
+Here are two sample references: @Feynman1963118 [@Dirac1953888].
+
+References {#references .unnumbered}
+==========

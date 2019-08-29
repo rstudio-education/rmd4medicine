@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400');
+@import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
+
+
+body { 
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  color: #404040;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prata', sans-serif;
+  font-weight: 400;
+  color: #5699cc;
+}
+
+.remark-code { 
+  font-family: 'PT Mono', monospace;
+}
+
+.remark-inline-code { 
+  font-family: 'PT Mono', monospace;
+}
+
+@media print {
+  body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+}
+
+

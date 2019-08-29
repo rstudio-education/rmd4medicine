@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 16 Using data | R Markdown for Medicine</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 16 Using data | R Markdown for Medicine" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://bookdown.org/john/awesome/" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio-education/rmd4medicine" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 16 Using data | R Markdown for Medicine" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Alison Hill" />
+<meta name="author" content="Peter Higgins" />
+
+
+<meta name="date" content="2019-08-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="importing-data.html">
+<link rel="next" href="dealing-with-other-peoples-data.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">rmd4medicine</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="prework.html"><a href="prework.html"><i class="fa fa-check"></i>Prework</a></li>
+<li class="chapter" data-level="" data-path="workshop-outline.html"><a href="workshop-outline.html"><i class="fa fa-check"></i>Workshop outline</a></li>
+<li class="chapter" data-level="" data-path="uplevels.html"><a href="uplevels.html"><i class="fa fa-check"></i>Uplevels</a></li>
+<li class="part"><span><b>Warmup</b></span></li>
+<li class="chapter" data-level="" data-path="warmup-intro.html"><a href="warmup-intro.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="0.1" data-path="warmup-intro.html"><a href="warmup-intro.html#first-look"><i class="fa fa-check"></i><b>0.1</b> First look</a></li>
+<li class="chapter" data-level="0.2" data-path="warmup-intro.html"><a href="warmup-intro.html#first-report"><i class="fa fa-check"></i><b>0.2</b> First report</a></li>
+<li class="chapter" data-level="0.3" data-path="warmup-intro.html"><a href="warmup-intro.html#first-draft"><i class="fa fa-check"></i><b>0.3</b> First draft</a></li>
+</ul></li>
+<li class="part"><span><b>I R Markdown Basics</b></span></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="basic-anatomy.html"><a href="basic-anatomy.html"><i class="fa fa-check"></i><b>1</b> Basic Anatomy</a></li>
+<li class="chapter" data-level="2" data-path="using-r-markdown-in-rstudio.html"><a href="using-r-markdown-in-rstudio.html"><i class="fa fa-check"></i><b>2</b> Using R Markdown in RStudio</a></li>
+<li class="chapter" data-level="3" data-path="whole-document-metadata.html"><a href="whole-document-metadata.html"><i class="fa fa-check"></i><b>3</b> Whole document metadata</a><ul>
+<li class="chapter" data-level="3.1" data-path="whole-document-metadata.html"><a href="whole-document-metadata.html#all-about-yaml"><i class="fa fa-check"></i><b>3.1</b> All about YAML</a></li>
+<li class="chapter" data-level="3.2" data-path="whole-document-metadata.html"><a href="whole-document-metadata.html#changing-output-formats"><i class="fa fa-check"></i><b>3.2</b> Changing output formats</a></li>
+<li class="chapter" data-level="3.3" data-path="whole-document-metadata.html"><a href="whole-document-metadata.html#adding-output-options"><i class="fa fa-check"></i><b>3.3</b> Adding output options</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="add-text-with-markdown.html"><a href="add-text-with-markdown.html"><i class="fa fa-check"></i><b>4</b> Add text with Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="add-text-with-markdown.html"><a href="add-text-with-markdown.html#headers"><i class="fa fa-check"></i><b>4.1</b> Headers</a></li>
+<li class="chapter" data-level="4.2" data-path="add-text-with-markdown.html"><a href="add-text-with-markdown.html#text-images"><i class="fa fa-check"></i><b>4.2</b> Text &amp; Images</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="add-code.html"><a href="add-code.html"><i class="fa fa-check"></i><b>5</b> Add code</a></li>
+<li class="chapter" data-level="6" data-path="use-chunk-options.html"><a href="use-chunk-options.html"><i class="fa fa-check"></i><b>6</b> Use chunk options</a><ul>
+<li class="chapter" data-level="6.1" data-path="use-chunk-options.html"><a href="use-chunk-options.html#how-it-all-works"><i class="fa fa-check"></i><b>6.1</b> How it all works</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="up-rmd.html"><a href="up-rmd.html"><i class="fa fa-check"></i><b>7</b> Uplevel</a><ul>
+<li class="chapter" data-level="7.1" data-path="up-rmd.html"><a href="up-rmd.html#adding-output-formats"><i class="fa fa-check"></i><b>7.1</b> Adding output formats</a></li>
+<li class="chapter" data-level="7.2" data-path="up-rmd.html"><a href="up-rmd.html#adding-multiple-yaml-keys"><i class="fa fa-check"></i><b>7.2</b> Adding multiple YAML keys</a></li>
+<li class="chapter" data-level="7.3" data-path="up-rmd.html"><a href="up-rmd.html#live-preview-without-reknitting"><i class="fa fa-check"></i><b>7.3</b> Live preview without reknitting</a></li>
+<li class="chapter" data-level="7.4" data-path="up-rmd.html"><a href="up-rmd.html#beef-up-your-yaml"><i class="fa fa-check"></i><b>7.4</b> Beef up your YAML</a></li>
+<li class="chapter" data-level="7.5" data-path="up-rmd.html"><a href="up-rmd.html#knit-with-parameters"><i class="fa fa-check"></i><b>7.5</b> Knit with parameters</a></li>
+<li class="chapter" data-level="7.6" data-path="up-rmd.html"><a href="up-rmd.html#knit-from-the-command-line"><i class="fa fa-check"></i><b>7.6</b> Knit from the command line</a></li>
+<li class="chapter" data-level="7.7" data-path="up-rmd.html"><a href="up-rmd.html#extend-your-r-markdown"><i class="fa fa-check"></i><b>7.7</b> Extend your R Markdown</a></li>
+<li class="chapter" data-level="7.8" data-path="up-rmd.html"><a href="up-rmd.html#r-markdown-templates"><i class="fa fa-check"></i><b>7.8</b> R Markdown templates</a></li>
+<li class="chapter" data-level="7.9" data-path="up-rmd.html"><a href="up-rmd.html#git-rmd"><i class="fa fa-check"></i><b>7.9</b> GitHub</a></li>
+</ul></li>
+<li class="part"><span><b>II Tables</b></span></li>
+<li class="chapter" data-level="" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="8" data-path="janitor-tabyls.html"><a href="janitor-tabyls.html"><i class="fa fa-check"></i><b>8</b> Janitor tabyls</a></li>
+<li class="chapter" data-level="9" data-path="make-a-table-1.html"><a href="make-a-table-1.html"><i class="fa fa-check"></i><b>9</b> Make a “Table 1”</a><ul>
+<li class="chapter" data-level="9.1" data-path="make-a-table-1.html"><a href="make-a-table-1.html#the-arsenal-package"><i class="fa fa-check"></i><b>9.1</b> The arsenal package</a></li>
+<li class="chapter" data-level="9.2" data-path="make-a-table-1.html"><a href="make-a-table-1.html#the-tableone-package"><i class="fa fa-check"></i><b>9.2</b> The tableone package</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="markdown-tables.html"><a href="markdown-tables.html"><i class="fa fa-check"></i><b>10</b> Markdown tables</a></li>
+<li class="chapter" data-level="11" data-path="kable-tables.html"><a href="kable-tables.html"><i class="fa fa-check"></i><b>11</b> kable tables</a></li>
+<li class="chapter" data-level="12" data-path="flextable.html"><a href="flextable.html"><i class="fa fa-check"></i><b>12</b> flextable</a></li>
+<li class="chapter" data-level="13" data-path="up-tables.html"><a href="up-tables.html"><i class="fa fa-check"></i><b>13</b> Uplevel</a><ul>
+<li class="chapter" data-level="13.1" data-path="up-tables.html"><a href="up-tables.html#html-widgets-dt"><i class="fa fa-check"></i><b>13.1</b> HTML widgets (DT)</a></li>
+<li class="chapter" data-level="13.2" data-path="up-tables.html"><a href="up-tables.html#tables-for-eda"><i class="fa fa-check"></i><b>13.2</b> Tables for EDA</a></li>
+</ul></li>
+<li class="part"><span><b>III Data + Workflows</b></span></li>
+<li class="chapter" data-level="" data-path="introduction-2.html"><a href="introduction-2.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="14" data-path="projects-and-files.html"><a href="projects-and-files.html"><i class="fa fa-check"></i><b>14</b> Projects and files</a></li>
+<li class="chapter" data-level="15" data-path="importing-data.html"><a href="importing-data.html"><i class="fa fa-check"></i><b>15</b> Importing data</a></li>
+<li class="chapter" data-level="16" data-path="using-data.html"><a href="using-data.html"><i class="fa fa-check"></i><b>16</b> Using data</a></li>
+<li class="chapter" data-level="17" data-path="dealing-with-other-peoples-data.html"><a href="dealing-with-other-peoples-data.html"><i class="fa fa-check"></i><b>17</b> Dealing with other people’s data</a></li>
+<li class="chapter" data-level="18" data-path="r-markdown-collections.html"><a href="r-markdown-collections.html"><i class="fa fa-check"></i><b>18</b> R Markdown collections</a></li>
+<li class="chapter" data-level="19" data-path="up-flow.html"><a href="up-flow.html"><i class="fa fa-check"></i><b>19</b> Uplevel</a><ul>
+<li class="chapter" data-level="19.1" data-path="up-flow.html"><a href="up-flow.html#git-flow"><i class="fa fa-check"></i><b>19.1</b> GitHub</a></li>
+<li class="chapter" data-level="19.2" data-path="up-flow.html"><a href="up-flow.html#collaborating"><i class="fa fa-check"></i><b>19.2</b> Collaborating</a></li>
+<li class="chapter" data-level="19.3" data-path="up-flow.html"><a href="up-flow.html#datapasta"><i class="fa fa-check"></i><b>19.3</b> Datapasta</a></li>
+<li class="chapter" data-level="19.4" data-path="up-flow.html"><a href="up-flow.html#reprex"><i class="fa fa-check"></i><b>19.4</b> Reprex</a></li>
+</ul></li>
+<li class="part"><span><b>IV Graphics</b></span></li>
+<li class="chapter" data-level="" data-path="introduction-3.html"><a href="introduction-3.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="20" data-path="controlling-size.html"><a href="controlling-size.html"><i class="fa fa-check"></i><b>20</b> Controlling size</a></li>
+<li class="chapter" data-level="21" data-path="controlling-resolution.html"><a href="controlling-resolution.html"><i class="fa fa-check"></i><b>21</b> Controlling resolution</a></li>
+<li class="chapter" data-level="22" data-path="adding-captions-references.html"><a href="adding-captions-references.html"><i class="fa fa-check"></i><b>22</b> Adding captions &amp; references</a></li>
+<li class="chapter" data-level="23" data-path="exporting-all-graphics.html"><a href="exporting-all-graphics.html"><i class="fa fa-check"></i><b>23</b> Exporting all graphics</a></li>
+<li class="chapter" data-level="24" data-path="multi-panel.html"><a href="multi-panel.html"><i class="fa fa-check"></i><b>24</b> Multi-panel</a></li>
+<li class="chapter" data-level="25" data-path="up-graphics.html"><a href="up-graphics.html"><i class="fa fa-check"></i><b>25</b> Uplevel</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="colophon.html"><a href="colophon.html"><i class="fa fa-check"></i><b>A</b> Colophon</a></li>
+<li class="chapter" data-level="B" data-path="license.html"><a href="license.html"><i class="fa fa-check"></i><b>B</b> License</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R Markdown for Medicine</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="using-data" class="section level1">
+<h1><span class="header-section-number">Chapter 16</span> Using data</h1>
+<p>primarily <code>here</code> package stuff with file paths</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="importing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dealing-with-other-peoples-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>
