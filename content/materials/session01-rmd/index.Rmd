@@ -1,0 +1,25 @@
+---
+title: The Basics of Markdown and Knitr
+date: '2019-08-29'
+slug: 01-rmd
+categories: [slides]
+tags: []
+subtitle: ''
+summary: ''
+authors: [alison]
+lastmod: '2019-08-29T11:21:55-07:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+weight: 1
+---
+
+[View slides](/slides/01-rmd.html)
+
+```{r echo=FALSE}
+knitr::include_url("/slides/01-rmd.html")
+```
+

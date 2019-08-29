@@ -1,5 +1,5 @@
 ---
-title: "02<br>Tables"
+title: "03<br>Data & Workflows"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill
 date: "`r Sys.Date()`"
@@ -27,8 +27,6 @@ options(htmltools.dir.version = FALSE)
 ```{r packages, include=FALSE}
 library(countdown)
 ```
-
----
 
 ```{r echo = FALSE}
 countdown(minutes = 15, update_every = 15)
