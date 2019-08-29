@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400');
 @import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
 
@@ -17,11 +17,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .remark-code { 
-  font-family: 'PT Mono', monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .remark-inline-code { 
-  font-family: 'PT Mono', monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 @media print {

@@ -142,7 +142,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 }
 
 .title-slide h2 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 500;
   font-size: 1.6em;
   color: #FFFFFF;
@@ -153,7 +153,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 }
 
 .title-slide h3 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 300;
   font-size: 1.6em;
   color: #FFFFFF;
@@ -163,7 +163,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 }
 
 .title-slide h4 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 300;
   font-size: 1.4em;
   color: #FFFFFF;
