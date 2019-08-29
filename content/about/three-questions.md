@@ -16,19 +16,19 @@ subtitle = "This workshop will be appropriate for attendees who answer yes to th
   icon = "scroll"
   icon_pack = "fas"
   name = ""
-  description = "Have you written or collaborated on a medical manuscript to submit for publication to a peer-reviewed journal? <br><br>Are you familiar with common components of a medical manuscript like a 'Table One', other summary tables, plots, text and citations?"
+  description = "Have you written or collaborated on a medical manuscript to submit for publication to a peer-reviewed journal?"
   
 [[feature]]
   icon = "r-project"
   icon_pack = "fab"
   name = ""
-  description = "Have you downloaded and used R a bit? Can you install and load packages? <br><br>*Even better,* have you used `tidyverse` packages like `ggplot2` and `dplyr`?" 
+  description = "Have you downloaded and used R? Can you install and load packages?" 
   
 [[feature]]
   icon = "laptop-code"
   icon_pack = "fas"
   name = ""
-  description = "Have you used R with the RStudio Integrated Development Environment (IDE)? Are you familiar with the various panes and tabs? For instance, can you quickly find all objects in your current global environment, and can you send R code from a source file (`.R`, `.Rmd`) to the console? <br><br>*Even better,* have you tried to knit an R Markdown document to some kind of output format like HTML, PDF, or Word?"
+  description = "Have you used R with the RStudio Integrated Development Environment (IDE)? <br><br>Can you send R code from a source file (`.R`, `.Rmd`) to the console?"
   
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.

@@ -73,3 +73,7 @@ a.hero-cta-alt:hover {
 .wg-hero .btn {
   color: white;
 }
+
+.hero-title {
+	line-height: 1.2;
+}
