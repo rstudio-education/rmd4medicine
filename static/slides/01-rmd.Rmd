@@ -68,6 +68,40 @@ background-size: 100%
 cloud link
 introduce self
 
+---
+class: middle, center
+
+# Ph.D. student > Assistant Professor
+
+.pull-left[
+```{r echo = FALSE, out.width="50%"}
+knitr::include_graphics("images/wiki-sas.png")
+```
+]
+
+.pull-right[
+```{r echo = FALSE, out.width="50%"}
+knitr::include_graphics("images/wiki-r.png")
+```
+]
+
+---
+class: middle, center
+
+# Assistant > Associate Professor/PI
+
+.pull-left[
+```{r echo = FALSE, out.width="50%"}
+knitr::include_graphics("images/wiki-r.png")
+```
+]
+
+.pull-right[
+```{r echo = FALSE, out.width="50%"}
+knitr::include_graphics("images/wiki-rstudio.png")
+```
+]
+
 
 ---
 
@@ -80,7 +114,7 @@ introduce self
 .left-column[
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"></i>
-  <strong class="fa-stack-1x" style="color: #fff;">1</strong>
+  <strong class="fa-stack-1x" style="color: #fff;">?</strong>
 </span> 
 ]
 
@@ -96,7 +130,9 @@ introduce self
 
 1. ["A file format for making dynamic documents with R."](https://rmarkdown.rstudio.com/articles_intro.html) (`r emo::ji("heavy_check_mark")`)
 
-1. ["A tool for integrating prose, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (`r emo::ji("heavy_check_mark")`)
+1. ["A tool for integrating text, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (`r emo::ji("heavy_check_mark")`)
+
+1. ["A computational document."](http://radar.oreilly.com/2011/07/wolframs-computational-documen.html) (`r emo::ji("heavy_check_mark")`)
 
 1. Wizardry. (`r emo::ji("wizard")`)
 
@@ -105,17 +141,39 @@ introduce self
 
 ---
 
+bit more on "why Rmd for medicine?"
+
+Your current workflow may look like (no shame!):
+
+Enter data into Excel file
+
+HIPAA-compliant transfer of data :)
+
+You do some wrangling in combo of Excel/SPSS/SAS
+
+---
+class: your-turn
+
 # Your turn
 
-Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening?
+## .Rmd anatomy
+
+Find a partner, and take a look at this R Markdown document together. 
+
+Try to identify these parts of the document:
+
+1. The **text** (not code)
+
+1. The **code**
+
+If this was easy, try to find all code that produces a **table**, then all code that produces a **plot**.
+
 
 ```{r echo = FALSE}
-countdown(minutes = 5)
+countdown(minutes = 2)
 ```
 
-???
 
-We discuss, pointing out where title/author come from (YAML), etc
 
 ---
 name: 01-formative
@@ -128,11 +186,10 @@ show "raw" doc
 
 .pull-right[
 
-+ Which part(s) are YAML?
 
-+ Which part(s) are Markdown?
+1. The **text** 
 
-+ Which part(s) are <i class="fab fa-r-project"></i>?
+1. The **code**
 
 ]
     
@@ -141,7 +198,7 @@ class: center, middle
 
 # Now we knit
 
-```{r knit-html, echo=FALSE}
+```{r knit-html, echo=FALSE, out.width="50%"}
 knitr::include_graphics("images/Knit-to-html.jpg")
 ```
 
@@ -162,13 +219,17 @@ show output screenshot
 
 .pull-right[
 
-+ Which part(s) are YAML?
+1. The **text** 
 
-+ Which part(s) are Markdown?
+1. The **code**
 
-+ Which part(s) are <i class="fab fa-r-project"></i>?
+1. The **output**
 
 ]
+
+---
+background-image: url(images/rmarkdown_wizards.png)
+background-size: cover
 
 ---
 class: middle, center
@@ -187,15 +248,12 @@ class: inverse, center, middle
 
 --
 
-# Prose
+# Text
 
 --
 
-Real words, written with Markdown
+What do you want/need to say?
 
----
-
-how can we make it easier on ourselves to explore what is in this report?
 
 ---
 
@@ -234,6 +292,11 @@ how can we make it easier on ourselves to explore what is in this report?
 
 ###### HEADER 6
 ]
+
+---
+
+![](images/rmd-nav.png)
+
 
 ---
 # <center>Text</center>
@@ -361,15 +424,13 @@ Receiving rubella vaccination, Brazil, 2008.
 
 ---
 name: 03-formative
-class: middle, center
+class: middle
 
-# Your turn
+# Pop quiz
 
 --
 
 .pull-left[
-
-## Part I
 
 How do you add headers in Markdown?
 
@@ -387,7 +448,6 @@ How do you add headers in Markdown?
 
 .pull-right[
 
-## Part II
 
 What about bulleted lists in Markdown? Numbered?
 
@@ -402,13 +462,17 @@ What about bulleted lists in Markdown? Numbered?
 ]
 
 ---
+class: your-turn
 
-add headers 
+# Your turn
 
-use RStudio outline pane
+## Organize your text
 
-```{r ref.label="knit-html", echo=FALSE}
-```
+1. Add headers as you see fit in our current document.
+
+1. Test out using RStudio outline pane; rejoice!
+
+1. `r emo::ji("yarn")` **Knit** to HTML.
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -494,17 +558,14 @@ class: inverse, center, middle
 
 
 ---
+class: your-turn
 
+# Your turn
 
+1. Edit chunk options (give some ideas here)
 
-# Your turn: edit chunk options
+1. `r emo::ji("yarn")` **Knit** to HTML.
 
-give some guidance here
-
-knit again 
-
-```{r ref.label="knit-html", echo=FALSE}
-```
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -521,7 +582,7 @@ show how to add chunk labels and view in IDE interactively
 
 ---
 
-# The `setup` chunk
+# The setup chunk
 
 Have one, make include false, global options
 
@@ -545,19 +606,18 @@ med
 ]
 
 ---
+class: your-turn
 
-# Code chunk cleanup
+# Your turn
 
-add the labels
+## Code chunk cleanup
 
-split up first big chunk of code
+1. Split up the first big chunk of code into two: `setup` and `packages`
 
-use RStudio outline pane
+1. Use the RStudio outline pane; rejoice!
 
-knit again
+1. `r emo::ji("yarn")` **Knit** to HTML.
 
-```{r ref.label="knit-html", echo=FALSE}
-```
 
 ```{r echo = FALSE}
 countdown(minutes = 5)
@@ -595,7 +655,7 @@ class: top
 .left-column[
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"></i>
-  <strong class="fa-stack-1x" style="color: #fff;">2</strong>
+  <strong class="fa-stack-1x" style="color: #fff;">?</strong>
 </span> 
 
 ]
@@ -607,9 +667,9 @@ class: top
 
 1. `r emo::ji("shrug")` (`r emo::ji("heavy_check_mark")`)
 
-1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (`r emo::ji("heavy_check_mark")`)
-
 1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (`r emo::ji("wizard")`)
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (`r emo::ji("heavy_check_mark")`)
 
 ]
 
@@ -621,7 +681,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/
 ```
 
 
->"In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
+> "In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
 
 --
 
@@ -653,7 +713,7 @@ class: middle, center
 
 --
 
-`r emo::ji("heavy_check_mark")` **Organize your words:** use markdown headers with `#`
+`r emo::ji("heavy_check_mark")` **Organize your text:** use markdown headers with `#`
 
 --
 
@@ -661,11 +721,11 @@ class: middle, center
 
 --
 
-`r emo::ji("heavy_check_mark")` **Format your words:** use markdown **bold**, _italics_, <i class="fas fa-list-ul"></i> bullets, and <i class="fas fa-list-ol"></i> lists
+`r emo::ji("heavy_check_mark")` **Format your text:** use markdown **bold**, _italics_, <i class="fas fa-list-ul"></i> bullets, and <i class="fas fa-list-ol"></i> lists
 
 --
 
-`r emo::ji("heavy_check_mark")` **Format your code:** use `knitr` chunk options
+`r emo::ji("heavy_check_mark")` **Format your output:** use `knitr` chunk options
 
 --
 
@@ -679,7 +739,8 @@ class: middle, center
 
 # Time for a break!
 
-
-Please be back in 10 minutes.
+```{r echo = FALSE}
+countdown(minutes = 10, update_every = 15)
+```
 
 

@@ -19,6 +19,8 @@ output:
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
       in_header: assets/header.html  
+params:
+  episode_counter: 0
 ---
 
 ```{r setup, include=FALSE}
@@ -29,12 +31,6 @@ options(htmltools.dir.version = FALSE)
 library(countdown)
 ```
 
-
-```{r echo = FALSE}
-countdown(minutes = 10, update_every = 15)
-```
-
----
 
 class: title-slide, center, middle
 
@@ -72,7 +68,7 @@ plot here times knitted so far
 
 ---
 
-# Pop quiz: 
+# Pop quiz
 
 _(discuss with a neighbor)_
 
@@ -99,7 +95,7 @@ _(discuss with a neighbor)_
 
 + Metadata
 
-+ Prose
++ text
 
 + Code
 
@@ -124,29 +120,28 @@ background-position: right
 background-size: contain
 
 ---
+class: your-turn
 
 # Your turn
 
-Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening? 
+## Spruce up the doc
 
-```{r knit-html, echo=FALSE, out.width="25%"}
-knitr::include_graphics("images/Knit-to-html.jpg")
-```
+Let's all take a look at this R Markdown document together.
 
-Feel free to add or edit:
+
 
 .pull-left[
 
-## Prose
+Add or edit text...
 
 + Headers
-+ Lists
++ Lists (<i class="fas fa-list-ul"></i> or <i class="fas fa-list-ol"></i>)
 + Text formatting like **bold** or _italics_
 ]
 
 .pull-right[
 
-## Code
+Add or edit code...
 
 + Chunk labels
 + Chunk options
@@ -164,9 +159,10 @@ countdown(minutes = 5)
 ---
 class: middle, center, inverse
 
+
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 1` </strong>
 </span> 
 
 --
@@ -179,23 +175,57 @@ _"YAML Ain't Markup Language"_
 
 ---
 
+# Think: Metadata
+
+.pull-left[
 acronym not helpful, what does it mean, key: value pairs
 
 think about "metadata"
 
-```{r echo=FALSE, out.width="25%"}
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_output(html_document()) %>% 
+  asis_yaml_output()
+```
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="75%", fig.align='center'}
 knitr::include_graphics("images/orchestra.jpg")
 ```
 
+]
+
 ---
+class: your-turn
 
-# Your turn: edit the YAML
 
-Add your name as first author
-Change the title to something you might actually write
+# Your turn
 
-```{r ref.label="knit-html", echo=FALSE, out.width="25%"}
+## Edit the YAML
+
+.pull-left[
+
+1. Add your name as first author
+
+1. Change the title to something you might actually write
+
+1. `r emo::ji("yarn")` **Knit** to HTML.
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document()) %>% 
+  asis_yaml_output()
 ```
+
+]
 
 
 ```{r echo = FALSE}
@@ -207,7 +237,78 @@ class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">2</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 2` </strong>
+</span> 
+
+--
+
+# Output formats
+
+--
+
+What do you want to make?
+
+---
+
+Built in formats (in the `rmarkdown` package)
+
+versus
+
+extensions (different packages that extend output formats available to you)
+
+---
+class: your-turn
+
+# Your turn
+
+## Use a different built-in format
+
+Use the drop-down menu for the `r emo::ji("yarn")` **Knit** button and try:
+
+1. Knitting to Word
+
+1. Knitting to PDF
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+---
+class: your-turn
+
+# Your turn
+
+## Use an extension package
+
+.pull-left[
+
+1. Edit your YAML! Change the `output:` key to `distill::distill_article()` (note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)
+
+1. `r emo::ji("yarn")` **Knit** to distill_article.
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(distill::distill_article()) %>% 
+  asis_yaml_output()
+```
+]
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 3` </strong>
 </span> 
 
 --
@@ -223,52 +324,54 @@ nesting matters
 
 
 ---
+class: your-turn
 
-# Your turn: add an output option
+# Your turn
 
-add a toc
+## Add an output option
 
-make it floating
+.pull-left[
 
-```{r ref.label="knit-html", echo=FALSE, out.width="25%"}
+1. Add a table of contents to our distill article
+
+1. Select "Knit to distill_article"
+
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(distill::distill_article(toc = TRUE)) %>% 
+  asis_yaml_output()
 ```
+
+]
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
 ```
+
+
+---
+name: distill_article
+
+
+
+
+???
+
+At this point, I'm going to stick with the distill_article output format for the rest of this session.
 
 ---
 class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">3</strong>
-</span> 
-
---
-
-# Output formats
-
---
-
-Indented under the `output:` key in your YAML
-
----
-
-# Your turn: change the output format
-
-Knit to something else (word?)
-
-```{r echo = FALSE}
-countdown(minutes = 2)
-```
-
----
-class: middle, center, inverse
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">4</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 4` </strong>
 </span> 
 
 --
@@ -332,8 +435,17 @@ class: center
 .pull-left[
 `knitr::kable()`
 
-```{r}
+it knows format automatically
 
+```{r}
+library(tidyverse)
+mock_surv <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", "Died" = "2")) %>% 
+  filter(fu_fct == "Lived")
+ggplot(mock_surv, aes(x = age, y = fu_time)) + geom_point() +geom_smooth(method = "lm")
+
+ggplot(mock_surv, aes(x = hgb, y = fu_time)) + geom_point() +geom_smooth(method = "lm")
 ```
 
 ]
@@ -363,8 +475,11 @@ gt
 arsenal (need `knitr` asis options)
 
 ---
+class: your-turn
 
-# Your turn: spruce up the report
+# Your turn
+
+## Spruce up the tables
 
 pick one table to include?
 
@@ -383,5 +498,6 @@ class: middle, center
 
 # Time for a break!
 
-
-Please be back in 15 minutes.
+```{r echo = FALSE}
+countdown(minutes = 15, update_every = 15)
+```

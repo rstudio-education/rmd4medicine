@@ -138,7 +138,6 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
   line-height: 1em;
   padding-bottom: .1em;
   word-wrap: break-word;
-  text-shadow: 50px 50px 50px #3b4245;
 }
 
 .title-slide h2 {
@@ -247,4 +246,39 @@ div.my-footer span {
     position: absolute;
     left: 15px;
     bottom: 2px;
+}
+
+.your-turn {
+  background-color: #bed3ec;
+  color: #1f5386;
+}
+
+.your-turn h1 {
+  color: #fff;
+  text-shadow: 1px 1px 2px #1f5386;
+}
+
+.your-turn h1:before {
+    content: "";
+    display: inline-block;
+    background: url("../Your-turn.png") no-repeat;
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: 100px;
+    padding-right: 10px;
+}
+
+h1#pop-quiz {
+  color: #E7553C;
+}
+
+h1#pop-quiz:before {
+    content: "";
+    display: inline-block;
+    background: url("../lightbulb-color.png") no-repeat;
+    width: 80px;
+    height: 80px;
+    float: left;
+    background-size: 70px;
 }

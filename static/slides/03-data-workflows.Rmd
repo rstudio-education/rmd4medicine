@@ -29,11 +29,7 @@ options(htmltools.dir.version = FALSE)
 library(countdown)
 ```
 
-```{r echo = FALSE}
-countdown_fullscreen(minutes = 15, update_every = 15)
-```
 
----
 class: title-slide, center, middle
 
 <span class="fa-stack fa-4x">
@@ -249,5 +245,6 @@ class: middle, center
 
 # Time for a break!
 
-
-Please be back in 10 minutes.
+```{r echo = FALSE}
+countdown(minutes = 10, update_every = 15)
+```

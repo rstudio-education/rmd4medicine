@@ -8,6 +8,8 @@ author:
 output: html_document
 ---
 
+to do: what is `fu_time` when `fu_stat` is 1?
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(warning = FALSE, 
                       message = FALSE)

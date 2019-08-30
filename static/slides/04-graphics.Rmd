@@ -67,5 +67,9 @@ class: middle, center, inverse
 
 # Time to wrap-up!
 
+```{r echo = FALSE}
+countdown(minutes = 15, update_every = 15)
+```
+
 
 

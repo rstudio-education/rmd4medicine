@@ -59,6 +59,32 @@ background-size: 100%
 cloud link
 introduce self
 
+---
+class: middle, center
+
+# Ph.D. student &gt; Assistant Professor
+
+.pull-left[
+&lt;img src="images/wiki-sas.png" width="50%" /&gt;
+]
+
+.pull-right[
+&lt;img src="images/wiki-r.png" width="50%" /&gt;
+]
+
+---
+class: middle, center
+
+# Assistant &gt; Associate Professor/PI
+
+.pull-left[
+&lt;img src="images/wiki-r.png" width="50%" /&gt;
+]
+
+.pull-right[
+&lt;img src="images/wiki-rstudio.png" width="50%" /&gt;
+]
+
 
 ---
 
@@ -67,14 +93,13 @@ introduce self
 .left-column[
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
 &lt;/span&gt; 
 ]
 
 .right-column[
 
 # What *is* R Markdown?
-
 
 
 1. An authoring framework for data science.
@@ -87,6 +112,8 @@ introduce self
 
 1. A tool for integrating prose, code, and results.
 
+1. A computational document.
+
 1. Wizardry.
 
 ]
@@ -96,7 +123,7 @@ introduce self
 .left-column[
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
 &lt;/span&gt; 
 ]
 
@@ -112,7 +139,9 @@ introduce self
 
 1. ["A file format for making dynamic documents with R."](https://rmarkdown.rstudio.com/articles_intro.html) (✔️)
 
-1. ["A tool for integrating prose, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (✔️)
+1. ["A tool for integrating text, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (✔️)
+
+1. ["A computational document."](http://radar.oreilly.com/2011/07/wolframs-computational-documen.html) (✔️)
 
 1. Wizardry. (🧙‍♂️)
 
@@ -121,17 +150,39 @@ introduce self
 
 ---
 
+bit more on "why Rmd for medicine?"
+
+Your current workflow may look like (no shame!):
+
+Enter data into Excel file
+
+HIPAA-compliant transfer of data :)
+
+You do some wrangling in combo of Excel/SPSS/SAS
+
+---
+class: your-turn
+
 # Your turn
 
-Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening?
+## .Rmd anatomy
 
-<div class="countdown" id="timer_5d692d40" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+Find a partner, and take a look at this R Markdown document together. 
+
+Try to identify these parts of the document:
+
+1. The **text** (not code)
+
+1. The **code**
+
+If this was easy, try to find all code that produces a **table**, then all code that produces a **plot**.
+
+
+<div class="countdown" id="timer_5d69799a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
-???
 
-We discuss, pointing out where title/author come from (YAML), etc
 
 ---
 name: 01-formative
@@ -144,11 +195,10 @@ show "raw" doc
 
 .pull-right[
 
-+ Which part(s) are YAML?
 
-+ Which part(s) are Markdown?
+1. The **text** 
 
-+ Which part(s) are &lt;i class="fab fa-r-project"&gt;&lt;/i&gt;?
+1. The **code**
 
 ]
     
@@ -157,7 +207,7 @@ class: center, middle
 
 # Now we knit
 
-&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
+&lt;img src="images/Knit-to-html.jpg" width="50%" /&gt;
 
 
 ---
@@ -176,13 +226,17 @@ show output screenshot
 
 .pull-right[
 
-+ Which part(s) are YAML?
+1. The **text** 
 
-+ Which part(s) are Markdown?
+1. The **code**
 
-+ Which part(s) are &lt;i class="fab fa-r-project"&gt;&lt;/i&gt;?
+1. The **output**
 
 ]
+
+---
+background-image: url(images/rmarkdown_wizards.png)
+background-size: cover
 
 ---
 class: middle, center
@@ -201,15 +255,12 @@ class: inverse, center, middle
 
 --
 
-# Prose
+# Text
 
 --
 
-Real words, written with Markdown
+What do you want/need to say?
 
----
-
-how can we make it easier on ourselves to explore what is in this report?
 
 ---
 
@@ -248,6 +299,11 @@ how can we make it easier on ourselves to explore what is in this report?
 
 ###### HEADER 6
 ]
+
+---
+
+![](images/rmd-nav.png)
+
 
 ---
 # &lt;center&gt;Text&lt;/center&gt;
@@ -375,15 +431,13 @@ Receiving rubella vaccination, Brazil, 2008.
 
 ---
 name: 03-formative
-class: middle, center
+class: middle
 
-# Your turn
+# Pop quiz
 
 --
 
 .pull-left[
-
-## Part I
 
 How do you add headers in Markdown?
 
@@ -401,7 +455,6 @@ How do you add headers in Markdown?
 
 .pull-right[
 
-## Part II
 
 What about bulleted lists in Markdown? Numbered?
 
@@ -416,14 +469,19 @@ What about bulleted lists in Markdown? Numbered?
 ]
 
 ---
+class: your-turn
 
-add headers 
+# Your turn
 
-use RStudio outline pane
+## Organize your text
 
-&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
+1. Add headers as you see fit in our current document.
 
-<div class="countdown" id="timer_5d692e8d" style="right:0;bottom:0;" data-warnwhen="0">
+1. Test out using RStudio outline pane; rejoice!
+
+1. 🧶 **Knit** to HTML.
+
+<div class="countdown" id="timer_5d69787e" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -512,18 +570,16 @@ class: inverse, center, middle
 
 
 ---
+class: your-turn
+
+# Your turn
+
+1. Edit chunk options (give some ideas here)
+
+1. 🧶 **Knit** to HTML.
 
 
-
-# Your turn: edit chunk options
-
-give some guidance here
-
-knit again 
-
-&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
-
-<div class="countdown" id="timer_5d692eac" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6978c9" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -538,7 +594,7 @@ show how to add chunk labels and view in IDE interactively
 
 ---
 
-# The `setup` chunk
+# The setup chunk
 
 Have one, make include false, global options
 
@@ -562,20 +618,20 @@ med
 ]
 
 ---
+class: your-turn
 
-# Code chunk cleanup
+# Your turn
 
-add the labels
+## Code chunk cleanup
 
-split up first big chunk of code
+1. Split up the first big chunk of code into two: `setup` and `packages`
 
-use RStudio outline pane
+1. Use the RStudio outline pane; rejoice!
 
-knit again
+1. 🧶 **Knit** to HTML.
 
-&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
 
-<div class="countdown" id="timer_5d692c06" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d697a75" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -605,7 +661,7 @@ anatomy pic
 .left-column[
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
 &lt;/span&gt; 
 ]
 
@@ -615,9 +671,9 @@ anatomy pic
 
 1. 🤷
 
-1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
-
 1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
 
 ]
 
@@ -627,7 +683,7 @@ class: top
 .left-column[
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;2&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
 &lt;/span&gt; 
 
 ]
@@ -639,9 +695,9 @@ class: top
 
 1. 🤷 (✔️)
 
-1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (✔️)
-
 1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (🧙‍♂️)
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (✔️)
 
 ]
 
@@ -651,7 +707,7 @@ class: middle, center
 &lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
 
 
-&gt;"In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
+&gt; "In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
 
 --
 
@@ -681,7 +737,7 @@ class: middle, center
 
 --
 
-✔️ **Organize your words:** use markdown headers with `#`
+✔️ **Organize your text:** use markdown headers with `#`
 
 --
 
@@ -689,11 +745,11 @@ class: middle, center
 
 --
 
-✔️ **Format your words:** use markdown **bold**, _italics_, &lt;i class="fas fa-list-ul"&gt;&lt;/i&gt; bullets, and &lt;i class="fas fa-list-ol"&gt;&lt;/i&gt; lists
+✔️ **Format your text:** use markdown **bold**, _italics_, &lt;i class="fas fa-list-ul"&gt;&lt;/i&gt; bullets, and &lt;i class="fas fa-list-ol"&gt;&lt;/i&gt; lists
 
 --
 
-✔️ **Format your code:** use `knitr` chunk options
+✔️ **Format your output:** use `knitr` chunk options
 
 --
 
@@ -707,8 +763,9 @@ class: middle, center
 
 # Time for a break!
 
-
-Please be back in 10 minutes.
+<div class="countdown blink-colon noupdate-15" id="timer_5d697bbe" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
