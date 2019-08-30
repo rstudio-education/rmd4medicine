@@ -4,8 +4,8 @@ date: '2019-08-29'
 slug: 01-rmd
 categories: [slides]
 tags: []
-subtitle: ''
-summary: ''
+subtitle: 'Session 01'
+summary: 'Session 01'
 authors: [alison]
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no

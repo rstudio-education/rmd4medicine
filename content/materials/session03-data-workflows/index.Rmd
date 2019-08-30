@@ -4,8 +4,8 @@ date: '2019-08-29'
 slug: 03-data-workflows
 categories: [slides]
 tags: []
-subtitle: ''
-summary: ''
+subtitle: 'Session 03'
+summary: 'Session 03'
 authors: [alison]
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
