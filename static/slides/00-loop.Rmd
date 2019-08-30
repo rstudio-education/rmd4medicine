@@ -1,10 +1,11 @@
 ---
-title: "R Markdown for Medicine"
+title: "Welcome"
+subtitle: "R Markdown for Medicine"
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
     seal: false 
     lib_dir: libs
     nature:
@@ -16,7 +17,7 @@ output:
       ratio: "16:9"
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
-      in_header: [loop.html, header.html]
+      in_header: [assets/loop.html, assets/header.html]
 ---
 
 ```{r setup, include=FALSE}
@@ -28,15 +29,12 @@ library(countdown)
 ```
 
 
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 10%
-
-<!--put cloud link in footer going across-->
-
----
 class: title-slide, center, middle
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
+  <strong class="fa-stack-1x" style="color:#3b4245;">Hi!</strong>
+</span> 
 
 # `r rmarkdown::metadata$title`
 
@@ -44,7 +42,7 @@ class: title-slide, center, middle
 
 ### `r rmarkdown::metadata$author` &#183; RStudio
 
-#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
 <!-- this ends up being the title slide since seal = FALSE-->
 

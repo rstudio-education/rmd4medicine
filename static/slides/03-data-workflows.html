@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>03 Data &amp; Workflows</title>
+    <title>Data &amp; Workflows</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-08-29" />
+    <meta name="date" content="2019-08-30" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
-    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -21,29 +20,26 @@
 
 
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d681ea0" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d692d18" style="top:0;right:0;bottom:0;left:0;margin:0;padding:0;font-size:30vw;line-height:96vh;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
-
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 100%
-
-&lt;!--put cloud link in footer going across--&gt;
-
----
 class: title-slide, center, middle
 
-# 03&lt;br&gt;Data &amp; Workflows
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#3b4245;"&gt;03&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Data &amp; Workflows
 
 ## R Markdown for Medicine
 
 ### Alison Hill &amp;#183; RStudio
 
-#### <i class="fas  fa-code-branch "></i> alison.rbind.io &amp;#183; <i class="fab  fa-twitter "></i> @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+
 
 &lt;!-- this ends up being the title slide since seal = FALSE--&gt;
 
@@ -76,37 +72,158 @@ What are keys you'll typically want to use in the YAML?
 
 1. The document's `author`
 
-1. The packages used
+1. The document's `packages`
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Projects
 
 
 ---
+class: center
 
-R projects
+# R projects
+
+&lt;img src="images/rproj.png" width="171" /&gt;
+
+what do they do??
+
+---
 
 - project organization 
 
 - naming files
 
----
-
-setup chunk (do this earlier with named chunks in 01)
 
 ---
+class: middle, center, inverse
 
-file paths (here)
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2&lt;/strong&gt;
+&lt;/span&gt; 
+
+# External files
+
+---
+class: center
+
+&lt;img src="images/Data.jpg" width="1027" /&gt;
+
+save a local copy, keep raw data raw
+
+---
+class: center
+
+# File paths
+
+.pull-left[
+do not
+
+
+```r
+setwd()
+```
+
+]
+
+.pull-right[
+&lt;div class="figure"&gt;
+&lt;img src="images/horst_here.png" alt="Art by Allison Horst" width="3696" /&gt;
+&lt;p class="caption"&gt;Art by Allison Horst&lt;/p&gt;
+&lt;/div&gt;
+]
+
 
 ---
 
-common data import patterns
+# Images
+
+I know I said Markdown earlier, but `knitr::include_graphics`
+
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3&lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Output formats
+
+--
+
+revisited
 
 ---
 
+# Use `bookdown`
 
-change output format to a bookdown one for single docs
+Try changing output format in your YAML to a bookdown one for single docs
+
+.pull-left[
+
+```yaml
+---
+output: html_document
+---
+```
+
+]
+
+.pull-right[
+
+```yaml
+---
+output: bookdown::html_document2
+---
+```
+
+]
+
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;4&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Cross-references
 
 ---
 
-demo cross references for headers/images (will need knitr include graphics)
+# Header references
+
+---
+
+# Figure references
+
+`knitr::include_graphics`
+
+---
+
+# Table references
+
+---
+
+# Add cross-references
+
+To a section, a figure, and a table in the text.
+
+<div class="countdown" id="timer_5d692f63" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 
 ---
 

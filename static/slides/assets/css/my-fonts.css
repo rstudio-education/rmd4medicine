@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+ @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
+
+
+body { 
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  color: #404040;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prata', sans-serif;
+  font-weight: 400;
+  color: #5699cc;
+}
+
+.remark-code { 
+  font-family: 'Source Code Pro', monospace;
+}
+
+.remark-inline-code { 
+  font-family: 'Source Code Pro', monospace;
+}
+
+@media print {
+  body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+}
+
+

@@ -10,7 +10,7 @@ authors: [alison]
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
 image:
-  caption: '[Photo by Tony Hand on Unsplash](https://unsplash.com/photos/C9Ni6Gh_gWk)'
+  caption: ''
   focal_point: ''
   preview_only: yes
 projects: []
@@ -22,4 +22,13 @@ weight: 3
 ```{r echo=FALSE}
 knitr::include_url("/slides/03-data-workflows.html")
 ```
+
+# Relevant resources
+
++ [R4DS Workflow: Projects](https://r4ds.had.co.nz/workflow-projects.html)
++ [What They Forgot: Project-oriented workflow](https://whattheyforgot.org/project-oriented-workflow.html)
++ [What The Forgot: Practice safe paths](https://whattheyforgot.org/safe-paths.html)
++ [Bookdown: A single document](https://bookdown.org/yihui/bookdown/a-single-document.html)
++ [Bookdown: Cross-references](https://bookdown.org/yihui/bookdown/cross-references.html)
++ [Linking rticles to bookdown](https://bookdown.org/yihui/rmarkdown/rticles-bookdown.html)
 

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>01 R Markdown Basics</title>
+    <title>R Markdown Basics</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-08-29" />
+    <meta name="date" content="2019-08-30" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -22,27 +21,30 @@
 
 
 
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 10%
-
-&lt;!--put cloud link in footer going across--&gt;
-
----
 class: title-slide, center, middle
 
-# 01&lt;br&gt;R Markdown Basics
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#3b4245;"&gt;01&lt;/strong&gt;
+&lt;/span&gt; 
+
+# R Markdown Basics
 
 ## R Markdown for Medicine
 
 ### Alison Hill &amp;#183; RStudio
 
-#### <i class="fas  fa-code-branch "></i> alison.rbind.io &amp;#183; <i class="fab  fa-twitter "></i> @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+
 
 &lt;!-- this ends up being the title slide since seal = FALSE--&gt;
 
-???
+---
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;rstudio.cloud/link&lt;/span&gt;&lt;/div&gt;
+
+&lt;!-- this adds the link footer to all slides, depends on my-footer class in css--&gt;
 
 ---
 
@@ -62,7 +64,18 @@ introduce self
 
 
 
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+]
+
+.right-column[
+
 # What *is* R Markdown?
+
+
 
 1. An authoring framework for data science.
 
@@ -76,54 +89,35 @@ introduce self
 
 1. Wizardry.
 
+]
+
 ---
 
-# Answers 
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+]
 
+.right-column[
 
-What *is* R Markdown?
+# What *is* R Markdown?
 
 1. ["An authoring framework for data science."](https://rmarkdown.rstudio.com/lesson-1.html) (✔️)
 
---
-
 1. [A document format (`.Rmd`).](https://bookdown.org/yihui/rmarkdown/) (✔️)
-
---
 
 1. [An R package named `rmarkdown`.](https://rmarkdown.rstudio.com/docs/) (✔️)
 
---
-
 1. ["A file format for making dynamic documents with R."](https://rmarkdown.rstudio.com/articles_intro.html) (✔️)
 
---
+1. ["A tool for integrating prose, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (✔️)
 
-1. ["A tool for integrating prose, code, and results"](https://r4ds.had.co.nz/communicate-intro.html) (✔️)
+1. Wizardry. (🧙‍♂️)
 
---
+]
 
-1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (🧙‍♂️)
-
----
-class: middle, center
-
-&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
-
-
-&gt;"In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
-
---
-
-&gt; The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
-
---
-
-&gt; The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
-
---
-
-&gt; &amp;mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 
 ---
 
@@ -131,7 +125,7 @@ class: middle, center
 
 Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening?
 
-<div class="countdown" id="timer_5d680f6d" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d692d40" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -159,8 +153,17 @@ show "raw" doc
 ]
     
 ---
+class: center, middle
 
-now we knit
+# Now we knit
+
+&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
+
+
+---
+class: center, middle
+
+![](images/doc-live.jpg)
 
 ---
 name: 02-formative
@@ -181,6 +184,12 @@ show output screenshot
 
 ]
 
+---
+class: middle, center
+
+# What is inside?
+
+![](images/doc-make.jpg)
 
 ---
 class: inverse, center, middle
@@ -192,11 +201,11 @@ class: inverse, center, middle
 
 --
 
-# Text
+# Prose
 
 --
 
-Written with Markdown
+Real words, written with Markdown
 
 ---
 
@@ -205,6 +214,8 @@ how can we make it easier on ourselves to explore what is in this report?
 ---
 
 # &lt;center&gt;Headers&lt;/center&gt;
+
+--
 
 .pull-left[
 ```markdown
@@ -221,6 +232,8 @@ how can we make it easier on ourselves to explore what is in this report?
 ###### HEADER 6
 ```
 ]
+
+--
 
 .pull-right[
 # HEADER 1
@@ -239,6 +252,8 @@ how can we make it easier on ourselves to explore what is in this report?
 ---
 # &lt;center&gt;Text&lt;/center&gt;
 
+--
+
 .pull-left[
 ```markdown
 Childhood **vaccines**  
@@ -247,6 +262,8 @@ _great triumphs_
 of modern medicine. 
 ```
 ]
+
+--
 
 .pull-right[
 
@@ -261,6 +278,8 @@ of modern medicine.
 ---
 
 # &lt;center&gt;Lists&lt;/center&gt;
+
+--
 
 .pull-left[
 ```markdown
@@ -284,6 +303,8 @@ roll out in developing countries:
 1. meningitis A
 ```
 ]
+
+--
 
 .pull-right[
 
@@ -312,12 +333,16 @@ roll out in developing countries:
 
 # &lt;center&gt;Images&lt;/center&gt;
 
+--
+
 .pull-left[
 ```markdown
 Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ```
 ]
+
+--
 
 .pull-right[
 Receiving rubella vaccination, Brazil, 2008.
@@ -328,6 +353,8 @@ Receiving rubella vaccination, Brazil, 2008.
 
 # &lt;center&gt;Links&lt;/center&gt;
 
+--
+
 .pull-left[
 ```markdown
 [Photo](https://en.wikipedia.org/wiki/Vaccine)
@@ -336,6 +363,8 @@ Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ```
 ]
+
+--
 
 .pull-right[
 [Photo](https://en.wikipedia.org/wiki/Vaccine)
@@ -374,15 +403,15 @@ How do you add headers in Markdown?
 
 ## Part II
 
-What about lists in Markdown?
+What about bulleted lists in Markdown? Numbered?
 
-`! Bullet 1`
+`! Item 1`
 
-`- Bullet 1`
+`- Item 1`
 
-`# Bullet 1`
+`# Item 1`
 
-`1.Bullet 1`
+`1. Item 1`
 
 ]
 
@@ -392,9 +421,9 @@ add headers
 
 use RStudio outline pane
 
-knit
+&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
 
-<div class="countdown" id="timer_5d680c7d" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d692e8d" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -490,10 +519,11 @@ class: inverse, center, middle
 
 give some guidance here
 
+knit again 
 
-knit again
+&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
 
-<div class="countdown" id="timer_5d680f36" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d692eac" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -508,16 +538,45 @@ show how to add chunk labels and view in IDE interactively
 
 ---
 
-# Add chunk labels
+# The `setup` chunk
+
+Have one, make include false, global options
+
+have another one for loading packages
+
+.pull-left[
+
+````
+```{r setup}
+med &lt;- rep("rmd", 4)
+med
+```
+````
+
+]
+
+.pull-right[
+
+
+
+]
+
+---
+
+# Code chunk cleanup
 
 add the labels
 
+split up first big chunk of code
+
 use RStudio outline pane
 
-knit
+knit again
 
-<div class="countdown" id="timer_5d680e21" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+&lt;img src="images/Knit-to-html.jpg" width="1051" /&gt;
+
+<div class="countdown" id="timer_5d692c06" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 
@@ -533,6 +592,87 @@ When you change the code chunk names, what did *not* change?
 1. `knitr` code chunk options
 
 (for answer reveal, maybe show empty "template")
+
+
+---
+anatomy pic
+
+# How it all fits together
+
+---
+
+
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+]
+
+.right-column[
+
+# How *does* R Markdown work?
+
+1. 🤷
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+]
+
+---
+class: top
+
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;2&lt;/strong&gt;
+&lt;/span&gt; 
+
+]
+
+
+.right-column[
+
+# How *does* R Markdown work?
+
+1. 🤷 (✔️)
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (✔️)
+
+1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (🧙‍♂️)
+
+]
+
+---
+class: middle, center
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+
+&gt;"In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
+
+--
+
+&gt; The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
+
+--
+
+&gt; The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
+
+--
+
+&gt; &amp;mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+---
+class: center, middle
+
+# Foreshadowing
+
+
+&lt;img src="images/outputs.png" width="40%" /&gt;
+
 
 ---
 class: middle, center

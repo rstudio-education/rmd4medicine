@@ -56,7 +56,7 @@ user_groups:
 
 Alison Hill is a Data Scientist & Professional Educator at RStudio.
 Prior to joining RStudio, Dr. Hill was an Associate Professor and Center
-Director at Oregon Health & Science University in Portland, Oregon,
+Assistant Director at Oregon Health & Science University in Portland, Oregon,
 where she was an NIH-funded Principal Investigator. Her
 [work](https://profiles.impactstory.org/u/0000-0002-8082-1890) has been
 published in

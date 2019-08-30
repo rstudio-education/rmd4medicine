@@ -1,11 +1,12 @@
 ---
-title: "02<br>Outputs & Tables"
+title: "Output & Tables"
+session: "02"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
     seal: false 
     lib_dir: libs
     nature:
@@ -17,7 +18,7 @@ output:
       ratio: "16:9"
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
-      in_header: header.html  
+      in_header: assets/header.html  
 ---
 
 ```{r setup, include=FALSE}
@@ -35,15 +36,12 @@ countdown(minutes = 10, update_every = 15)
 
 ---
 
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 100%
-
-<!--put cloud link in footer going across-->
-
----
 class: title-slide, center, middle
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
+  <strong class="fa-stack-1x" style="color:#3b4245;">`r rmarkdown::metadata$session`</strong>
+</span> 
 
 # `r rmarkdown::metadata$title`
 
@@ -51,11 +49,17 @@ class: title-slide, center, middle
 
 ### `r rmarkdown::metadata$author` &#183; RStudio
 
-#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+
 
 <!-- this ends up being the title slide since seal = FALSE-->
 
-???
+---
+layout: true
+
+<div class="my-footer"><span>rstudio.cloud/link</span></div>
+
+<!-- this adds the link footer to all slides, depends on my-footer class in css-->
 
 ---
 
@@ -74,23 +78,83 @@ _(discuss with a neighbor)_
 
 Which of the following is **NOT** a part of R Markdown basic anatomy?
 
-1. YAML.
+1. Metadata (written in YAML).
 
 1. Text (written in Markdown).
 
-1. Code.
+1. CSS.
+
+1. Code (<i class="fab fa-r-project"></i> or other).
 
 1. Output.
 
-1. 
 
+---
 
+# Match these! 
+
+_(discuss with a neighbor)_
+
+.pull-left[
+
++ Metadata
+
++ Prose
+
++ Code
+
++ Output
+]
+
+.pull-right[
+
++ Markdown
+
++ `knitr`
+
++ <i class="fab fa-r-project"></i> (or other programming language)
+
++ YAML
+]
+
+---
+class: middle, center
+background-image: url(images/pierre-acobas-nbD0VmKnPrI-unsplash.jpg)
+background-position: right
+background-size: contain
 
 ---
 
 # Your turn
 
-Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening?
+Let's all take a look at this R Markdown document together. You can look at it the way it is, but feel free to knit it also. What is happening? 
+
+```{r knit-html, echo=FALSE, out.width="25%"}
+knitr::include_graphics("images/Knit-to-html.jpg")
+```
+
+Feel free to add or edit:
+
+.pull-left[
+
+## Prose
+
++ Headers
++ Lists
++ Text formatting like **bold** or _italics_
+]
+
+.pull-right[
+
+## Code
+
++ Chunk labels
++ Chunk options
+
+]
+
+
+
 
 ```{r echo = FALSE}
 countdown(minutes = 5)
@@ -119,12 +183,20 @@ acronym not helpful, what does it mean, key: value pairs
 
 think about "metadata"
 
+```{r echo=FALSE, out.width="25%"}
+knitr::include_graphics("images/orchestra.jpg")
+```
+
 ---
 
 # Your turn: edit the YAML
 
 Add your name as first author
 Change the title to something you might actually write
+
+```{r ref.label="knit-html", echo=FALSE, out.width="25%"}
+```
+
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -157,6 +229,9 @@ nesting matters
 add a toc
 
 make it floating
+
+```{r ref.label="knit-html", echo=FALSE, out.width="25%"}
+```
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -210,13 +285,68 @@ for print versus online versus word
 
 for eda versus publication
 
+
+---
+class: center
+
+# Markdown tables
+
+.pull-left[
+
+```markdown
+| Time          | Activity           |
+|:--------------|:-------------------|
+| 01:00 - 01:50 | Session 1          |
+| 01:50 - 02:00 | *Break*            |
+| 02:00 - 02:45 | Session 2          |
+| 02:45 - 03:00 | *Break*            |
+| 03:00 - 03:50 | Session 3          |
+| 03:50 - 04:00 | *Break*            |
+| 04:00 - 04:45 | Session 4          |
+| 04:45 - 05:00 | Wrap-up / Overtime |
+```
+]
+
+--
+
+.pull-right[
+
+| Time          | Activity           |
+|:--------------|:-------------------|
+| 01:00 - 01:50 | Session 1          |
+| 01:50 - 02:00 | *Break*            |
+| 02:00 - 02:45 | Session 2          |
+| 02:45 - 03:00 | *Break*            |
+| 03:00 - 03:50 | Session 3          |
+| 03:50 - 04:00 | *Break*            |
+| 04:00 - 04:45 | Session 4          |
+| 04:45 - 05:00 | Wrap-up / Overtime |
+
+]
+
 ---
 
+# Simple tables
+
+
+.pull-left[
+`knitr::kable()`
+
+```{r}
+
+```
+
+]
+
+.pull-right[
 for eda
 
 Janitor
+]
 
 ---
+
+# Interactive tables
 
 online options: DT
 
@@ -227,6 +357,8 @@ print + online
 gt
 
 ---
+
+# Table One
 
 arsenal (need `knitr` asis options)
 

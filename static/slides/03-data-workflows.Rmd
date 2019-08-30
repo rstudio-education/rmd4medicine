@@ -1,11 +1,12 @@
 ---
-title: "03<br>Data & Workflows"
+title: "Data & Workflows"
+session: "03"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
     seal: false 
     lib_dir: libs
     nature:
@@ -17,7 +18,7 @@ output:
       ratio: "16:9"
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
-      in_header: header.html  
+      in_header: assets/header.html  
 ---
 
 ```{r setup, include=FALSE}
@@ -29,20 +30,16 @@ library(countdown)
 ```
 
 ```{r echo = FALSE}
-countdown(minutes = 15, update_every = 15)
+countdown_fullscreen(minutes = 15, update_every = 15)
 ```
 
 ---
-
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 100%
-
-<!--put cloud link in footer going across-->
-
----
 class: title-slide, center, middle
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
+  <strong class="fa-stack-1x" style="color:#3b4245;">`r rmarkdown::metadata$session`</strong>
+</span> 
 
 # `r rmarkdown::metadata$title`
 
@@ -50,7 +47,8 @@ class: title-slide, center, middle
 
 ### `r rmarkdown::metadata$author` &#183; RStudio
 
-#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+
 
 <!-- this ends up being the title slide since seal = FALSE-->
 
@@ -83,37 +81,162 @@ What are keys you'll typically want to use in the YAML?
 
 1. The document's `author`
 
-1. The packages used
+1. The document's `packages`
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+</span> 
+
+# Projects
 
 
 ---
+class: center
 
-R projects
+# R projects
+
+```{r echo=FALSE}
+knitr::include_graphics("images/rproj.png")
+```
+
+what do they do??
+
+---
 
 - project organization 
 
 - naming files
 
----
-
-setup chunk (do this earlier with named chunks in 01)
 
 ---
+class: middle, center, inverse
 
-file paths (here)
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">2</strong>
+</span> 
+
+# External files
+
+---
+class: center
+
+```{r echo=FALSE}
+knitr::include_graphics("images/Data.jpg")
+```
+
+save a local copy, keep raw data raw
+
+---
+class: center
+
+# File paths
+
+.pull-left[
+do not
+
+```{r eval=FALSE}
+setwd()
+```
+
+]
+
+.pull-right[
+```{r echo=FALSE, fig.cap="Art by Allison Horst"}
+knitr::include_graphics("images/horst_here.png")
+```
+]
+
 
 ---
 
-common data import patterns
+# Images
+
+I know I said Markdown earlier, but `knitr::include_graphics`
+
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">3</strong>
+</span> 
+
+--
+
+# Output formats
+
+--
+
+revisited
 
 ---
 
+# Use `bookdown`
 
-change output format to a bookdown one for single docs
+Try changing output format in your YAML to a bookdown one for single docs
+
+.pull-left[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_output(html_document()) %>% 
+  asis_yaml_output()
+```
+
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_output(bookdown::html_document2()) %>% 
+  asis_yaml_output()
+```
+
+]
+
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">4</strong>
+</span> 
+
+# Cross-references
 
 ---
 
-demo cross references for headers/images (will need knitr include graphics)
+# Header references
+
+---
+
+# Figure references
+
+`knitr::include_graphics`
+
+---
+
+# Table references
+
+---
+
+# Add cross-references
+
+To a section, a figure, and a table in the text.
+
+```{r echo = FALSE}
+countdown(minutes = 5)
+```
 
 ---
 

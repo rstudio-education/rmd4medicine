@@ -10,7 +10,7 @@ authors: [alison]
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
 image:
-  caption: '[Photo by Vincent van Zalinge on Unsplash](https://unsplash.com/photos/4Mu2bXIsn5Y)'
+  caption: ''
   focal_point: ''
   preview_only: yes
 projects: []
@@ -23,3 +23,7 @@ weight: 2
 knitr::include_url("/slides/02-output-tables.html")
 ```
 
+# Relevant resources
+
++ [R4DS R Markdown formats](https://r4ds.had.co.nz/r-markdown-formats.html)
++ [R Markdown: The Definitive Guide on output formats](https://bookdown.org/yihui/rmarkdown/output-formats.html)

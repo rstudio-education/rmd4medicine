@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>R Markdown for Medicine</title>
+    <title>Welcome</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-08-29" />
+    <meta name="date" content="2019-08-30" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <script>
     // Adapted from https://github.com/gnab/remark/wiki/Configuration#using-javascript-to-create-a-continuously-looping-slideshow
     // every 8 seconds (change to your desired interval), fire the helper function
@@ -25,8 +24,8 @@
     });
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
-    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -37,23 +36,20 @@
 
 
 
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 10%
-
-&lt;!--put cloud link in footer going across--&gt;
-
----
 class: title-slide, center, middle
 
-# R Markdown for Medicine
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#3b4245;"&gt;Hi!&lt;/strong&gt;
+&lt;/span&gt; 
 
-## 
+# Welcome
+
+## R Markdown for Medicine
 
 ### Alison Hill &amp;#183; RStudio
 
-#### <i class="fas  fa-code-branch "></i> alison.rbind.io &amp;#183; <i class="fab  fa-twitter "></i> @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
 &lt;!-- this ends up being the title slide since seal = FALSE--&gt;
 
@@ -79,7 +75,18 @@ class: center, middle
 
 
 
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+]
+
+.right-column[
+
 # What *is* R Markdown?
+
+
 
 1. An authoring framework for data science.
 
@@ -93,17 +100,29 @@ class: center, middle
 
 1. Wizardry.
 
+]
+
 ---
 
 
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+]
 
-# How does R Markdown work?
+.right-column[
+
+# How *does* R Markdown work?
 
 1. 🤷
 
 1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
 
 1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+]
 
 
 ---

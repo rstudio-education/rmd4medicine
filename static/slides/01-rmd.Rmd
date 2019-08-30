@@ -1,11 +1,12 @@
 ---
-title: "01<br>R Markdown Basics"
+title: "R Markdown Basics"
+session: "01"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["default", "css/my-theme.css", "css/my-fonts.css"]
+    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
     seal: false 
     lib_dir: libs
     nature:
@@ -17,7 +18,7 @@ output:
       ratio: "16:9"
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
-      in_header: header.html  
+      in_header: assets/header.html  
 ---
 
 ```{r setup, include=FALSE}
@@ -29,15 +30,12 @@ library(countdown)
 ```
 
 
-layout: true
-background-image: url(img/RStudio-Logo-Flat.png)
-background-position: 0% 100%;
-background-size: 10%
-
-<!--put cloud link in footer going across-->
-
----
 class: title-slide, center, middle
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
+  <strong class="fa-stack-1x" style="color:#3b4245;">`r rmarkdown::metadata$session`</strong>
+</span> 
 
 # `r rmarkdown::metadata$title`
 
@@ -45,11 +43,17 @@ class: title-slide, center, middle
 
 ### `r rmarkdown::metadata$author` &#183; RStudio
 
-#### `r icon::fa("code-branch")` alison.rbind.io &#183; `r icon::fa("twitter")` @apreshill 
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+
 
 <!-- this ends up being the title slide since seal = FALSE-->
 
-???
+---
+layout: true
+
+<div class="my-footer"><span>rstudio.cloud/link</span></div>
+
+<!-- this adds the link footer to all slides, depends on my-footer class in css-->
 
 ---
 
@@ -73,54 +77,31 @@ introduce self
 
 ---
 
-# Answers 
+.left-column[
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"></i>
+  <strong class="fa-stack-1x" style="color: #fff;">1</strong>
+</span> 
+]
 
+.right-column[
 
-What *is* R Markdown?
+# What *is* R Markdown?
 
 1. ["An authoring framework for data science."](https://rmarkdown.rstudio.com/lesson-1.html) (`r emo::ji("heavy_check_mark")`)
 
---
-
 1. [A document format (`.Rmd`).](https://bookdown.org/yihui/rmarkdown/) (`r emo::ji("heavy_check_mark")`)
-
---
 
 1. [An R package named `rmarkdown`.](https://rmarkdown.rstudio.com/docs/) (`r emo::ji("heavy_check_mark")`)
 
---
-
 1. ["A file format for making dynamic documents with R."](https://rmarkdown.rstudio.com/articles_intro.html) (`r emo::ji("heavy_check_mark")`)
 
---
+1. ["A tool for integrating prose, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (`r emo::ji("heavy_check_mark")`)
 
-1. ["A tool for integrating prose, code, and results"](https://r4ds.had.co.nz/communicate-intro.html) (`r emo::ji("heavy_check_mark")`)
+1. Wizardry. (`r emo::ji("wizard")`)
 
---
+]
 
-1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (`r emo::ji("wizard")`)
-
----
-class: middle, center
-
-```{r echo = FALSE, out.width="25%", fig.align="center"}
-knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png")
-```
-
-
->"In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
-
---
-
-> The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
-
---
-
-> The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
-
---
-
-> &mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 
 ---
 
@@ -156,8 +137,19 @@ show "raw" doc
 ]
     
 ---
+class: center, middle
 
-now we knit
+# Now we knit
+
+```{r knit-html, echo=FALSE}
+knitr::include_graphics("images/Knit-to-html.jpg")
+```
+
+
+---
+class: center, middle
+
+![](images/doc-live.jpg)
 
 ---
 name: 02-formative
@@ -178,6 +170,12 @@ show output screenshot
 
 ]
 
+---
+class: middle, center
+
+# What is inside?
+
+![](images/doc-make.jpg)
 
 ---
 class: inverse, center, middle
@@ -189,11 +187,11 @@ class: inverse, center, middle
 
 --
 
-# Text
+# Prose
 
 --
 
-Written with Markdown
+Real words, written with Markdown
 
 ---
 
@@ -202,6 +200,8 @@ how can we make it easier on ourselves to explore what is in this report?
 ---
 
 # <center>Headers</center>
+
+--
 
 .pull-left[
 ```markdown
@@ -218,6 +218,8 @@ how can we make it easier on ourselves to explore what is in this report?
 ###### HEADER 6
 ```
 ]
+
+--
 
 .pull-right[
 # HEADER 1
@@ -236,6 +238,8 @@ how can we make it easier on ourselves to explore what is in this report?
 ---
 # <center>Text</center>
 
+--
+
 .pull-left[
 ```markdown
 Childhood **vaccines**  
@@ -244,6 +248,8 @@ _great triumphs_
 of modern medicine. 
 ```
 ]
+
+--
 
 .pull-right[
 
@@ -258,6 +264,8 @@ of modern medicine.
 ---
 
 # <center>Lists</center>
+
+--
 
 .pull-left[
 ```markdown
@@ -281,6 +289,8 @@ roll out in developing countries:
 1. meningitis A
 ```
 ]
+
+--
 
 .pull-right[
 
@@ -309,12 +319,16 @@ roll out in developing countries:
 
 # <center>Images</center>
 
+--
+
 .pull-left[
 ```markdown
 Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ```
 ]
+
+--
 
 .pull-right[
 Receiving rubella vaccination, Brazil, 2008.
@@ -325,6 +339,8 @@ Receiving rubella vaccination, Brazil, 2008.
 
 # <center>Links</center>
 
+--
+
 .pull-left[
 ```markdown
 [Photo](https://en.wikipedia.org/wiki/Vaccine)
@@ -333,6 +349,8 @@ Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ```
 ]
+
+--
 
 .pull-right[
 [Photo](https://en.wikipedia.org/wiki/Vaccine)
@@ -371,15 +389,15 @@ How do you add headers in Markdown?
 
 ## Part II
 
-What about lists in Markdown?
+What about bulleted lists in Markdown? Numbered?
 
-`! Bullet 1`
+`! Item 1`
 
-`- Bullet 1`
+`- Item 1`
 
-`# Bullet 1`
+`# Item 1`
 
-`1.Bullet 1`
+`1. Item 1`
 
 ]
 
@@ -389,7 +407,8 @@ add headers
 
 use RStudio outline pane
 
-knit
+```{r ref.label="knit-html", echo=FALSE}
+```
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -482,8 +501,10 @@ class: inverse, center, middle
 
 give some guidance here
 
+knit again 
 
-knit again
+```{r ref.label="knit-html", echo=FALSE}
+```
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -500,16 +521,46 @@ show how to add chunk labels and view in IDE interactively
 
 ---
 
-# Add chunk labels
+# The `setup` chunk
+
+Have one, make include false, global options
+
+have another one for loading packages
+
+.pull-left[
+
+````
+```{r setup}`r ''`
+med <- rep("rmd", 4)
+med
+```
+````
+
+]
+
+.pull-right[
+
+
+
+]
+
+---
+
+# Code chunk cleanup
 
 add the labels
 
+split up first big chunk of code
+
 use RStudio outline pane
 
-knit
+knit again
+
+```{r ref.label="knit-html", echo=FALSE}
+```
 
 ```{r echo = FALSE}
-countdown(minutes = 2)
+countdown(minutes = 5)
 ```
 
 
@@ -525,6 +576,75 @@ When you change the code chunk names, what did *not* change?
 1. `knitr` code chunk options
 
 (for answer reveal, maybe show empty "template")
+
+
+---
+anatomy pic
+
+# How it all fits together
+
+---
+
+```{r child="how-rmd-works.Rmd"}
+
+```
+
+---
+class: top
+
+.left-column[
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"></i>
+  <strong class="fa-stack-1x" style="color: #fff;">2</strong>
+</span> 
+
+]
+
+
+.right-column[
+
+# How *does* R Markdown work?
+
+1. `r emo::ji("shrug")` (`r emo::ji("heavy_check_mark")`)
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (`r emo::ji("heavy_check_mark")`)
+
+1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (`r emo::ji("wizard")`)
+
+]
+
+---
+class: middle, center
+
+```{r echo = FALSE, out.width="25%", fig.align="center"}
+knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png")
+```
+
+
+>"In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
+
+--
+
+> The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
+
+--
+
+> The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
+
+--
+
+> &mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+---
+class: center, middle
+
+# Foreshadowing
+
+
+```{r echo=FALSE, out.width="40%"}
+knitr::include_graphics("images/outputs.png")
+```
+
 
 ---
 class: middle, center
