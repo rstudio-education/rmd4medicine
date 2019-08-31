@@ -2,7 +2,7 @@
 header:
   caption: ""
   image: ""
-title: "Sessions"
+title: "Workshop materials"
 view: 2
 layout: post
 ---
