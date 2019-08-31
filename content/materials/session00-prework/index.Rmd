@@ -1,6 +1,6 @@
 ---
 title: Prework
-alias: /prework
+alias: /prework.html
 date: '2019-08-29'
 slug: 00-rmd
 categories: [slides, prework]
