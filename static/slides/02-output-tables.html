@@ -4,7 +4,7 @@
     <title>Output &amp; Tables</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-08-30" />
+    <meta name="date" content="2019-08-31" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -137,92 +137,16 @@ Add or edit code...
 
 ]
 
-
-
-
-<div class="countdown" id="timer_5d698425" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ae02e" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
-
 ---
 class: middle, center, inverse
-
 
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
   &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1 &lt;/strong&gt;
-&lt;/span&gt; 
-
---
-
-# YAML
-
---
-
-_"YAML Ain't Markup Language"_
-
----
-
-# Think: Metadata
-
-.pull-left[
-acronym not helpful, what does it mean, key: value pairs
-
-think about "metadata"
-
-```yaml
----
-output: html_document
----
-```
-]
-
-.pull-right[
-&lt;img src="images/orchestra.jpg" width="75%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-class: your-turn
-
-
-# Your turn
-
-## Edit the YAML
-
-.pull-left[
-
-1. Add your name as first author
-
-1. Change the title to something you might actually write
-
-1. 🧶 **Knit** to HTML.
-]
-
-.pull-right[
-
-```yaml
----
-author: Your name here
-title: Your title here
-output: html_document
----
-```
-
-]
-
-
-<div class="countdown" id="timer_5d6983e1" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
----
-class: middle, center, inverse
-
-&lt;span class="fa-stack fa-4x"&gt;
-  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2 &lt;/strong&gt;
 &lt;/span&gt; 
 
 --
@@ -254,7 +178,7 @@ Use the drop-down menu for the 🧶 **Knit** button and try:
 
 1. Knitting to PDF
 
-<div class="countdown" id="timer_5d698449" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ae2bd" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -283,60 +207,7 @@ output: distill::distill_article
 ```
 ]
 
-<div class="countdown" id="timer_5d69841e" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
----
-class: middle, center, inverse
-
-&lt;span class="fa-stack fa-4x"&gt;
-  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3 &lt;/strong&gt;
-&lt;/span&gt; 
-
---
-
-# Output options
-
---
-
-The `output:` key in your YAML
-
----
-nesting matters
-
-
----
-class: your-turn
-
-# Your turn
-
-## Add an output option
-
-.pull-left[
-
-1. Add a table of contents to our distill article
-
-1. Select "Knit to distill_article"
-
-]
-
-.pull-right[
-
-```yaml
----
-author: Your name here
-title: Your title here
-output:
-  distill::distill_article:
-    toc: true
----
-```
-
-]
-
-<div class="countdown" id="timer_5d6983f9" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ae365" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -356,7 +227,7 @@ class: middle, center, inverse
 
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;4 &lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2 &lt;/strong&gt;
 &lt;/span&gt; 
 
 --
@@ -428,7 +299,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ──────────────────────────────────────── tidyverse 1.2.1.9000 ──
+## ── Attaching packages ───────────────────── tidyverse 1.2.1.9000 ──
 ```
 
 ```
@@ -439,7 +310,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Conflicts ──────────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ───────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ```
@@ -476,7 +347,7 @@ mock_surv &lt;- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %&gt;
 ggplot(mock_surv, aes(x = age, y = fu_time)) + geom_point() +geom_smooth(method = "lm")
 ```
 
-![](02-output-tables_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](02-output-tables_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
 ```r
 ggplot(mock_surv, aes(x = hgb, y = fu_time)) + geom_point() +geom_smooth(method = "lm")
@@ -490,7 +361,7 @@ ggplot(mock_surv, aes(x = hgb, y = fu_time)) + geom_point() +geom_smooth(method 
 ## Warning: Removed 31 rows containing missing values (geom_point).
 ```
 
-![](02-output-tables_files/figure-html/unnamed-chunk-11-2.png)&lt;!-- --&gt;
+![](02-output-tables_files/figure-html/unnamed-chunk-5-2.png)&lt;!-- --&gt;
 
 ]
 
@@ -531,7 +402,7 @@ To exclude, use your `knitr` code chunk options (do not delete!)
 
 add text to frame the table and what it is showing
 
-<div class="countdown" id="timer_5d698450" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ae372" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -542,7 +413,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d698334" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d6ae005" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

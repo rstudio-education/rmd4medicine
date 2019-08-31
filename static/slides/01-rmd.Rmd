@@ -23,6 +23,7 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+episode_counter <- 0
 ```
 
 ```{r packages, include=FALSE}
@@ -160,17 +161,31 @@ class: your-turn
 
 Find a partner, and take a look at this R Markdown document together. 
 
+.pull-left[
 Try to identify these parts of the document:
+
+1. The **metadata**
 
 1. The **text** (not code)
 
 1. The **code**
 
 If this was easy, try to find all code that produces a **table**, then all code that produces a **plot**.
+]
+
+.pull-right[
+Try to answer the following questions:
+
+1. How many sites do we have data for?
+
+1. How many participants survived this trial?
+
+1. Which treatment arm has the highest survival rate?
+]
 
 
 ```{r echo = FALSE}
-countdown(minutes = 2)
+countdown(minutes = 5)
 ```
 
 
@@ -186,6 +201,7 @@ show "raw" doc
 
 .pull-right[
 
+1. The **metadata**
 
 1. The **text** 
 
@@ -219,6 +235,8 @@ show output screenshot
 
 .pull-right[
 
+1. The **metadata**
+
 1. The **text** 
 
 1. The **code**
@@ -239,11 +257,141 @@ class: middle, center
 ![](images/doc-make.jpg)
 
 ---
+class: middle, center, inverse
+
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
+</span> 
+
+--
+
+# Metadata
+
+--
+
+Your document's control panel
+
+---
+
+# metadata: YAML
+
+.pull-left[
+
+_"YAML Ain't Markup Language"_
+
+acronym not helpful, what does it mean, key: value pairs
+
+think "metadata"
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_output(html_document()) %>% 
+  asis_yaml_output()
+```
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="75%", fig.align='center'}
+knitr::include_graphics("images/orchestra.jpg")
+```
+
+]
+
+---
+class: your-turn
+
+
+# Your turn
+
+## Edit the YAML
+
+.pull-left[
+
+1. Add your name as first author
+
+1. Change the title to something you might actually write
+
+1. `r emo::ji("yarn")` **Knit** to HTML.
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document()) %>% 
+  asis_yaml_output()
+```
+
+]
+
+
+```{r echo = FALSE}
+countdown(minutes = 1)
+```
+
+---
+class: middle, center
+
+# Output options
+
+--
+
+The `output:` key in your YAML
+
+--
+nesting matters
+
+
+---
+class: your-turn
+
+# Your turn
+
+## Add an output option
+
+.pull-left[
+
+1. Add a floating table of contents
+
+1. Add a theme ([pick one](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style))
+
+1. `r emo::ji("yarn")` **Knit** to HTML.
+
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+library(ymlthis)
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document(toc = TRUE,
+                           toc_float = TRUE,
+                           theme = "flatly")) %>% 
+  asis_yaml_output()
+```
+
+]
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+
+
+---
 class: inverse, center, middle
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 --
@@ -325,6 +473,7 @@ of modern medicine.
 
 
 ---
+class: top
 
 # <center>Lists</center>
 
@@ -483,7 +632,7 @@ class: inverse, center, middle
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">2</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 --
@@ -533,7 +682,7 @@ class: inverse, center, middle
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">3</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 --
@@ -562,7 +711,9 @@ class: your-turn
 
 # Your turn
 
-1. Edit chunk options (give some ideas here)
+## Change chunk options
+
+1. give some ideas here
 
 1. `r emo::ji("yarn")` **Knit** to HTML.
 
@@ -610,9 +761,11 @@ class: your-turn
 
 # Your turn
 
-## Code chunk cleanup
+## New data dump! `r emo::ji("newspaper")`
 
-1. Split up the first big chunk of code into two: `setup` and `packages`
+1. Data from more sites just came in! Replace `mockboston` in the file `mockbsd`. How many sites do we have now?
+
+1. Clean up the chunks (split, combine, label as you see fit)
 
 1. Use the RStudio outline pane; rejoice!
 
@@ -713,6 +866,14 @@ class: middle, center
 
 --
 
+`r emo::ji("heavy_check_mark")` **Document your document:** use YAML to set up meaningful metadata
+
+--
+
+`r emo::ji("heavy_check_mark")` **Style your document:** use YAML to add options to your chosen output format
+
+--
+
 `r emo::ji("heavy_check_mark")` **Organize your text:** use markdown headers with `#`
 
 --
@@ -721,11 +882,11 @@ class: middle, center
 
 --
 
-`r emo::ji("heavy_check_mark")` **Format your text:** use markdown **bold**, _italics_, <i class="fas fa-list-ul"></i> bullets, and <i class="fas fa-list-ol"></i> lists
+`r emo::ji("heavy_check_mark")` **Style your text:** use markdown **bold**, _italics_, <i class="fas fa-list-ul"></i> bullets, and <i class="fas fa-list-ol"></i> lists
 
 --
 
-`r emo::ji("heavy_check_mark")` **Format your output:** use `knitr` chunk options
+`r emo::ji("heavy_check_mark")` **Style your output:** use `knitr` chunk options
 
 --
 

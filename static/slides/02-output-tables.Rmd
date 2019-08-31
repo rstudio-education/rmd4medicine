@@ -19,12 +19,11 @@ output:
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
       in_header: assets/header.html  
-params:
-  episode_counter: 0
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+episode_counter <- 0
 ```
 
 ```{r packages, include=FALSE}
@@ -148,96 +147,16 @@ Add or edit code...
 
 ]
 
-
-
-
 ```{r echo = FALSE}
 countdown(minutes = 5)
 ```
 
-
----
-class: middle, center, inverse
-
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 1` </strong>
-</span> 
-
---
-
-# YAML
-
---
-
-_"YAML Ain't Markup Language"_
-
----
-
-# Think: Metadata
-
-.pull-left[
-acronym not helpful, what does it mean, key: value pairs
-
-think about "metadata"
-
-```{r echo = FALSE}
-library(ymlthis)
-yml_empty() %>% 
-  yml_output(html_document()) %>% 
-  asis_yaml_output()
-```
-]
-
-.pull-right[
-```{r echo=FALSE, out.width="75%", fig.align='center'}
-knitr::include_graphics("images/orchestra.jpg")
-```
-
-]
-
----
-class: your-turn
-
-
-# Your turn
-
-## Edit the YAML
-
-.pull-left[
-
-1. Add your name as first author
-
-1. Change the title to something you might actually write
-
-1. `r emo::ji("yarn")` **Knit** to HTML.
-]
-
-.pull-right[
-
-```{r echo = FALSE}
-library(ymlthis)
-yml_empty() %>% 
-  yml_author("Your name here") %>% 
-  yml_title("Your title here") %>% 
-  yml_output(html_document()) %>% 
-  asis_yaml_output()
-```
-
-]
-
-
-```{r echo = FALSE}
-countdown(minutes = 2)
-```
-
 ---
 class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 2` </strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 --
@@ -303,58 +222,6 @@ yml_empty() %>%
 countdown(minutes = 2)
 ```
 
----
-class: middle, center, inverse
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 3` </strong>
-</span> 
-
---
-
-# Output options
-
---
-
-The `output:` key in your YAML
-
----
-nesting matters
-
-
----
-class: your-turn
-
-# Your turn
-
-## Add an output option
-
-.pull-left[
-
-1. Add a table of contents to our distill article
-
-1. Select "Knit to distill_article"
-
-]
-
-.pull-right[
-
-```{r echo = FALSE}
-library(ymlthis)
-yml_empty() %>% 
-  yml_author("Your name here") %>% 
-  yml_title("Your title here") %>% 
-  yml_output(distill::distill_article(toc = TRUE)) %>% 
-  asis_yaml_output()
-```
-
-]
-
-```{r echo = FALSE}
-countdown(minutes = 2)
-```
-
 
 ---
 name: distill_article
@@ -371,7 +238,7 @@ class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">`r params$episode_counter + 4` </strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 --

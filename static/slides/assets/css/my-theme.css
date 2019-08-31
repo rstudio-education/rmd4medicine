@@ -2,14 +2,16 @@
   font-size: 22px;
 }
 
+.remark-slide-content h1 {
+	margin-bottom: .25em !important;
+}
+
 .large { font-size: 2em; }
 
 .title {
   font-family: 'Prata', serif;
   font-weight: 400;
 }
-
-
 
 /* link color */
 a, a > code {

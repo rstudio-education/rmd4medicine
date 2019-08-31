@@ -4,7 +4,7 @@
     <title>R Markdown Basics</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-08-30" />
+    <meta name="date" content="2019-08-31" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -169,17 +169,31 @@ class: your-turn
 
 Find a partner, and take a look at this R Markdown document together. 
 
+.pull-left[
 Try to identify these parts of the document:
+
+1. The **metadata**
 
 1. The **text** (not code)
 
 1. The **code**
 
 If this was easy, try to find all code that produces a **table**, then all code that produces a **plot**.
+]
+
+.pull-right[
+Try to answer the following questions:
+
+1. How many sites do we have data for?
+
+1. How many participants survived this trial?
+
+1. Which treatment arm has the highest survival rate?
+]
 
 
-<div class="countdown" id="timer_5d69799a" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_5d6ae09d" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 
@@ -195,6 +209,7 @@ show "raw" doc
 
 .pull-right[
 
+1. The **metadata**
 
 1. The **text** 
 
@@ -226,6 +241,8 @@ show output screenshot
 
 .pull-right[
 
+1. The **metadata**
+
 1. The **text** 
 
 1. The **code**
@@ -246,11 +263,138 @@ class: middle, center
 ![](images/doc-make.jpg)
 
 ---
+class: middle, center, inverse
+
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Metadata
+
+--
+
+Your document's control panel
+
+---
+
+# metadata: YAML
+
+.pull-left[
+
+_"YAML Ain't Markup Language"_
+
+acronym not helpful, what does it mean, key: value pairs
+
+think "metadata"
+
+```yaml
+---
+output: html_document
+---
+```
+]
+
+.pull-right[
+&lt;img src="images/orchestra.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+class: your-turn
+
+
+# Your turn
+
+## Edit the YAML
+
+.pull-left[
+
+1. Add your name as first author
+
+1. Change the title to something you might actually write
+
+1. 🧶 **Knit** to HTML.
+]
+
+.pull-right[
+
+```yaml
+---
+author: Your name here
+title: Your title here
+output: html_document
+---
+```
+
+]
+
+
+<div class="countdown" id="timer_5d6adfab" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: middle, center
+
+# Output options
+
+--
+
+The `output:` key in your YAML
+
+--
+nesting matters
+
+
+---
+class: your-turn
+
+# Your turn
+
+## Add an output option
+
+.pull-left[
+
+1. Add a floating table of contents
+
+1. Add a theme ([pick one](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style))
+
+1. 🧶 **Knit** to HTML.
+
+]
+
+.pull-right[
+
+```yaml
+---
+author: Your name here
+title: Your title here
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+```
+
+]
+
+<div class="countdown" id="timer_5d6adff1" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+
+---
 class: inverse, center, middle
 
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2 &lt;/strong&gt;
 &lt;/span&gt; 
 
 --
@@ -332,6 +476,7 @@ of modern medicine.
 
 
 ---
+class: top
 
 # &lt;center&gt;Lists&lt;/center&gt;
 
@@ -481,7 +626,7 @@ class: your-turn
 
 1. 🧶 **Knit** to HTML.
 
-<div class="countdown" id="timer_5d69787e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ae0f4" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -490,7 +635,7 @@ class: inverse, center, middle
 
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3 &lt;/strong&gt;
 &lt;/span&gt; 
 
 --
@@ -545,7 +690,7 @@ class: inverse, center, middle
 
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3&lt;/strong&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;4 &lt;/strong&gt;
 &lt;/span&gt; 
 
 --
@@ -574,12 +719,14 @@ class: your-turn
 
 # Your turn
 
-1. Edit chunk options (give some ideas here)
+## Change chunk options
+
+1. give some ideas here
 
 1. 🧶 **Knit** to HTML.
 
 
-<div class="countdown" id="timer_5d6978c9" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6adf23" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -622,16 +769,18 @@ class: your-turn
 
 # Your turn
 
-## Code chunk cleanup
+## New data dump! 📰
 
-1. Split up the first big chunk of code into two: `setup` and `packages`
+1. Data from more sites just came in! Replace `mockboston` in the file `mockbsd`. How many sites do we have now?
+
+1. Clean up the chunks (split, combine, label as you see fit)
 
 1. Use the RStudio outline pane; rejoice!
 
 1. 🧶 **Knit** to HTML.
 
 
-<div class="countdown" id="timer_5d697a75" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ae27e" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -737,6 +886,14 @@ class: middle, center
 
 --
 
+✔️ **Document your document:** use YAML to set up meaningful metadata
+
+--
+
+✔️ **Style your document:** use YAML to add options to your chosen output format
+
+--
+
 ✔️ **Organize your text:** use markdown headers with `#`
 
 --
@@ -745,11 +902,11 @@ class: middle, center
 
 --
 
-✔️ **Format your text:** use markdown **bold**, _italics_, &lt;i class="fas fa-list-ul"&gt;&lt;/i&gt; bullets, and &lt;i class="fas fa-list-ol"&gt;&lt;/i&gt; lists
+✔️ **Style your text:** use markdown **bold**, _italics_, &lt;i class="fas fa-list-ul"&gt;&lt;/i&gt; bullets, and &lt;i class="fas fa-list-ol"&gt;&lt;/i&gt; lists
 
 --
 
-✔️ **Format your output:** use `knitr` chunk options
+✔️ **Style your output:** use `knitr` chunk options
 
 --
 
@@ -763,7 +920,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d697bbe" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d6adfb0" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>
