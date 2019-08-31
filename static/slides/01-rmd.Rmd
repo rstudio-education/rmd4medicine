@@ -300,40 +300,6 @@ knitr::include_graphics("images/orchestra.jpg")
 
 ]
 
----
-class: your-turn
-
-
-# Your turn
-
-## Edit the YAML
-
-.pull-left[
-
-1. Add your name as first author
-
-1. Change the title to something you might actually write
-
-1. `r emo::ji("yarn")` **Knit** to HTML.
-]
-
-.pull-right[
-
-```{r echo = FALSE}
-library(ymlthis)
-yml_empty() %>% 
-  yml_author("Your name here") %>% 
-  yml_title("Your title here") %>% 
-  yml_output(html_document()) %>% 
-  asis_yaml_output()
-```
-
-]
-
-
-```{r echo = FALSE}
-countdown(minutes = 1)
-```
 
 ---
 class: middle, center
@@ -353,9 +319,13 @@ class: your-turn
 
 # Your turn
 
-## Add an output option
+## Edit your YAML
 
 .pull-left[
+
+1. Add your name as first author
+
+1. Change the title to something you might actually write
 
 1. Add a floating table of contents
 
@@ -381,7 +351,7 @@ yml_empty() %>%
 ]
 
 ```{r echo = FALSE}
-countdown(minutes = 2)
+countdown(minutes = 4)
 ```
 
 
