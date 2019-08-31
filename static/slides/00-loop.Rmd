@@ -49,13 +49,29 @@ class: title-slide, center, middle
 ???
 
 ---
+class: middle, center
 
-go here and log in (free):
+# <i class="fas fa-cloud"></i>
+
+Go here and log in (free):
+
 cloud link
 
 ---
+class: middle, center
 
-wifi network and password go in footer
+.pull-left[
+# <i class="fas fa-wifi"></i>
+
+Wifi network name
+]
+
+.pull-left[
+# <i class="fas fa-key"></i>
+
+Wifi password
+]
+
 
 ---
 class: center, middle

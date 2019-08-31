@@ -13,7 +13,7 @@ image:
   focal_point: ''
   preview_only: yes
 projects: []
-weight: 3
+weight: 4
 ---
 
 [View slides](/slides/03-data-workflows.html)

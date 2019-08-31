@@ -123,8 +123,6 @@ Medicine](https://rmd4medicine.netlify.com/workshop/) workshop\! We look
 forward to meeting you in person. Before attending the workshop, please
 complete the following prework:
 
-<br> <br>
-
 1.  Sign up for a free RStudio Cloud account at <https://rstudio.cloud/>
     before the workshop. I recommend logging in with an existing Google
     or GitHub account, if you have one (rather than creating a new
@@ -137,28 +135,31 @@ complete the following prework:
     
       - A recent version of R (\>=3.6.0), which is available for free at
         <https://cloud.r-project.org/>
+    
       - A recent version of RStudio Desktop (\>=1.2), available for free
         ([RStudio Desktop Open Source
         License](https://www.rstudio.com/products/rstudio/download/#download))
+    
       - The R packages we will use, which you can install by connecting
         to the internet, opening RStudio, and running at the command
         line:
-    
-    <!-- end list -->
-    
-    ``` r
-    install.packages(c("rmarkdown", "distill", "bookdown",
-                       "tidyverse", "here", "janitor", "skimr", 
-                       "flextable", "arsenal", "scico", "cowplot"))
-    ```
+        
+        ``` r
+        install.packages(c("rmarkdown", "distill", "bookdown",
+                           "tidyverse", "here", "janitor", "skimr", 
+                           "flextable", "arsenal", "scico", "cowplot"))
+        ```
 
 4.  Don’t forget your power cord\!
 
 On the day of the workshop, I’ll provide you with an RStudio Cloud
 project that contains all of the course materials. We will use the
 software listed above only as an important backup should there be
-problems with the on-site internet
-connection.
+problems with the on-site internet connection.
+
+[View slides](/slides/00-loop.html) (note: these slides are
+intentionally a loop and will play on
+autoadvance)
 
 -----
 

@@ -13,7 +13,7 @@ image:
   focal_point: ''
   preview_only: yes
 projects: []
-weight: 1
+weight: 2
 ---
 
 [View slides](/slides/01-rmd.html)
