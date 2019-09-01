@@ -16,7 +16,7 @@ R Markdown for Medicine: <br>From Data to Manuscript
 | 04:00 - 04:45 | Session 4 (Graphics for Communication) |
 | 04:45 - 05:00 | Wrap-up / Overtime                     |
 
-spiral\_calendar: September 12, 2019  
+calendar: September 12, 2019  
 :clock8: 01:00pm - 05:00pm  
 :round\_pushpin: Boston, MA  
 :white\_check\_mark: [Register](https://cvent.me/en41V)  

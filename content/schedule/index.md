@@ -4,7 +4,7 @@ summary: "Overview of our 2-day schedule"  # Add a page description.
 date: "2019-01-01T00:00:00Z"  # Add today's date.
 ---
 
-:spiral_calendar:    September 12, 2019  
+:calendar:    September 12, 2019  
 :clock8:             01:00pm - 05:00pm   
 :round_pushpin:      Boston, MA  
 :white_check_mark:   [Register](https://cvent.me/en41V)  
