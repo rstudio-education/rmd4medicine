@@ -25,4 +25,7 @@ knitr::include_url("/slides/04-graphics.html")
 # Relevant resources
 
 + [Linking rticles to bookdown](https://bookdown.org/yihui/rmarkdown/rticles-bookdown.html)
-
++ [R4DS Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
++ [R Markdown: The Definitive Guide chapter on PowerPoint presentations](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
++ [R Markdown docs on `powerpoint_presentation` output format](https://rmarkdown.rstudio.com/docs/reference/powerpoint_presentation.html)
++ [RStudio webinar _Make PowerPoint Presentations with R Markdown_ ](https://resources.rstudio.com/webinars/make-powerpoint-presentations-with-r-markdown-nathan-stephens)

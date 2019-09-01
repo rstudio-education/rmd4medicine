@@ -11,7 +11,7 @@ output: html_document
 
 .right-column[
 
-# What *is* R Markdown?
+# What is R Markdown?
 
 
 1. An authoring framework for data science.

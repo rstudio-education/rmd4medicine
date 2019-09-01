@@ -103,6 +103,27 @@ knitr::include_graphics("images/wiki-rstudio.png")
 ```
 ]
 
+---
+# Let's play a quick game
+
+.pull-left[
+### Never have I ever...
+
+1. Copy/pasted figures into a paper
+
+1. Had to re-run analyses because a data entry error was found
+
+1. Had to redo anything in a paper to respond to a reviewer's question or suggestion
+
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="50%", fig.align="center"}
+knitr::include_graphics("images/neverever.jpg")
+```
+
+]
+
 
 ---
 
@@ -121,7 +142,7 @@ knitr::include_graphics("images/wiki-rstudio.png")
 
 .right-column[
 
-# What *is* R Markdown?
+# What is R Markdown?
 
 1. ["An authoring framework for data science."](https://rmarkdown.rstudio.com/lesson-1.html) (`r emo::ji("heavy_check_mark")`)
 
@@ -153,6 +174,27 @@ HIPAA-compliant transfer of data :)
 You do some wrangling in combo of Excel/SPSS/SAS
 
 ---
+class: middle, center
+
+# Change your mental model
+
+.pull-left[
+
+### Content = presentation
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("images/word.png")
+```
+
+]
+
+.pull-right[
+
+### Content &rarr; presentation
+
+]
+
+---
 class: your-turn
 
 # Your turn
@@ -161,7 +203,7 @@ class: your-turn
 
 Find a partner, and take a look at this R Markdown document together. 
 
-.pull-left[
+
 Try to identify these parts of the document:
 
 1. The **metadata**
@@ -171,17 +213,7 @@ Try to identify these parts of the document:
 1. The **code**
 
 If this was easy, try to find all code that produces a **table**, then all code that produces a **plot**.
-]
 
-.pull-right[
-Try to answer the following questions:
-
-1. How many sites do we have data for?
-
-1. How many participants survived this trial?
-
-1. Which treatment arm has the highest survival rate?
-]
 
 
 ```{r echo = FALSE}

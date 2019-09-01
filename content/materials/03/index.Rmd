@@ -25,8 +25,10 @@ knitr::include_url("/slides/03-data-workflows.html")
 # Relevant resources
 
 + [R4DS Workflow: Projects](https://r4ds.had.co.nz/workflow-projects.html)
++ [R4DS R Markdown workflow](https://r4ds.had.co.nz/r-markdown-workflow.html)
 + [What They Forgot: Project-oriented workflow](https://whattheyforgot.org/project-oriented-workflow.html)
 + [What The Forgot: Practice safe paths](https://whattheyforgot.org/safe-paths.html)
++ [R4DS Bibliographies & Citations](https://r4ds.had.co.nz/r-markdown.html#bibliographies-and-citations)
 + [Bookdown: A single document](https://bookdown.org/yihui/bookdown/a-single-document.html)
 + [Bookdown: Cross-references](https://bookdown.org/yihui/bookdown/cross-references.html)
 + [Linking rticles to bookdown](https://bookdown.org/yihui/rmarkdown/rticles-bookdown.html)

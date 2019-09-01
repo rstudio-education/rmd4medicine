@@ -55,14 +55,56 @@ layout: true
 
 <!-- this adds the link footer to all slides, depends on my-footer class in css-->
 
+---
+
+`knitr` options for controlling size (https://r4ds.had.co.nz/graphics-for-communication.html#figure-sizing)
+
+---
+
+graphics type output (https://r4ds.had.co.nz/graphics-for-communication.html#other-important-options)
+
+---
+`knitr` options for fig resolution
+
+---
+
+setting `fig.path`
+
+---
+
+adding figure captions with `fig.cap` + in text references
+
+---
+
+`cowplot` or `patchwork` for multi-panel plots
+
+---
+
+Add in powerpoint output format here, natural place with graphics for communication
+
+---
+class: middle, center
+
+# Change your mental model
+
+.pull-left[
+
+### Content = presentation
+
+```{r echo=FALSE}
+knitr::include_graphics("images/ppt.png")
+```
+
+]
+
+.pull-right[
+
+### Content &rarr; presentation
+
+]
 
 ---
 class: middle, center, inverse
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
-  <strong class="fas fa-gifts" style="color:#E7553C;"></strong>
-</span> 
 
 
 # Time to wrap-up!

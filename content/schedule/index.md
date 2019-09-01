@@ -21,7 +21,7 @@ date: "2019-01-01T00:00:00Z"  # Add today's date.
 | 02:00 - 02:45 | Session 2 (Outputs & Tables)            |
 | 02:45 - 03:00 | *Break* :tea:                           |
 | 03:00 - 03:50 | Session 3 (Data & Workflows)            |
-| 03:50 - 04:00 | *Break*           |
+| 03:50 - 04:00 | *Break* :potable_water:                 |
 | 04:00 - 04:45 | Session 4 (Graphics for Communication)  |
 | 04:45 - 05:00 | Wrap-up / Overtime                      |
 
