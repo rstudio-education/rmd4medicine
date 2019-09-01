@@ -5,10 +5,22 @@ R Markdown for Medicine: <br>From Data to Manuscript
 
 -----
 
-🗓 September 12, 2019  
-🕗 01:00pm - 05:00pm  
-📍 Boston, MA  
-✅ [Register](https://cvent.me/en41V)
+| Time          | Activity                               |
+| :------------ | :------------------------------------- |
+| 01:00 - 01:50 | Session 1 (R Markdown Anatomy)         |
+| 01:50 - 02:00 | *Break* :coffee:                       |
+| 02:00 - 02:45 | Session 2 (Outputs & Tables)           |
+| 02:45 - 03:00 | *Break* :tea:                          |
+| 03:00 - 03:50 | Session 3 (Data & Workflows)           |
+| 03:50 - 04:00 | *Break*                                |
+| 04:00 - 04:45 | Session 4 (Graphics for Communication) |
+| 04:45 - 05:00 | Wrap-up / Overtime                     |
+
+spiral\_calendar: September 12, 2019  
+:clock8: 01:00pm - 05:00pm  
+:round\_pushpin: Boston, MA  
+:white\_check\_mark: [Register](https://cvent.me/en41V)  
+:anchor: [`rmd4medicine.netlify.com`](https://rmd4medicine.netlify.com/)
 
 -----
 
@@ -89,19 +101,6 @@ workflow. No prior experience with R Markdown is required.
       - *Even better,* have you tried to knit 🧶 an R Markdown document
         to some kind of output format like HTML, PDF, or Word?
 
-## Schedule
-
-| Time          | Activity                                 |
-| :------------ | :--------------------------------------- |
-| 01:00 - 01:50 | Session 1 (`rmarkdown` + `knitr` basics) |
-| 01:50 - 02:00 | *Break*                                  |
-| 02:00 - 02:45 | Session 2 (tables)                       |
-| 02:45 - 03:00 | *Break*                                  |
-| 03:00 - 03:50 | Session 3 (data + workflows)             |
-| 03:50 - 04:00 | *Break*                                  |
-| 04:00 - 04:45 | Session 4 (graphics)                     |
-| 04:45 - 05:00 | Wrap-up / Overtime                       |
-
 ## Instructor
 
 Alison Hill is a Data Scientist & Professional Educator at RStudio.
@@ -157,9 +156,9 @@ project that contains all of the course materials. We will use the
 software listed above only as an important backup should there be
 problems with the on-site internet connection.
 
-[View slides](/slides/00-loop.html) (note: these slides are
+[View slides](/slides/00-loop.html) *(note: these slides are
 intentionally a loop and will play on
-autoadvance)
+autoadvance)*
 
 -----
 

@@ -2,7 +2,7 @@
 title: Prework
 aliases: /prework
 date: '2019-08-29'
-categories: [slides, prework]
+categories: [prework]
 tags: []
 summary: 'Welcome to the R Markdown for Medicine workshop! We look forward to meeting you in person. Here is all you need to do ahead of time.'
 lastmod: '2019-08-29T11:21:55-07:00'

@@ -7,10 +7,8 @@ output: github_document
 
 ---
 
-`r emo::ji("spiral_calendar")`    September 12, 2019  
-`r emo::ji("clock8")`             01:00pm - 05:00pm   
-`r emo::ji("round_pushpin")`      Boston, MA  
-`r emo::ji("white_check_mark")`   [Register](https://cvent.me/en41V)
+```{r child = here::here('content/schedule/index.md')}
+```
 
 ---
 
@@ -58,20 +56,6 @@ This introductory workshop is targeted at people who work in the medical field w
 
 - Have you used R with the RStudio Integrated Development Environment (IDE)? Are you familiar with the various "panes" and "tabs"? For instance, can you quickly find all objects in your current global environment, and can you send R code from a source file (.R, .Rmd) to the console? 
   - *Even better,* have you tried to knit `r emo::ji("yarn")` an R Markdown document to some kind of output format like HTML, PDF, or Word?
-
-
-## Schedule
-
-| Time          | Activity                                |
-|:--------------|:----------------------------------------|
-| 01:00 - 01:50 | Session 1 (`rmarkdown` + `knitr` basics)|
-| 01:50 - 02:00 | *Break*             |
-| 02:00 - 02:45 | Session 2 (tables)                      |
-| 02:45 - 03:00 | *Break*        |
-| 03:00 - 03:50 | Session 3 (data + workflows)            |
-| 03:50 - 04:00 | *Break*           |
-| 04:00 - 04:45 | Session 4 (graphics)                    |
-| 04:45 - 05:00 | Wrap-up / Overtime                      |
 
 ## Instructor
 

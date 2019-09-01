@@ -1,5 +1,5 @@
 ---
-title: "Output & Tables"
+title: "Outputs & Tables"
 session: "02"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill

@@ -1,5 +1,5 @@
 ---
-title: "R Markdown Basics"
+title: "R Markdown Anatomy"
 session: "01"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill

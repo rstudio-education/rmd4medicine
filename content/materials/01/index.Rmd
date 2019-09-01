@@ -1,7 +1,7 @@
 ---
-title: The Basics of Markdown and Knitr
+title: R Markdown Anatomy
 date: '2019-08-29'
-slug: 01-rmd
+slug: 01-rmd-anatomy
 categories: [slides]
 tags: []
 subtitle: 'Session 01'
@@ -16,10 +16,10 @@ projects: []
 weight: 2
 ---
 
-[View slides](/slides/01-rmd.html)
+[View slides](/slides/01-rmd-anatomy.html)
 
 ```{r echo=FALSE}
-knitr::include_url("/slides/01-rmd.html")
+knitr::include_url("/slides/01-rmd-anatomy.html")
 ```
 
 # Relevant resources
