@@ -5,6 +5,16 @@ R Markdown for Medicine: <br>From Data to Manuscript
 
 -----
 
+<br>
+
+:spiral\_calendar: September 12, 2019  
+:clock8: 01:00pm - 05:00pm  
+:round\_pushpin: Boston, MA  
+:white\_check\_mark: [Register](https://cvent.me/en41V)  
+:anchor: [`rmd4medicine.netlify.com`](https://rmd4medicine.netlify.com/)
+
+<br>
+
 | Time          | Activity                               |
 | :------------ | :------------------------------------- |
 | 01:00 - 01:50 | Session 1 (R Markdown Anatomy)         |
@@ -16,11 +26,7 @@ R Markdown for Medicine: <br>From Data to Manuscript
 | 04:00 - 04:45 | Session 4 (Graphics for Communication) |
 | 04:45 - 05:00 | Wrap-up / Overtime                     |
 
-calendar: September 12, 2019  
-:clock8: 01:00pm - 05:00pm  
-:round\_pushpin: Boston, MA  
-:white\_check\_mark: [Register](https://cvent.me/en41V)  
-:anchor: [`rmd4medicine.netlify.com`](https://rmd4medicine.netlify.com/)
+<br>
 
 -----
 
