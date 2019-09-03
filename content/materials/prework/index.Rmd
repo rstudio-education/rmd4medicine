@@ -8,7 +8,7 @@ summary: 'Welcome to the R Markdown for Medicine workshop! We look forward to me
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
 image:
-  caption: ''
+  caption: '[Photo by Samuel Zeller on Unsplash](https://unsplash.com/photos/FvNp_SY4kF0)'
   focal_point: ''
   preview_only: yes
 projects: []

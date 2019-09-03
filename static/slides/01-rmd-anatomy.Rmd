@@ -115,6 +115,8 @@ knitr::include_graphics("images/wiki-rstudio.png")
 
 1. Had to redo anything in a paper to respond to a reviewer's question or suggestion
 
+1. Had a shadow of doubt t
+
 ]
 
 .pull-right[
@@ -744,9 +746,12 @@ have another one for loading packages
 .pull-left[
 
 ````
-```{r setup}`r ''`
-med <- rep("rmd", 4)
-med
+```{r setup, include=FALSE}`r ''`
+knitr::opts_chunk$set(
+  collapse = TRUE,   
+  comment = "#>", 
+  out.width = "100%" 
+)
 ```
 ````
 

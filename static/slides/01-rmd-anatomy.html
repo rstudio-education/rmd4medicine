@@ -4,7 +4,7 @@
     <title>R Markdown Anatomy</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-09-01" />
+    <meta name="date" content="2019-09-03" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -96,6 +96,8 @@ class: middle, center
 1. Had to re-run analyses because a data entry error was found
 
 1. Had to redo anything in a paper to respond to a reviewer's question or suggestion
+
+1. Had a shadow of doubt t
 
 ]
 
@@ -220,7 +222,7 @@ If this was easy, try to find all code that produces a **table**, then all code 
 
 
 
-<div class="countdown" id="timer_5d6c3d30" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ec9c4" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -382,7 +384,7 @@ output:
 
 ]
 
-<div class="countdown" id="timer_5d6c3d7b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ecabc" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -625,7 +627,7 @@ class: your-turn
 
 1. 🧶 **Knit** to HTML.
 
-<div class="countdown" id="timer_5d6c3e26" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ecbdb" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -725,7 +727,7 @@ class: your-turn
 1. 🧶 **Knit** to HTML.
 
 
-<div class="countdown" id="timer_5d6c3d30" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6eca30" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -749,9 +751,12 @@ have another one for loading packages
 .pull-left[
 
 ````
-```{r setup}
-med &lt;- rep("rmd", 4)
-med
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,   
+  comment = "#&gt;", 
+  out.width = "100%" 
+)
 ```
 ````
 
@@ -779,7 +784,7 @@ class: your-turn
 1. 🧶 **Knit** to HTML.
 
 
-<div class="countdown" id="timer_5d6c3b55" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d6ec995" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -919,7 +924,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d6c3d3d" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d6ecb0a" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>
