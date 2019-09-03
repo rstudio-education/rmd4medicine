@@ -28,6 +28,10 @@ episode_counter <- 0
 
 ```{r packages, include=FALSE}
 library(countdown)
+library(ymlthis)
+library(tidyverse)
+library(arsenal)
+library(janitor)
 ```
 
 
@@ -192,6 +196,49 @@ Use the drop-down menu for the `r emo::ji("yarn")` **Knit** button and try:
 countdown(minutes = 2)
 ```
 
+
+---
+
+# Temp check `r emo::ji("thermometer")`
+
+Does your current YAML look like this?
+
+```{r echo=FALSE}
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document(toc = TRUE,
+                           toc_float = TRUE,
+                           theme = "flatly")) %>% 
+  asis_yaml_output()
+```
+
+---
+class: your-turn
+
+# Your turn
+
+## Use your YAML instead
+
+You just used the drop-down `r emo::ji("yarn")` **Knit** button to knit to Word and PDF. Now try changing your YAML to:
+
+```{r echo=FALSE}
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document(toc = TRUE, toc_float = TRUE, theme = "flatly"), 
+             word_document(toc = TRUE), 
+             pdf_document()) %>% 
+  asis_yaml_output()
+```
+
+Now click `r emo::ji("yarn")` **Knit** - what do you notice?
+
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
 ---
 class: your-turn
 
@@ -201,15 +248,16 @@ class: your-turn
 
 .pull-left[
 
-1. Edit your YAML! Change the `output:` key to `distill::distill_article()` (note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)
+1. Edit your YAML again! Change the `output:` key to `distill::distill_article()` (note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)
 
 1. `r emo::ji("yarn")` **Knit** to distill_article.
+
+1. _If this was easy, add a table of contents._
 ]
 
 .pull-right[
 
 ```{r echo = FALSE}
-library(ymlthis)
 yml_empty() %>% 
   yml_author("Your name here") %>% 
   yml_title("Your title here") %>% 
@@ -247,6 +295,8 @@ class: middle, center, inverse
 
 ---
 
+Some deep thoughts on tables and R Markdown here
+
 jen's simplicity versus complexity
 
 also tables from you (usually words) versus tables from R (usually numbers)
@@ -264,16 +314,17 @@ class: center
 .pull-left[
 
 ```markdown
-| Time          | Activity           |
-|:--------------|:-------------------|
-| 01:00 - 01:50 | Session 1          |
-| 01:50 - 02:00 | *Break*            |
-| 02:00 - 02:45 | Session 2          |
-| 02:45 - 03:00 | *Break*            |
-| 03:00 - 03:50 | Session 3          |
-| 03:50 - 04:00 | *Break*            |
-| 04:00 - 04:45 | Session 4          |
-| 04:45 - 05:00 | Wrap-up / Overtime |
+| Time          | Session | Topic    |
+|:--------------|:-------:|---------:|
+| _left_        | _center_| _right_  |
+| 01:00 - 01:50 | 1       | Anatomy  |
+| 01:50 - 02:00 |         | *Break*  |
+| 02:00 - 02:45 | 2       | Tables   |
+| 02:45 - 03:00 |         | *Break*  |
+| 03:00 - 03:50 | 3       | Workflow |
+| 03:50 - 04:00 |         | *Break*  |
+| 04:00 - 04:45 | 4       | Graphics |
+| 04:45 - 05:00 | 5       | Wrap-up  |
 ```
 ]
 
@@ -281,18 +332,23 @@ class: center
 
 .pull-right[
 
-| Time          | Activity           |
-|:--------------|:-------------------|
-| 01:00 - 01:50 | Session 1          |
-| 01:50 - 02:00 | *Break*            |
-| 02:00 - 02:45 | Session 2          |
-| 02:45 - 03:00 | *Break*            |
-| 03:00 - 03:50 | Session 3          |
-| 03:50 - 04:00 | *Break*            |
-| 04:00 - 04:45 | Session 4          |
-| 04:45 - 05:00 | Wrap-up / Overtime |
+| Time          | Session | Topic    |
+|:--------------|:-------:|---------:|
+| _left_        | _center_| _right_  |
+| 01:00 - 01:50 | 1       | Anatomy  |
+| 01:50 - 02:00 |         | *Break*  |
+| 02:00 - 02:45 | 2       | Tables   |
+| 02:45 - 03:00 |         | *Break*  |
+| 03:00 - 03:50 | 3       | Workflow |
+| 03:50 - 04:00 |         | *Break*  |
+| 04:00 - 04:45 | 4       | Graphics |
+| 04:45 - 05:00 | 5       | Wrap-up  |
 
 ]
+
+---
+
+# Let's try using data now
 
 ---
 
@@ -304,15 +360,10 @@ class: center
 
 it knows format automatically
 
-```{r}
-library(tidyverse)
-mock_surv <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
+```{r echo = FALSE}
+mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
   mutate(fu_fct = fct_recode(as.factor(fu_stat), 
-                             "Lived" = "1", "Died" = "2")) %>% 
-  filter(fu_fct == "Lived")
-ggplot(mock_surv, aes(x = age, y = fu_time)) + geom_point() +geom_smooth(method = "lm")
-
-ggplot(mock_surv, aes(x = hgb, y = fu_time)) + geom_point() +geom_smooth(method = "lm")
+                             "Lived" = "1", "Died" = "2"))  
 ```
 
 ]
@@ -341,6 +392,35 @@ gt
 
 arsenal (need `knitr` asis options)
 
+```{r results='asis'}
+mockdata %>% 
+  tableby(arm ~ age, data = .) %>% 
+  summary(digits = 2, digits.p = 3, digits.pct=1, 
+          pfootnote=TRUE,
+          title = "Table One: Demographics")
+```
+
+---
+
+.pull-left[
+
+```{r}
+mockdata_gender <- mockdata %>% 
+  tableby(arm ~ sex, data = .) %>% 
+  summary(digits = 2, digits.p = 3, digits.pct=1, 
+          pfootnote=TRUE,
+          title = "Table One: Demographics")
+labels(mockdata_gender) <- c(sex = "Gender")
+```
+]
+
+.pull-right[
+```{r results='asis'}
+mockdata_gender
+```
+]
+
+
 ---
 class: your-turn
 
@@ -349,6 +429,10 @@ class: your-turn
 ## Spruce up the tables
 
 pick one table to include?
++ Not fond of so many decimal places?
++ Edit the summary function to add `digit` arguments between the parentheses,
+like `digits = 2, digits.p = 3, digits.pct=1`
++ You can also edit the labels for the variables in the labels function.
 
 To exclude, use your `knitr` code chunk options (do not delete!)
 
@@ -357,6 +441,30 @@ add text to frame the table and what it is showing
 ```{r echo = FALSE}
 countdown(minutes = 5)
 ```
+
+---
+
+an adverse events table
+
+maybe do some fancier regex worthy stuff to be able to cast all of the adverse events as factors easily
+
+that was a good test- see how tableone deals with factors versus numbers
+
+think about when pfootnote should be TRUE
+
+```{r results='asis'}
+mockdata <- mockdata %>% 
+  mutate(low_wbc = as.factor(low_wbc))
+labels(mockdata) <- c(age = "Age, years", sex = "Gender")
+mockdata %>% 
+  tableby(arm ~ low_wbc + neuropathy + blood_clot, data = .) %>% 
+  summary(digits = 2, digits.p = 3, digits.pct=1, 
+          pfootnote=FALSE,
+          title = "Table One: Demographics") ->
+table_two
+table_two
+```
+
 
 ---
 class: middle, center
