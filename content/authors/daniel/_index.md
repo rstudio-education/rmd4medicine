@@ -7,7 +7,7 @@ education:
   - course: PhD in Genetics, Bioinformatics, and Computational Biology
     institution: Virginia Tech
     year: 2021
-  - course: MPH in Epidemology
+  - course: MPH in Epidemiology
     institution: Columbia University - Mailman School of Public Health
     year: 2014
   - course: BA in Psychology - Behavioral neuroscience
@@ -19,7 +19,7 @@ interests:
 - Teaching data science skills
 - R
 - Python
-- Leaving the world a better place than I found it
+- Leaving the world a in a better place
 name: Daniel Chen
 organizations:
 - name: Virginia Tech
@@ -48,21 +48,19 @@ user_groups:
 - Teaching Assistants
 ---
 
-I am a graduate student at Virginia Tech (VT) in
+I am a PhD student at Virginia Tech (VT) in
 Genetics, Bioinformatics, and Computational Biology ([GBCB][gbcb])
-doing statistics, computer science, and life science.
-My PhD is
-[up][bi-vt-uva-2018-07-31]
-[in][bi-vt-uva-2018-08-07-1]
-[the][bi-vt-uva-2018-08-07-2]
-[air][bi-vt-uva-2018-09-20]
-[at][bi-vt-uva-2019-09-21-1]
-[the][bi-vt-uva-2019-09-21-2]
-moment.
+working with
+[Anne Brown](https://bevanbrownlab.com/)
+bringing data science skills to medical practitioners so they can
+process data for medical research,
+better communicate with biostatisticians,
+interpret models,
+and make necessary changes as needed.
 
-[RStudio]({{ .Site.urls.rstudio }})
-[intern]({{ .Site.urls.rstudioIntern }})
-working on the [grader]({{ .Site.urls.grader }}) package
+Former [RStudio](https://www.rstudio.com/)
+[intern](https://blog.rstudio.com/2019/03/25/summer-interns-2019/)
+working on the [gradethis](https://github.com/rstudio-education/gradethis) package.
 
 [Arch Linux][arch] user who maintains the
 [RStudio Preview][aur-rstudio],
@@ -70,16 +68,12 @@ working on the [grader]({{ .Site.urls.grader }}) package
 [Rodeo][aur-rodeo]
 packages in the [AUR][aur].
 
+Author of [Pandas for Everyone](https://amzn.to/2lX2VOK).
+
+
 Enjoys: photography, curling, snowboarding, and scuba diving into caves.
 
 [gbcb]: http://gbcb.vbi.vt.edu/
-
-[bi-vt-uva-2018-07-31]: https://vtnews.vt.edu/articles/2018/07/unirel-bi-statement.html
-[bi-vt-uva-2018-08-07-1]: https://www.roanoke.com/news/education/higher_education/virginia_tech/virginia-tech-biocomplexity-institute-director-leaving-post-for-uva/article_7f16f45e-fd2f-55f6-abee-1e68e3aecfe4.html
-[bi-vt-uva-2018-08-07-2]: https://news.virginia.edu/content/uva-lead-statewide-biocomplexity-initiative
-[bi-vt-uva-2018-09-20]: https://www.roanoke.com/news/education/higher_education/perks-for-biocomplexity-researcher-who-left-tech-for-uva-released/article_9f02a6fe-f67b-50a6-8f3c-bfe661954505.html
-[bi-vt-uva-2019-09-21-1]: https://www.reddit.com/r/VirginiaTech/comments/9htdkf/inside_uvas_30_million_raid_on_techs/
-[bi-vt-uva-2019-09-21-2]: https://www.baconsrebellion.com/wp/uvas-30-million-raid-on-techs-biocomplexity-initiative/
 
 [arch]: https://www.archlinux.org/
 [aur]: https://aur.archlinux.org/
