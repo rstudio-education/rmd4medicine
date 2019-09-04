@@ -49,7 +49,7 @@ hero_media = "rmd4med-sq.jpg"
 
 # Note. An optional note to show underneath the links.
 [cta_note]
-  label = ''
+  label = '[Photo, _right_, by Samuel Zeller on Unsplash](https://unsplash.com/photos/FvNp_SY4kF0)<br>Website theme by [Desirée De Leon](http://desiree.rbind.io/)'
 +++
 
 A four-hour workshop that will take you on a tour of how to get from data to manuscript using [R Markdown](https://rmarkdown.rstudio.com/). You'll learn:
