@@ -44,8 +44,8 @@
   weight = 40
 
 # uncomment when ready to share source code and add repo link to upper navbar
-# [[main]]
-  #pre = "<i class=\"fab fa-github fa-lg\"></i>"
-  #name = ""
-  #url = "https://github.com/rstudio-conf-2020/workshop-template-blogdown"
-  #weight = 60
+[[main]]
+  pre = "<i class=\"fab fa-github fa-lg\"></i>"
+  name = ""
+  url = "https://github.com/rstudio-education/rmd4medicine"
+  weight = 60
