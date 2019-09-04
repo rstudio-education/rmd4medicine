@@ -102,3 +102,6 @@ a.hero-cta-alt:hover {
   border-radius: 0px;
 }
 
+table {
+	font-size: .9rem;
+}
