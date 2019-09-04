@@ -19,7 +19,7 @@ interests:
 - Teaching data science skills
 - R
 - Python
-- Leaving the world a in a better place
+- Leaving the world in a better place
 name: Daniel Chen
 organizations:
 - name: Virginia Tech
