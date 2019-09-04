@@ -24,6 +24,10 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 episode_counter <- 0
+knitr::opts_chunk$set(
+  collapse = TRUE,   
+  comment = "#>"
+)
 ```
 
 ```{r packages, include=FALSE}

@@ -1,8 +1,8 @@
 ---
 header:
   caption: ""
-  image: ""
+  image: "med-art.png"
 title: "Workshop materials"
-view: 2
+view: 1
 layout: post
 ---

@@ -1,5 +1,5 @@
 ---
-title: Prework
+title: 'Session 00: Prework'
 aliases: /prework
 date: '2019-08-29'
 categories: [prework]

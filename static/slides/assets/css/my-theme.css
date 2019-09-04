@@ -258,6 +258,7 @@ div.my-footer span {
 .your-turn h1 {
   color: #fff;
   text-shadow: 1px 1px 2px #1f5386;
+  font-size: 4em;
 }
 
 .your-turn h1:before {
@@ -273,6 +274,7 @@ div.my-footer span {
 
 h1#pop-quiz {
   color: #E7553C;
+  font-size: 4em;
 }
 
 h1#pop-quiz:before {

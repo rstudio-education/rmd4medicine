@@ -24,6 +24,10 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 episode_counter <- 0
+knitr::opts_chunk$set(
+  collapse = TRUE,   
+  comment = "#>"
+)
 ```
 
 ```{r packages, include=FALSE}
@@ -50,15 +54,10 @@ class: title-slide, center, middle
 
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
-
-<!-- this ends up being the title slide since seal = FALSE-->
-
 ---
 layout: true
 
 <div class="my-footer"><span>rstudio.cloud/link</span></div>
-
-<!-- this adds the link footer to all slides, depends on my-footer class in css-->
 
 ---
 
@@ -220,7 +219,17 @@ class: your-turn
 
 ## Use your YAML instead
 
-You just used the drop-down `r emo::ji("yarn")` **Knit** button to knit to Word and PDF. Now try changing your YAML to:
+.pull-left[
+
+You just used the drop-down `r emo::ji("yarn")` **Knit** button to knit to Word and PDF. 
+
+1. Change your YAML to the right...
+
+1. Click `r emo::ji("yarn")` **Knit** - what do you notice?
+
+]
+
+.pull-right[
 
 ```{r echo=FALSE}
 yml_empty() %>% 
@@ -232,7 +241,8 @@ yml_empty() %>%
   asis_yaml_output()
 ```
 
-Now click `r emo::ji("yarn")` **Knit** - what do you notice?
+]
+
 
 
 ```{r echo = FALSE}
@@ -350,29 +360,136 @@ class: center
 
 # Let's try using data now
 
----
-
-# Simple tables
-
-
-.pull-left[
-`knitr::kable()`
-
-it knows format automatically
-
-```{r echo = FALSE}
+```{r}
 mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
   mutate(fu_fct = fct_recode(as.factor(fu_stat), 
                              "Lived" = "1", "Died" = "2"))  
 ```
 
+---
+
+# Table One from `arsenal`
+
+
+```{r}
+tableby(arm ~ sex, data = mockdata) 
+```
+
+--
+
+
+```{r}
+tableby(arm ~ sex, data = mockdata) %>% 
+  summary()
+```
+
+
+---
+
+# One more step!
+
+For R Markdown pretty printing...
+
+````
+```{r results='asis'}`r ''`
+tableby(arm ~ sex, data = mockdata) %>% 
+  summary()
+```
+````
+
+```{r results= 'asis', echo=FALSE}
+tableby(arm ~ sex, data = mockdata) %>% 
+  summary()
+```
+
+???
+
+This is a new knitr chunk option- the results option.
+
+---
+class: your-turn
+
+# Your turn
+
+## Make a table one
+
+1. Take the current table one in the doc, and add using the `+` age and bmi
+
+---
+
+# Table Two
+
+an adverse events table
+
+maybe do some fancier regex worthy stuff to be able to cast all of the adverse events as factors easily
+
+that was a good test- see how tableone deals with factors versus numbers
+
+think about when pfootnote should be TRUE
+
+```{r results='asis'}
+mockdata <- mockdata %>% 
+  mutate(low_wbc = as.factor(low_wbc))
+labels(mockdata) <- c(age = "Age, years", sex = "Gender")
+mockdata %>% 
+  tableby(arm ~ low_wbc + neuropathy + blood_clot, data = .) %>% 
+  summary(digits = 2, digits.p = 3, digits.pct=1, 
+          pfootnote=FALSE,
+          title = "Table One: Demographics") ->
+table_two
+table_two
+```
+
+
+---
+class: center, middle
+
+# Two table types
+
+
+.pull-left[
+
+# <i class="fas fa-search-plus"></i>
+
+Exploratory Data Analysis
+
+(for you)
+
 ]
+
+--
 
 .pull-right[
-for eda
 
-Janitor
+# <i class="fas fa-notes-medical"></i>
+
+Actual Data Analysis
+
+(for other people)
+mental model: separate
 ]
+
+---
+
+# EDA tables: `skimr`
+
+
+```{r skim, message=FALSE, warning=FALSE}
+library(skimr)
+
+# smell test (n's, NAs, etc)
+mockdata %>% 
+  select(fu_fct) %>% 
+  skimr::skim() %>% 
+  kable()
+```
+
+
+---
+
+# EDA tables: `janitor`
+
+Good for 1- and 2-way frequency tables (or `tabyl`s)
 
 ---
 
@@ -386,19 +503,16 @@ print + online
 
 gt
 
----
-
-# Table One
-
-arsenal (need `knitr` asis options)
-
-```{r results='asis'}
+```{r}
+# a 1-way tabyl
 mockdata %>% 
-  tableby(arm ~ age, data = .) %>% 
-  summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=TRUE,
-          title = "Table One: Demographics")
+  tabyl(sex) %>% 
+  adorn_totals("row") %>%
+  adorn_pct_formatting() %>% 
+  gt::gt()
 ```
+
+
 
 ---
 
@@ -442,28 +556,6 @@ add text to frame the table and what it is showing
 countdown(minutes = 5)
 ```
 
----
-
-an adverse events table
-
-maybe do some fancier regex worthy stuff to be able to cast all of the adverse events as factors easily
-
-that was a good test- see how tableone deals with factors versus numbers
-
-think about when pfootnote should be TRUE
-
-```{r results='asis'}
-mockdata <- mockdata %>% 
-  mutate(low_wbc = as.factor(low_wbc))
-labels(mockdata) <- c(age = "Age, years", sex = "Gender")
-mockdata %>% 
-  tableby(arm ~ low_wbc + neuropathy + blood_clot, data = .) %>% 
-  summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=FALSE,
-          title = "Table One: Demographics") ->
-table_two
-table_two
-```
 
 
 ---

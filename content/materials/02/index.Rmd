@@ -1,11 +1,9 @@
 ---
-title: Outputs & Tables
+title: 'Session 02: Outputs & Tables'
 date: '2019-08-29'
 slug: 02-output-tables
 categories: [slides]
 tags: []
-subtitle: 'Session 02'
-summary: 'Session 02'
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
 image:

@@ -1,11 +1,9 @@
 ---
-title: R Markdown Anatomy
+title: 'Session 01: R Markdown Anatomy'
 date: '2019-08-29'
 slug: 01-rmd-anatomy
 categories: [slides]
 tags: []
-subtitle: 'Session 01'
-summary: 'Session 01'
 lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
 image:
