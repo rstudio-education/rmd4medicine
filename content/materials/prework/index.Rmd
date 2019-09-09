@@ -1,21 +1,22 @@
 ---
 title: 'Session 00: Prework'
 aliases: /prework
-date: '2019-08-29'
+date: '2019-09-09'
 categories: [prework]
 tags: []
 summary: 'Welcome to the R Markdown for Medicine workshop! We look forward to meeting you in person. Here is all you need to do ahead of time.'
-lastmod: '2019-08-29T11:21:55-07:00'
+lastmod: '2019-09-09T11:21:55-07:00'
 featured: no
-image:
-  caption: '[Photo by Samuel Zeller on Unsplash](https://unsplash.com/photos/FvNp_SY4kF0)'
-  focal_point: ''
-  preview_only: yes
 projects: []
 weight: 1
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: /slides/00-loop.html
 ---
 
-Welcome to the [R Markdown for Medicine](https://rmd4medicine.netlify.com/workshop/) workshop! We look forward to meeting you in person. Before attending the workshop, please complete the following prework:
+Welcome to the [R Markdown for Medicine](/) workshop! We look forward to meeting you in person. Before attending the workshop, please complete the following prework:
 
 1. Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).
 
@@ -29,9 +30,9 @@ Welcome to the [R Markdown for Medicine](https://rmd4medicine.netlify.com/worksh
 
         ```{r pkg-list, eval=FALSE}
         install.packages(c("rmarkdown", "tidyverse", "distill", 
-                           "bookdown", "rticles", "janitor",
-                           "skimr", "here", "scico", "tableone",
-                           "flextable", "arsenal", "cowplot"))
+                           "bookdown", "rticles", "here", "gt",
+                           "skimr", "scico", "janitor", "arsenal",
+                           "tableone", "flextable", "cowplot"))
         ```
     
 1. Don't forget your power cord!
@@ -39,7 +40,7 @@ Welcome to the [R Markdown for Medicine](https://rmd4medicine.netlify.com/worksh
 On the day of the workshop, I'll provide you with an RStudio Cloud project that contains all of the course materials. We will use the software listed above only as an important backup should there be problems with the on-site internet connection.
 
 
-[View slides](/slides/00-loop.html) _(note: these slides are intentionally a loop and will play on autoadvance)_
+_(note: these slides are intentionally a loop and will play on autoadvance)_
 
 ```{r echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_url("/slides/00-loop.html")

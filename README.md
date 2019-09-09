@@ -123,10 +123,9 @@ journals](https://alison.rbind.io/publication/#2).
 
 ## Pre-work
 
-Welcome to the [R Markdown for
-Medicine](https://rmd4medicine.netlify.com/workshop/) workshop\! We look
-forward to meeting you in person. Before attending the workshop, please
-complete the following prework:
+Welcome to the [R Markdown for Medicine](/) workshop\! We look forward
+to meeting you in person. Before attending the workshop, please complete
+the following prework:
 
 1.  Sign up for a free RStudio Cloud account at <https://rstudio.cloud/>
     before the workshop. I recommend logging in with an existing Google
@@ -151,9 +150,9 @@ complete the following prework:
         
         ``` r
         install.packages(c("rmarkdown", "tidyverse", "distill", 
-                           "bookdown", "rticles", "janitor",
-                           "skimr", "here", "scico", "tableone",
-                           "flextable", "arsenal", "cowplot"))
+                           "bookdown", "rticles", "here", "gt",
+                           "skimr", "scico", "janitor", "arsenal",
+                           "tableone", "flextable", "cowplot"))
         ```
 
 4.  Don’t forget your power cord\!
@@ -163,8 +162,7 @@ project that contains all of the course materials. We will use the
 software listed above only as an important backup should there be
 problems with the on-site internet connection.
 
-[View slides](/slides/00-loop.html) *(note: these slides are
-intentionally a loop and will play on
+*(note: these slides are intentionally a loop and will play on
 autoadvance)*
 
 -----

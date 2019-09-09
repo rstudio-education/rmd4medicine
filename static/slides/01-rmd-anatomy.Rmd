@@ -465,6 +465,7 @@ What do you want/need to say?
 
 
 ---
+
 # <center>Text</center>
 
 --
@@ -588,6 +589,7 @@ Receiving rubella vaccination, Brazil, 2008.
 Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ]
+
 
 ---
 name: 03-formative
