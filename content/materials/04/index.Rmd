@@ -1,6 +1,7 @@
 ---
-title: 'Session 04: Graphics for Communication'
+title: 'Session 04: Data & Workflows'
 date: '2019-08-29'
+slug: 04-data-workflows
 categories: []
 tags: []
 lastmod: '2019-08-29T11:21:55-07:00'
@@ -15,32 +16,32 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: /slides/04-graphics.html
+  url: /slides/04-data-workflows.html
 ---
 
+
 ```{r echo=FALSE}
-knitr::include_url("/slides/04-graphics.html")
+knitr::include_url("/slides/04-data-workflows.html")
 ```
 
 # In this session, you will:
 
-1. Knit the same document to a different output format from an extension package ([`bookdown::html_document2`](https://bookdown.org/yihui/rmarkdown/bookdown-output.html#a-single-document))
+1. Knit the same document to a different output format from an extension package (`bookdown::html_document2`)
 
-1. Knit a new document to a slide presentation ([`powerpoint_presentation`](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html))
+1. Add section and table references.
 
-1. Export your figures to a place you can find on your computer so you can share and re-use them. (can I use `knitr::fig.path` with `here` package??)
+1. Add cross-references in text to sections and tables.
 
-1. Add figure captions using `knitr` chunk options.
-
-1. Add cross-references in text to figures.
-
-1. Make a multi-panel plot.
-
+1. Add a bibiography.
 
 # Relevant resources
 
++ [R4DS Workflow: Projects](https://r4ds.had.co.nz/workflow-projects.html)
++ [R4DS R Markdown workflow](https://r4ds.had.co.nz/r-markdown-workflow.html)
++ [What They Forgot: Project-oriented workflow](https://whattheyforgot.org/project-oriented-workflow.html)
++ [What The Forgot: Practice safe paths](https://whattheyforgot.org/safe-paths.html)
++ [R4DS Bibliographies & Citations](https://r4ds.had.co.nz/r-markdown.html#bibliographies-and-citations)
++ [Bookdown: A single document](https://bookdown.org/yihui/bookdown/a-single-document.html)
++ [Bookdown: Cross-references](https://bookdown.org/yihui/bookdown/cross-references.html)
 + [Linking rticles to bookdown](https://bookdown.org/yihui/rmarkdown/rticles-bookdown.html)
-+ [R4DS Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
-+ [R Markdown: The Definitive Guide chapter on PowerPoint presentations](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
-+ [R Markdown docs on `powerpoint_presentation` output format](https://rmarkdown.rstudio.com/docs/reference/powerpoint_presentation.html)
-+ [RStudio webinar _Make PowerPoint Presentations with R Markdown_ ](https://resources.rstudio.com/webinars/make-powerpoint-presentations-with-r-markdown-nathan-stephens)
+

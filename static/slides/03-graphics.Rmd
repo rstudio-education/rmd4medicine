@@ -1,6 +1,6 @@
 ---
 title: "Graphics for Communication"
-session: "04"
+session: "03"
 subtitle: "R Markdown for Medicine"
 author: Alison Hill
 date: "`r Sys.Date()`"
