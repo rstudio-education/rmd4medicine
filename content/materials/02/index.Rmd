@@ -1,28 +1,59 @@
 ---
 title: 'Session 02: Outputs & Tables'
 date: '2019-08-29'
-slug: 02-output-tables
-categories: [slides]
-tags: []
-lastmod: '2019-08-29T11:21:55-07:00'
 featured: no
 image:
   caption: '[Photo by Samuel Zeller on Unsplash](https://unsplash.com/photos/FvNp_SY4kF0)'
   focal_point: ''
   preview_only: yes
-projects: []
-weight: 3
+lastmod: '2019-08-29T11:21:55-07:00'
 links:
 - icon: images
   icon_pack: fas
   name: slides
   url: /slides/02-output-tables.html
+projects: []
+slug: 02-output-tables
+tags: []
+categories: slides
+weight: 3
 ---
 
 
 ```{r echo=FALSE}
 knitr::include_url("/slides/02-output-tables.html")
 ```
+
+# Episodes
+
+1. Output formats
+
+1. Typed tables
+
+1. EDA tables
+
+1. Table one
+
+1. Table two
+
+# In this session, you will:
+
+1. Knit the same document to different built-in output formats (Word and PDF) using the knit button.
+
+1. Knit the same document to different built-in output formats (Word and PDF) using the YAML to store output options.
+
+1. Knit the same document to a different output format from an extension package (`distill::distill_article`) by changing the YAML.
+
+1. Make a markdown table.
+
+1. Make a table one.
+
+# Output formats used 
+
++ HTML
++ Word
++ PDF
++ `distill::distill_article`
 
 # Relevant resources
 

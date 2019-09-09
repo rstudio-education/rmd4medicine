@@ -24,6 +24,34 @@ links:
 knitr::include_url("/slides/01-rmd-anatomy.html")
 ```
 
+# Episodes
+
+1. Metadata
+
+1. Text
+
+1. Code
+
+1. Output
+
+
+# In this session, you will:
+
+1. Identify the basic anatomy of an R Markdown document.
+
+1. Use the YAML to set up meaningful metadata and change output format options.
+ 
+1. Organize and style your text using markdown formatting.
+
+1. Organize your code using `knitr` chunk labels. (-->put in ~~workflows~~ graphics?)
+
+1. Style your code's output using `knitr` chunk options.
+
+1. Knit a document with updated data.
+
+
+
+
 # Relevant resources
 
 + [R4DS R Markdown](https://r4ds.had.co.nz/r-markdown.html)

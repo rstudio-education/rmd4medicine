@@ -24,6 +24,16 @@ links:
 knitr::include_url("/slides/03-data-workflows.html")
 ```
 
+# In this session, you will:
+
+1. Knit the same document to a different output format from an extension package (`bookdown::html_document2`)
+
+1. Add section and table references.
+
+1. Add cross-references in text to sections and tables.
+
+1. Add a bibiography.
+
 # Relevant resources
 
 + [R4DS Workflow: Projects](https://r4ds.had.co.nz/workflow-projects.html)
