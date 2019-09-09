@@ -53,9 +53,9 @@ class: middle, center
 
 # <i class="fas fa-cloud"></i>
 
-Go here and log in (free):
+# Go here and log in (free):
 
-cloud link
+https://rstd.io/rmd4medicine-cloud
 
 ---
 class: middle, center

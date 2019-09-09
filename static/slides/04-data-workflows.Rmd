@@ -45,15 +45,10 @@ class: title-slide, center, middle
 
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
-
-<!-- this ends up being the title slide since seal = FALSE-->
-
-???
-
 ---
+layout: true
 
-go here and log in (free):
-cloud link
+<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
 
 ---
 

@@ -50,20 +50,19 @@ class: title-slide, center, middle
 
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
-
-<!-- this ends up being the title slide since seal = FALSE-->
-
 ---
 layout: true
 
-<div class="my-footer"><span>rstudio.cloud/link</span></div>
-
-<!-- this adds the link footer to all slides, depends on my-footer class in css-->
+<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
 
 ---
+class: middle, center
 
-go here and log in (free):
-cloud link
+# <i class="fas fa-cloud"></i>
+
+# Go here and log in (free):
+
+https://rstd.io/rmd4medicine-cloud
 
 ---
 background-image: url(images/hello.jpg)

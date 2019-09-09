@@ -54,7 +54,7 @@ class: title-slide, center, middle
 ---
 layout: true
 
-<div class="my-footer"><span>rstudio.cloud/link</span></div>
+<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
 
 
 ---
