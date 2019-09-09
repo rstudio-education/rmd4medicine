@@ -9,11 +9,6 @@ lastmod: '2019-09-09T11:21:55-07:00'
 featured: no
 projects: []
 weight: 1
-links:
-- icon: images
-  icon_pack: fas
-  name: slides
-  url: /slides/00-loop.html
 ---
 
 Welcome to the [R Markdown for Medicine](/) workshop! We look forward to meeting you in person. Before attending the workshop, please complete the following prework:
@@ -39,9 +34,3 @@ Welcome to the [R Markdown for Medicine](/) workshop! We look forward to meeting
 
 On the day of the workshop, I'll provide you with an RStudio Cloud project that contains all of the course materials. We will use the software listed above only as an important backup should there be problems with the on-site internet connection.
 
-
-_(note: these slides are intentionally a loop and will play on autoadvance)_
-
-```{r echo=FALSE, eval = knitr::is_html_output()}
-knitr::include_url("/slides/00-loop.html")
-```
