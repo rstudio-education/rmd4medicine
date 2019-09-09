@@ -1,0 +1,1200 @@
+site,case,age,arm,sex,race,fu_time,fu_stat,ps,hgb,bmi,alk_phos,ast,mdquality_s,age_ord,country,ethnicity,name,first_name,last_name,ae_low_wbc,ae_neuropathy,ae_diarrhea,ae_vomiting,ae_blood_clot
+Portland,80803,38,A: IFL,Male,Caucasian,538,2,1,10.9,22.3148148148148,66,38,1,30-39,USA,White (not Hispanic),Alexander Harmon,Alexander,Harmon,0,0,0,0,0
+Portland,78902,70,G: IROX,Male,Caucasian,18,2,1,10.6,33.1397550814291,363,33,1,60-69,USA,White (not Hispanic),Benjamin Adams,Benjamin,Adams,0,0,0,0,0
+Portland,78134,64,A: IFL,Female,Caucasian,254,2,1,10.8,32.8578418457601,189,67,0,60-69,USA,White (not Hispanic),Natalie Vosburg,Natalie,Vosburg,0,0,0,0,0
+Portland,77355,42,A: IFL,Male,African-Am,324,2,0,10.7,29.9382716049382,81,31,1,40-49,USA,Black (not Hispanic),Alejandro Sanchez,Alejandro,Sanchez,0,0,0,0,0
+Portland,81065,60,G: IROX,Male,Caucasian,81,2,1,15.4,28.2334859166694,322,54,1,50-59,USA,White (not Hispanic),Kyle Weidlich,Kyle,Weidlich,0,0,0,0,0
+Portland,83509,73,F: FOLFOX,Male,Caucasian,844,2,0,14.1,24.7585953423101,412,45,1,70-79,USA,White (not Hispanic),Michael Fuhrman,Michael,Fuhrman,0,0,0,0,0
+Portland,105001,71,G: IROX,Female,Caucasian,128,2,1,12.6,29.4292156164708,771,68,1,70-79,USA,White (not Hispanic),Simone Conta,Simone,Conta,0,0,0,0,0
+Portland,78845,57,F: FOLFOX,Male,Caucasian,579,2,1,10.2,28.9461247637051,119,27,1,50-59,USA,White (not Hispanic),Michael Fahrenbruch,Michael,Fahrenbruch,0,0,0,0,0
+Portland,83298,63,A: IFL,Female,Caucasian,543,2,1,10.6,41.6796875,273,34,1,60-69,USA,White (not Hispanic),Dakota Martin,Dakota,Martin,0,0,0,0,0
+Portland,86030,45,A: IFL,Female,Caucasian,1489,2,0,12.7,26.2629757785467,83,19,1,40-49,USA,White (not Hispanic),Vanessa Averkov,Vanessa,Averkov,0,0,0,0,0
+Portland,83441,68,G: IROX,Male,Caucasian,875,2,0,12.9,23.8564602893514,73,25,1,60-69,USA,White (not Hispanic),Dylan Tafoya,Dylan,Tafoya,0,0,0,0,0
+Portland,99706,74,A: IFL,Female,Caucasian,270,2,1,10.7,19.4978632478632,290,52,1,70-79,USA,White (not Hispanic),Kelsey Diorio,Kelsey,Diorio,1,1,1,1,0
+Portland,80293,71,A: IFL,Female,Caucasian,42,2,1,11.5,22.2991157247212,78,15,1,70-79,USA,White (not Hispanic),Jordan Anttila,Jordan,Anttila,0,0,0,0,0
+Portland,83767,71,G: IROX,Male,Caucasian,1030,2,1,11.5,27.5925925925925,108,18,1,70-79,USA,White (not Hispanic),Charles May,Charles,May,0,0,0,0,0
+Portland,102126,42,F: FOLFOX,Male,Caucasian,960,2,1,13.1,22.3239126643357,147,16,NA,40-49,USA,White (not Hispanic),Noah Moran,Noah,Moran,0,0,0,0,0
+Portland,83837,60,A: IFL,Female,Caucasian,184,2,0,13.5,21.7968749999999,55,22,1,50-59,USA,White (not Hispanic),Sophia Glenn,Sophia,Glenn,1,1,1,1,1
+Portland,76170,52,A: IFL,Male,Caucasian,149,2,1,12.1,23.5294117647058,171,32,1,50-59,USA,White (not Hispanic),Pierce Gorman,Pierce,Gorman,0,0,0,0,0
+Portland,79657,68,A: IFL,Female,Caucasian,437,2,1,11.7,20.0413809890867,228,58,1,60-69,USA,White (not Hispanic),Susanna Hazard,Susanna,Hazard,0,0,0,0,0
+Portland,83255,47,F: FOLFOX,Female,Caucasian,2173,1,0,11,24.4140625,82,28,1,40-49,USA,White (not Hispanic),Hannah Ingelhart,Hannah,Ingelhart,1,1,1,1,0
+Portland,102946,69,F: FOLFOX,Male,Caucasian,119,2,1,10.1,27.8857142857142,213,95,0,60-69,USA,White (not Hispanic),Luke Dufaud,Luke,Dufaud,0,0,0,0,0
+Portland,79380,79,F: FOLFOX,Male,Caucasian,821,2,0,16.7,28.3102040816326,155,27,1,70-79,USA,White (not Hispanic),Braedan Wang,Braedan,Wang,0,0,0,0,0
+Portland,110754,67,F: FOLFOX,Male,Caucasian,922,2,0,11.5,25.0986121256391,160,35,NA,60-69,USA,White (not Hispanic),Ethan Grebenc,Ethan,Grebenc,1,1,1,1,0
+Portland,79237,56,A: IFL,Female,Caucasian,2149,2,0,12,32.3232323232323,166,21,1,50-59,USA,White (not Hispanic),Alyssa Widlowski,Alyssa,Widlowski,0,0,0,0,0
+Portland,80805,46,F: FOLFOX,Male,Caucasian,393,2,0,13.9,21.0785423268447,90,21,1,40-49,USA,White (not Hispanic),Jeffrey Brown,Jeffrey,Brown,0,0,0,0,0
+Portland,80048,41,A: IFL,Male,Caucasian,472,2,0,12,28.4055043555106,198,35,0,40-49,USA,White (not Hispanic),Cory Frasl,Cory,Frasl,1,1,1,1,0
+Portland,101219,59,F: FOLFOX,Female,Caucasian,1067,2,0,14.9,25.1041630195021,239,16,NA,50-59,USA,White (not Hispanic),Alyssa Van Dyne,Alyssa,Van,1,1,1,1,0
+Portland,83683,55,F: FOLFOX,Male,Caucasian,1630,2,0,16.7,31.6734693877551,116,20,1,50-59,USA,White (not Hispanic),Maxwell Barner,Maxwell,Barner,0,0,0,0,0
+Portland,78859,73,A: IFL,Male,Caucasian,66,2,1,11.8,23.6728395061728,100,25,NA,70-79,USA,White (not Hispanic),Griffin Foreman,Griffin,Foreman,0,0,0,0,0
+Portland,84423,63,A: IFL,Male,Caucasian,736,2,0,15,33.9591669231558,194,45,1,60-69,USA,White (not Hispanic),Andrew Mortimer,Andrew,Mortimer,0,0,0,0,0
+Portland,78496,44,A: IFL,Female,Native-Am/Alaska,38,2,2,9.06,23.8095238095238,351,55,NA,40-49,USA,American Indian or Native Alaskan,Christiana Begay,Christiana,Begay,0,0,0,0,0
+Portland,80831,64,G: IROX,Male,Caucasian,1477,2,1,12.3,36.9341595189402,124,28,1,60-69,USA,White (not Hispanic),Austin Connolly,Austin,Connolly,0,0,0,0,0
+Portland,76240,65,A: IFL,Male,Caucasian,722,2,1,10.4,19.9154147203635,481,36,1,60-69,USA,White (not Hispanic),Jakob Hunter,Jakob,Hunter,0,0,0,0,0
+Portland,78246,55,A: IFL,Female,Caucasian,28,2,2,12,21.0459183673469,128,42,1,50-59,USA,White (not Hispanic),Samantha Sands,Samantha,Sands,0,0,0,0,0
+Portland,79578,56,A: IFL,Male,Caucasian,879,2,0,10.9,27.8081208451671,82,29,1,50-59,USA,White (not Hispanic),Ty Peel,Ty,Peel,1,1,1,1,0
+Portland,105271,50,A: IFL,Female,Caucasian,175,2,1,11.1,NA,700,100,1,40-49,USA,White (not Hispanic),Mikaela Jones,Mikaela,Jones,0,0,0,0,0
+Portland,76431,62,A: IFL,Female,Caucasian,399,2,0,11.7,25,391,53,1,60-69,USA,White (not Hispanic),Zoe Giesenhagen,Zoe,Giesenhagen,0,0,0,0,0
+Portland,77956,50,A: IFL,Male,Caucasian,265,2,1,12.3,26.0085401176505,114,30,1,40-49,USA,White (not Hispanic),Timothy Wallace,Timothy,Wallace,0,0,0,0,0
+Portland,83904,65,F: FOLFOX,Male,Caucasian,797,2,0,9.6,20.6916099773242,202,41,1,60-69,USA,White (not Hispanic),Shane Fay,Shane,Fay,0,0,0,0,0
+Portland,84485,49,A: IFL,Male,Caucasian,165,2,0,17.3,38.50523923747,78,28,1,40-49,USA,White (not Hispanic),Joshua Sadaqat,Joshua,Sadaqat,0,0,1,1,0
+Portland,95204,59,F: FOLFOX,Male,Caucasian,1063,2,1,10.3,26.7847764434018,686,80,0,50-59,USA,White (not Hispanic),Trenton Gunning,Trenton,Gunning,0,0,0,0,0
+Portland,79599,60,G: IROX,Female,Caucasian,657,2,1,11.1,23.3241505968778,145,21,1,50-59,USA,White (not Hispanic),Lisa Gross,Lisa,Gross,0,0,0,0,0
+Portland,83483,48,A: IFL,Male,Caucasian,1167,2,0,13,28.4090909090909,128,19,1,40-49,USA,White (not Hispanic),Dustin Jaramillo,Dustin,Jaramillo,0,0,0,0,0
+Portland,78314,68,A: IFL,Female,Caucasian,326,2,0,11.2,29.3460166468489,162,44,1,60-69,USA,White (not Hispanic),Lidia St Clair,Lidia,St,0,0,0,0,0
+Portland,89650,62,G: IROX,Male,Caucasian,1290,2,0,12.4,30.1533966398831,305,62,1,60-69,USA,White (not Hispanic),Jaron Cervantes,Jaron,Cervantes,0,0,0,0,0
+Portland,102275,60,F: FOLFOX,Female,Caucasian,1549,1,0,11.8,20.0745528538695,140,13,1,50-59,USA,White (not Hispanic),Carly Mcpherson,Carly,Mcpherson,0,0,0,0,0
+Portland,81159,75,F: FOLFOX,Male,Caucasian,181,2,0,12.4,38.9348025711662,372,59,1,70-79,USA,White (not Hispanic),Gage Cohen,Gage,Cohen,1,1,1,1,0
+Portland,79009,66,F: FOLFOX,Male,Caucasian,618,2,0,15.5,29.6514259846084,183,30,1,60-69,USA,White (not Hispanic),Jacob Burnett,Jacob,Burnett,0,0,0,0,0
+Portland,92645,71,A: IFL,Male,Caucasian,1948,1,0,13.4,48.3840424188865,56,25,1,70-79,USA,White (not Hispanic),Zachary Gall,Zachary,Gall,0,0,0,0,0
+Portland,83596,61,F: FOLFOX,Female,Caucasian,270,2,1,12.2,38.5140576310353,150,54,1,60-69,USA,White (not Hispanic),Kristen Stapleton,Kristen,Stapleton,0,0,0,0,0
+Portland,84254,71,G: IROX,Male,Caucasian,323,2,1,14.2,29.1690333789969,137,25,1,70-79,USA,White (not Hispanic),Zachary Melonas,Zachary,Melonas,0,0,0,0,0
+Portland,76780,59,A: IFL,Female,Caucasian,435,2,0,11.6,29.2011019283746,75,24,1,50-59,USA,White (not Hispanic),Madison Suter,Madison,Suter,0,0,0,0,0
+Portland,90158,57,A: IFL,Male,Caucasian,421,2,0,12.1,21.7384952520087,152,12,1,50-59,USA,White (not Hispanic),Robert Anderson,Robert,Anderson,0,0,0,0,0
+Portland,79524,63,F: FOLFOX,Male,Caucasian,205,2,2,10,21.8358948517678,267,43,1,60-69,USA,White (not Hispanic),Ohran Nolan,Ohran,Nolan,0,0,0,0,0
+Portland,99508,50,F: FOLFOX,Male,Caucasian,369,2,0,13.3,24.5987654320987,162,16,1,40-49,USA,White (not Hispanic),Austin Calderon,Austin,Calderon,0,0,0,0,0
+Portland,79610,65,F: FOLFOX,Female,Caucasian,650,2,0,14.5,33.982577251808,126,18,1,60-69,USA,White (not Hispanic),Haley Spencer,Haley,Spencer,0,0,0,0,0
+Portland,84040,65,G: IROX,Female,Caucasian,35,2,0,11.2,21.2183171945526,532,70,1,60-69,USA,White (not Hispanic),Jayme Zufelt,Jayme,Zufelt,0,0,0,0,0
+Portland,93433,61,F: FOLFOX,Male,Caucasian,1014,2,1,12.3,25.6205545071853,493,50,1,60-69,USA,White (not Hispanic),Jonah Lapenna,Jonah,Lapenna,0,0,0,0,0
+Portland,83428,63,G: IROX,Female,Caucasian,529,2,0,10.2,24.9097326463548,120,30,1,60-69,USA,White (not Hispanic),Cheyenne Hager,Cheyenne,Hager,0,0,0,0,0
+Portland,80390,68,G: IROX,Male,Caucasian,637,2,0,11.6,23.3204114648515,89,17,1,60-69,USA,White (not Hispanic),Michael Harbert,Michael,Harbert,0,0,0,0,0
+Portland,83244,58,G: IROX,Female,Caucasian,298,2,1,13.2,25,79,24,1,50-59,USA,White (not Hispanic),Taylor Claydon,Taylor,Claydon,0,0,0,0,0
+Portland,86205,56,G: IROX,Male,Caucasian,120,2,0,10.2,19.0367346938775,569,27,1,50-59,USA,White (not Hispanic),Cameron Lunder,Cameron,Lunder,0,0,0,0,0
+Portland,83999,63,A: IFL,Male,Caucasian,346,2,0,12.3,26.1479591836734,141,34,NA,60-69,USA,White (not Hispanic),Austin Whitesides,Austin,Whitesides,0,0,0,0,0
+Portland,80282,69,F: FOLFOX,Female,African-Am,338,2,2,12,27.03125,189,54,1,60-69,USA,Black (not Hispanic),Martina Benavidez,Martina,Benavidez,0,0,0,0,0
+Portland,90515,63,A: IFL,Male,Caucasian,363,2,1,12.1,27.7707790935304,492,18,1,60-69,USA,White (not Hispanic),John Russell,John,Russell,0,0,0,0,0
+Portland,81016,58,F: FOLFOX,Female,Caucasian,2441,1,0,12,26.5039447731755,72,18,1,50-59,USA,White (not Hispanic),Kylie Burton,Kylie,Burton,0,0,0,0,0
+Portland,79795,74,A: IFL,Male,Caucasian,462,2,0,12.8,14.0530018441363,103,28,1,70-79,USA,White (not Hispanic),Jonathan Guy-Pace,Jonathan,Guy-Pace,0,0,0,0,0
+Portland,76712,52,A: IFL,Male,Caucasian,378,2,1,12.4,25.4095277179303,345,50,1,50-59,USA,White (not Hispanic),Anthony Eskridge,Anthony,Eskridge,0,0,0,0,0
+Portland,79178,48,G: IROX,Male,Hispanic,827,2,0,13.9,28.9229205980548,99,19,1,40-49,USA,Hispanic,Fredy Chavez,Fredy,Chavez,0,0,0,0,0
+Portland,81218,57,A: IFL,Male,Caucasian,133,2,0,11.4,26.2857142857142,80,20,1,50-59,USA,White (not Hispanic),Keanan Martin,Keanan,Martin,0,0,0,0,0
+Portland,84079,67,F: FOLFOX,Male,Caucasian,2472,1,1,11.9,37.1480873627067,83,18,1,60-69,USA,White (not Hispanic),Matthew Micek,Matthew,Micek,0,0,0,0,0
+Portland,84242,46,F: FOLFOX,Male,Caucasian,412,2,0,13.4,28.6851211072664,62,22,1,40-49,USA,White (not Hispanic),Christopher Smith,Christopher,Smith,0,0,0,0,0
+Portland,83390,51,F: FOLFOX,Female,Caucasian,178,2,1,14.2,29.2638317329675,211,37,0,50-59,USA,White (not Hispanic),Madison Albright,Madison,Albright,0,0,0,0,0
+Portland,80725,69,F: FOLFOX,Male,Caucasian,590,2,0,13.6,23.9839319470699,436,50,1,60-69,USA,White (not Hispanic),Jayde Garcia,Jayde,Garcia,0,0,1,1,0
+Portland,105214,73,A: IFL,Male,Caucasian,297,2,0,13.4,24.1689623507805,134,59,1,70-79,USA,White (not Hispanic),Taylor Fenczik,Taylor,Fenczik,0,0,0,0,0
+Portland,102150,61,G: IROX,Female,Caucasian,168,2,1,11.2,25.1903114186851,740,45,NA,60-69,USA,White (not Hispanic),Christina Stevens,Christina,Stevens,0,0,0,0,0
+Portland,103215,72,F: FOLFOX,Female,Caucasian,998,2,0,11.9,24.0184414039262,76,21,1,70-79,USA,White (not Hispanic),Anahid Kenley,Anahid,Kenley,0,0,1,1,0
+Portland,88989,51,F: FOLFOX,Female,Caucasian,387,2,1,13.8,19.7413026442074,231,25,1,50-59,USA,White (not Hispanic),Kaitlyn Granzella,Kaitlyn,Granzella,1,1,1,1,0
+Portland,77591,81,A: IFL,Male,Caucasian,291,2,0,10.3,33.3455845501019,82,25,1,80-89,USA,White (not Hispanic),Matthew Durand,Matthew,Durand,0,0,0,0,0
+Portland,77066,61,A: IFL,Female,Caucasian,94,2,1,11.5,26.6439909297052,189,36,1,60-69,USA,White (not Hispanic),Danielle Wall,Danielle,Wall,0,0,0,0,0
+Portland,77851,58,A: IFL,Male,Caucasian,1572,2,0,14.7,28.0276816608996,85,24,1,50-59,USA,White (not Hispanic),Marco Evelo,Marco,Evelo,0,0,0,0,0
+Ann Arbor,86686,65,A: IFL,Male,Caucasian,517,2,0,10.4,42.7731536530585,127,24,1,60-69,USA,White (not Hispanic),John Thompson,John,Thompson,0,0,0,0,0
+Ann Arbor,86380,72,G: IROX,Male,Caucasian,720,2,0,12.8,22.8457289098342,91,29,1,70-79,USA,White (not Hispanic),Armer Nichols,Armer,Nichols,0,0,0,0,0
+Ann Arbor,88138,76,A: IFL,Female,Caucasian,264,2,1,11,24.9097326463548,225,37,NA,70-79,USA,White (not Hispanic),Hannah Chadwick,Hannah,Chadwick,0,0,0,0,0
+Ann Arbor,86071,66,A: IFL,Female,Caucasian,883,2,0,12.6,28.6868686868686,76,18,1,60-69,USA,White (not Hispanic),Meagan Brown,Meagan,Brown,0,0,0,0,0
+Ann Arbor,86407,57,A: IFL,Female,Caucasian,313,2,0,12.2,22.4568709101725,150,33,1,50-59,USA,White (not Hispanic),Gabrielle Murphy,Gabrielle,Murphy,0,0,0,0,0
+Ann Arbor,86033,75,F: FOLFOX,Male,Caucasian,897,2,1,16.4,27.2029621666815,101,68,1,70-79,USA,White (not Hispanic),Alexander Conn,Alexander,Conn,1,1,1,1,0
+Ann Arbor,84660,43,F: FOLFOX,Male,Caucasian,2208,1,1,12.9,31.2100121719047,247,37,1,40-49,USA,White (not Hispanic),Alex Kempton,Alex,Kempton,0,0,0,0,0
+Ann Arbor,84627,52,F: FOLFOX,Male,Caucasian,375,2,1,12.9,26.9852291377351,125,14,1,50-59,USA,White (not Hispanic),Matthew Walker,Matthew,Walker,0,0,0,0,0
+Ann Arbor,88507,65,A: IFL,Male,Caucasian,430,2,1,14.2,24.5739199365834,500,115,1,60-69,USA,White (not Hispanic),Aaron Kennedy,Aaron,Kennedy,0,0,1,1,0
+Ann Arbor,86930,71,G: IROX,Male,Caucasian,1404,2,1,13.4,26.3959750566893,490,82,0,70-79,USA,White (not Hispanic),David King,David,King,0,0,0,0,0
+Ann Arbor,88242,64,A: IFL,Male,Caucasian,1678,2,0,14.9,31.912223457277,94,31,1,60-69,USA,White (not Hispanic),Ryan Torbet,Ryan,Torbet,0,0,0,0,0
+Ann Arbor,88615,50,F: FOLFOX,Male,Caucasian,330,2,0,12.3,28.1142857142857,66,26,1,40-49,USA,White (not Hispanic),Jacob Mcintyre,Jacob,Mcintyre,0,0,0,0,0
+Ann Arbor,85158,51,F: FOLFOX,Female,Caucasian,299,2,1,13,22.9839721754096,86,21,1,50-59,USA,White (not Hispanic),Sarah Elsarboukh,Sarah,Elsarboukh,1,0,1,0,0
+Ann Arbor,88529,62,A: IFL,Female,Caucasian,131,2,2,11.1,26.7949380165289,555,69,1,60-69,USA,White (not Hispanic),Kady Retherford,Kady,Retherford,0,0,0,0,0
+Ann Arbor,87351,74,G: IROX,Male,Caucasian,460,2,1,14.7,37.0588235294117,93,21,1,70-79,USA,White (not Hispanic),Malaki Bennett,Malaki,Bennett,0,0,0,0,0
+Ann Arbor,86975,51,F: FOLFOX,Female,Caucasian,630,2,1,12.1,21.305700899422,71,15,0,50-59,USA,White (not Hispanic),Briana Myers,Briana,Myers,0,0,0,0,0
+Ann Arbor,85029,56,A: IFL,Female,Caucasian,332,2,1,13,18.5467128027681,127,20,1,50-59,USA,White (not Hispanic),Kathryn Cohen,Kathryn,Cohen,0,0,0,0,0
+Ann Arbor,87314,78,A: IFL,Female,Caucasian,623,2,0,14.6,26.1245674740484,114,18,NA,70-79,USA,White (not Hispanic),Shaylena Crist,Shaylena,Crist,0,0,0,0,0
+Ann Arbor,87130,60,F: FOLFOX,Male,Caucasian,780,2,0,11.8,31.1069531223896,187,72,1,50-59,USA,White (not Hispanic),Kurtis Paul,Kurtis,Paul,1,1,1,1,0
+Ann Arbor,85256,80,G: IROX,Female,Caucasian,852,2,0,13.2,20.8333333333333,165,17,1,70-79,USA,White (not Hispanic),Ariel Bartley,Ariel,Bartley,0,0,0,0,0
+Ann Arbor,88395,76,F: FOLFOX,Female,Caucasian,217,2,1,11.1,36.5463510105762,175,64,1,70-79,USA,White (not Hispanic),Cailey Rogers,Cailey,Rogers,0,0,0,0,0
+Ann Arbor,86696,64,G: IROX,Male,Caucasian,554,2,0,14,25.3979238754325,151,32,1,60-69,USA,White (not Hispanic),Kevin Reed,Kevin,Reed,0,0,0,0,0
+Ann Arbor,84989,54,G: IROX,Male,Caucasian,624,2,1,13.1,27.2925438203589,227,109,1,50-59,USA,White (not Hispanic),Branden Teter,Branden,Teter,0,0,0,0,0
+Ann Arbor,85105,68,G: IROX,Female,Caucasian,923,2,0,12.2,28.9666923607448,137,27,0,60-69,USA,White (not Hispanic),Cecelia Cooke,Cecelia,Cooke,1,1,1,1,0
+Ann Arbor,84760,70,A: IFL,Female,Caucasian,299,2,0,11.2,25.7116620752984,113,15,1,60-69,USA,White (not Hispanic),Madison Fitch,Madison,Fitch,0,0,0,0,0
+Ann Arbor,84910,65,F: FOLFOX,Male,Caucasian,1236,1,0,15.9,28.344671201814,47,23,1,60-69,USA,White (not Hispanic),Morgan Kerstiens,Morgan,Kerstiens,0,0,0,0,0
+Ann Arbor,88817,57,F: FOLFOX,Male,Caucasian,1416,2,1,12.1,31.6081632653061,98,27,1,50-59,USA,White (not Hispanic),Jared Hughes,Jared,Hughes,0,0,0,0,0
+Ann Arbor,86237,52,G: IROX,Female,African-Am,233,2,2,10.4,20.4152249134948,104,28,1,50-59,USA,Black (not Hispanic),Eiricka Parra,Eiricka,Parra,0,0,0,0,0
+Ann Arbor,85101,76,F: FOLFOX,Female,Caucasian,30,2,1,12.1,21.2456747404844,232,32,1,70-79,USA,White (not Hispanic),Elise Podmore,Elise,Podmore,0,0,1,1,0
+Ann Arbor,87064,45,G: IROX,Male,Caucasian,394,2,1,10.4,32.5,403,93,1,40-49,USA,White (not Hispanic),Jeremy Bernal,Jeremy,Bernal,0,0,0,0,0
+Ann Arbor,84611,67,G: IROX,Female,Caucasian,330,2,0,14,35.8516263419323,155,45,1,60-69,USA,White (not Hispanic),Jazzylyn Ogez,Jazzylyn,Ogez,0,0,0,0,0
+Ann Arbor,84952,44,F: FOLFOX,Male,Caucasian,355,2,1,13.8,23.3406508264462,102,20,1,40-49,USA,White (not Hispanic),Connor Stites,Connor,Stites,0,0,0,0,0
+Ann Arbor,84943,44,A: IFL,Female,Caucasian,533,2,0,11,24.6770213383655,81,18,1,40-49,USA,White (not Hispanic),Jana Yost,Jana,Yost,0,0,0,0,0
+Ann Arbor,86097,67,F: FOLFOX,Male,Caucasian,381,2,0,11.7,31.4452812049351,84,29,1,60-69,USA,White (not Hispanic),Nicholas Parks,Nicholas,Parks,1,0,0,0,0
+Ann Arbor,84792,61,F: FOLFOX,Male,Caucasian,417,2,0,16.1,25.3061224489796,76,20,1,60-69,USA,White (not Hispanic),Calin Yakobson,Calin,Yakobson,0,0,0,0,0
+Ann Arbor,86761,66,G: IROX,Female,Caucasian,150,2,2,10.4,44.7340344459686,110,62,0,60-69,USA,White (not Hispanic),Halley Schmidt,Halley,Schmidt,0,0,0,0,0
+Ann Arbor,84834,55,A: IFL,Male,Caucasian,2119,1,0,12.8,32.8719723183391,106,12,1,50-59,USA,White (not Hispanic),Matthew Maier,Matthew,Maier,0,0,0,0,0
+Ann Arbor,84723,74,G: IROX,Male,Caucasian,740,2,1,13.9,29.000376184125,104,15,NA,70-79,USA,White (not Hispanic),Scott Haas,Scott,Haas,0,0,0,0,0
+Ann Arbor,85172,67,A: IFL,Male,Caucasian,463,2,1,14.7,24.9433106575963,351,59,1,60-69,USA,White (not Hispanic),Adam Squair,Adam,Squair,0,0,0,0,0
+Ann Arbor,88170,65,G: IROX,Male,Caucasian,1832,2,0,13.4,24.7496008128901,109,23,1,60-69,USA,White (not Hispanic),Nathanial Sands,Nathanial,Sands,0,0,0,0,0
+Ann Arbor,88528,48,G: IROX,Male,Caucasian,448,2,0,14.4,21.1938885884261,122,68,1,40-49,USA,White (not Hispanic),Dakota Teltow,Dakota,Teltow,0,0,0,0,0
+Ann Arbor,84681,57,F: FOLFOX,Male,Caucasian,799,2,0,11.2,NA,102,7,NA,50-59,USA,White (not Hispanic),Matthew Assante,Matthew,Assante,0,0,1,1,0
+Ann Arbor,88849,73,G: IROX,Male,Caucasian,276,2,2,9.3,23.3240752430248,69,12,1,70-79,USA,White (not Hispanic),Warren Denton,Warren,Denton,1,1,1,1,1
+Ann Arbor,88526,63,F: FOLFOX,Female,Caucasian,1206,2,0,10.4,33.1213067861041,249,27,0,60-69,USA,White (not Hispanic),Mikayla Smith,Mikayla,Smith,0,0,0,0,0
+Ann Arbor,86698,41,F: FOLFOX,Male,African-Am,2329,1,1,14.3,26.1178195285675,69,25,0,40-49,USA,Black (not Hispanic),Miguel Griego,Miguel,Griego,0,0,0,0,0
+Ann Arbor,87344,61,F: FOLFOX,Male,Caucasian,298,2,2,11.2,25.5307712980381,158,31,1,60-69,USA,White (not Hispanic),Bo Lord,Bo,Lord,1,1,1,1,0
+Ann Arbor,87058,76,F: FOLFOX,Female,Caucasian,1442,2,0,13.4,28.5779606767261,85,24,1,70-79,USA,White (not Hispanic),Courtney Louvaris,Courtney,Louvaris,1,1,1,1,0
+Ann Arbor,88258,48,G: IROX,Male,Caucasian,577,2,1,13.3,24.4646016033723,196,22,1,40-49,USA,White (not Hispanic),Kenyon Kratzer,Kenyon,Kratzer,0,0,0,0,0
+Ann Arbor,86600,61,A: IFL,Male,Caucasian,690,2,1,13.4,30.3210671895241,137,23,1,60-69,USA,White (not Hispanic),Ryan Maierhofer,Ryan,Maierhofer,0,0,0,0,0
+Ann Arbor,86363,61,F: FOLFOX,Female,Caucasian,1614,2,0,13.3,29.4423970517545,248,46,1,60-69,USA,White (not Hispanic),Mikaela Helbig,Mikaela,Helbig,0,0,0,0,0
+Ann Arbor,86731,54,G: IROX,Male,Caucasian,374,2,0,12.2,22.2461106632028,427,65,1,50-59,USA,White (not Hispanic),Nicholas Wilson,Nicholas,Wilson,0,0,0,0,0
+Ann Arbor,86515,66,F: FOLFOX,Male,Caucasian,322,2,1,12.4,38.1481481481481,103,11,0,60-69,USA,White (not Hispanic),Morgan Roberts,Morgan,Roberts,0,0,0,0,0
+Ann Arbor,84810,70,G: IROX,Female,Caucasian,1449,2,0,14.2,22.0557792916556,93,22,1,60-69,USA,White (not Hispanic),Nickie Johnson,Nickie,Johnson,0,0,0,0,0
+Ann Arbor,84548,53,F: FOLFOX,Male,Caucasian,459,2,1,13,32.5,96,16,1,50-59,USA,White (not Hispanic),Andy Smith,Andy,Smith,0,0,0,0,0
+Ann Arbor,88692,42,A: IFL,Male,Caucasian,1206,2,0,15.5,29.2049756625202,142,22,1,40-49,USA,White (not Hispanic),Charles Keil,Charles,Keil,1,1,1,1,0
+Ann Arbor,88925,59,G: IROX,Female,Caucasian,514,2,0,14.1,27.7322997761368,80,12,1,50-59,USA,White (not Hispanic),Grace Bowles,Grace,Bowles,0,0,0,0,0
+Ann Arbor,85078,49,A: IFL,Female,Caucasian,649,2,0,16.4,19.8294818872728,320,101,1,40-49,USA,White (not Hispanic),Alexandra Layman,Alexandra,Layman,0,0,0,0,0
+Ann Arbor,85180,68,F: FOLFOX,Male,Caucasian,291,2,1,13.9,28.3078025620352,284,21,1,60-69,USA,White (not Hispanic),Nathan Valencia,Nathan,Valencia,0,0,0,0,0
+Ann Arbor,88860,65,F: FOLFOX,Male,Hispanic,782,2,0,13.2,20.679012345679,119,26,1,60-69,USA,Hispanic,Kenneth Ortiz,Kenneth,Ortiz,0,0,0,0,0
+Ann Arbor,86244,50,F: FOLFOX,Female,Caucasian,794,2,0,17.9,43.8669356433685,107,40,1,40-49,USA,White (not Hispanic),Rebeka Robinson,Rebeka,Robinson,0,0,0,0,0
+Ann Arbor,86442,65,G: IROX,Male,Caucasian,458,2,1,13.9,34.2174981646397,76,41,1,60-69,USA,White (not Hispanic),Dylan Pearson,Dylan,Pearson,0,0,0,0,0
+Ann Arbor,87050,68,G: IROX,Male,Caucasian,718,2,0,14.8,29.3523545006943,99,36,1,60-69,USA,White (not Hispanic),Ely Johnson,Ely,Johnson,0,0,0,0,0
+Ann Arbor,84613,75,A: IFL,Male,Caucasian,829,2,1,12.7,27.2108843537415,76,24,NA,70-79,USA,White (not Hispanic),Pavel Stout,Pavel,Stout,0,0,0,0,0
+Ann Arbor,85167,44,G: IROX,Male,Caucasian,283,2,0,9.7,25.2801098592428,380,60,1,40-49,USA,White (not Hispanic),Kellen Erickson,Kellen,Erickson,0,0,0,0,0
+Ann Arbor,85064,59,F: FOLFOX,Female,Caucasian,549,2,0,15.6,16.6493236212278,73,27,NA,50-59,USA,White (not Hispanic),Sarah Salstrand,Sarah,Salstrand,1,0,1,0,0
+Ann Arbor,84667,42,A: IFL,Female,Hispanic,168,2,2,12,32.051282051282,63,15,1,40-49,USA,Hispanic,Jamie Ramirez,Jamie,Ramirez,0,0,0,0,0
+Ann Arbor,86629,61,F: FOLFOX,Female,Caucasian,594,2,1,13.6,25.2993759487266,115,25,1,60-69,USA,White (not Hispanic),Sara Chamberlain,Sara,Chamberlain,0,0,0,0,0
+Ann Arbor,84515,44,G: IROX,Male,Caucasian,1002,2,0,14.8,24.8922449797854,169,32,1,40-49,USA,White (not Hispanic),Nicholas Wagner,Nicholas,Wagner,1,1,1,1,1
+Ann Arbor,86782,42,A: IFL,Male,Caucasian,173,2,1,15.2,23.9292790733119,196,85,1,40-49,USA,White (not Hispanic),James Harris,James,Harris,1,1,1,1,0
+Ann Arbor,86883,59,A: IFL,Male,Caucasian,612,2,0,12.2,22.5368489449745,126,49,1,50-59,USA,White (not Hispanic),Matthew Brugger,Matthew,Brugger,0,0,0,0,0
+Ann Arbor,86926,72,F: FOLFOX,Male,Caucasian,1692,2,0,12.6,28.0816326530612,408,50,1,70-79,USA,White (not Hispanic),Dustin Braden,Dustin,Braden,1,1,1,1,0
+Ann Arbor,86944,58,A: IFL,Male,Caucasian,226,2,1,11.2,29.7619047619047,555,94,1,50-59,USA,White (not Hispanic),Brandon Wallman,Brandon,Wallman,0,0,0,0,0
+Ann Arbor,86435,57,F: FOLFOX,Male,Caucasian,330,2,1,9.5,21.7180660897457,430,129,0,50-59,USA,White (not Hispanic),Benjamin Lynch,Benjamin,Lynch,1,0,1,0,0
+Ann Arbor,84944,63,G: IROX,Female,Caucasian,122,2,0,12.5,38.0195651245247,95,18,1,60-69,USA,White (not Hispanic),Laura Sandberg,Laura,Sandberg,1,1,1,1,0
+Ann Arbor,88818,66,A: IFL,Male,Caucasian,943,2,0,10,33.9197530864197,128,17,1,60-69,USA,White (not Hispanic),Dylan Stubert,Dylan,Stubert,0,0,0,0,0
+Ann Arbor,86744,75,F: FOLFOX,Male,Caucasian,86,2,1,11.7,25.0390625,165,18,0,70-79,USA,White (not Hispanic),Matthew Robinson,Matthew,Robinson,0,0,0,0,0
+Ann Arbor,87163,37,G: IROX,Female,Caucasian,95,2,0,11.5,27.0992510068124,367,34,1,30-39,USA,White (not Hispanic),Madison Karambay,Madison,Karambay,1,1,1,1,1
+Ann Arbor,86355,53,A: IFL,Male,Caucasian,465,2,0,12.7,27.5217775533392,213,62,1,50-59,USA,White (not Hispanic),Evan Gardner,Evan,Gardner,0,0,0,0,0
+Ann Arbor,88785,74,F: FOLFOX,Female,Caucasian,580,2,2,12.4,30.1837802750618,105,29,NA,70-79,USA,White (not Hispanic),Annastasia Metzer,Annastasia,Metzer,0,0,0,0,0
+Ann Arbor,87094,59,A: IFL,Male,Caucasian,1278,2,0,13.7,31.7417889003976,84,19,0,50-59,USA,White (not Hispanic),Jacob Mayer,Jacob,Mayer,1,1,1,1,1
+St. Louis,89851,61,F: FOLFOX,Female,Caucasian,1266,2,1,11.6,26.3826389896937,158,23,NA,60-69,USA,White (not Hispanic),Lauren Fairchild,Lauren,Fairchild,0,0,0,0,0
+St. Louis,90340,75,G: IROX,Female,Caucasian,152,2,1,10.9,31.2487944137957,450,56,1,70-79,USA,White (not Hispanic),Kylie Slensker,Kylie,Slensker,0,0,0,0,0
+St. Louis,90066,55,G: IROX,Female,Caucasian,1218,2,0,9.7,32.2864925492709,115,26,1,50-59,USA,White (not Hispanic),Kayla Lazzaro,Kayla,Lazzaro,0,0,0,0,0
+St. Louis,89566,67,F: FOLFOX,Female,Caucasian,2190,1,0,12.8,26.8544055741036,103,17,1,60-69,USA,White (not Hispanic),Brittany Poindexter,Brittany,Poindexter,0,0,0,0,0
+St. Louis,90354,44,F: FOLFOX,Male,Caucasian,323,2,2,10.5,28.3265803721897,374,51,NA,40-49,USA,White (not Hispanic),Casey Bochner,Casey,Bochner,0,0,0,0,0
+St. Louis,89665,64,F: FOLFOX,Male,Caucasian,1097,2,NA,NA,47.4580854515954,NA,NA,1,60-69,USA,White (not Hispanic),Ryan Bollin,Ryan,Bollin,0,0,0,0,0
+St. Louis,89002,59,A: IFL,Male,Caucasian,960,2,1,9.9,20.2374774884771,349,26,0,50-59,USA,White (not Hispanic),Dalton Panicucci,Dalton,Panicucci,0,0,0,0,0
+St. Louis,89880,60,F: FOLFOX,Male,Asian,331,2,NA,NA,41.0014345874404,NA,NA,NA,50-59,USA,Asian or Pacific Islander,Sidney Yeh,Sidney,Yeh,1,0,1,0,0
+St. Louis,89817,70,G: IROX,Male,Caucasian,449,2,1,13.2,31.9020408163265,110,34,1,60-69,USA,White (not Hispanic),Austin Dunn,Austin,Dunn,0,0,0,0,0
+St. Louis,89144,55,F: FOLFOX,Male,Caucasian,470,2,1,10.7,32.4349319593077,342,75,1,50-59,USA,White (not Hispanic),Austin Phelps,Austin,Phelps,0,0,0,0,0
+St. Louis,90168,62,A: IFL,Female,Caucasian,928,2,0,11.8,34.3736402832166,99,12,1,60-69,USA,White (not Hispanic),Rebecca Hill,Rebecca,Hill,0,0,0,0,0
+St. Louis,89749,65,A: IFL,Male,Caucasian,504,2,1,13.7,24.2214532871972,130,24,1,60-69,USA,White (not Hispanic),Michael Bradford,Michael,Bradford,0,0,0,0,0
+St. Louis,89549,61,G: IROX,Male,Caucasian,1152,2,NA,NA,28.664142779881,NA,NA,1,60-69,USA,White (not Hispanic),Tyler Epps,Tyler,Epps,0,0,0,0,0
+St. Louis,90259,69,A: IFL,Male,Caucasian,247,2,0,14.4,28.3044982698962,222,26,1,60-69,USA,White (not Hispanic),William Thompson,William,Thompson,0,0,0,0,0
+St. Louis,89349,78,F: FOLFOX,Male,Caucasian,456,2,1,12.2,24.4705578512396,354,57,1,70-79,USA,White (not Hispanic),Alexander Sardi,Alexander,Sardi,0,0,0,0,0
+St. Louis,89560,58,F: FOLFOX,Male,Caucasian,320,2,1,11.2,28.2334155900711,104,27,0,50-59,USA,White (not Hispanic),Austin Phenicie,Austin,Phenicie,1,1,1,1,0
+St. Louis,90198,53,G: IROX,Female,Caucasian,508,2,NA,NA,40.5683106575963,NA,NA,1,50-59,USA,White (not Hispanic),Heather Edwards,Heather,Edwards,0,0,0,0,0
+St. Louis,90164,70,A: IFL,Female,Caucasian,448,2,NA,NA,23.046875,NA,NA,0,60-69,USA,White (not Hispanic),Morgan Creal,Morgan,Creal,1,1,1,1,0
+St. Louis,89591,58,F: FOLFOX,Male,Caucasian,169,2,NA,NA,38.2653061224489,NA,NA,1,50-59,USA,White (not Hispanic),Seth Mcbryde,Seth,Mcbryde,0,0,0,0,0
+St. Louis,90346,48,F: FOLFOX,Female,Caucasian,1282,2,0,11.6,21.3628988642509,86,22,1,40-49,USA,White (not Hispanic),Shyanna Foley-Stockton,Shyanna,Foley-Stockton,0,0,0,0,0
+St. Louis,90185,68,F: FOLFOX,Female,Caucasian,1083,2,1,12.5,33.1688198577442,95,16,1,60-69,USA,White (not Hispanic),Nina Bohus,Nina,Bohus,0,0,0,0,0
+St. Louis,88955,68,A: IFL,Male,Caucasian,910,2,NA,NA,30.2382304787998,NA,NA,1,60-69,USA,White (not Hispanic),Brandon Pepin,Brandon,Pepin,0,0,0,0,0
+St. Louis,89448,57,A: IFL,Male,Caucasian,371,2,0,14.3,30.6779447039515,235,118,1,50-59,USA,White (not Hispanic),Jedidiah Nadeau,Jedidiah,Nadeau,0,0,0,0,0
+St. Louis,89682,72,A: IFL,Male,Caucasian,62,2,0,13.3,34.0844671201814,61,24,1,70-79,USA,White (not Hispanic),George Null,George,Null,0,0,0,0,0
+St. Louis,88949,58,G: IROX,Male,Caucasian,301,2,0,12.5,30.6481481481481,100,22,1,50-59,USA,White (not Hispanic),Grant Mcna,Grant,Mcna,0,0,0,0,0
+St. Louis,90357,49,A: IFL,Female,Caucasian,222,2,0,10.1,18.709702938966,310,53,1,40-49,USA,White (not Hispanic),Ann Marie Jones,Ann,Marie,0,0,0,0,0
+St. Louis,90020,66,A: IFL,Female,Caucasian,788,2,1,12.4,33.75,96,23,1,60-69,USA,White (not Hispanic),Lynnsey Carvo,Lynnsey,Carvo,0,0,0,0,0
+St. Louis,89823,56,G: IROX,Male,Caucasian,158,2,0,14.7,26.4721074380165,214,20,1,50-59,USA,White (not Hispanic),Steven Pfeifer,Steven,Pfeifer,0,0,0,0,0
+St. Louis,90017,66,G: IROX,Male,Caucasian,571,1,0,10.7,35.0162050185438,162,59,1,60-69,USA,White (not Hispanic),Dylan Adams,Dylan,Adams,0,0,0,0,0
+St. Louis,89389,47,G: IROX,Female,Caucasian,277,2,1,12.4,22.8838119613082,482,176,1,40-49,USA,White (not Hispanic),Shae Merritt,Shae,Merritt,0,0,0,0,0
+St. Louis,90087,74,F: FOLFOX,Male,African-Am,189,2,0,12,21.8775510204081,68,35,1,70-79,USA,Black (not Hispanic),Alberto Leon,Alberto,Leon,0,0,0,0,0
+St. Louis,89497,69,A: IFL,Female,Caucasian,802,2,0,11.5,21.8670128605622,62,21,1,60-69,USA,White (not Hispanic),Brandi Hardaway,Brandi,Hardaway,0,0,0,0,0
+St. Louis,89489,56,G: IROX,Male,Caucasian,629,2,1,13.9,37.1480873627067,243,26,0,50-59,USA,White (not Hispanic),Thomas Brown,Thomas,Brown,0,0,0,0,0
+St. Louis,90030,73,G: IROX,Male,Caucasian,259,2,NA,NA,25.1204648526077,NA,NA,1,70-79,USA,White (not Hispanic),Joshua Soeken,Joshua,Soeken,1,1,1,1,0
+St. Louis,89253,64,F: FOLFOX,Female,Caucasian,97,2,1,12.6,NA,272,62,1,60-69,USA,White (not Hispanic),Madison Cree,Madison,Cree,0,0,0,0,0
+St. Louis,90166,54,G: IROX,Female,Caucasian,878,2,0,10.9,NA,247,23,1,50-59,USA,White (not Hispanic),Alexis Friesenegger,Alexis,Friesenegger,0,0,0,0,0
+St. Louis,89857,39,A: IFL,Female,African-Am,509,2,1,10.1,20.7511505588428,66,26,1,30-39,USA,Black (not Hispanic),Josephine Atencio,Josephine,Atencio,0,0,0,0,0
+St. Louis,89295,54,A: IFL,Female,Caucasian,511,2,1,12,25.353385930309,316,43,1,50-59,USA,White (not Hispanic),Jessica Fitzsimons,Jessica,Fitzsimons,0,0,0,0,0
+St. Louis,88993,57,G: IROX,Male,Caucasian,378,2,0,13.8,24.2764123602694,260,52,1,50-59,USA,White (not Hispanic),Levi Snell,Levi,Snell,0,0,0,0,0
+St. Louis,89871,64,G: IROX,Female,Caucasian,1882,1,0,13.4,25.5280073461891,140,30,1,60-69,USA,White (not Hispanic),Nora Grosse,Nora,Grosse,0,0,0,0,0
+St. Louis,89582,64,F: FOLFOX,Female,Caucasian,238,2,0,10,25.4619806334632,384,28,1,60-69,USA,White (not Hispanic),Taylor Ederveen,Taylor,Ederveen,1,1,1,1,0
+St. Louis,89702,64,G: IROX,Female,Caucasian,889,2,2,12.6,25.5363321799308,93,23,1,60-69,USA,White (not Hispanic),Kali Ingle,Kali,Ingle,0,0,0,0,0
+St. Louis,89005,70,G: IROX,Male,Caucasian,407,2,1,10.8,26.6380507511677,149,55,1,60-69,USA,White (not Hispanic),Colby Green,Colby,Green,0,0,0,0,0
+St. Louis,89207,71,A: IFL,Male,Caucasian,2170,1,0,15.6,31.9429421308815,81,13,1,70-79,USA,White (not Hispanic),Tyler Kurtz,Tyler,Kurtz,0,0,1,1,0
+St. Louis,89595,57,G: IROX,Female,Caucasian,1357,2,NA,NA,22.6427721594289,NA,NA,1,50-59,USA,White (not Hispanic),Allyson Hart,Allyson,Hart,0,0,0,0,0
+St. Louis,90165,71,F: FOLFOX,Male,Hispanic,1514,2,1,11.6,30.3460207612456,188,34,1,70-79,USA,Hispanic,Alejandro Valdez,Alejandro,Valdez,0,0,0,0,0
+St. Louis,89839,62,G: IROX,Female,Caucasian,1276,2,0,12.9,31.0826888756692,122,35,1,60-69,USA,White (not Hispanic),Alyssa Bennett,Alyssa,Bennett,0,0,0,0,0
+St. Louis,90279,66,F: FOLFOX,Male,Caucasian,568,2,0,11.6,25,138,25,1,60-69,USA,White (not Hispanic),Tyler Neiman,Tyler,Neiman,0,0,0,0,0
+St. Louis,90321,61,F: FOLFOX,Female,Hawaii/Pacific,617,2,1,12.9,27.1816300864132,109,34,1,60-69,USA,Asian or Pacific Islander,Nina Gurung,Nina,Gurung,0,0,0,0,0
+St. Louis,90329,73,A: IFL,Male,Caucasian,1014,2,0,14.7,28.6465809545239,67,17,1,70-79,USA,White (not Hispanic),Connor Wentworth,Connor,Wentworth,1,1,1,1,0
+St. Louis,89229,29,G: IROX,Male,African-Am,721,2,1,14.3,23.9316239316239,87,21,0,20-29,USA,Black (not Hispanic),Avery Padilla,Avery,Padilla,0,0,0,0,0
+St. Louis,88928,73,F: FOLFOX,Male,Caucasian,2226,1,0,12.5,24.8865741362184,74,22,1,70-79,USA,White (not Hispanic),Cullin Paschke,Cullin,Paschke,0,0,0,0,0
+St. Louis,89953,62,G: IROX,Male,Caucasian,799,2,NA,NA,35.696250473425,NA,NA,NA,60-69,USA,White (not Hispanic),Ben Gerlach,Ben,Gerlach,0,0,0,0,0
+St. Louis,90352,77,A: IFL,Male,Hispanic,731,2,1,10.7,19.7133215276153,103,26,1,70-79,USA,Hispanic,Marco Martinez,Marco,Martinez,0,0,0,0,0
+St. Louis,90046,50,A: IFL,Male,African-Am,999,2,NA,NA,23.4926106802004,NA,NA,1,40-49,USA,Black (not Hispanic),Gabriel Nunez,Gabriel,Nunez,0,0,0,0,0
+St. Louis,89819,70,A: IFL,Female,Caucasian,648,2,1,12,31.4652414467989,153,46,1,60-69,USA,White (not Hispanic),Maggie Brill,Maggie,Brill,0,0,0,0,0
+St. Louis,90118,49,F: FOLFOX,Male,Caucasian,628,2,1,9.5,34.8472632804801,72,19,1,40-49,USA,White (not Hispanic),Ryan Dorrell,Ryan,Dorrell,0,0,0,0,0
+St. Louis,90228,79,F: FOLFOX,Male,Other,886,2,0,10.4,32.4814633595543,152,13,1,70-79,USA,"Middle-Eastern, Arabic",Fawz al-Saab,Fawz,al-Saab,0,0,0,0,0
+St. Louis,89397,70,A: IFL,Male,Caucasian,350,2,0,10.6,26.0633551457465,183,39,0,60-69,USA,White (not Hispanic),Colton Lima Jr,Colton,Lima,0,0,0,0,0
+St. Louis,90095,62,G: IROX,Male,Caucasian,343,2,1,13,24.0377437367493,107,22,1,60-69,USA,White (not Hispanic),Wesley Nau,Wesley,Nau,1,1,1,1,1
+St. Louis,88977,30,F: FOLFOX,Female,Caucasian,61,2,0,10,26.3251133786848,99,17,1,20-29,USA,White (not Hispanic),Angela Bevan,Angela,Bevan,0,0,0,0,0
+St. Louis,90398,62,F: FOLFOX,Male,Caucasian,760,2,0,10.5,31.9349687908259,24,60,1,60-69,USA,White (not Hispanic),Kyle Kratz,Kyle,Kratz,0,0,0,0,0
+St. Louis,89541,56,G: IROX,Male,Caucasian,706,2,0,11.9,25.5593291551416,73,29,1,50-59,USA,White (not Hispanic),Benjamin Schnetzler,Benjamin,Schnetzler,0,0,0,0,0
+St. Louis,89741,59,F: FOLFOX,Male,African-Am,630,2,1,14.6,20.1771485243322,166,19,0,50-59,USA,Black (not Hispanic),Brandon Varela Amador,Brandon,Varela,1,1,1,1,0
+St. Louis,89584,61,A: IFL,Male,Caucasian,597,2,NA,NA,26.6658057851239,NA,NA,1,60-69,USA,White (not Hispanic),Ryan Hamby,Ryan,Hamby,0,0,0,0,0
+St. Louis,90253,73,G: IROX,Male,African-Am,702,2,0,12.7,23.9590942293644,96,20,1,70-79,USA,Black (not Hispanic),Sergio Martinez,Sergio,Martinez,0,0,0,0,0
+St. Louis,90010,45,F: FOLFOX,Female,Caucasian,1515,2,NA,NA,27.818869165023,NA,NA,1,40-49,USA,White (not Hispanic),Malea Lopez,Malea,Lopez,0,0,1,1,0
+St. Louis,90177,81,G: IROX,Female,Caucasian,365,2,0,13.5,22.1854912764003,194,32,NA,80-89,USA,White (not Hispanic),Julia Kennedy,Julia,Kennedy,0,0,0,0,0
+St. Louis,89624,53,G: IROX,Male,Caucasian,952,2,0,13.5,23.6565096952908,150,24,1,50-59,USA,White (not Hispanic),Ryan Miller,Ryan,Miller,0,0,0,0,0
+St. Louis,89425,70,G: IROX,Female,Caucasian,249,2,1,14.1,20.700816741315,207,49,1,60-69,USA,White (not Hispanic),Aundrea Adams,Aundrea,Adams,0,0,0,0,0
+St. Louis,89710,36,A: IFL,Male,Caucasian,657,2,0,12.8,22.0521901834341,187,41,1,30-39,USA,White (not Hispanic),Steven Loyd,Steven,Loyd,1,1,1,1,0
+St. Louis,89432,58,F: FOLFOX,Male,Caucasian,847,2,1,11.8,26.2542517006802,88,17,1,50-59,USA,White (not Hispanic),Brady Beul,Brady,Beul,0,0,0,0,0
+St. Louis,88947,49,A: IFL,Male,Caucasian,2132,1,0,13.1,29.9390589569161,68,23,1,40-49,USA,White (not Hispanic),John Mcbride,John,Mcbride,0,0,0,0,0
+St. Louis,89703,73,G: IROX,Female,Caucasian,231,2,1,15.8,18.813775510204,119,33,0,70-79,USA,White (not Hispanic),Amanda Zakhem,Amanda,Zakhem,0,0,0,0,0
+St. Louis,89036,70,F: FOLFOX,Male,Caucasian,403,2,1,13.7,26.0616793076948,103,22,1,60-69,USA,White (not Hispanic),Zachary Frick,Zachary,Frick,1,1,1,1,0
+St. Louis,90132,73,G: IROX,Female,Caucasian,709,2,1,12.7,25.5999342537804,74,30,1,70-79,USA,White (not Hispanic),Haley Koch,Haley,Koch,0,0,0,0,0
+St. Louis,89827,60,F: FOLFOX,Female,African-Am,840,2,NA,NA,23.114186851211,NA,NA,1,50-59,USA,Black (not Hispanic),Camilla Guerrero-Mendoza,Camilla,Guerrero-Mendoza,0,0,0,0,0
+St. Louis,89563,64,A: IFL,Female,Caucasian,460,2,NA,NA,27.5200448163579,NA,NA,1,60-69,USA,White (not Hispanic),Katie Young,Katie,Young,1,1,1,1,1
+St. Louis,89636,72,F: FOLFOX,Female,Caucasian,953,2,1,10.4,23.7118446309609,283,26,1,70-79,USA,White (not Hispanic),Jessica Holcomb,Jessica,Holcomb,0,0,0,0,0
+St. Louis,89829,54,A: IFL,Male,Caucasian,226,2,0,13.3,33.0122448979591,207,40,0,50-59,USA,White (not Hispanic),Michael Beetham,Michael,Beetham,0,0,0,0,0
+Rochester,90904,57,A: IFL,Male,Caucasian,1292,2,NA,NA,30.269387755102,NA,NA,1,50-59,USA,White (not Hispanic),Phillip Manns,Phillip,Manns,0,0,0,0,0
+Rochester,91167,77,F: FOLFOX,Female,Caucasian,511,2,0,12.8,22.1797052154195,57,19,1,70-79,USA,White (not Hispanic),Anna Duarte,Anna,Duarte,0,0,0,0,0
+Rochester,90523,65,A: IFL,Male,Caucasian,666,2,0,11.6,27.7840651878678,138,19,1,60-69,USA,White (not Hispanic),Nicholas Ajour,Nicholas,Ajour,0,0,0,0,0
+Rochester,90981,57,A: IFL,Male,Caucasian,657,2,0,10.7,29.7458085451595,78,28,NA,50-59,USA,White (not Hispanic),Andre Scott,Andre,Scott,1,1,1,1,1
+Rochester,91330,57,A: IFL,Male,Caucasian,449,2,0,14.5,26.196187350082,124,21,1,50-59,USA,White (not Hispanic),Christopher Madsen,Christopher,Madsen,0,0,0,0,0
+Rochester,91054,55,A: IFL,Male,Caucasian,607,2,NA,NA,32.8395061728395,NA,NA,1,50-59,USA,White (not Hispanic),Allaeldien Curdy,Allaeldien,Curdy,0,0,0,0,0
+Rochester,90623,64,G: IROX,Male,Caucasian,604,2,NA,NA,26.8726338561384,NA,NA,1,60-69,USA,White (not Hispanic),Caleb Poli,Caleb,Poli,0,0,0,0,0
+Rochester,90799,68,A: IFL,Male,Caucasian,592,2,NA,NA,22.3316576040491,NA,NA,1,60-69,USA,White (not Hispanic),Alexander Maggs,Alexander,Maggs,0,0,0,0,0
+Rochester,90888,57,F: FOLFOX,Male,Caucasian,199,2,1,13.9,23.492428339643,143,43,NA,50-59,USA,White (not Hispanic),Tyler Hillson,Tyler,Hillson,0,0,0,0,0
+Rochester,91274,68,G: IROX,Male,Caucasian,17,2,NA,NA,24.0238086700849,NA,NA,1,60-69,USA,White (not Hispanic),Jason Newberg,Jason,Newberg,0,0,0,0,0
+Rochester,91092,66,G: IROX,Male,Caucasian,1861,1,NA,NA,35.1736837177366,NA,NA,1,60-69,USA,White (not Hispanic),Brandon Tyrrell,Brandon,Tyrrell,0,0,0,0,0
+Rochester,90808,58,F: FOLFOX,Female,Caucasian,442,2,NA,NA,22.3945199292408,NA,NA,1,50-59,USA,White (not Hispanic),Jade Burglin,Jade,Burglin,0,0,0,0,0
+Rochester,91079,58,A: IFL,Male,Caucasian,704,2,1,10.2,24.5434623813002,116,29,1,50-59,USA,White (not Hispanic),Gabriel Janich,Gabriel,Janich,0,0,0,0,0
+Rochester,91099,69,F: FOLFOX,Female,Caucasian,580,2,NA,NA,23.8343214228489,NA,NA,1,60-69,USA,White (not Hispanic),Madeline Van Lerberghe,Madeline,Van,0,0,0,0,0
+Rochester,90644,63,G: IROX,Male,African-Am,883,2,1,11.4,29.3877551020408,105,29,1,60-69,USA,Black (not Hispanic),Paul Rael,Paul,Rael,0,0,0,0,0
+Rochester,90858,46,A: IFL,Male,African-Am,715,2,0,15.4,25.9732910819375,62,27,1,40-49,USA,Black (not Hispanic),Davis Barrow,Davis,Barrow,0,0,0,0,0
+Rochester,90748,65,G: IROX,Female,Caucasian,455,2,NA,NA,21.8851281365899,NA,NA,1,60-69,USA,White (not Hispanic),Rebecca Holtz,Rebecca,Holtz,0,0,0,0,0
+Rochester,90444,46,F: FOLFOX,Male,Caucasian,560,2,0,13.9,31.25,96,20,1,40-49,USA,White (not Hispanic),Austin Dinges,Austin,Dinges,0,0,0,0,0
+Rochester,90776,30,F: FOLFOX,Female,Caucasian,345,2,1,9.4,19.1246915372332,178,21,1,20-29,USA,White (not Hispanic),Elise Miller,Elise,Miller,1,1,1,1,0
+Rochester,91097,37,A: IFL,Male,Caucasian,286,2,1,13.9,24.8163265306122,126,19,1,30-39,USA,White (not Hispanic),Benjamin Levett,Benjamin,Levett,0,0,0,0,0
+Rochester,90622,59,A: IFL,Male,Caucasian,1462,2,0,11.2,27.206160838278,85,31,1,50-59,USA,White (not Hispanic),Trevor Trout,Trevor,Trout,0,0,0,0,0
+Rochester,90846,56,A: IFL,Male,Caucasian,1395,2,NA,NA,29.6495115633095,NA,NA,0,50-59,USA,White (not Hispanic),Samuel Rafii,Samuel,Rafii,1,1,1,1,0
+Rochester,90545,62,A: IFL,Male,Hispanic,378,2,NA,NA,28.734693877551,NA,NA,1,60-69,USA,Hispanic,Ernesto Chavarria,Ernesto,Chavarria,0,0,0,0,0
+Rochester,90557,66,F: FOLFOX,Male,Caucasian,470,2,0,13.6,22.4197266864913,92,26,1,60-69,USA,White (not Hispanic),Christopher Porter,Christopher,Porter,0,0,0,0,0
+Rochester,91282,52,F: FOLFOX,Female,Caucasian,449,2,0,10.5,34.4290657439446,222,29,1,50-59,USA,White (not Hispanic),Micaela Harkins,Micaela,Harkins,0,0,0,0,0
+Rochester,91305,59,A: IFL,Female,Hispanic,126,2,0,11.7,28.4090909090909,60,40,NA,50-59,USA,Hispanic,Juana Enriquez,Juana,Enriquez,0,0,0,0,0
+Rochester,91030,57,A: IFL,Female,Caucasian,552,2,1,10,35.153750611615,30,13,1,50-59,USA,White (not Hispanic),Kymberly Baughman,Kymberly,Baughman,0,0,0,0,0
+Rochester,91310,77,G: IROX,Male,Caucasian,528,2,1,11.3,23.9520958083832,196,36,1,70-79,USA,White (not Hispanic),Preston Pearson,Preston,Pearson,0,0,0,0,0
+Rochester,90810,72,A: IFL,Male,Caucasian,476,2,0,11.9,27.1604938271605,226,41,NA,70-79,USA,White (not Hispanic),Cody Sanderson,Cody,Sanderson,0,0,0,0,0
+Rochester,90413,62,A: IFL,Female,Caucasian,307,2,0,9.7,24.341758286340198,289,60,1,60-69,USA,White (not Hispanic),Jacqueline Visage-Packard,Jacqueline,Visage-Packard,1,1,1,1,0
+Rochester,91075,68,A: IFL,Male,Caucasian,996,2,1,13.6,21.8091150107309,92,23,NA,60-69,USA,White (not Hispanic),Ty Gutierrez-Homan,Ty,Gutierrez-Homan,0,0,0,0,0
+Rochester,91065,51,F: FOLFOX,Female,Caucasian,316,2,1,12.5,33.2718581805864,100,29,1,50-59,USA,White (not Hispanic),Rio Karimi,Rio,Karimi,0,0,0,0,0
+Rochester,90718,53,G: IROX,Female,African-Am,135,2,1,9.8,29.7442228309093,607,151,1,50-59,USA,Black (not Hispanic),Edith Butler,Edith,Butler,1,1,1,1,0
+Rochester,91089,47,G: IROX,Male,African-Am,672,2,1,10.6,19.6616369455875,484,52,1,40-49,USA,Black (not Hispanic),Marcus Palomino Romero,Marcus,Palomino,0,0,0,0,0
+Rochester,90456,77,G: IROX,Male,Caucasian,212,2,1,14,28.1469387755102,85,21,1,70-79,USA,White (not Hispanic),Hudson Dyer,Hudson,Dyer,1,1,1,1,1
+Rochester,91295,66,A: IFL,Male,Caucasian,250,2,1,13.1,24.3265306122449,79,17,0,60-69,USA,White (not Hispanic),Alan Maddox,Alan,Maddox,0,0,0,0,0
+Rochester,90546,57,G: IROX,Male,Caucasian,1940,1,0,15.9,31.6975308641975,46,39,1,50-59,USA,White (not Hispanic),Matthew Fischer,Matthew,Fischer,0,0,0,0,0
+Rochester,91291,63,G: IROX,Male,Hispanic,224,2,1,10.8,28.6868686868686,222,44,1,60-69,USA,Hispanic,Felix Salgado,Felix,Salgado,0,0,0,0,0
+Rochester,90972,69,F: FOLFOX,Female,Caucasian,852,2,0,11.7,22.4445646295294,183,43,NA,60-69,USA,White (not Hispanic),Jasmine Toman,Jasmine,Toman,0,0,0,0,0
+Rochester,91076,77,G: IROX,Male,Caucasian,380,2,NA,NA,25.3443526170798,NA,NA,1,70-79,USA,White (not Hispanic),Guyo Witty,Guyo,Witty,0,0,0,0,0
+Rochester,91037,54,G: IROX,Female,Caucasian,690,2,0,12.7,20.5333333333333,408,44,NA,50-59,USA,White (not Hispanic),Christina Factor,Christina,Factor,1,1,1,1,1
+Rochester,90723,52,F: FOLFOX,Female,Caucasian,434,2,1,10.4,24.0166493236212,613,147,1,50-59,USA,White (not Hispanic),Laura Palmer,Laura,Palmer,0,0,0,0,0
+Rochester,91066,49,G: IROX,Female,Caucasian,503,2,0,14.2,22.2093192045289,173,37,1,40-49,USA,White (not Hispanic),Heather Warner,Heather,Warner,0,0,0,0,0
+Rochester,90596,58,A: IFL,Male,Caucasian,396,2,0,14.5,32.9674087753496,90,24,1,50-59,USA,White (not Hispanic),Bashar Murphy,Bashar,Murphy,0,0,0,0,0
+Rochester,90535,75,F: FOLFOX,Female,Caucasian,991,2,1,12.9,22.9874272846688,65,22,1,70-79,USA,White (not Hispanic),Nathalie Bloch,Nathalie,Bloch,0,0,0,0,0
+Rochester,90512,33,F: FOLFOX,Female,Caucasian,237,2,NA,NA,27.6816608996539,NA,NA,1,30-39,USA,White (not Hispanic),Rebekah Mueller,Rebekah,Mueller,0,0,0,0,0
+Rochester,90720,88,F: FOLFOX,Male,Caucasian,49,2,1,12.3,24.4472789115646,51,20,1,80-89,USA,White (not Hispanic),Riley Murray,Riley,Murray,0,0,0,0,0
+Rochester,90983,64,F: FOLFOX,Male,Caucasian,378,2,1,11.8,22.0069204152249,77,42,1,60-69,USA,White (not Hispanic),Mike Mcdonald,Mike,Mcdonald,0,0,0,0,0
+Rochester,90586,59,G: IROX,Male,Caucasian,141,2,1,9.6,27.5086505190311,100,38,1,50-59,USA,White (not Hispanic),Zeph Brazeel,Zeph,Brazeel,1,1,1,1,0
+Rochester,90511,51,G: IROX,Male,Caucasian,639,2,1,9.6,28.2182209083579,103,22,1,50-59,USA,White (not Hispanic),Ayden Pettine,Ayden,Pettine,0,0,0,0,0
+Rochester,91304,76,F: FOLFOX,Male,Caucasian,230,2,1,14,22.2213649164769,147,42,1,70-79,USA,White (not Hispanic),Ryan Pipe,Ryan,Pipe,1,1,1,1,0
+Rochester,91081,77,F: FOLFOX,Female,Caucasian,2150,1,NA,NA,32.0915712799167,NA,NA,1,70-79,USA,White (not Hispanic),Sarah Santistevan,Sarah,Santistevan,0,0,0,0,0
+Rochester,91264,37,A: IFL,Female,Hispanic,516,2,1,10.9,25.7170325268386,369,65,0,30-39,USA,Hispanic,Marilyn Tellez,Marilyn,Tellez,0,0,0,0,0
+Rochester,90522,55,G: IROX,Male,Caucasian,1485,2,1,14.1,27.5051652892562,67,24,1,50-59,USA,White (not Hispanic),Ryan Burns III,Ryan,Burns,0,0,0,0,0
+Rochester,90727,58,A: IFL,Male,African-Am,372,2,0,10.3,18.3391003460207,206,25,1,50-59,USA,Black (not Hispanic),Angelo Mira,Angelo,Mira,0,0,0,0,0
+Rochester,91073,60,F: FOLFOX,Female,Caucasian,330,2,0,14,24,534,139,NA,50-59,USA,White (not Hispanic),Hannah Nicholas,Hannah,Nicholas,0,0,0,0,0
+Rochester,91020,51,F: FOLFOX,Male,Caucasian,1092,1,1,10.8,21.2200090538705,165,24,1,50-59,USA,White (not Hispanic),Brandon Sauve,Brandon,Sauve,0,0,0,0,0
+Rochester,91015,54,A: IFL,Female,Caucasian,197,2,0,10.4,23.8222222222222,293,45,1,50-59,USA,White (not Hispanic),Shelby Sprinkle,Shelby,Sprinkle,0,0,0,0,0
+Rochester,91161,64,G: IROX,Male,Caucasian,328,2,0,14,21.3988132811513,127,29,1,60-69,USA,White (not Hispanic),Derek Kipp,Derek,Kipp,0,0,0,0,0
+Rochester,91306,61,G: IROX,Female,Caucasian,295,2,0,10.9,33.4235171696149,133,14,1,60-69,USA,White (not Hispanic),Courtney Stapleton,Courtney,Stapleton,0,0,0,0,0
+Rochester,91155,72,A: IFL,Male,Caucasian,662,2,0,9.8,27.4713311075627,319,55,NA,70-79,USA,White (not Hispanic),Gregory Emmons,Gregory,Emmons,0,0,0,0,0
+Rochester,90690,79,A: IFL,Female,Caucasian,327,2,1,11.2,22.8928199791883,90,16,1,70-79,USA,White (not Hispanic),Lauren Byerly,Lauren,Byerly,0,0,0,0,0
+Rochester,91016,55,G: IROX,Male,Caucasian,783,2,0,14.5,24.5402920497566,143,29,1,50-59,USA,White (not Hispanic),Leo Joines,Leo,Joines,0,0,0,0,0
+Rochester,91312,52,F: FOLFOX,Female,Caucasian,601,2,1,12,26.2629757785467,61,16,1,50-59,USA,White (not Hispanic),Cassidy Light,Cassidy,Light,0,0,0,0,0
+Rochester,90882,66,G: IROX,Female,Caucasian,402,2,0,12.4,37.65625,77,23,0,60-69,USA,White (not Hispanic),Samantha Trautman,Samantha,Trautman,0,0,0,0,0
+Rochester,90782,58,G: IROX,Male,Caucasian,377,2,1,10,23.5969387755102,456,25,1,50-59,USA,White (not Hispanic),Beau Steakley,Beau,Steakley,0,0,0,0,0
+Rochester,90702,45,A: IFL,Female,African-Am,69,2,0,12.7,23.7728136541288,95,27,1,40-49,USA,Black (not Hispanic),Tiffany Mendez,Tiffany,Mendez,0,0,0,0,0
+Rochester,90801,71,G: IROX,Female,Caucasian,369,2,0,11.9,28.5585141354372,94,25,1,70-79,USA,White (not Hispanic),Samantha Redd,Samantha,Redd,0,0,0,0,0
+Rochester,90982,51,G: IROX,Female,Caucasian,524,2,0,11.6,41.7822697846479,346,103,1,50-59,USA,White (not Hispanic),Emily Loflin,Emily,Loflin,1,1,1,1,0
+Rochester,91334,72,F: FOLFOX,Male,Caucasian,576,2,0,13.5,39.8465171192444,95,26,1,70-79,USA,White (not Hispanic),Sean King,Sean,King,0,0,0,0,0
+Rochester,90834,58,F: FOLFOX,Male,Caucasian,149,2,NA,NA,21.9285645887197,NA,NA,NA,50-59,USA,White (not Hispanic),Casey Mcguire,Casey,Mcguire,0,0,0,0,0
+Rochester,91247,34,A: IFL,Male,Caucasian,215,2,2,11.5,23.620287912158,301,36,1,30-39,USA,White (not Hispanic),Nicholas Skeen,Nicholas,Skeen,0,0,0,0,0
+Rochester,90517,52,F: FOLFOX,Female,Caucasian,1911,1,0,12.3,26.4453125,92,22,1,50-59,USA,White (not Hispanic),Abigail Drury,Abigail,Drury,0,0,1,1,0
+Rochester,90850,66,G: IROX,Female,African-Am,688,2,1,12.5,21.4532871972318,223,29,1,60-69,USA,Black (not Hispanic),Itzel Duarte,Itzel,Duarte,0,0,0,0,0
+Rochester,90631,70,F: FOLFOX,Male,Caucasian,319,2,0,13.8,28.2161343264739,138,55,1,60-69,USA,White (not Hispanic),Robert Conklen,Robert,Conklen,1,0,1,0,0
+Rochester,90915,75,G: IROX,Male,Caucasian,732,2,0,15.1,26.2644916384528,80,21,1,70-79,USA,White (not Hispanic),Cory Shaner,Cory,Shaner,0,0,0,0,0
+Rochester,90569,76,A: IFL,Male,Caucasian,493,2,0,12.1,23.8287198781689,150,39,1,70-79,USA,White (not Hispanic),Drake Lilly,Drake,Lilly,0,0,0,0,0
+Rochester,91197,68,A: IFL,Male,Caucasian,1192,2,NA,NA,30.679012345679,NA,NA,1,60-69,USA,White (not Hispanic),Zackary Donahue,Zackary,Donahue,1,1,1,1,0
+Rochester,90499,58,A: IFL,Male,Caucasian,395,2,0,12.7,22.7595557851239,252,33,1,50-59,USA,White (not Hispanic),Eric Mcclure,Eric,Mcclure,0,0,0,0,0
+Rochester,90938,61,G: IROX,Female,Caucasian,2065,1,1,12.9,20.5469678953626,79,20,1,60-69,USA,White (not Hispanic),Makenna Bergamo,Makenna,Bergamo,0,0,0,0,0
+New Haven,91724,50,G: IROX,Male,Caucasian,481,2,1,13.4,NA,69,13,NA,40-49,USA,White (not Hispanic),John Murphy,John,Murphy,0,0,0,0,0
+New Haven,92133,41,F: FOLFOX,Female,Caucasian,339,2,NA,NA,23.1132831277038,NA,NA,1,40-49,USA,White (not Hispanic),Mallory Johnson,Mallory,Johnson,1,1,1,1,0
+New Haven,92164,70,A: IFL,Male,Caucasian,329,2,2,12.4,24.7058823529411,124,20,1,60-69,USA,White (not Hispanic),James Neumiller,James,Neumiller,1,1,1,1,0
+New Haven,91430,63,G: IROX,Male,Caucasian,415,2,0,15.1,27.037037037037,74,17,1,60-69,USA,White (not Hispanic),Denver Rasmussen,Denver,Rasmussen,1,1,1,1,1
+New Haven,91782,69,F: FOLFOX,Female,Hispanic,740,2,0,10.2,27.4656172664205,296,48,1,60-69,USA,Hispanic,Katie Buist,Katie,Buist,1,0,0,0,0
+New Haven,91941,30,F: FOLFOX,Male,Caucasian,395,2,NA,NA,27.0306391793912,NA,NA,1,20-29,USA,White (not Hispanic),Benjamin Pownell-Styer,Benjamin,Pownell-Styer,0,0,0,0,0
+New Haven,91596,71,G: IROX,Female,Caucasian,938,2,0,13,28.3984375,74,18,1,70-79,USA,White (not Hispanic),Margaret Rollins,Margaret,Rollins,0,0,0,0,0
+New Haven,91628,53,F: FOLFOX,Male,Hawaii/Pacific,637,2,2,13.7,24.4646016033723,79,28,1,50-59,USA,Asian or Pacific Islander,Franco Mungmee,Franco,Mungmee,0,0,0,0,0
+New Haven,91595,81,F: FOLFOX,Male,Caucasian,595,2,0,11.2,25.5978332672744,71,21,1,80-89,USA,White (not Hispanic),Colin Burns,Colin,Burns,1,1,1,1,0
+New Haven,91762,49,F: FOLFOX,Male,Caucasian,392,2,1,10.2,28.0086180363188,82,16,1,40-49,USA,White (not Hispanic),Kevin Cismoski,Kevin,Cismoski,0,0,0,0,0
+New Haven,91588,51,A: IFL,Female,Caucasian,1033,2,1,12.2,28.59375,189,29,1,50-59,USA,White (not Hispanic),Mikaela Stoetzer,Mikaela,Stoetzer,0,0,0,0,0
+New Haven,91357,51,A: IFL,Male,Caucasian,319,2,0,14,25.9515570934256,66,26,1,50-59,USA,White (not Hispanic),Pawel Lefforge,Pawel,Lefforge,0,0,0,0,0
+New Haven,92115,35,A: IFL,Female,Caucasian,636,2,1,15.2,17.3456790123456,240,28,0,30-39,USA,White (not Hispanic),Ashley Mcneil,Ashley,Mcneil,0,0,0,0,0
+New Haven,91759,66,G: IROX,Male,Caucasian,98,2,1,10.8,28.8326530612244,304,82,0,60-69,USA,White (not Hispanic),Casey Kellner,Casey,Kellner,0,0,0,0,0
+New Haven,91352,65,G: IROX,Male,Hispanic,537,2,NA,NA,21.7469387755102,NA,NA,1,60-69,USA,Hispanic,Christian Peraza-Diaz,Christian,Peraza-Diaz,0,0,0,0,0
+New Haven,91944,35,A: IFL,Male,Caucasian,822,2,2,14.3,26.1224489795918,357,45,1,30-39,USA,White (not Hispanic),Walter Sherwood,Walter,Sherwood,0,0,0,0,0
+New Haven,91529,55,F: FOLFOX,Male,Caucasian,614,2,0,11.7,31.0952783480256,89,16,1,50-59,USA,White (not Hispanic),Zachary Holm,Zachary,Holm,0,0,0,0,0
+New Haven,91532,63,G: IROX,Male,Caucasian,905,2,1,13.8,27.210654407788,99,43,1,60-69,USA,White (not Hispanic),Domonic Duncan,Domonic,Duncan,0,0,0,0,0
+New Haven,91620,36,F: FOLFOX,Female,Caucasian,1132,1,0,9.7,35.4683195592286,459,35,NA,30-39,USA,White (not Hispanic),Mikayla Lewis,Mikayla,Lewis,0,0,0,0,0
+New Haven,91861,74,A: IFL,Male,Caucasian,244,2,1,9.9,25.1557093425605,71,29,1,70-79,USA,White (not Hispanic),James Kloch,James,Kloch,1,1,1,1,1
+New Haven,92121,64,G: IROX,Female,African-Am,824,2,2,11.6,16.0713613609846,72,19,0,60-69,USA,Black (not Hispanic),Elizabeth Northcott,Elizabeth,Northcott,0,0,0,0,0
+New Haven,91991,66,F: FOLFOX,Female,Hispanic,1512,1,0,13.3,27.7333333333333,54,39,1,60-69,USA,Hispanic,Ashley Corona,Ashley,Corona,0,0,0,0,0
+New Haven,91594,53,F: FOLFOX,Male,Caucasian,235,2,0,13.3,24.7443504608004,210,62,1,50-59,USA,White (not Hispanic),Tanner Malone,Tanner,Malone,1,0,1,0,0
+New Haven,91487,63,G: IROX,Female,Caucasian,517,2,0,10.7,28.5004026469661,202,28,NA,60-69,USA,White (not Hispanic),Kaylen Plomondon,Kaylen,Plomondon,1,1,1,1,0
+New Haven,92153,39,G: IROX,Female,African-Am,550,2,1,11.3,25.3777777777777,159,35,1,30-39,USA,Black (not Hispanic),Danielle Olague,Danielle,Olague,0,0,0,0,0
+New Haven,91647,38,G: IROX,Male,Caucasian,97,2,2,10.3,17.3765432098765,197,23,0,30-39,USA,White (not Hispanic),Leif Toms,Leif,Toms,0,0,0,0,0
+New Haven,91342,67,F: FOLFOX,Female,Caucasian,846,2,0,12.2,35.9163007792413,373,57,1,60-69,USA,White (not Hispanic),Christine Stumpe,Christine,Stumpe,1,1,1,1,1
+New Haven,91589,53,G: IROX,Female,Caucasian,310,2,0,12.2,38.0078125,163,32,NA,50-59,USA,White (not Hispanic),Olivia Overturf,Olivia,Overturf,0,0,0,0,0
+New Haven,91873,30,G: IROX,Female,Caucasian,607,2,0,13,19.8412698412698,7,13,1,20-29,USA,White (not Hispanic),Taylor Doris,Taylor,Doris,0,0,0,0,0
+New Haven,91543,55,F: FOLFOX,Male,Caucasian,178,2,0,12.8,25.9944522291172,142,40,1,50-59,USA,White (not Hispanic),Kyle Reeder,Kyle,Reeder,0,0,0,0,0
+New Haven,91923,51,G: IROX,Male,Caucasian,51,2,1,11.9,60.2425740920177,163,58,0,50-59,USA,White (not Hispanic),Chase Warden Jr,Chase,Warden,1,1,1,1,1
+New Haven,91415,76,A: IFL,Male,Caucasian,502,2,1,11.8,29.9835879308168,60,15,0,70-79,USA,White (not Hispanic),Joseph Levine,Joseph,Levine,0,0,0,0,0
+New Haven,91384,63,G: IROX,Male,Caucasian,482,2,0,12.6,32.9873711714327,249,32,NA,60-69,USA,White (not Hispanic),Thomas Nelson,Thomas,Nelson,0,0,0,0,0
+New Haven,92089,45,G: IROX,Female,Asian,359,2,1,13.7,28.678459937565,76,43,0,40-49,USA,Asian or Pacific Islander,Emily Tran,Emily,Tran,0,0,0,0,0
+New Haven,92075,65,F: FOLFOX,Female,Caucasian,352,2,2,14.1,34.2291255752794,81,20,1,60-69,USA,White (not Hispanic),Sara Mckenna,Sara,Mckenna,0,0,0,0,0
+New Haven,91467,68,A: IFL,Female,Caucasian,332,2,NA,NA,26.1583047912981,NA,NA,1,60-69,USA,White (not Hispanic),Mary Fraser,Mary,Fraser,0,0,0,0,0
+New Haven,91450,71,F: FOLFOX,Female,Hispanic,1046,1,NA,NA,NA,NA,NA,1,70-79,USA,Hispanic,Maria Fernandez,Maria,Fernandez,0,0,0,0,0
+New Haven,92026,63,A: IFL,Male,Caucasian,2116,1,0,14.1,27.6480242393637,134,30,1,60-69,USA,White (not Hispanic),Tucker Mcallister,Tucker,Mcallister,0,0,1,1,0
+New Haven,92065,61,G: IROX,Male,Caucasian,217,2,1,10.7,25.6502135029412,292,52,0,60-69,USA,White (not Hispanic),Cyrus Fowler,Cyrus,Fowler,0,0,0,0,0
+New Haven,91606,68,F: FOLFOX,Male,Caucasian,682,2,1,15.2,24.3265306122449,84,16,1,60-69,USA,White (not Hispanic),Erik Dell,Erik,Dell,0,0,0,0,0
+New Haven,92093,57,A: IFL,Male,Caucasian,223,2,1,12.8,27.9310703873386,205,29,1,50-59,USA,White (not Hispanic),Nicholas Decker,Nicholas,Decker,0,0,1,1,0
+New Haven,91465,61,F: FOLFOX,Female,Caucasian,1980,2,0,13.5,26.2945975280977,115,26,NA,60-69,USA,White (not Hispanic),Linda Tucker,Linda,Tucker,1,1,1,1,1
+New Haven,91401,53,A: IFL,Female,Caucasian,231,2,1,9.3,20.3767781622452,362,92,0,50-59,USA,White (not Hispanic),Bobby Whaley,Bobby,Whaley,1,1,1,1,0
+New Haven,91912,57,F: FOLFOX,Male,Caucasian,1117,2,0,12.2,40.1199637845178,89,37,1,50-59,USA,White (not Hispanic),Derek Thomas,Derek,Thomas,0,0,0,0,0
+New Haven,91863,61,A: IFL,Female,Caucasian,336,2,0,10.81,20.2310090702947,51,17,0,60-69,USA,White (not Hispanic),Jenna Grimm,Jenna,Grimm,0,0,0,0,0
+New Haven,92123,72,A: IFL,Male,Caucasian,287,2,0,10.9,24.5140285358613,111,18,1,70-79,USA,White (not Hispanic),Tucker Friedlander,Tucker,Friedlander,0,0,0,0,0
+New Haven,92056,73,F: FOLFOX,Female,Caucasian,509,2,1,9.9,27.8538636626673,119,12,1,70-79,USA,White (not Hispanic),Tabitha Bettis,Tabitha,Bettis,0,0,0,0,0
+New Haven,91444,69,G: IROX,Female,Caucasian,150,2,1,14.1,23.0029615805915,71,10,1,60-69,USA,White (not Hispanic),Carly Drake,Carly,Drake,0,0,0,0,0
+New Haven,91406,46,F: FOLFOX,Female,African-Am,61,2,1,9.7,25.0277887339094,372,117,1,40-49,USA,Black (not Hispanic),Lizeth Zepeda Benavides,Lizeth,Zepeda,1,1,1,1,0
+New Haven,91739,64,A: IFL,Male,Caucasian,620,2,1,12.3,29.0146509623671,367,34,NA,60-69,USA,White (not Hispanic),Dylan Sawaged,Dylan,Sawaged,0,0,0,0,0
+New Haven,91504,56,A: IFL,Male,Caucasian,181,2,1,10.8,NA,252,77,1,50-59,USA,White (not Hispanic),Luke Mcgee,Luke,Mcgee,0,0,0,0,0
+New Haven,92079,43,A: IFL,Male,African-Am,149,2,NA,NA,NA,NA,NA,0,40-49,USA,Black (not Hispanic),Darion Gonzalez,Darion,Gonzalez,0,0,0,0,0
+New Haven,91375,62,A: IFL,Female,Caucasian,632,2,1,12,29.375,67,17,1,60-69,USA,White (not Hispanic),Jordyn Vogel,Jordyn,Vogel,1,1,1,1,0
+New Haven,91569,66,A: IFL,Male,Hispanic,103,2,1,9.7,21.8775510204081,121,29,0,60-69,USA,Hispanic,Jesse Cortez-Mendez,Jesse,Cortez-Mendez,0,0,0,0,0
+New Haven,91475,51,F: FOLFOX,Female,Caucasian,277,2,NA,NA,19.6878251821019,NA,NA,1,50-59,USA,White (not Hispanic),Davena Clarke,Davena,Clarke,1,0,1,0,0
+New Haven,91460,47,G: IROX,Male,Caucasian,1681,2,0,9.1,25.7632653061224,43,16,1,40-49,USA,White (not Hispanic),Alexander Fisher,Alexander,Fisher,0,0,0,0,0
+New Haven,91555,59,F: FOLFOX,Female,Caucasian,23,2,NA,NA,28.0257936507936,NA,NA,0,50-59,USA,White (not Hispanic),Raelene Blair,Raelene,Blair,0,0,0,0,0
+New Haven,91735,54,F: FOLFOX,Female,Caucasian,2066,1,0,11.5,25.1404786680541,54,14,1,50-59,USA,White (not Hispanic),Shelby Vassos,Shelby,Vassos,0,0,0,0,0
+New Haven,91767,69,G: IROX,Female,Caucasian,872,2,0,10,32.8514542936288,79,19,1,60-69,USA,White (not Hispanic),Abigail Nielsen,Abigail,Nielsen,1,1,1,1,0
+New Haven,91984,57,F: FOLFOX,Female,Caucasian,1043,2,NA,NA,20.815931036787,NA,NA,1,50-59,USA,White (not Hispanic),Rebeccah Lewis,Rebeccah,Lewis,1,0,0,0,0
+New Haven,91452,69,G: IROX,Male,Caucasian,333,2,1,13.2,27.993079584775,481,92,1,60-69,USA,White (not Hispanic),Alec Howard,Alec,Howard,0,0,0,0,0
+New Haven,92116,67,G: IROX,Male,African-Am,90,2,NA,NA,24.4135802469135,NA,NA,1,60-69,USA,Black (not Hispanic),Patrick Avila Mendoza,Patrick,Avila,0,0,0,0,0
+New Haven,92139,74,G: IROX,Female,Caucasian,569,2,0,10.1,22.3081499107674,93,22,1,70-79,USA,White (not Hispanic),Zoe Whittington,Zoe,Whittington,0,0,0,0,0
+New Haven,91492,65,G: IROX,Female,Caucasian,478,2,1,10.1,34.2214532871972,70,14,NA,60-69,USA,White (not Hispanic),Apryl Yount,Apryl,Yount,0,0,0,0,0
+New Haven,91366,58,F: FOLFOX,Male,African-Am,1543,2,0,10.6,26.2857142857142,18,22,1,50-59,USA,Black (not Hispanic),Euziveo Payan,Euziveo,Payan,0,0,1,1,0
+New Haven,92049,63,G: IROX,Male,Caucasian,243,2,0,12.5,28.0583259689433,63,19,1,60-69,USA,White (not Hispanic),Tyler Herndon,Tyler,Herndon,1,1,1,1,1
+New Haven,92059,79,A: IFL,Male,Caucasian,629,2,1,13.7,33.5802469135802,75,21,0,70-79,USA,White (not Hispanic),Michael Keelick,Michael,Keelick,1,1,1,1,0
+New Haven,92132,55,F: FOLFOX,Male,Caucasian,651,2,1,15.8,27.9327742323498,130,22,1,50-59,USA,White (not Hispanic),Samuel Keeter,Samuel,Keeter,0,0,0,0,0
+New Haven,91753,47,F: FOLFOX,Female,Caucasian,243,2,1,10.9,31.5781549926606,205,46,1,40-49,USA,White (not Hispanic),Echo Gann,Echo,Gann,0,0,0,0,0
+New Haven,91486,66,A: IFL,Male,Caucasian,60,2,1,10.5,NA,196,39,0,60-69,USA,White (not Hispanic),Matthew Flesner,Matthew,Flesner,1,1,1,1,0
+New Haven,91768,49,A: IFL,Male,Caucasian,740,2,NA,NA,25.6232686980609,NA,NA,1,40-49,USA,White (not Hispanic),Daniel Podbevsek,Daniel,Podbevsek,0,0,0,0,0
+New Haven,91733,77,A: IFL,Female,Caucasian,676,2,0,12.5,27.5962539021852,79,18,1,70-79,USA,White (not Hispanic),Stacie Sloat,Stacie,Sloat,0,0,0,0,0
+New Haven,91498,69,F: FOLFOX,Male,Caucasian,407,2,1,10.5,21.5224913494809,558,69,0,60-69,USA,White (not Hispanic),Jerimiah Larson,Jerimiah,Larson,1,1,1,1,0
+New Haven,91605,56,A: IFL,Female,Caucasian,757,2,1,12.8,18.8092062514961,142,47,1,50-59,USA,White (not Hispanic),Kelsey Wright,Kelsey,Wright,0,0,0,0,0
+New Haven,91935,69,A: IFL,Male,Caucasian,73,2,0,16.4,29.9486208761492,85,20,1,60-69,USA,White (not Hispanic),Zachary Whalin,Zachary,Whalin,0,0,0,0,0
+New Haven,91780,46,F: FOLFOX,Male,Caucasian,50,2,1,12.6,31.0857142857142,229,128,0,40-49,USA,White (not Hispanic),Cameron Blach,Cameron,Blach,0,0,0,0,0
+New Haven,91792,49,G: IROX,Female,Caucasian,62,2,1,9.2,21.1072664359861,485,27,0,40-49,USA,White (not Hispanic),Jordan Davis,Jordan,Davis,0,0,0,0,0
+New Haven,91948,57,F: FOLFOX,Female,Caucasian,189,2,0,12.9,25.1147718066432,75,21,1,50-59,USA,White (not Hispanic),Stephenie Cottam,Stephenie,Cottam,0,0,0,0,0
+New Haven,91607,46,G: IROX,Female,Caucasian,347,2,1,12.3,21.9671201814059,280,39,1,40-49,USA,White (not Hispanic),Jennifer Trosch,Jennifer,Trosch,0,0,0,0,0
+New Haven,91975,59,A: IFL,Male,Caucasian,110,2,1,12.6,21.2200090538705,219,35,1,50-59,USA,White (not Hispanic),Calen Smith,Calen,Smith,0,0,0,0,0
+Boston,92500,58,F: FOLFOX,Female,Caucasian,1769,2,0,13,26.6475968233655,125,65,1,50-59,USA,White (not Hispanic),Caroline Matthews,Caroline,Matthews,0,0,0,0,0
+Boston,92797,77,F: FOLFOX,Male,Caucasian,669,2,0,11.3,28.5899935022742,103,9,1,70-79,USA,White (not Hispanic),Joshua Dyas,Joshua,Dyas,0,0,0,0,0
+Boston,92587,77,F: FOLFOX,Male,Caucasian,260,2,1,14.2,NA,190,20,1,70-79,USA,White (not Hispanic),Jacob Worthy,Jacob,Worthy,0,0,0,0,0
+Boston,92375,61,A: IFL,Male,Caucasian,556,2,NA,NA,24.2214532871972,NA,NA,1,60-69,USA,White (not Hispanic),Austin Shelby Gardner,Austin,Shelby,0,0,0,0,0
+Boston,92395,64,F: FOLFOX,Male,Caucasian,453,2,0,14.1,30.8244897959183,113,33,1,60-69,USA,White (not Hispanic),Jordan King,Jordan,King,0,0,0,0,0
+Boston,92294,52,G: IROX,Male,Caucasian,209,2,NA,NA,26.6448979591836,NA,NA,NA,50-59,USA,White (not Hispanic),Logan Vaughn,Logan,Vaughn,0,0,0,0,0
+Boston,92390,71,G: IROX,Female,Caucasian,951,2,1,13.3,29.802916199327,85,20,1,70-79,USA,White (not Hispanic),Emma Debrine,Emma,Debrine,0,0,0,0,0
+Boston,92694,64,A: IFL,Male,Hispanic,1145,2,0,16.8,38.9739229024943,101,25,1,60-69,USA,Hispanic,Jesus Martinez,Jesus,Martinez,0,0,0,0,0
+Boston,92466,78,A: IFL,Male,Caucasian,950,2,1,10.6,20.3481573056233,593,38,1,70-79,USA,White (not Hispanic),Adam Noeldner,Adam,Noeldner,0,0,0,0,0
+Boston,92830,74,A: IFL,Male,Caucasian,690,2,0,13.5,25.2163331530557,81,26,1,70-79,USA,White (not Hispanic),Teaugan Cordova,Teaugan,Cordova,1,1,1,1,0
+Boston,93038,53,G: IROX,Female,Caucasian,714,2,0,12.5,31.163434903047,82,13,1,50-59,USA,White (not Hispanic),Randi Kaempfen,Randi,Kaempfen,0,0,1,1,0
+Boston,92528,67,A: IFL,Male,Caucasian,1109,2,1,11.5,27.0061728395061,108,47,1,60-69,USA,White (not Hispanic),Christopher Cross,Christopher,Cross,0,0,0,0,0
+Boston,92384,42,F: FOLFOX,Male,Caucasian,532,2,NA,NA,22.6799524092801,NA,NA,0,40-49,USA,White (not Hispanic),Ryan Cole,Ryan,Cole,0,0,0,0,0
+Boston,92792,63,A: IFL,Male,Caucasian,844,2,1,14.1,23.1009070294784,295,189,1,60-69,USA,White (not Hispanic),Hayden Kramer,Hayden,Kramer,0,0,0,0,0
+Boston,92260,64,A: IFL,Male,Caucasian,195,2,1,12.3,21.6119369558523,287,18,1,60-69,USA,White (not Hispanic),Kaiser Guglielmo,Kaiser,Guglielmo,0,0,0,0,0
+Boston,92819,75,A: IFL,Female,Caucasian,171,2,0,11.8,29.1363163371488,274,101,0,70-79,USA,White (not Hispanic),Jordan Schweitz,Jordan,Schweitz,0,0,0,0,0
+Boston,92289,73,A: IFL,Female,Caucasian,29,2,NA,NA,21.640625,NA,NA,1,70-79,USA,White (not Hispanic),Courtney Call,Courtney,Call,0,0,0,0,0
+Boston,92829,38,F: FOLFOX,Male,Caucasian,170,2,0,12.8,28.4011110764333,231,130,1,30-39,USA,White (not Hispanic),Brenton Peasley,Brenton,Peasley,0,0,0,0,0
+Boston,92303,54,G: IROX,Female,Caucasian,201,2,1,13.9,28.362436803040602,314,69,1,50-59,USA,White (not Hispanic),Kaycee Jenkins,Kaycee,Jenkins,0,0,0,0,0
+Boston,92525,51,F: FOLFOX,Male,Caucasian,684,2,0,11.7,28.179012345679,160,37,1,50-59,USA,White (not Hispanic),Colton Rainwater,Colton,Rainwater,0,0,0,0,0
+Boston,92529,76,F: FOLFOX,Female,Caucasian,972,2,0,14.7,21.1862643080124,65,23,1,70-79,USA,White (not Hispanic),Paige Rapp,Paige,Rapp,0,0,0,0,0
+Boston,92785,44,G: IROX,Male,Hispanic,597,2,0,14.7,27.7054417568256,119,25,1,40-49,USA,Hispanic,Francisco Perry,Francisco,Perry,0,0,0,0,0
+Boston,92453,67,F: FOLFOX,Male,Caucasian,706,2,1,15,32.653452073159,163,17,1,60-69,USA,White (not Hispanic),Nickolas Woods,Nickolas,Woods,0,0,0,0,0
+Boston,92806,64,G: IROX,Female,Caucasian,234,2,1,9,24.0932974496988,208,54,0,60-69,USA,White (not Hispanic),Anna Dague,Anna,Dague,0,0,1,1,0
+Boston,92886,47,A: IFL,Female,African-Am,355,2,0,11,NA,106,74,1,40-49,USA,Black (not Hispanic),Astrid Leon Hernandez,Astrid,Leon,1,1,1,1,0
+Boston,92196,79,F: FOLFOX,Male,Caucasian,579,2,1,12.3,25.0811249323959,141,23,1,70-79,USA,White (not Hispanic),Joshua Stanks,Joshua,Stanks,0,0,0,0,0
+Boston,92235,57,F: FOLFOX,Female,African-Am,404,2,0,11.8,29.759545514599,311,107,1,50-59,USA,Black (not Hispanic),Quiana Montanez,Quiana,Montanez,0,0,0,0,0
+Boston,92737,46,G: IROX,Male,Caucasian,147,2,NA,NA,21.4746491625169,NA,NA,1,40-49,USA,White (not Hispanic),Collin Porter,Collin,Porter,0,0,0,0,0
+Boston,92293,50,F: FOLFOX,Male,Caucasian,269,2,1,10.1,19.5686776317842,172,21,1,40-49,USA,White (not Hispanic),Patrick Kelly,Patrick,Kelly,0,0,0,0,0
+Boston,92960,63,A: IFL,Male,Caucasian,743,2,1,10.7,23.5303663434622,296,22,1,60-69,USA,White (not Hispanic),Justin Clawson,Justin,Clawson,1,1,1,1,0
+Boston,92598,58,F: FOLFOX,Female,Caucasian,2005,1,1,12.1,26.4552184642183,78,17,0,50-59,USA,White (not Hispanic),Kaitlin Brasher,Kaitlin,Brasher,0,0,0,0,0
+Boston,92769,48,F: FOLFOX,Male,Caucasian,114,2,0,12,NA,93,45,NA,40-49,USA,White (not Hispanic),Matthew Litinsky,Matthew,Litinsky,0,0,0,0,0
+Boston,92448,50,F: FOLFOX,Male,Caucasian,294,2,1,10.7,21.4305029745808,282,51,1,40-49,USA,White (not Hispanic),Nathan Conklin,Nathan,Conklin,0,0,0,0,0
+Boston,92389,58,A: IFL,Male,African-Am,419,2,NA,NA,39.294281025123,NA,NA,1,50-59,USA,Black (not Hispanic),Nestor Sanchez,Nestor,Sanchez,1,1,1,1,0
+Boston,92243,75,G: IROX,Male,Caucasian,84,2,NA,NA,34.7178386567352,NA,NA,0,70-79,USA,White (not Hispanic),Braxton Asher,Braxton,Asher,0,0,0,0,0
+Boston,92913,71,F: FOLFOX,Female,Caucasian,225,2,1,9.8,21.7546765026911,129,29,0,70-79,USA,White (not Hispanic),Rachel Ellis,Rachel,Ellis,0,0,0,0,0
+Boston,92942,69,F: FOLFOX,Female,Caucasian,692,2,0,12,30.376492194674,97,14,1,60-69,USA,White (not Hispanic),Emily Crist,Emily,Crist,0,0,0,0,0
+Boston,92709,35,A: IFL,Female,Caucasian,256,2,1,13.1,24.3359375,104,21,1,30-39,USA,White (not Hispanic),Sabrina Kuntz,Sabrina,Kuntz,0,0,0,0,0
+Boston,92402,65,A: IFL,Male,African-Am,242,2,NA,NA,32.2066326530612,NA,NA,0,60-69,USA,Black (not Hispanic),Zaid Garduno,Zaid,Garduno,0,0,0,0,0
+Boston,92499,62,F: FOLFOX,Male,Caucasian,598,2,0,13.4,26.8274207802045,109,21,1,60-69,USA,White (not Hispanic),Nicholas Porter,Nicholas,Porter,0,0,0,0,0
+Boston,92435,55,F: FOLFOX,Male,Caucasian,1455,2,1,10.8,31.2163265306122,74,80,1,50-59,USA,White (not Hispanic),Sean Fotenos,Sean,Fotenos,0,0,0,0,0
+Boston,92218,58,A: IFL,Male,Caucasian,421,2,0,13.1,38.28125,134,27,NA,50-59,USA,White (not Hispanic),Daniel Keller,Daniel,Keller,0,0,0,0,0
+Boston,92846,54,F: FOLFOX,Male,Caucasian,965,2,0,15.8,25.7482600418214,82,24,1,50-59,USA,White (not Hispanic),Samuel Rodriguez,Samuel,Rodriguez,1,1,1,1,0
+Boston,92643,66,G: IROX,Female,Caucasian,819,2,0,12.8,31.4453125,60,21,1,60-69,USA,White (not Hispanic),Elizabeth Palamides,Elizabeth,Palamides,0,0,0,0,0
+Boston,92941,71,G: IROX,Female,Caucasian,512,2,1,13.5,29.1289707493204,174,61,NA,70-79,USA,White (not Hispanic),Riley Belmont,Riley,Belmont,1,1,1,1,1
+Boston,92534,59,G: IROX,Male,Caucasian,1093,2,1,14,19.6877869605142,253,84,NA,50-59,USA,White (not Hispanic),Jamey Grenfell,Jamey,Grenfell,0,0,0,0,0
+Boston,92242,62,G: IROX,Female,Caucasian,62,2,NA,NA,24.8623508087958,NA,NA,NA,60-69,USA,White (not Hispanic),Megan Rothermich,Megan,Rothermich,0,0,0,0,0
+Boston,92679,44,A: IFL,Male,Caucasian,423,2,0,14.8,24.8209635416666,79,26,1,40-49,USA,White (not Hispanic),Joshua Emblen,Joshua,Emblen,0,0,0,0,0
+Boston,92839,38,G: IROX,Male,Caucasian,1895,1,0,13.5,23.8884409806205,105,25,1,30-39,USA,White (not Hispanic),Everett Thomas,Everett,Thomas,0,0,0,0,0
+Boston,93048,50,F: FOLFOX,Male,Caucasian,936,2,1,14.8,32.3875432525951,122,22,1,40-49,USA,White (not Hispanic),Ryan Proctor,Ryan,Proctor,1,1,1,1,0
+Boston,92365,54,A: IFL,Male,Caucasian,652,2,0,14.9,31.7663442357634,76,19,1,50-59,USA,White (not Hispanic),Jacob Rose,Jacob,Rose,0,0,0,0,0
+Boston,92939,65,A: IFL,Female,African-Am,352,2,1,9.2,18.8614540466392,263,41,1,60-69,USA,Black (not Hispanic),Stephanie Waggle,Stephanie,Waggle,0,0,0,0,0
+Boston,92536,54,A: IFL,Male,Caucasian,333,2,0,11.4,25.9629017013232,101,34,1,50-59,USA,White (not Hispanic),Adam Jeffryes,Adam,Jeffryes,0,0,0,0,0
+Boston,92884,54,F: FOLFOX,Male,Caucasian,816,2,0,13.7,20.8174353652208,126,24,1,50-59,USA,White (not Hispanic),Timothy Lininger,Timothy,Lininger,1,1,1,1,1
+Boston,92224,73,F: FOLFOX,Male,Caucasian,183,2,1,12.4,26.6447253247435,151,19,1,70-79,USA,White (not Hispanic),Matthew Bible,Matthew,Bible,0,0,0,0,0
+Boston,92907,50,G: IROX,Female,Caucasian,886,2,0,11.2,19.5545458233599,95,16,1,40-49,USA,White (not Hispanic),Kayla-Ann Howard,Kayla-Ann,Howard,0,0,0,0,0
+Boston,92583,46,A: IFL,Female,Caucasian,782,2,2,11.3,29.8997930950545,135,72,1,40-49,USA,White (not Hispanic),Emilie Carpenter,Emilie,Carpenter,1,1,1,1,0
+Boston,92183,56,F: FOLFOX,Male,African-Am,240,2,NA,NA,24.017531044558,NA,NA,1,50-59,USA,Black (not Hispanic),Luis Guzman,Luis,Guzman,1,1,1,1,0
+Boston,92689,76,F: FOLFOX,Male,Caucasian,544,2,NA,NA,27.6113951789627,NA,NA,1,70-79,USA,White (not Hispanic),Brandon Risberg,Brandon,Risberg,1,1,1,1,1
+Boston,92809,63,F: FOLFOX,Male,Caucasian,1210,2,1,12.1,25.5488909008601,90,17,1,60-69,USA,White (not Hispanic),Pierce Bryant,Pierce,Bryant,1,1,1,1,1
+Boston,92605,54,A: IFL,Male,Caucasian,109,2,NA,NA,31.4878892733564,NA,NA,NA,50-59,USA,White (not Hispanic),Alec Stratton,Alec,Stratton,1,1,1,1,0
+Boston,92501,66,G: IROX,Male,Caucasian,316,2,1,10.1,25.0135208220659,165,74,1,60-69,USA,White (not Hispanic),Shane Markus,Shane,Markus,1,1,1,1,1
+Boston,92595,69,A: IFL,Male,Caucasian,26,2,0,17.1,33.7131210531591,193,45,NA,60-69,USA,White (not Hispanic),Marcus Peters,Marcus,Peters,0,0,0,0,0
+Boston,92680,73,F: FOLFOX,Male,African-Am,646,2,NA,NA,24.8051261725459,NA,NA,1,70-79,USA,Black (not Hispanic),Felix Medina,Felix,Medina,0,0,0,0,0
+Boston,92820,57,G: IROX,Female,Caucasian,912,2,NA,NA,33.7190082644628,NA,NA,1,50-59,USA,White (not Hispanic),Olga Guettlein,Olga,Guettlein,0,0,0,0,0
+Boston,92485,59,G: IROX,Male,Caucasian,905,1,NA,NA,28.717678497497,NA,NA,1,50-59,USA,White (not Hispanic),Gianni Thorburn,Gianni,Thorburn,0,0,0,0,0
+Boston,92494,45,A: IFL,Male,Caucasian,560,2,0,12.2,24.31405020889,285,49,1,40-49,USA,White (not Hispanic),Eric Genz,Eric,Genz,0,0,0,0,0
+Boston,92945,73,G: IROX,Male,Caucasian,682,2,0,12.1,24.9680097375238,200,27,1,70-79,USA,White (not Hispanic),Warren Simpson,Warren,Simpson,0,0,0,0,0
+Boston,92420,51,F: FOLFOX,Female,Caucasian,728,2,0,10.9,NA,126,25,0,50-59,USA,White (not Hispanic),Emmarie Newman,Emmarie,Newman,1,1,1,1,0
+Boston,92353,66,F: FOLFOX,Male,Caucasian,360,2,1,10.7,19.3518518518518,635,136,1,60-69,USA,White (not Hispanic),Joshua Lockhart,Joshua,Lockhart,1,1,1,1,0
+Boston,92627,52,G: IROX,Male,Caucasian,47,2,0,10.2,20.4113479604257,69,17,0,50-59,USA,White (not Hispanic),Jacob Acker,Jacob,Acker,0,0,0,0,0
+Boston,92522,71,G: IROX,Male,Hispanic,551,2,0,15.3,25.5270807577934,82,25,1,70-79,USA,Hispanic,Ivan Ramos,Ivan,Ramos,0,0,1,1,0
+Boston,92444,64,A: IFL,Male,Hawaii/Pacific,67,2,NA,NA,27.9649215250856,NA,NA,1,60-69,USA,Asian or Pacific Islander,Jadrian Le,Jadrian,Le,1,1,1,1,0
+Boston,92879,46,A: IFL,Female,Caucasian,205,2,1,9.8,25.3515625,430,30,1,40-49,USA,White (not Hispanic),Gianna Langseth,Gianna,Langseth,0,0,0,0,0
+Boston,92510,44,A: IFL,Male,Caucasian,590,2,0,11.1,24.3265306122449,72,21,1,40-49,USA,White (not Hispanic),Kyle Lawson,Kyle,Lawson,0,0,0,0,0
+Boston,92445,51,G: IROX,Male,Caucasian,751,2,1,12.4,NA,302,51,NA,50-59,USA,White (not Hispanic),Cameron Dressen-Shipley,Cameron,Dressen-Shipley,0,0,0,0,0
+Boston,92203,65,A: IFL,Male,Caucasian,390,2,0,11.1,19.7839506172839,73,21,0,60-69,USA,White (not Hispanic),Trey Cooper,Trey,Cooper,0,0,0,0,0
+Boston,92400,52,G: IROX,Male,Caucasian,629,2,1,9.2,34.0484429065744,41,16,1,50-59,USA,White (not Hispanic),Andrew Maynard,Andrew,Maynard,0,0,0,0,0
+Boston,92631,27,F: FOLFOX,Male,Caucasian,1134,2,0,11.7,18.8729898789229,221,45,1,20-29,USA,White (not Hispanic),Willie Fisher,Willie,Fisher,0,0,0,0,0
+Boston,92777,76,G: IROX,Male,Caucasian,826,2,0,12.4,26.0951865873445,56,14,1,70-79,USA,White (not Hispanic),Jesy Ryd,Jesy,Ryd,0,0,1,1,0
+Chapel Hill,93310,37,A: IFL,Male,African-Am,554,2,0,13.7,25.0839359504132,97,37,1,30-39,USA,Black (not Hispanic),Jacob Villegas-Monroy,Jacob,Villegas-Monroy,0,0,0,0,0
+Chapel Hill,93843,64,F: FOLFOX,Male,Caucasian,1271,2,1,13.6,19.8765432098765,75,15,1,60-69,USA,White (not Hispanic),Zebulon Hanafee,Zebulon,Hanafee,1,1,1,1,0
+Chapel Hill,93985,68,G: IROX,Male,Caucasian,329,2,0,15.3,31.9559228650137,110,33,1,60-69,USA,White (not Hispanic),James Spicer,James,Spicer,0,0,0,0,0
+Chapel Hill,93838,69,A: IFL,Female,Caucasian,10,2,2,14.5,25.8984375,231,31,1,60-69,USA,White (not Hispanic),Marissa Baer,Marissa,Baer,0,0,0,0,0
+Chapel Hill,94057,48,F: FOLFOX,Male,Caucasian,1104,2,0,14.9,22.8195763330898,84,19,1,40-49,USA,White (not Hispanic),Christian Houston,Christian,Houston,0,0,0,0,0
+Chapel Hill,93379,71,A: IFL,Male,Caucasian,393,2,0,11.8,33.6528412314491,118,40,1,70-79,USA,White (not Hispanic),Ilya Patran,Ilya,Patran,0,0,0,0,0
+Chapel Hill,93370,60,G: IROX,Male,African-Am,583,2,NA,NA,37.3550736743626,NA,NA,1,50-59,USA,Black (not Hispanic),Marcial Ingraham,Marcial,Ingraham,0,0,0,0,0
+Chapel Hill,93237,54,A: IFL,Male,African-Am,724,2,0,12.6,29.890430971512,73,25,1,50-59,USA,Black (not Hispanic),Andres Rodriguez,Andres,Rodriguez,0,0,0,0,0
+Chapel Hill,93785,66,A: IFL,Female,Caucasian,457,2,1,12.4,19.2424935223289,63,20,NA,60-69,USA,White (not Hispanic),Hanna Castle,Hanna,Castle,0,0,0,0,0
+Chapel Hill,93750,72,A: IFL,Male,Caucasian,352,2,0,15.4,25.390625,71,24,1,70-79,USA,White (not Hispanic),John Sprague,John,Sprague,0,0,0,0,0
+Chapel Hill,93828,61,G: IROX,Female,African-Am,1007,1,1,11.1,23.8343214228489,60,19,1,60-69,USA,Black (not Hispanic),Elizabeth Almazan Acosta,Elizabeth,Almazan,0,0,0,0,0
+Chapel Hill,93243,66,F: FOLFOX,Male,Caucasian,1154,2,1,11.3,27.281746031746,281,32,1,60-69,USA,White (not Hispanic),Andrew Anderson,Andrew,Anderson,0,0,0,0,0
+Chapel Hill,93205,50,G: IROX,Male,Caucasian,1903,1,NA,NA,25.8227201634268,NA,NA,1,40-49,USA,White (not Hispanic),Donald Amen,Donald,Amen,0,0,0,0,0
+Chapel Hill,93950,72,A: IFL,Female,Caucasian,271,2,0,11.7,32.6783606004385,200,13,1,70-79,USA,White (not Hispanic),Samantha Eggen,Samantha,Eggen,0,0,0,0,0
+Chapel Hill,93891,73,G: IROX,Male,Caucasian,968,2,1,13.4,28.9345592212006,219,29,1,70-79,USA,White (not Hispanic),Jason Wheeler,Jason,Wheeler,0,0,0,0,0
+Chapel Hill,94058,62,A: IFL,Male,Caucasian,1082,2,0,15.6,31.6358024691358,134,43,1,60-69,USA,White (not Hispanic),Riley King,Riley,King,0,0,0,0,0
+Chapel Hill,93136,62,G: IROX,Female,Caucasian,117,2,1,10.1,29.4625246548323,209,37,1,60-69,USA,White (not Hispanic),Cynthia Mukherjee,Cynthia,Mukherjee,1,1,1,1,0
+Chapel Hill,93266,50,A: IFL,Female,Caucasian,681,2,0,11.3,31.7503182747579,171,41,1,40-49,USA,White (not Hispanic),Courtney Jessen,Courtney,Jessen,1,1,1,1,0
+Chapel Hill,93119,55,A: IFL,Male,Native-Am/Alaska,340,2,NA,NA,28.2958395653368,NA,NA,1,50-59,USA,American Indian or Native Alaskan,Victor Leclaire,Victor,Leclaire,0,0,0,0,0
+Chapel Hill,93255,73,A: IFL,Male,Caucasian,271,2,1,10.7,31.8342124153428,298,51,1,70-79,USA,White (not Hispanic),Trevor Jordan,Trevor,Jordan,0,0,0,0,0
+Chapel Hill,93867,61,A: IFL,Female,Caucasian,815,2,0,11.1,22.6810857889388,67,23,NA,60-69,USA,White (not Hispanic),Emma Snyder,Emma,Snyder,0,0,0,0,0
+Chapel Hill,93937,71,F: FOLFOX,Female,Caucasian,1520,1,0,13.7,19.3788663047595,75,27,1,70-79,USA,White (not Hispanic),Morgan Cameron,Morgan,Cameron,1,1,1,1,0
+Chapel Hill,93256,62,F: FOLFOX,Male,Caucasian,1953,1,0,18.2,28.4011110764333,95,21,1,60-69,USA,White (not Hispanic),Kyle Thompson,Kyle,Thompson,0,0,0,0,0
+Chapel Hill,93589,51,F: FOLFOX,Male,Asian,589,2,NA,NA,20.5773550006605,NA,NA,1,50-59,USA,Asian or Pacific Islander,Brandon Sasiratna,Brandon,Sasiratna,0,0,0,0,0
+Chapel Hill,93566,57,G: IROX,Female,African-Am,271,2,1,11.7,31.3595488492607,233,35,1,50-59,USA,Black (not Hispanic),Luna Gonzales,Luna,Gonzales,0,0,0,0,0
+Chapel Hill,93788,60,A: IFL,Male,Caucasian,303,2,1,12.1,24.6950851346455,126,60,NA,50-59,USA,White (not Hispanic),Michael Prucha,Michael,Prucha,0,0,1,1,0
+Chapel Hill,93628,54,A: IFL,Male,Caucasian,221,2,1,10.8,33.0274121482912,212,30,1,50-59,USA,White (not Hispanic),Henry Sortland,Henry,Sortland,0,0,0,0,0
+Chapel Hill,93411,49,A: IFL,Male,Caucasian,36,2,1,9.3,31.3259519308668,414,32,1,40-49,USA,White (not Hispanic),Logan Smith,Logan,Smith,0,0,0,0,0
+Chapel Hill,93583,47,A: IFL,Female,Caucasian,458,2,NA,NA,19.8791026005111,NA,NA,NA,40-49,USA,White (not Hispanic),Katrina Taussig,Katrina,Taussig,0,0,0,0,0
+Chapel Hill,93148,59,A: IFL,Male,Caucasian,371,2,NA,NA,40.5292525644024,NA,NA,1,50-59,USA,White (not Hispanic),Benjamin Carr,Benjamin,Carr,0,0,0,0,0
+Chapel Hill,93974,38,F: FOLFOX,Female,Caucasian,1196,2,NA,NA,23.4944085359597,NA,NA,1,30-39,USA,White (not Hispanic),Marisa Schulze,Marisa,Schulze,1,1,1,1,0
+Chapel Hill,93382,68,G: IROX,Female,Caucasian,309,2,1,11.7,25.4055478188866,101,20,1,60-69,USA,White (not Hispanic),Jessica Thomson,Jessica,Thomson,1,1,1,1,1
+Chapel Hill,94047,64,F: FOLFOX,Male,Caucasian,305,2,1,14.4,27.6851851851851,121,14,1,60-69,USA,White (not Hispanic),William Cintron,William,Cintron,0,0,0,0,0
+Chapel Hill,93783,74,F: FOLFOX,Female,Caucasian,200,2,1,11.8,19.8543184183142,180,23,1,70-79,USA,White (not Hispanic),Stephanie Keefe,Stephanie,Keefe,0,0,0,0,0
+Chapel Hill,93863,76,G: IROX,Male,Caucasian,562,2,NA,NA,25.0135208220659,NA,NA,1,70-79,USA,White (not Hispanic),Austin Leck,Austin,Leck,0,0,0,0,0
+Chapel Hill,93324,58,A: IFL,Male,Caucasian,294,2,1,12.9,24.1870464928782,133,29,1,50-59,USA,White (not Hispanic),Preston Dixon,Preston,Dixon,1,1,1,1,0
+Chapel Hill,93211,71,A: IFL,Female,Caucasian,264,2,0,12.9,28.3987180007302,162,60,1,70-79,USA,White (not Hispanic),Courtney Yacko,Courtney,Yacko,0,0,0,0,0
+Chapel Hill,93114,52,A: IFL,Female,Caucasian,569,2,1,12.5,36.9146005509641,114,23,1,50-59,USA,White (not Hispanic),Alexandria Bartlett,Alexandria,Bartlett,0,0,0,0,0
+Chapel Hill,94035,65,G: IROX,Male,Caucasian,878,2,NA,NA,28.5061224489795,NA,NA,1,60-69,USA,White (not Hispanic),Jordan Snyder,Jordan,Snyder,0,0,0,0,0
+Chapel Hill,93490,49,F: FOLFOX,Male,Caucasian,309,2,0,10.9,29.3026830164723,105,68,1,40-49,USA,White (not Hispanic),Brandon Hiett,Brandon,Hiett,0,0,0,0,0
+Chapel Hill,94053,50,A: IFL,Male,Caucasian,1355,1,NA,NA,30.9259259259259,NA,NA,1,40-49,USA,White (not Hispanic),Justin Colalancia,Justin,Colalancia,0,0,0,0,0
+Chapel Hill,93724,30,A: IFL,Male,Hispanic,121,2,1,11.6,19.6641156462585,79,18,0,20-29,USA,Hispanic,Gerardo Torres,Gerardo,Torres,0,0,0,0,0
+Chapel Hill,93406,56,F: FOLFOX,Male,Caucasian,446,2,0,11.9,25.3592561284869,83,21,1,50-59,USA,White (not Hispanic),Michael Mcmillen,Michael,Mcmillen,0,0,0,0,0
+Chapel Hill,93338,48,A: IFL,Male,Caucasian,750,2,NA,NA,22.6582111243228,NA,NA,1,40-49,USA,White (not Hispanic),Jakib Johnson,Jakib,Johnson,0,0,0,0,0
+Chapel Hill,93787,75,G: IROX,Female,Caucasian,1062,2,NA,NA,20.1142704400414,NA,NA,1,70-79,USA,White (not Hispanic),Kristin Wilson,Kristin,Wilson,0,0,0,0,0
+Chapel Hill,93392,64,G: IROX,Male,Caucasian,272,2,NA,NA,20.8746201611837,NA,NA,0,60-69,USA,White (not Hispanic),Benjamin Langan,Benjamin,Langan,0,0,0,0,0
+Chapel Hill,93835,66,F: FOLFOX,Female,African-Am,332,2,1,9.1,28.7235996326905,554,124,1,60-69,USA,Black (not Hispanic),Celina Herrera,Celina,Herrera,0,0,0,0,0
+Chapel Hill,93782,55,G: IROX,Male,Caucasian,374,2,1,12.6,24.5915332954659,186,22,0,50-59,USA,White (not Hispanic),Donavan Kopp,Donavan,Kopp,1,1,1,1,1
+Chapel Hill,93248,49,G: IROX,Male,Caucasian,336,2,0,10.7,29.5389979338843,130,29,1,40-49,USA,White (not Hispanic),Schuyler Emme,Schuyler,Emme,0,0,0,0,0
+Chapel Hill,93357,68,F: FOLFOX,Male,Caucasian,440,2,NA,NA,29.6033947007918,NA,NA,1,60-69,USA,White (not Hispanic),Nicholas Traphagen,Nicholas,Traphagen,0,0,0,0,0
+Chapel Hill,93673,63,G: IROX,Male,Caucasian,965,2,0,17,29.0938775510204,61,27,1,60-69,USA,White (not Hispanic),Benjamin Wright,Benjamin,Wright,0,0,0,0,0
+Chapel Hill,93732,59,F: FOLFOX,Male,Caucasian,470,2,1,13,18.5077660037741,284,76,1,50-59,USA,White (not Hispanic),Ryan Gettig,Ryan,Gettig,0,0,0,0,0
+Chapel Hill,93984,70,F: FOLFOX,Male,Caucasian,656,2,1,11.2,22.5352112676056,147,23,0,60-69,USA,White (not Hispanic),Brett French,Brett,French,0,0,0,0,0
+Chapel Hill,93361,59,A: IFL,Male,African-Am,122,2,NA,NA,23.8132392871633,NA,NA,NA,50-59,USA,Black (not Hispanic),Geovanny Gutierrez,Geovanny,Gutierrez,0,0,0,0,0
+Chapel Hill,93565,50,F: FOLFOX,Male,Caucasian,665,2,0,9.1,29.2726107261683,126,23,NA,40-49,USA,White (not Hispanic),Andrew Sherry,Andrew,Sherry,0,0,0,0,0
+Chapel Hill,93890,74,A: IFL,Male,Caucasian,305,2,0,10.5,26.7283950617283,92,15,1,70-79,USA,White (not Hispanic),Andrew Danduran,Andrew,Danduran,0,0,0,0,0
+Chapel Hill,93160,75,F: FOLFOX,Female,Caucasian,1601,1,NA,NA,27.3439084749888,NA,NA,1,70-79,USA,White (not Hispanic),Alyssa Stadelmayer,Alyssa,Stadelmayer,0,0,0,0,0
+Chapel Hill,93066,29,G: IROX,Female,Caucasian,82,2,2,9.1,23.59375,140,36,1,20-29,USA,White (not Hispanic),Hannah Munholland,Hannah,Munholland,0,0,0,0,0
+Chapel Hill,94046,67,A: IFL,Male,Caucasian,590,2,0,14.2,27.14324106423,78,19,1,60-69,USA,White (not Hispanic),Austin Giorgi,Austin,Giorgi,0,0,0,0,0
+Chapel Hill,93116,56,G: IROX,Male,Caucasian,421,2,0,12.6,32.1376667987845,242,46,1,50-59,USA,White (not Hispanic),Iain Contos,Iain,Contos,0,0,0,0,0
+Chapel Hill,93425,75,G: IROX,Male,Caucasian,637,2,0,11.8,25.8333333333333,149,41,1,70-79,USA,White (not Hispanic),Bryce Hamedl,Bryce,Hamedl,0,0,0,0,0
+Chapel Hill,93340,59,G: IROX,Female,Caucasian,664,2,0,12.8,26.3959750566893,88,17,1,50-59,USA,White (not Hispanic),Eden Anderson,Eden,Anderson,1,1,1,1,1
+Chapel Hill,93593,61,G: IROX,Female,Caucasian,334,2,0,11.4,24.3893480257116,103,16,1,60-69,USA,White (not Hispanic),Taylor Roy,Taylor,Roy,0,0,0,0,0
+Chapel Hill,93948,55,G: IROX,Female,Caucasian,218,2,1,12.5,22.3132784291451,60,15,1,50-59,USA,White (not Hispanic),Megan Betcher,Megan,Betcher,0,0,0,0,0
+Chapel Hill,93374,61,F: FOLFOX,Female,Caucasian,1976,1,NA,NA,18.1060727447524,NA,NA,1,60-69,USA,White (not Hispanic),Olivia Nicolaus-Harms,Olivia,Nicolaus-Harms,1,1,1,1,1
+Chapel Hill,93440,32,A: IFL,Female,African-Am,400,2,0,10,21.3068181818181,86,15,1,30-39,USA,Black (not Hispanic),Silvia Rivera,Silvia,Rivera,0,0,0,0,0
+Chapel Hill,93077,70,F: FOLFOX,Female,Caucasian,291,2,0,13.5,30.5078125,104,19,1,60-69,USA,White (not Hispanic),Darla Hansen,Darla,Hansen,0,0,0,0,0
+Chapel Hill,93161,42,G: IROX,Male,Hispanic,249,2,0,12.8,42.2926398182047,70,18,0,40-49,USA,Hispanic,Francisco Duran,Francisco,Duran,0,0,0,0,0
+Chapel Hill,93257,57,G: IROX,Female,Caucasian,500,2,1,13.3,25.1044450299221,158,22,1,50-59,USA,White (not Hispanic),Alexandria Braslin,Alexandria,Braslin,0,0,0,0,0
+Chapel Hill,93127,64,F: FOLFOX,Male,Caucasian,864,2,0,15,39.608163265306104,61,16,NA,60-69,USA,White (not Hispanic),Tiger Thompson,Tiger,Thompson,1,1,1,1,0
+Chapel Hill,93208,68,F: FOLFOX,Male,Caucasian,730,2,0,12.1,40.0833228127761,181,16,1,60-69,USA,White (not Hispanic),Austyn Jones,Austyn,Jones,1,1,1,1,0
+Chapel Hill,93480,55,A: IFL,Female,Caucasian,692,2,NA,NA,25.6749311294765,NA,NA,1,50-59,USA,White (not Hispanic),Rachel Engel,Rachel,Engel,0,0,1,1,0
+Chapel Hill,93210,73,G: IROX,Male,Asian,1853,2,NA,NA,24.1938307482231,NA,NA,NA,70-79,USA,Asian or Pacific Islander,Yonghyuk Cho,Yonghyuk,Cho,0,0,0,0,0
+Chapel Hill,93618,46,F: FOLFOX,Male,Caucasian,251,2,1,12.2,24.2467675953298,501,78,1,40-49,USA,White (not Hispanic),Frank Phillips,Frank,Phillips,1,1,1,1,0
+Chapel Hill,94032,48,A: IFL,Female,Caucasian,709,2,0,12.4,23.5812672176308,79,25,1,40-49,USA,White (not Hispanic),Jenna Goodrich,Jenna,Goodrich,0,0,0,0,0
+Chapel Hill,93391,51,A: IFL,Male,Caucasian,1085,2,0,12.8,25.3290665378577,104,25,1,50-59,USA,White (not Hispanic),Christian Pease,Christian,Pease,1,1,1,1,0
+Chapel Hill,93504,67,A: IFL,Male,Caucasian,303,2,1,11.4,22.4367252066115,234,27,1,60-69,USA,White (not Hispanic),Matthew Sharp,Matthew,Sharp,0,0,0,0,0
+Chapel Hill,93298,38,F: FOLFOX,Female,Caucasian,304,2,NA,NA,22.6627066115702,NA,NA,1,30-39,USA,White (not Hispanic),Megan Louie,Megan,Louie,1,1,1,1,0
+Chapel Hill,93081,88,A: IFL,Female,Caucasian,75,2,1,11.1,27.6888888888888,139,28,1,80-89,USA,White (not Hispanic),Kristine Walker,Kristine,Walker,0,0,0,0,0
+Chapel Hill,93491,53,G: IROX,Female,Caucasian,682,2,0,13.1,17.614513154428,437,104,1,50-59,USA,White (not Hispanic),Lylea Elder,Lylea,Elder,0,0,0,0,0
+Gainesville,94988,64,F: FOLFOX,Male,Caucasian,517,2,1,11.3,24.1237595643021,317,14,1,60-69,USA,White (not Hispanic),Scott Straten,Scott,Straten,0,0,0,0,0
+Gainesville,94571,71,F: FOLFOX,Male,Caucasian,345,2,1,14.9,31.2213039485766,72,17,1,70-79,USA,White (not Hispanic),Cory Mauk,Cory,Mauk,0,0,0,0,0
+Gainesville,94207,62,G: IROX,Male,Caucasian,814,2,1,10.2,22.2145328719723,79,17,1,60-69,USA,White (not Hispanic),Kelly Brandin,Kelly,Brandin,0,0,0,0,0
+Gainesville,94793,41,A: IFL,Male,African-Am,677,1,1,10.7,21.996762631518,164,35,1,40-49,USA,Black (not Hispanic),Dominic Meyer,Dominic,Meyer,1,1,1,1,0
+Gainesville,95011,50,A: IFL,Male,Caucasian,371,2,0,13.5,27.9320792829188,102,19,1,40-49,USA,White (not Hispanic),Matthew Crowther,Matthew,Crowther,1,1,1,1,1
+Gainesville,94277,66,A: IFL,Male,Caucasian,224,2,0,11.4,29.3209876543209,136,42,1,60-69,USA,White (not Hispanic),Tyler Dormer,Tyler,Dormer,0,0,0,0,0
+Gainesville,94136,39,G: IROX,Female,Caucasian,498,2,1,11.2,18.6960514233241,140,22,1,30-39,USA,White (not Hispanic),Robin Luckenbaugh,Robin,Luckenbaugh,0,0,0,0,0
+Gainesville,95141,49,A: IFL,Male,Caucasian,776,2,NA,NA,26.4171190506249,NA,NA,1,40-49,USA,White (not Hispanic),Landen Reynolds,Landen,Reynolds,0,0,0,0,0
+Gainesville,94238,59,G: IROX,Male,Native-Am/Alaska,57,2,1,9.2,27.5308641975308,79,43,1,50-59,USA,American Indian or Native Alaskan,Todd Quint,Todd,Quint,1,1,1,1,1
+Gainesville,94810,69,G: IROX,Male,Caucasian,612,2,0,14.3,35.1027135923811,61,17,1,60-69,USA,White (not Hispanic),Basel Leonard,Basel,Leonard,0,0,0,0,0
+Gainesville,94355,60,F: FOLFOX,Female,Caucasian,1051,2,NA,NA,33.7539048237251,NA,NA,1,50-59,USA,White (not Hispanic),Mariah Bohnen,Mariah,Bohnen,0,0,0,0,0
+Gainesville,94372,82,F: FOLFOX,Female,Caucasian,575,2,0,11.3,33.2179930795847,85,26,1,80-89,USA,White (not Hispanic),Nicole Beutler,Nicole,Beutler,0,0,0,0,0
+Gainesville,94088,61,A: IFL,Male,Caucasian,239,2,NA,NA,23.5599749171369,NA,NA,0,60-69,USA,White (not Hispanic),Christopher Fakes,Christopher,Fakes,0,0,0,0,0
+Gainesville,94275,50,G: IROX,Female,Caucasian,857,2,0,14,23.9389897746315,89,17,1,40-49,USA,White (not Hispanic),Alexandra Mckay-Epp,Alexandra,Mckay-Epp,0,0,0,0,0
+Gainesville,94080,73,G: IROX,Male,Caucasian,844,2,NA,NA,27.5086505190311,NA,NA,1,70-79,USA,White (not Hispanic),Cody Lee Pramberg,Cody,Lee,0,0,0,0,0
+Gainesville,94225,61,F: FOLFOX,Female,Caucasian,545,2,2,9.2,21.7899659863945,356,95,1,60-69,USA,White (not Hispanic),Natalie Gatling,Natalie,Gatling,0,0,0,0,0
+Gainesville,94851,74,G: IROX,Male,Caucasian,771,2,1,13.5,24.8588325704166,104,20,1,70-79,USA,White (not Hispanic),Conor Marshall,Conor,Marshall,0,0,0,0,0
+Gainesville,94781,61,F: FOLFOX,Male,Caucasian,1785,1,0,14.3,31.6975308641975,105,19,1,60-69,USA,White (not Hispanic),Kevin Navant,Kevin,Navant,0,0,0,0,0
+Gainesville,94607,65,A: IFL,Female,Caucasian,33,2,0,11.8,23.8501560874089,109,24,NA,60-69,USA,White (not Hispanic),Rebecca Mcquillen,Rebecca,Mcquillen,1,1,1,1,0
+Gainesville,94893,54,A: IFL,Male,Caucasian,500,2,NA,NA,21.2836613935515,NA,NA,1,50-59,USA,White (not Hispanic),Damon Beer,Damon,Beer,0,0,1,1,0
+Gainesville,94150,65,G: IROX,Male,African-Am,1857,1,2,13.9,25.3395061728395,288,36,1,60-69,USA,Black (not Hispanic),Jose Delgado,Jose,Delgado,0,0,0,0,0
+Gainesville,94534,44,G: IROX,Female,Caucasian,491,2,0,10.2,37.2214240368873,151,46,1,40-49,USA,White (not Hispanic),Jordan Eveleth,Jordan,Eveleth,0,0,1,1,0
+Gainesville,95052,70,F: FOLFOX,Male,Hispanic,512,2,2,13,23.0343633557905,166,12,0,60-69,USA,Hispanic,Hector Villa,Hector,Villa,0,0,0,0,0
+Gainesville,94474,82,F: FOLFOX,Male,Caucasian,229,2,1,10.7,24.0166493236212,235,132,0,80-89,USA,White (not Hispanic),Mitchell Rinaldi,Mitchell,Rinaldi,0,0,0,0,0
+Gainesville,94122,61,F: FOLFOX,Male,Caucasian,834,2,0,14.1,26.4930256312043,80,23,1,60-69,USA,White (not Hispanic),Parker Schaecher,Parker,Schaecher,0,0,0,0,0
+Gainesville,95093,63,F: FOLFOX,Female,Caucasian,940,2,0,13.9,23.6293879307253,77,17,1,60-69,USA,White (not Hispanic),Karissa Kyle,Karissa,Kyle,1,1,1,1,1
+Gainesville,94875,63,F: FOLFOX,Female,Caucasian,546,2,1,11,27.65625,183,100,1,60-69,USA,White (not Hispanic),Jessica Macpherson,Jessica,Macpherson,0,0,0,0,0
+Gainesville,94151,55,F: FOLFOX,Male,Caucasian,368,2,0,13.1,25.3814685419092,207,33,1,50-59,USA,White (not Hispanic),Andrew Kane,Andrew,Kane,0,0,0,0,0
+Gainesville,94596,40,F: FOLFOX,Male,Caucasian,1666,1,0,11.8,23.8642509464575,98,15,1,30-39,USA,White (not Hispanic),Deion Hulstine,Deion,Hulstine,0,0,0,0,0
+Gainesville,95145,71,F: FOLFOX,Male,Caucasian,467,2,0,11.9,39.388426058923,122,42,1,70-79,USA,White (not Hispanic),Robert Brokop,Robert,Brokop,0,0,0,0,0
+Gainesville,94223,51,G: IROX,Female,Caucasian,847,2,1,12.4,25.0399187109885,65,25,1,50-59,USA,White (not Hispanic),Kelly Craig,Kelly,Craig,0,0,0,0,0
+Gainesville,95057,74,F: FOLFOX,Female,Caucasian,32,2,1,12.7,29.6418732782369,101,22,NA,70-79,USA,White (not Hispanic),Katie Mcmenimen,Katie,Mcmenimen,0,0,0,0,0
+Gainesville,94296,57,G: IROX,Female,Caucasian,810,2,NA,NA,18.8553590010405,NA,NA,1,50-59,USA,White (not Hispanic),Cheyenne Pezdirtz,Cheyenne,Pezdirtz,0,0,0,0,0
+Gainesville,94213,74,F: FOLFOX,Female,African-Am,1016,2,NA,NA,26.39801313892,NA,NA,1,70-79,USA,Black (not Hispanic),Karen Najera Molina,Karen,Najera,0,0,0,0,0
+Gainesville,94466,59,G: IROX,Female,Caucasian,746,2,1,11.4,45.3536075877902,102,21,1,50-59,USA,White (not Hispanic),Jennifer Koch,Jennifer,Koch,0,0,0,0,0
+Gainesville,94857,71,F: FOLFOX,Male,Hispanic,510,2,0,11.6,27.5132673416387,88,24,1,70-79,USA,Hispanic,Jacob Davis,Jacob,Davis,0,0,0,0,0
+Gainesville,94870,74,G: IROX,Male,Caucasian,1838,1,1,11,25.6313749106101,87,18,1,70-79,USA,White (not Hispanic),Tyler Amiot,Tyler,Amiot,0,0,0,0,0
+Gainesville,94480,58,A: IFL,Female,African-Am,424,2,NA,NA,39.4483024691358,NA,NA,1,50-59,USA,Black (not Hispanic),Traci Lucio,Traci,Lucio,0,0,0,0,0
+Gainesville,94823,52,F: FOLFOX,Female,Caucasian,1795,2,NA,NA,22.2151360544217,NA,NA,1,50-59,USA,White (not Hispanic),Kendall Miller,Kendall,Miller,0,0,0,0,0
+Gainesville,94378,69,F: FOLFOX,Female,Caucasian,992,2,1,10.9,49.1297821412633,499,66,NA,60-69,USA,White (not Hispanic),Jane Brockway,Jane,Brockway,0,0,0,0,0
+Gainesville,94307,56,F: FOLFOX,Female,Asian,1797,2,1,13.9,22.8959352335975,42,16,1,50-59,USA,Asian or Pacific Islander,Wahida Kim,Wahida,Kim,1,1,1,1,0
+Gainesville,95079,48,A: IFL,Female,Caucasian,529,2,0,12.6,35.2666641574767,140,50,1,40-49,USA,White (not Hispanic),Madeleine Ferreira,Madeleine,Ferreira,1,1,1,1,0
+Gainesville,94167,56,A: IFL,Male,Caucasian,1034,2,0,14.2,26.3257852447041,98,25,1,50-59,USA,White (not Hispanic),David Kostadinov,David,Kostadinov,0,0,0,0,0
+Gainesville,94107,74,A: IFL,Female,Caucasian,304,2,0,10.7,20.1456815816857,112,21,1,70-79,USA,White (not Hispanic),Lauren Whaley,Lauren,Whaley,0,0,0,0,0
+Gainesville,94292,73,A: IFL,Female,Caucasian,792,2,0,10.9,23.6340330075308,351,32,1,70-79,USA,White (not Hispanic),Alexandra Leeburg,Alexandra,Leeburg,0,0,0,0,0
+Gainesville,94616,52,G: IROX,Male,Caucasian,966,2,0,13.1,34.0708889486099,107,34,NA,50-59,USA,White (not Hispanic),Emmet Graves,Emmet,Graves,0,0,0,0,0
+Gainesville,94647,67,F: FOLFOX,Female,Caucasian,639,2,0,10.8,24.4921875,122,30,1,60-69,USA,White (not Hispanic),Vanessa Rockett,Vanessa,Rockett,0,0,0,0,0
+Gainesville,94074,61,F: FOLFOX,Male,Caucasian,312,2,2,14.1,21.4724883742704,635,94,1,60-69,USA,White (not Hispanic),Daniel Wein,Daniel,Wein,0,0,0,0,0
+Gainesville,94598,71,G: IROX,Female,Caucasian,571,2,NA,NA,26.9140625,NA,NA,1,70-79,USA,White (not Hispanic),Laurissa Gilbert,Laurissa,Gilbert,0,0,0,0,0
+Gainesville,94609,52,F: FOLFOX,Male,Caucasian,1145,2,NA,NA,37.5221357212068,NA,NA,1,50-59,USA,White (not Hispanic),Kyler Ryan,Kyler,Ryan,0,0,0,0,0
+Gainesville,94065,29,G: IROX,Female,Caucasian,840,2,NA,NA,22.9935720844811,NA,NA,1,20-29,USA,White (not Hispanic),Nicole Hillstrom,Nicole,Hillstrom,0,0,0,0,0
+Gainesville,94656,73,G: IROX,Male,Caucasian,343,2,0,13.7,36.6354875283446,310,59,1,70-79,USA,White (not Hispanic),Charles Brannigan,Charles,Brannigan,0,0,0,0,0
+Gainesville,94575,72,A: IFL,Female,Caucasian,62,2,1,12.5,19.4383538539382,365,34,NA,70-79,USA,White (not Hispanic),Kayla Tryon,Kayla,Tryon,0,0,0,0,0
+Gainesville,94759,81,G: IROX,Male,Caucasian,896,2,0,10.4,28.344671201814,102,27,1,80-89,USA,White (not Hispanic),Aric Walker,Aric,Walker,0,0,0,0,0
+Gainesville,94460,74,A: IFL,Male,Caucasian,542,2,0,11,28.0750429383009,49,19,1,70-79,USA,White (not Hispanic),Vincent Barr,Vincent,Barr,0,0,0,0,0
+Gainesville,95155,50,G: IROX,Male,Caucasian,752,2,1,14.4,51.3241285649615,89,31,NA,40-49,USA,White (not Hispanic),Vincent Brooks,Vincent,Brooks,0,0,0,0,0
+Gainesville,94992,68,A: IFL,Male,Caucasian,208,2,0,11.6,25.4393424036281,176,47,1,60-69,USA,White (not Hispanic),Sean Mcbride,Sean,Mcbride,0,0,0,0,0
+Gainesville,94159,58,F: FOLFOX,Female,Caucasian,157,2,NA,NA,22.302699989243,NA,NA,1,50-59,USA,White (not Hispanic),Stevey Yarnell,Stevey,Yarnell,1,1,1,1,0
+Gainesville,95130,32,G: IROX,Male,Caucasian,273,2,0,11.8,22.0521901834341,549,102,1,30-39,USA,White (not Hispanic),David George,David,George,0,0,0,0,0
+Gainesville,94224,72,A: IFL,Male,Caucasian,150,2,2,11.5,27.3711806747604,112,23,1,70-79,USA,White (not Hispanic),Beck Harrell,Beck,Harrell,0,0,0,0,0
+Gainesville,94251,54,A: IFL,Male,Caucasian,330,2,0,13.5,23.4483796906168,100,30,1,50-59,USA,White (not Hispanic),Robert Lobben,Robert,Lobben,0,0,0,0,0
+Gainesville,94753,72,F: FOLFOX,Female,Caucasian,770,2,NA,NA,23.7006553878981,NA,NA,1,70-79,USA,White (not Hispanic),Emily Jenkins,Emily,Jenkins,0,0,0,0,0
+Gainesville,94995,58,G: IROX,Male,Caucasian,663,2,1,13.5,31.1744154797097,111,17,1,50-59,USA,White (not Hispanic),Kyle Rose,Kyle,Rose,0,0,0,0,0
+Gainesville,94409,59,G: IROX,Female,Caucasian,1426,2,0,12.8,37.5336998004271,136,17,1,50-59,USA,White (not Hispanic),Hailey Levin,Hailey,Levin,0,0,0,0,0
+Gainesville,94447,75,G: IROX,Female,Caucasian,1883,1,0,12.2,21.8576869806094,86,33,1,70-79,USA,White (not Hispanic),Teagan Fischer,Teagan,Fischer,0,0,0,0,0
+Gainesville,94559,70,A: IFL,Male,Caucasian,1852,1,NA,NA,33.0782852751511,NA,NA,1,60-69,USA,White (not Hispanic),Taylor Hubbell,Taylor,Hubbell,0,0,0,0,0
+Gainesville,94980,68,A: IFL,Female,African-Am,428,2,0,11.5,23.0147843316567,67,21,NA,60-69,USA,Black (not Hispanic),Perla Rosales,Perla,Rosales,0,0,0,0,0
+Gainesville,94451,63,F: FOLFOX,Male,Caucasian,940,2,0,13.8,31.3743769945139,57,25,1,60-69,USA,White (not Hispanic),Sean Clothier,Sean,Clothier,0,0,0,0,0
+Gainesville,94882,76,G: IROX,Female,Caucasian,66,2,2,11.5,24.7068846606353,417,70,0,70-79,USA,White (not Hispanic),Emily Houser,Emily,Houser,0,0,0,0,0
+Gainesville,94153,46,A: IFL,Male,Caucasian,536,2,0,12.1,24.6913580246913,88,16,1,40-49,USA,White (not Hispanic),Skyler Foley,Skyler,Foley,0,0,0,0,0
+Gainesville,94269,56,F: FOLFOX,Female,Caucasian,514,2,0,12.3,26.1065622404177,322,63,1,50-59,USA,White (not Hispanic),Jessica Spencer,Jessica,Spencer,0,0,0,0,0
+Gainesville,94503,51,G: IROX,Female,Caucasian,315,2,0,11.6,24.9538936354398,80,14,NA,50-59,USA,White (not Hispanic),Stephanie Skinner,Stephanie,Skinner,0,0,0,0,0
+Gainesville,94906,47,F: FOLFOX,Female,Caucasian,832,2,1,11.7,37.0518217448105,230,17,1,40-49,USA,White (not Hispanic),Alexandra Feliss,Alexandra,Feliss,1,1,1,1,0
+Gainesville,94482,67,F: FOLFOX,Female,Hispanic,872,2,1,9.6,30.0350031992171,116,14,0,60-69,USA,Hispanic,Eliza Soto Reyes,Eliza,Soto,0,0,0,0,0
+Gainesville,95032,59,G: IROX,Male,Caucasian,604,2,0,11.5,26.3510204081632,68,28,1,50-59,USA,White (not Hispanic),Wyatt Anderson,Wyatt,Anderson,0,0,0,0,0
+Gainesville,94075,71,F: FOLFOX,Male,Caucasian,416,2,1,12.2,27.5754422476586,273,82,NA,70-79,USA,White (not Hispanic),Mark Mccabe,Mark,Mccabe,0,0,0,0,0
+Gainesville,94120,56,G: IROX,Female,Caucasian,414,2,1,13.7,25.390625,363,110,1,50-59,USA,White (not Hispanic),Tori Pokorny,Tori,Pokorny,0,0,0,0,0
+Gainesville,94437,59,A: IFL,Male,Caucasian,1252,1,0,13.1,36.6115389471026,19,20,NA,50-59,USA,White (not Hispanic),Caeden Osborn,Caeden,Osborn,0,0,0,0,0
+Gainesville,94287,53,F: FOLFOX,Male,Caucasian,1036,2,0,14.6,30.5174833527426,91,26,1,50-59,USA,White (not Hispanic),Lucas Karr,Lucas,Karr,0,0,0,0,0
+Gainesville,94986,51,G: IROX,Male,Caucasian,1238,2,0,14.4,24.0963855421686,94,19,1,50-59,USA,White (not Hispanic),Shane Stafford,Shane,Stafford,0,0,0,0,0
+Denver,101622,67,A: IFL,Female,Caucasian,187,2,0,10.5,24.5412049861495,526,77,1,60-69,USA,White (not Hispanic),Jasmine Gallicchio-Foushi,Jasmine,Gallicchio-Foushi,0,0,0,0,0
+Denver,99219,66,G: IROX,Female,Caucasian,108,2,1,11.5,27.9744194794979,258,28,0,60-69,USA,White (not Hispanic),Alyssa Cram,Alyssa,Cram,0,0,0,0,0
+Denver,99999,57,F: FOLFOX,Female,Caucasian,261,2,0,11.7,21.9261258222297,152,23,1,50-59,USA,White (not Hispanic),Nicole Morgenstern,Nicole,Morgenstern,0,0,0,0,0
+Denver,101523,66,F: FOLFOX,Male,Caucasian,572,2,0,11.9,28.3930211202938,90,13,1,60-69,USA,White (not Hispanic),Joseph Larson,Joseph,Larson,1,1,1,1,0
+Denver,101771,65,A: IFL,Male,Caucasian,1522,2,0,13.6,26.6748743203036,100,46,1,60-69,USA,White (not Hispanic),Johnathen Geer,Johnathen,Geer,0,0,0,0,0
+Denver,99977,70,A: IFL,Male,Caucasian,432,2,0,15,26.3836734693877,74,28,1,60-69,USA,White (not Hispanic),Gabriel Case,Gabriel,Case,0,0,0,0,0
+Denver,101504,55,A: IFL,Female,Caucasian,593,2,NA,NA,28.6421355835936,NA,NA,1,50-59,USA,White (not Hispanic),Brittanie Valentine,Brittanie,Valentine,0,0,0,0,0
+Denver,100565,61,G: IROX,Female,Caucasian,142,2,1,10.8,21.655161078238,225,84,1,60-69,USA,White (not Hispanic),Shealynn Odalen,Shealynn,Odalen,0,0,0,0,0
+Denver,95255,62,A: IFL,Female,Caucasian,280,2,1,12,25.0137741046832,142,33,1,60-69,USA,White (not Hispanic),Emma Campbell,Emma,Campbell,0,0,0,0,0
+Denver,95253,41,G: IROX,Male,Caucasian,701,2,0,12.3,20.7156938086805,172,127,1,40-49,USA,White (not Hispanic),Ryan Jares,Ryan,Jares,0,0,0,0,0
+Denver,95241,51,F: FOLFOX,Female,Caucasian,569,2,1,10.7,24.2214532871972,133,22,1,50-59,USA,White (not Hispanic),Claire Berger,Claire,Berger,0,0,0,0,0
+Denver,100213,59,G: IROX,Male,African-Am,323,2,0,11.7,25.7716049382716,91,15,1,50-59,USA,Black (not Hispanic),Daniel Garcia,Daniel,Garcia,0,0,0,0,0
+Denver,99895,65,G: IROX,Male,Caucasian,217,2,2,12.9,30.7728290287012,933,63,1,60-69,USA,White (not Hispanic),Bradley Scholl,Bradley,Scholl,0,0,0,0,0
+Denver,100897,70,A: IFL,Male,Caucasian,520,2,0,12.2,36.5924557983653,69,32,1,60-69,USA,White (not Hispanic),Trust Abuzahra,Trust,Abuzahra,0,0,0,0,0
+Denver,101023,80,F: FOLFOX,Female,Caucasian,1500,1,0,11.6,25.5296448712086,302,58,1,70-79,USA,White (not Hispanic),Quincy Gale,Quincy,Gale,0,0,0,0,0
+Denver,100457,78,F: FOLFOX,Female,Caucasian,19,2,1,15.2,20.6297067777599,90,24,NA,70-79,USA,White (not Hispanic),Briana Wells,Briana,Wells,0,0,0,0,0
+Denver,95357,66,G: IROX,Male,Caucasian,770,2,2,11.9,25.4927222389737,110,22,NA,60-69,USA,White (not Hispanic),Gerard Boss,Gerard,Boss,0,0,0,0,0
+Denver,101745,29,F: FOLFOX,Female,African-Am,542,2,NA,NA,20.3244382551093,NA,NA,1,20-29,USA,Black (not Hispanic),Mayra Benitez Chavez,Mayra,Benitez,0,0,0,0,0
+Denver,95305,57,G: IROX,Female,Caucasian,650,2,NA,NA,39.2713700352955,NA,NA,1,50-59,USA,White (not Hispanic),Renae White,Renae,White,0,0,0,0,0
+Denver,101866,79,G: IROX,Female,African-Am,548,2,0,12.6,26.2226847034339,89,22,1,70-79,USA,Black (not Hispanic),Ariana Garcia,Ariana,Garcia,0,0,0,0,0
+Denver,101758,58,A: IFL,Male,Caucasian,722,2,0,13.3,37.6984126984127,110,43,1,50-59,USA,White (not Hispanic),Harold Draper,Harold,Draper,1,1,1,1,0
+Denver,100229,72,A: IFL,Female,Caucasian,607,2,NA,NA,21.3994699576757,NA,NA,1,70-79,USA,White (not Hispanic),Jayde Cerise,Jayde,Cerise,1,1,1,1,1
+Denver,101764,77,G: IROX,Male,Caucasian,992,2,0,12.7,25.9591836734693,150,39,1,70-79,USA,White (not Hispanic),Bret Hildebrandt,Bret,Hildebrandt,0,0,1,1,0
+Denver,95234,60,G: IROX,Female,Caucasian,341,2,1,11.8,22.109375,115,31,1,50-59,USA,White (not Hispanic),Sarah Houston,Sarah,Houston,0,0,0,0,0
+Denver,99556,68,G: IROX,Female,Caucasian,867,2,1,11.5,24.8818777625361,328,29,1,60-69,USA,White (not Hispanic),Mckenzie Pieper,Mckenzie,Pieper,0,0,1,1,0
+Denver,101513,71,F: FOLFOX,Female,Caucasian,1533,2,0,13.8,31.8003693527318,102,33,1,70-79,USA,White (not Hispanic),Sydnie Hunt,Sydnie,Hunt,0,0,0,0,0
+Denver,101410,73,G: IROX,Female,Caucasian,507,2,0,11.5,28.1476002629848,118,42,1,70-79,USA,White (not Hispanic),Sophia Bledowski,Sophia,Bledowski,0,0,0,0,0
+Denver,101006,59,A: IFL,Male,Caucasian,710,2,0,12.9,23.5134452720616,158,23,0,50-59,USA,White (not Hispanic),Keith O'Banion,Keith,O'Banion,0,0,0,0,0
+Denver,101829,66,F: FOLFOX,Male,Caucasian,1246,2,1,15.2,25.916955017301,83,21,1,60-69,USA,White (not Hispanic),Brenden Kirkpatrick,Brenden,Kirkpatrick,0,0,1,1,0
+Denver,98170,77,F: FOLFOX,Male,Caucasian,307,2,1,12.2,22.093170054286,353,45,0,70-79,USA,White (not Hispanic),Matthew Bowman,Matthew,Bowman,1,0,0,0,0
+Denver,99993,46,G: IROX,Male,African-Am,874,2,1,14.9,31.6373966942148,104,31,1,40-49,USA,Black (not Hispanic),David Medina,David,Medina,0,0,0,0,0
+Denver,99485,69,F: FOLFOX,Male,Caucasian,742,2,1,13.2,NA,184,36,1,60-69,USA,White (not Hispanic),Brice Schumann,Brice,Schumann,1,0,1,0,0
+Denver,100327,65,A: IFL,Male,Caucasian,888,2,1,14.3,22.3772250978411,64,11,1,60-69,USA,White (not Hispanic),Collin Mayo,Collin,Mayo,0,0,0,0,0
+Denver,101154,56,A: IFL,Female,Caucasian,351,2,0,11,31.2100121719047,221,27,1,50-59,USA,White (not Hispanic),Tiffany Zade,Tiffany,Zade,0,0,0,0,0
+Denver,101778,62,F: FOLFOX,Male,Caucasian,877,2,0,11.1,25.758881547448,295,33,1,60-69,USA,White (not Hispanic),Richard Veeder,Richard,Veeder,0,0,0,0,0
+Denver,95216,75,G: IROX,Female,Caucasian,179,2,NA,NA,21.3001066910531,NA,NA,1,70-79,USA,White (not Hispanic),Lauren Landau,Lauren,Landau,0,0,0,0,0
+Denver,100756,73,G: IROX,Male,African-Am,1704,1,0,11.8,21.6671173607355,44,23,NA,70-79,USA,Black (not Hispanic),Macario Provencio,Macario,Provencio,1,1,1,1,0
+Denver,101220,34,G: IROX,Male,Caucasian,929,2,0,14.9,23.2489795918367,87,20,1,30-39,USA,White (not Hispanic),Richard Spencer,Richard,Spencer,0,0,0,0,0
+Denver,99688,51,F: FOLFOX,Male,Caucasian,1678,1,0,16.4,25.2354570637119,71,20,1,50-59,USA,White (not Hispanic),Brian Trembly,Brian,Trembly,0,0,0,0,0
+Denver,100546,76,A: IFL,Male,Caucasian,196,2,1,14,31.4980158730158,82,33,1,70-79,USA,White (not Hispanic),Sean Grosse-Rhode,Sean,Grosse-Rhode,0,0,0,0,0
+Denver,101063,68,G: IROX,Female,Caucasian,318,2,1,10.8,25.9948544889572,245,26,NA,60-69,USA,White (not Hispanic),Brittany Gebhart,Brittany,Gebhart,0,0,0,0,0
+Denver,99437,60,A: IFL,Male,Caucasian,940,2,NA,NA,23.5600324499729,NA,NA,1,50-59,USA,White (not Hispanic),Breydon Billings,Breydon,Billings,0,0,0,0,0
+Denver,100195,28,G: IROX,Female,African-Am,624,2,2,11.2,25.0399187109885,70,11,1,20-29,USA,Black (not Hispanic),Lauren Fuentes,Lauren,Fuentes,0,0,0,0,0
+Denver,101569,65,G: IROX,Male,Caucasian,542,2,0,16,24.426588750913,184,27,1,60-69,USA,White (not Hispanic),Lucas Doris,Lucas,Doris,0,0,0,0,0
+Denver,95244,47,A: IFL,Male,Caucasian,173,2,NA,NA,39.934693877551,NA,NA,1,40-49,USA,White (not Hispanic),Wyatt Evans,Wyatt,Evans,1,1,1,1,1
+Denver,95264,38,F: FOLFOX,Male,Caucasian,1807,1,1,9.8,24.1571859416524,184,17,1,30-39,USA,White (not Hispanic),Matthew Behrman,Matthew,Behrman,0,0,0,0,0
+Denver,95212,56,G: IROX,Male,Caucasian,495,2,0,13,27.1669192713546,89,21,1,50-59,USA,White (not Hispanic),Jonathon Sable,Jonathon,Sable,0,0,0,0,0
+Denver,100018,62,A: IFL,Female,Caucasian,355,2,1,13.7,25.2240890049997,194,29,1,60-69,USA,White (not Hispanic),Anna Nielson,Anna,Nielson,0,0,0,0,0
+Denver,101413,53,F: FOLFOX,Female,Caucasian,1244,2,1,10.9,28.7031528851874,277,55,1,50-59,USA,White (not Hispanic),Shawnte Sharp,Shawnte,Sharp,0,0,0,0,0
+Denver,101512,57,G: IROX,Female,Caucasian,659,2,0,11.6,17.7410468319559,153,17,1,50-59,USA,White (not Hispanic),Shania Bangert,Shania,Bangert,0,0,0,0,0
+Denver,100349,54,F: FOLFOX,Male,Caucasian,1499,1,0,12.2,34.9382716049382,153,35,1,50-59,USA,White (not Hispanic),Brandon Campbell,Brandon,Campbell,1,1,1,1,0
+Denver,95195,67,F: FOLFOX,Male,Caucasian,1861,1,NA,NA,26.3656030286641,NA,NA,NA,60-69,USA,White (not Hispanic),Daniel Glaser,Daniel,Glaser,0,0,0,0,0
+Denver,95222,70,A: IFL,Male,Caucasian,151,2,1,11.8,24.4821092278719,139,22,1,60-69,USA,White (not Hispanic),Cory Anderson,Cory,Anderson,0,0,0,0,0
+Denver,101768,51,G: IROX,Male,Caucasian,1074,2,0,12,23.6627806242419,105,28,1,50-59,USA,White (not Hispanic),Brendan Phillips,Brendan,Phillips,0,0,0,0,0
+Denver,101004,55,F: FOLFOX,Male,Caucasian,842,2,0,12.3,26.2629757785467,94,16,1,50-59,USA,White (not Hispanic),Shayne Blankenbeckler,Shayne,Blankenbeckler,0,0,1,1,0
+Denver,101205,75,A: IFL,Male,Caucasian,155,2,0,14.1,25.2493372048983,110,24,1,70-79,USA,White (not Hispanic),Phillip Ball-Peterson,Phillip,Ball-Peterson,0,0,0,0,0
+Denver,95355,55,A: IFL,Female,Caucasian,599,2,0,10,30.1021185794848,202,53,NA,50-59,USA,White (not Hispanic),Jessica Goentzel,Jessica,Goentzel,0,0,0,0,0
+Denver,101069,65,A: IFL,Female,Caucasian,103,2,1,11,22.4196906603212,493,59,NA,60-69,USA,White (not Hispanic),Jordyn Marshall,Jordyn,Marshall,1,1,1,1,1
+Denver,100884,61,G: IROX,Male,Caucasian,780,2,1,9.4,25.9611573523583,190,11,NA,60-69,USA,White (not Hispanic),Blake Ufferman,Blake,Ufferman,0,0,0,0,0
+Denver,101481,42,A: IFL,Male,Caucasian,786,2,1,13.2,25.6273179858999,149,22,1,40-49,USA,White (not Hispanic),Torrey Pineau,Torrey,Pineau,0,0,0,0,0
+Denver,95168,28,A: IFL,Male,Caucasian,177,2,1,13.1,27.2222222222222,90,27,1,20-29,USA,White (not Hispanic),John Jauch,John,Jauch,0,0,0,0,0
+Denver,100873,55,A: IFL,Male,African-Am,314,2,0,11.1,27.3702422145328,115,79,1,50-59,USA,Black (not Hispanic),Jesus Simmons,Jesus,Simmons,0,0,0,0,0
+Denver,100435,38,A: IFL,Female,Caucasian,868,2,NA,NA,19.3213380026566,NA,NA,1,30-39,USA,White (not Hispanic),Samantha Wunder,Samantha,Wunder,0,0,1,1,0
+Denver,100961,71,A: IFL,Male,Caucasian,256,2,1,11.8,26.3888888888888,158,38,1,70-79,USA,White (not Hispanic),Jonathon Mckee,Jonathon,Mckee,0,0,0,0,0
+Denver,101415,56,A: IFL,Male,Other,1372,2,0,11.5,24.4472789115646,110,36,1,50-59,USA,"Middle-Eastern, Arabic",Abdul Kader el-Hashem,Abdul,Kader,0,0,0,0,0
+Denver,95226,59,F: FOLFOX,Female,Caucasian,990,2,1,10,38.2946681487324,218,63,1,50-59,USA,White (not Hispanic),Ashley Reed,Ashley,Reed,0,0,0,0,0
+Denver,100299,71,G: IROX,Female,Caucasian,60,2,1,12.9,26.0899653979238,223,83,1,70-79,USA,White (not Hispanic),Sara Stuart Hill,Sara,Stuart,0,0,0,0,0
+Denver,101446,64,G: IROX,Female,Caucasian,370,2,1,10.4,20.7498798269508,79,21,0,60-69,USA,White (not Hispanic),Jasmyn Perry,Jasmyn,Perry,0,0,0,0,0
+Denver,100889,81,F: FOLFOX,Male,Caucasian,668,2,1,16.8,26.6698215251487,1014,122,1,80-89,USA,White (not Hispanic),Paul Ryall,Paul,Ryall,1,1,1,1,1
+Denver,99129,40,G: IROX,Male,Hispanic,113,1,1,11.5,25.7515132861393,146,94,NA,30-39,USA,Hispanic,Adrian Balderas-Soto,Adrian,Balderas-Soto,0,0,0,0,0
+Denver,101605,39,F: FOLFOX,Female,Native-Am/Alaska,365,2,0,11.3,43.4858723434053,130,31,1,30-39,USA,American Indian or Native Alaskan,Alyssa Lavender,Alyssa,Lavender,0,0,0,0,0
+Denver,95312,61,A: IFL,Male,Caucasian,577,2,0,13.6,28.6895593990657,140,19,0,60-69,USA,White (not Hispanic),Austin Pence,Austin,Pence,0,0,0,0,0
+Denver,101106,79,F: FOLFOX,Female,Caucasian,865,2,0,13.7,30.5993456276026,74,42,NA,70-79,USA,White (not Hispanic),Mccall Fadl,Mccall,Fadl,0,0,0,0,0
+Denver,101302,40,G: IROX,Female,Caucasian,345,2,1,13.8,20.0183654729109,280,75,1,30-39,USA,White (not Hispanic),Grace Moran,Grace,Moran,0,0,0,0,0
+Denver,100151,70,F: FOLFOX,Male,Hispanic,497,2,NA,NA,27.5482093663911,NA,NA,NA,60-69,USA,Hispanic,Joshua Gonzales,Joshua,Gonzales,0,0,0,0,0
+Denver,100931,56,G: IROX,Male,Caucasian,706,2,1,9.7,20.9306122448979,55,13,1,50-59,USA,White (not Hispanic),Colton Wadsworth,Colton,Wadsworth,0,0,0,0,0
+Denver,101532,62,A: IFL,Male,Caucasian,564,2,0,10.2,26.3412502730876,149,35,0,60-69,USA,White (not Hispanic),Jackson Bristol,Jackson,Bristol,0,0,0,0,0
+Denver,101274,73,F: FOLFOX,Male,Caucasian,785,2,1,13.4,26.7130409839004,88,19,0,70-79,USA,White (not Hispanic),Austin Smith,Austin,Smith,0,0,0,0,0
+Denver,101469,36,F: FOLFOX,Male,African-Am,505,2,0,11.6,31.0009182736455,66,14,1,30-39,USA,Black (not Hispanic),David Zarate,David,Zarate,0,0,0,0,0
+Denver,100691,52,A: IFL,Female,Caucasian,697,2,2,10.8,25.0775510204081,172,26,1,50-59,USA,White (not Hispanic),Kristen Schroeder-Baca,Kristen,Schroeder-Baca,0,0,0,0,0
+Los Angeles,103367,53,A: IFL,Female,Caucasian,641,2,1,12.3,22.2151360544217,64,24,1,50-59,USA,White (not Hispanic),Cherith Akins,Cherith,Akins,1,1,1,1,1
+Los Angeles,102144,71,A: IFL,Male,Caucasian,725,2,NA,NA,32.5778613873212,NA,NA,NA,70-79,USA,White (not Hispanic),Bryce Johnson,Bryce,Johnson,0,0,0,0,0
+Los Angeles,103599,61,A: IFL,Male,Caucasian,309,2,1,13.8,26.9190117584885,179,35,1,60-69,USA,White (not Hispanic),Dillon Gregor,Dillon,Gregor,0,0,0,0,0
+Los Angeles,104303,64,F: FOLFOX,Female,Caucasian,1082,2,0,12.4,18.4351865292495,260,31,1,60-69,USA,White (not Hispanic),India Batt,India,Batt,0,0,0,0,0
+Los Angeles,102568,58,A: IFL,Male,Caucasian,1511,2,2,12.4,23.103143542482,125,36,1,50-59,USA,White (not Hispanic),John Dahms,John,Dahms,0,0,0,0,0
+Los Angeles,102337,57,F: FOLFOX,Male,Caucasian,1739,1,1,13.1,18.1038051864955,100,12,1,50-59,USA,White (not Hispanic),Ian Steward,Ian,Steward,1,1,1,1,1
+Los Angeles,103418,74,G: IROX,Female,Caucasian,683,2,NA,NA,27.2888888888888,NA,NA,0,70-79,USA,White (not Hispanic),Heather Lewis,Heather,Lewis,0,0,0,0,0
+Los Angeles,104152,46,F: FOLFOX,Female,Caucasian,1291,2,NA,NA,29.3013038548752,NA,NA,1,40-49,USA,White (not Hispanic),Kelly Pilling,Kelly,Pilling,1,1,1,0,0
+Los Angeles,103321,77,A: IFL,Male,Caucasian,441,2,0,10.7,31.9926538108356,98,30,1,70-79,USA,White (not Hispanic),Michael Kealiher,Michael,Kealiher,0,0,0,0,0
+Los Angeles,104268,37,G: IROX,Male,Caucasian,542,2,0,9.1,29.2358581977346,183,48,1,30-39,USA,White (not Hispanic),Mathew Yoder,Mathew,Yoder,1,1,1,1,0
+Los Angeles,103064,58,F: FOLFOX,Male,Caucasian,152,2,0,14.6,23.9520958083832,405,76,1,50-59,USA,White (not Hispanic),Tyler Snyder,Tyler,Snyder,0,0,0,0,0
+Los Angeles,102408,48,G: IROX,Male,Caucasian,841,2,NA,NA,42.4973985431841,NA,NA,1,40-49,USA,White (not Hispanic),Adam Lackey,Adam,Lackey,0,0,0,0,0
+Los Angeles,102802,55,G: IROX,Male,Hispanic,635,2,NA,NA,34.0830449826989,NA,NA,1,50-59,USA,Hispanic,Isaac Munoz,Isaac,Munoz,0,0,0,0,0
+Los Angeles,103216,53,G: IROX,Female,Caucasian,1276,2,0,13.1,22.9590876585494,111,22,1,50-59,USA,White (not Hispanic),Jamie Day,Jamie,Day,1,1,1,1,0
+Los Angeles,102562,45,G: IROX,Female,Caucasian,279,2,1,12.8,22.726326742976,103,29,1,40-49,USA,White (not Hispanic),Robyn Spracklin,Robyn,Spracklin,0,0,0,0,0
+Los Angeles,103763,46,G: IROX,Male,Caucasian,274,2,NA,NA,27.2747849705749,NA,NA,1,40-49,USA,White (not Hispanic),Christopher Friedentag,Christopher,Friedentag,0,0,0,0,0
+Los Angeles,102339,74,A: IFL,Male,African-Am,217,2,NA,NA,38.4576831835343,NA,NA,1,70-79,USA,Black (not Hispanic),Mark Gonzalez,Mark,Gonzalez,0,0,0,0,0
+Los Angeles,102335,64,G: IROX,Male,Caucasian,239,2,0,12.1,23.3747260774287,85,37,1,60-69,USA,White (not Hispanic),Owen Gorrell,Owen,Gorrell,0,0,0,0,0
+Los Angeles,103475,54,A: IFL,Male,African-Am,1165,1,0,15.4,30.9876543209876,116,42,1,50-59,USA,Black (not Hispanic),Brayan Carlson,Brayan,Carlson,1,1,1,1,0
+Los Angeles,102895,36,A: IFL,Male,Caucasian,198,2,0,9.2,28.5705564543206,422,85,0,30-39,USA,White (not Hispanic),Aspyn Black,Aspyn,Black,0,0,0,0,0
+Los Angeles,103230,67,A: IFL,Female,Caucasian,613,2,NA,NA,21.1148330761413,NA,NA,1,60-69,USA,White (not Hispanic),Cassie Kvatsak,Cassie,Kvatsak,0,0,0,0,0
+Los Angeles,104221,58,F: FOLFOX,Female,Caucasian,198,2,2,10.3,30.5059523809523,494,52,1,50-59,USA,White (not Hispanic),Hanna Friel,Hanna,Friel,0,0,0,0,0
+Los Angeles,102727,69,A: IFL,Male,Caucasian,181,2,1,15.9,25.2493372048983,135,29,0,60-69,USA,White (not Hispanic),Skyler Quaife,Skyler,Quaife,0,0,0,0,0
+Los Angeles,103985,31,G: IROX,Female,Hawaii/Pacific,540,2,0,14.2,29.6033947007918,57,25,1,30-39,USA,Asian or Pacific Islander,Alix Ng,Alix,Ng,0,0,0,0,0
+Los Angeles,102711,33,F: FOLFOX,Male,Caucasian,1328,2,0,12,28.7037037037037,89,14,1,30-39,USA,White (not Hispanic),Zachary Williams,Zachary,Williams,0,0,0,0,0
+Los Angeles,102243,66,F: FOLFOX,Male,Caucasian,1082,2,0,13.1,25.0616397740395,140,23,1,60-69,USA,White (not Hispanic),Christopher Avila,Christopher,Avila,0,0,0,0,0
+Los Angeles,103707,74,F: FOLFOX,Female,Caucasian,577,2,2,11.2,25.5177514792899,368,111,0,70-79,USA,White (not Hispanic),Sarah Herzog,Sarah,Herzog,1,0,1,0,0
+Los Angeles,101897,56,A: IFL,Male,Caucasian,1461,2,0,13.9,34.0708889486099,117,32,0,50-59,USA,White (not Hispanic),Jacob Cullip,Jacob,Cullip,0,0,0,0,0
+Los Angeles,103181,75,G: IROX,Female,Caucasian,360,2,0,13.1,32.6585257008397,81,24,NA,70-79,USA,White (not Hispanic),Stephanie Wrisley,Stephanie,Wrisley,0,0,0,0,0
+Los Angeles,102673,59,A: IFL,Female,Caucasian,629,2,0,11.3,22.4058769513315,408,45,1,50-59,USA,White (not Hispanic),Hope Nau,Hope,Nau,0,0,0,0,0
+Los Angeles,104176,44,A: IFL,Male,Caucasian,1738,1,0,12.7,33.272974196469,78,21,1,40-49,USA,White (not Hispanic),Cheyenne Morton,Cheyenne,Morton,0,0,0,0,0
+Los Angeles,104252,63,A: IFL,Female,Caucasian,1572,1,0,12.6,28.5868600748427,97,21,1,60-69,USA,White (not Hispanic),Caitlin Mares,Caitlin,Mares,0,0,0,0,0
+Los Angeles,103723,41,A: IFL,Male,African-Am,181,2,2,9.6,20.0617283950617,191,22,1,40-49,USA,Black (not Hispanic),Luis Romero,Luis,Romero,0,0,0,0,0
+Los Angeles,102322,46,A: IFL,Male,Caucasian,685,2,1,10.8,25.5270807577934,133,19,NA,40-49,USA,White (not Hispanic),Peter Marr,Peter,Marr,0,0,0,0,0
+Los Angeles,103916,49,F: FOLFOX,Male,Caucasian,958,2,NA,NA,36.2037037037037,NA,NA,NA,40-49,USA,White (not Hispanic),Sam IV Horner,Sam,IV,1,1,1,1,0
+Los Angeles,102891,73,G: IROX,Female,Caucasian,1693,1,0,12.9,25.8585722011898,72,19,1,70-79,USA,White (not Hispanic),Jazzmyne Anderson,Jazzmyne,Anderson,0,0,0,0,0
+Los Angeles,104113,56,F: FOLFOX,Female,Caucasian,720,2,0,10.9,29.4824547348181,238,36,1,50-59,USA,White (not Hispanic),Taylor Evans,Taylor,Evans,0,0,0,0,0
+Los Angeles,103770,47,A: IFL,Male,Caucasian,1283,2,0,14.2,24.9634208247484,117,41,NA,40-49,USA,White (not Hispanic),Andrew Willkomm,Andrew,Willkomm,0,0,0,0,0
+Los Angeles,103515,41,G: IROX,Male,Caucasian,279,2,2,11.1,24.6435038478949,57,19,NA,40-49,USA,White (not Hispanic),Alexander Lindburg,Alexander,Lindburg,1,1,1,1,0
+Los Angeles,102251,72,G: IROX,Female,Caucasian,86,2,1,12.3,23.9376717226843,174,39,1,70-79,USA,White (not Hispanic),Alison Nussbaum,Alison,Nussbaum,0,0,0,0,0
+Los Angeles,103522,54,A: IFL,Female,Caucasian,881,2,1,11,22.10197710718,435,31,1,50-59,USA,White (not Hispanic),Chelsie Sivey,Chelsie,Sivey,1,1,1,1,1
+Los Angeles,102071,52,G: IROX,Male,Caucasian,129,2,NA,NA,36.71875,NA,NA,1,50-59,USA,White (not Hispanic),Shea Smith,Shea,Smith,0,0,0,0,0
+Los Angeles,102999,49,A: IFL,Male,African-Am,187,2,0,13.3,18.1314878892733,137,46,0,40-49,USA,Black (not Hispanic),Austin Soto,Austin,Soto,0,0,0,0,0
+Los Angeles,102995,41,G: IROX,Male,Caucasian,962,2,1,12.4,20.6901268766458,59,15,1,40-49,USA,White (not Hispanic),Trent Culver,Trent,Culver,0,0,0,0,0
+Los Angeles,103035,71,G: IROX,Male,Caucasian,656,2,NA,NA,36.5738236884802,NA,NA,1,70-79,USA,White (not Hispanic),Matthew Worley,Matthew,Worley,0,0,0,0,0
+Los Angeles,101995,50,G: IROX,Female,Caucasian,494,2,0,11.2,28.7411751089849,224,51,1,40-49,USA,White (not Hispanic),Jamie Sullivan,Jamie,Sullivan,0,0,0,0,0
+Los Angeles,103240,51,F: FOLFOX,Male,Hispanic,1534,1,0,12.8,30.795847750865,86,20,1,50-59,USA,Hispanic,Robert Arroyo,Robert,Arroyo,0,0,0,0,0
+Los Angeles,102613,55,A: IFL,Male,Caucasian,420,2,1,10.2,30.7563677625489,301,61,1,50-59,USA,White (not Hispanic),Drake Danford,Drake,Danford,0,0,0,0,0
+Los Angeles,104076,33,A: IFL,Male,Caucasian,749,2,NA,NA,41.8792517006802,NA,NA,1,30-39,USA,White (not Hispanic),Mark Young,Mark,Young,0,0,0,0,0
+Los Angeles,103903,74,A: IFL,Female,Caucasian,254,2,0,14.6,31.54051714404,80,20,1,70-79,USA,White (not Hispanic),Erin Grube,Erin,Grube,0,0,0,0,0
+Los Angeles,104105,63,G: IROX,Female,Caucasian,74,2,1,10.2,31.6848553693861,304,74,1,60-69,USA,White (not Hispanic),Samantha Richman,Samantha,Richman,0,0,0,0,0
+Los Angeles,103840,50,F: FOLFOX,Female,Caucasian,432,2,2,10,20.8325863243572,421,132,1,40-49,USA,White (not Hispanic),Randilin Syme,Randilin,Syme,1,0,0,0,0
+Los Angeles,102060,38,F: FOLFOX,Female,African-Am,428,2,1,11.1,26.875,88,19,1,30-39,USA,Black (not Hispanic),Marissa Abarca,Marissa,Abarca,0,0,0,0,0
+Los Angeles,103813,71,F: FOLFOX,Male,African-Am,477,2,NA,NA,27.8546712802768,NA,NA,NA,70-79,USA,Black (not Hispanic),James Salazar,James,Salazar,0,0,0,0,0
+Los Angeles,102573,63,F: FOLFOX,Male,Caucasian,249,2,0,16,24.2787031528851,463,44,1,60-69,USA,White (not Hispanic),Matthew Forshey,Matthew,Forshey,0,0,0,0,0
+Los Angeles,104030,56,F: FOLFOX,Male,Caucasian,425,2,0,9.7,24.2214532871972,244,50,1,50-59,USA,White (not Hispanic),Michael Miller,Michael,Miller,0,0,0,0,0
+Los Angeles,102771,79,A: IFL,Male,Hispanic,579,2,0,12,24.9770431588613,141,20,NA,70-79,USA,Hispanic,Dylan Montano,Dylan,Montano,0,0,0,0,0
+Los Angeles,103444,56,G: IROX,Male,Caucasian,358,2,1,9.5,22.5459590704127,98,23,1,50-59,USA,White (not Hispanic),Jordon Davis,Jordon,Davis,0,0,0,0,0
+Los Angeles,102606,66,F: FOLFOX,Male,Caucasian,339,2,NA,NA,26.9753086419753,NA,NA,1,60-69,USA,White (not Hispanic),Luke Svyatetskaya,Luke,Svyatetskaya,1,0,0,0,0
+Los Angeles,103243,68,G: IROX,Male,Hispanic,44,2,0,13.3,32.3883554336229,219,43,1,60-69,USA,Hispanic,Alejandro Sena,Alejandro,Sena,0,0,0,0,0
+Los Angeles,103100,67,A: IFL,Male,Caucasian,268,2,1,14.2,36.3636363636363,95,36,1,60-69,USA,White (not Hispanic),Carl Bennett,Carl,Bennett,0,0,0,0,0
+Los Angeles,103536,77,F: FOLFOX,Female,Caucasian,1497,1,1,11.3,35.3333333333333,81,18,NA,70-79,USA,White (not Hispanic),Kyla Coyle,Kyla,Coyle,0,0,0,0,0
+Los Angeles,104145,45,A: IFL,Male,Caucasian,395,2,NA,NA,22.5566106647187,NA,NA,1,40-49,USA,White (not Hispanic),Joshua Mahnke,Joshua,Mahnke,0,0,0,0,0
+Los Angeles,104089,54,F: FOLFOX,Female,Caucasian,383,2,0,12.2,27.7014565847416,104,26,1,50-59,USA,White (not Hispanic),Ami Ammeter,Ami,Ammeter,0,0,0,0,0
+Los Angeles,104125,53,A: IFL,Male,Caucasian,712,2,1,11.9,30.0459136822773,168,18,1,50-59,USA,White (not Hispanic),Hunter Cuthill,Hunter,Cuthill,0,0,0,0,0
+Los Angeles,102750,51,F: FOLFOX,Male,Caucasian,644,2,0,13.3,32.3498617412548,63,22,1,50-59,USA,White (not Hispanic),Michael Goddard,Michael,Goddard,0,0,0,0,0
+Los Angeles,101910,48,F: FOLFOX,Female,Caucasian,622,2,0,11.7,35.3837415216011,180,22,1,40-49,USA,White (not Hispanic),Lauren Coleman,Lauren,Coleman,0,0,0,0,0
+Los Angeles,102708,58,A: IFL,Male,Caucasian,1751,2,NA,NA,20.4180845892075,NA,NA,1,50-59,USA,White (not Hispanic),Brad Wilson,Brad,Wilson,0,0,0,0,0
+Los Angeles,103024,74,F: FOLFOX,Male,Caucasian,339,2,NA,NA,26.7177877067987,NA,NA,1,70-79,USA,White (not Hispanic),Caleb Thompson,Caleb,Thompson,0,0,1,1,0
+Los Angeles,103674,70,F: FOLFOX,Male,African-Am,494,2,NA,NA,25.3287197231834,NA,NA,1,60-69,USA,Black (not Hispanic),Dylon Vigil,Dylon,Vigil,1,1,1,1,0
+Los Angeles,104091,81,A: IFL,Female,Caucasian,914,2,0,14.3,26.5932047750229,245,42,1,80-89,USA,White (not Hispanic),Amanda Williams,Amanda,Williams,1,1,1,1,0
+Los Angeles,102669,76,F: FOLFOX,Male,Caucasian,829,2,0,14.2,25.4671280276816,73,20,1,70-79,USA,White (not Hispanic),Grant Rogers,Grant,Rogers,0,0,0,0,0
+Los Angeles,102286,66,A: IFL,Male,Caucasian,778,2,1,14.1,30.9799562551543,82,24,1,60-69,USA,White (not Hispanic),Robert Boggs,Robert,Boggs,0,0,0,0,0
+Los Angeles,102774,57,F: FOLFOX,Female,Caucasian,1594,1,0,12.9,29.3425605536332,91,14,1,50-59,USA,White (not Hispanic),Kayla O'Keefe,Kayla,O'Keefe,0,0,0,0,0
+Los Angeles,103155,55,G: IROX,Female,Caucasian,178,2,2,9.7,35.376960701636,189,27,1,50-59,USA,White (not Hispanic),Karlee Elwell,Karlee,Elwell,0,0,0,0,0
+Los Angeles,102289,65,G: IROX,Male,Caucasian,870,2,1,15.5,33.7006489994591,125,55,1,60-69,USA,White (not Hispanic),Robert Balfanz,Robert,Balfanz,0,0,0,0,0
+Los Angeles,103684,51,G: IROX,Male,Caucasian,435,2,1,14.7,24,250,41,1,50-59,USA,White (not Hispanic),Joel Buckalew,Joel,Buckalew,0,0,0,0,0
+Los Angeles,102021,49,A: IFL,Male,Caucasian,1146,2,0,9.2,32.098219921727,52,20,1,40-49,USA,White (not Hispanic),Joshua Proffitt,Joshua,Proffitt,1,1,1,1,0
+Los Angeles,103184,29,A: IFL,Male,Caucasian,221,2,1,13.1,19.8392987582176,706,80,1,20-29,USA,White (not Hispanic),Garrett Reigenborn,Garrett,Reigenborn,1,1,1,1,1
+Los Angeles,102732,39,G: IROX,Male,Caucasian,617,2,1,13.8,26.528510346119,176,30,1,30-39,USA,White (not Hispanic),Jake Trullinger,Jake,Trullinger,0,0,0,0,0
+Seattle,105876,66,F: FOLFOX,Female,Caucasian,350,2,1,11,24.8061417383588,148,30,1,60-69,USA,White (not Hispanic),Madison Steele,Madison,Steele,1,1,1,1,1
+Seattle,105286,48,F: FOLFOX,Female,Caucasian,94,2,1,12.9,NA,95,17,1,40-49,USA,White (not Hispanic),Heidi Grover,Heidi,Grover,1,1,1,1,0
+Seattle,104688,53,F: FOLFOX,Male,Caucasian,58,2,0,15.6,23.0204081632653,187,34,1,50-59,USA,White (not Hispanic),Nicholas Howard,Nicholas,Howard,0,0,0,0,0
+Seattle,105856,37,G: IROX,Female,Caucasian,362,2,NA,NA,18.5364086462987,NA,NA,1,30-39,USA,White (not Hispanic),Makenzie Mcalpin,Makenzie,Mcalpin,0,0,0,0,0
+Seattle,104464,65,G: IROX,Male,Caucasian,494,1,1,11,26.0077533968158,140,19,1,60-69,USA,White (not Hispanic),Zachary D Attilo,Zachary,D,0,0,0,0,0
+Seattle,105515,49,A: IFL,Female,Caucasian,1651,1,NA,NA,20.0986111633859,NA,NA,1,40-49,USA,White (not Hispanic),Kaylan Anttila,Kaylan,Anttila,1,1,1,1,0
+Seattle,105497,41,F: FOLFOX,Male,Other,322,2,NA,NA,35.4308390022675,NA,NA,0,40-49,USA,"Middle-Eastern, Arabic",Ashraf al-Pasha,Ashraf,al-Pasha,0,0,0,0,0
+Seattle,106193,69,G: IROX,Male,Hispanic,598,2,0,15.3,22.9130330700044,67,11,NA,60-69,USA,Hispanic,Desmond Love,Desmond,Love,0,0,0,0,0
+Seattle,105403,61,A: IFL,Male,African-Am,287,2,1,11,26.605751142166,314,93,1,60-69,USA,Black (not Hispanic),Erick Silva,Erick,Silva,0,0,0,0,0
+Seattle,105652,63,F: FOLFOX,Female,Caucasian,339,2,0,12.5,40.8821947283485,103,20,1,60-69,USA,White (not Hispanic),Jessica Howe,Jessica,Howe,0,0,0,0,0
+Seattle,105439,59,G: IROX,Male,Caucasian,69,2,2,9.7,26.8809349890431,432,140,1,50-59,USA,White (not Hispanic),David Turner,David,Turner,0,0,0,0,0
+Seattle,104762,78,G: IROX,Female,Caucasian,511,2,0,14.4,20.238751147842,115,13,1,70-79,USA,White (not Hispanic),Sierra Atkin,Sierra,Atkin,0,0,0,0,0
+Seattle,105301,62,G: IROX,Male,Caucasian,695,2,0,10.8,24.0929705215419,125,17,1,60-69,USA,White (not Hispanic),Nathan Trainor,Nathan,Trainor,0,0,0,0,0
+Seattle,106068,51,A: IFL,Male,Caucasian,502,2,1,14.1,23.3469387755102,460,165,1,50-59,USA,White (not Hispanic),Conner Mcmahan,Conner,Mcmahan,0,0,0,0,0
+Seattle,106075,56,F: FOLFOX,Male,Caucasian,1141,2,0,13.9,33.7131210531591,75,12,1,50-59,USA,White (not Hispanic),Ian Dubois,Ian,Dubois,1,1,1,1,0
+Seattle,105832,67,F: FOLFOX,Male,Caucasian,178,2,1,9.7,28.1528296466532,74,16,1,60-69,USA,White (not Hispanic),Aaron Williams,Aaron,Williams,1,1,1,1,0
+Seattle,104916,75,F: FOLFOX,Male,Caucasian,162,2,1,10.9,31.8827160493827,10,16,1,70-79,USA,White (not Hispanic),Christian Geer,Christian,Geer,0,0,0,0,0
+Seattle,105532,41,G: IROX,Female,Caucasian,584,2,0,11.7,22.0557792916556,81,20,1,40-49,USA,White (not Hispanic),Katie Stenstadvold,Katie,Stenstadvold,0,0,0,0,0
+Seattle,106328,73,A: IFL,Male,Caucasian,405,2,1,15.6,28.4687839632894,210,36,1,70-79,USA,White (not Hispanic),Garrett Rhudy,Garrett,Rhudy,0,0,0,0,0
+Seattle,105687,64,A: IFL,Male,Caucasian,72,2,1,15.7,28.7543252595155,160,26,1,60-69,USA,White (not Hispanic),Joshua Knostman,Joshua,Knostman,0,0,0,0,0
+Seattle,104440,59,G: IROX,Male,Caucasian,305,2,0,11.8,29.659274690935,375,51,1,50-59,USA,White (not Hispanic),Logan Wykoff,Logan,Wykoff,0,0,0,0,0
+Seattle,105113,83,A: IFL,Male,Caucasian,626,2,1,10.7,24.8456790123456,99,20,1,80-89,USA,White (not Hispanic),Keith Franzel,Keith,Franzel,0,0,0,0,0
+Seattle,104547,63,G: IROX,Male,Caucasian,327,2,1,10.6,29.5847750865051,115,19,1,60-69,USA,White (not Hispanic),Marquise Hagar,Marquise,Hagar,0,0,0,0,0
+Seattle,104827,74,G: IROX,Male,Caucasian,443,2,0,16.1,25.0223081499107,163,28,NA,70-79,USA,White (not Hispanic),Dylan Gillard,Dylan,Gillard,0,0,0,0,0
+Seattle,105052,46,F: FOLFOX,Female,African-Am,419,2,1,10.1,44.8407202216066,80,25,1,40-49,USA,Black (not Hispanic),Rita Barragan,Rita,Barragan,0,0,0,0,0
+Seattle,106160,63,G: IROX,Male,Caucasian,217,2,NA,NA,28.8669551108707,NA,NA,1,60-69,USA,White (not Hispanic),Austin O'Shea,Austin,O'Shea,0,0,0,0,0
+Seattle,106141,71,F: FOLFOX,Female,Caucasian,663,2,1,12.5,34.4493169168493,62,23,0,70-79,USA,White (not Hispanic),Crystal Schroeder,Crystal,Schroeder,0,0,0,0,0
+Seattle,105175,54,G: IROX,Female,African-Am,340,2,NA,NA,20.5443255383802,NA,NA,0,50-59,USA,Black (not Hispanic),Yuripsy Campos Meraz,Yuripsy,Campos,0,0,0,0,0
+Seattle,106182,67,F: FOLFOX,Male,Other,687,2,1,13.5,29.9263946280991,122,26,1,60-69,USA,"Middle-Eastern, Arabic",Talaal al-Abdalla,Talaal,al-Abdalla,0,0,0,0,0
+Seattle,105571,48,G: IROX,Male,Caucasian,489,2,0,12.7,26.5731292517006,270,53,1,40-49,USA,White (not Hispanic),Caelan Fergerson,Caelan,Fergerson,0,0,0,0,0
+Seattle,105891,74,G: IROX,Male,Caucasian,334,2,NA,NA,31.0546875,NA,NA,1,70-79,USA,White (not Hispanic),Nathan Boudreaux,Nathan,Boudreaux,0,0,0,0,0
+Seattle,105047,70,F: FOLFOX,Female,Caucasian,257,2,1,9.7,27.0721439976774,304,55,1,60-69,USA,White (not Hispanic),Rebecca Lake,Rebecca,Lake,0,0,0,0,0
+Seattle,104971,66,G: IROX,Male,Caucasian,403,2,1,12.7,34.4161333172322,235,28,1,60-69,USA,White (not Hispanic),Daniel Burress,Daniel,Burress,0,0,0,0,0
+Seattle,105850,44,F: FOLFOX,Male,Other,1544,1,1,11.9,18.5321412403802,158,52,1,40-49,USA,"Middle-Eastern, Arabic",Taajuddeen al-Srour,Taajuddeen,al-Srour,1,1,1,1,0
+Seattle,106262,52,F: FOLFOX,Female,Caucasian,557,2,1,9.9,38.7136107300716,89,20,1,50-59,USA,White (not Hispanic),Ellenor O'Connor,Ellenor,O'Connor,1,1,1,1,0
+Seattle,105122,64,G: IROX,Male,Caucasian,575,2,NA,NA,27.4691358024691,NA,NA,1,60-69,USA,White (not Hispanic),Christopher Wohlfarth,Christopher,Wohlfarth,0,0,0,0,0
+Seattle,105082,82,G: IROX,Female,Caucasian,444,2,0,12.9,25.5456349206349,134,39,1,80-89,USA,White (not Hispanic),Julia Clampitt,Julia,Clampitt,0,0,0,0,0
+Seattle,105256,76,A: IFL,Female,Caucasian,1202,2,0,13.7,25.78125,92,19,1,70-79,USA,White (not Hispanic),Evan Gilbert,Evan,Gilbert,0,0,0,0,0
+Seattle,104797,75,F: FOLFOX,Male,Caucasian,444,2,1,12.5,22.4819821434974,111,28,1,70-79,USA,White (not Hispanic),Joseph Nelson,Joseph,Nelson,1,1,1,1,1
+Seattle,105712,54,G: IROX,Female,Caucasian,601,2,NA,NA,34.1411370217954,NA,NA,NA,50-59,USA,White (not Hispanic),Emma Allen,Emma,Allen,0,0,0,0,0
+Seattle,105696,77,F: FOLFOX,Female,Caucasian,258,2,1,11.4,24.3247922437673,480,27,1,70-79,USA,White (not Hispanic),Ashley Bahr,Ashley,Bahr,1,1,1,1,1
+Seattle,105080,53,A: IFL,Male,Caucasian,65,2,1,11.8,NA,257,119,1,50-59,USA,White (not Hispanic),Austin Lay,Austin,Lay,0,0,0,0,0
+Seattle,105763,68,A: IFL,Male,African-Am,986,2,1,13,26.1877551020408,189,17,NA,60-69,USA,Black (not Hispanic),Oscar Negrete Perez,Oscar,Negrete,0,0,0,0,0
+Seattle,104504,52,F: FOLFOX,Male,Caucasian,788,2,1,15.7,NA,174,144,NA,50-59,USA,White (not Hispanic),Isaac Cranford,Isaac,Cranford,1,1,1,1,1
+Seattle,104754,61,A: IFL,Male,Caucasian,1281,1,NA,NA,21.9135802469135,NA,NA,NA,60-69,USA,White (not Hispanic),Jared Lewis,Jared,Lewis,0,0,0,0,0
+Seattle,104502,61,A: IFL,Male,Other,882,2,NA,NA,25.0173010380622,NA,NA,NA,60-69,USA,"Middle-Eastern, Arabic",Saabiq el-Lodi,Saabiq,el-Lodi,0,0,0,0,0
+Seattle,104750,43,F: FOLFOX,Male,Caucasian,409,2,1,17.6,29.8319941563184,71,19,NA,40-49,USA,White (not Hispanic),Theodore Stephenson,Theodore,Stephenson,0,0,0,0,0
+Seattle,105747,57,F: FOLFOX,Male,Caucasian,671,2,0,15.8,41.7655117110494,105,32,0,50-59,USA,White (not Hispanic),Charles Nyquist,Charles,Nyquist,1,1,1,1,0
+Seattle,105045,74,A: IFL,Male,Caucasian,192,2,1,9.3,18.8888888888888,438,49,NA,70-79,USA,White (not Hispanic),Tyler Kamer,Tyler,Kamer,1,1,1,1,0
+Seattle,105838,69,G: IROX,Male,Caucasian,282,2,1,14,34.9134948096885,246,67,1,60-69,USA,White (not Hispanic),Kody Stinson,Kody,Stinson,0,0,0,0,0
+Seattle,104914,66,F: FOLFOX,Male,Caucasian,1215,1,0,11.4,32.4467232815254,87,18,1,60-69,USA,White (not Hispanic),Aaron Rupple,Aaron,Rupple,0,0,0,0,0
+Seattle,105718,85,G: IROX,Male,African-Am,322,2,0,11.4,25.7582199546485,75,22,1,80-89,USA,Black (not Hispanic),Juan Madrid,Juan,Madrid,0,0,0,0,0
+Seattle,105126,46,F: FOLFOX,Female,Caucasian,132,2,2,11.3,21.4530041641879,87,30,1,40-49,USA,White (not Hispanic),Clairissa Jonseck,Clairissa,Jonseck,0,0,0,0,0
+Seattle,104867,52,G: IROX,Male,Caucasian,639,2,0,11.4,34.7107438016529,67,19,1,50-59,USA,White (not Hispanic),Jason Keller,Jason,Keller,0,0,0,0,0
+Seattle,104918,52,G: IROX,Female,Caucasian,133,2,1,12.8,21.2890625,90,25,1,50-59,USA,White (not Hispanic),Victoria Evans,Victoria,Evans,0,0,0,0,0
+Seattle,104402,71,A: IFL,Female,Caucasian,480,2,0,15.7,34.7970863683662,150,51,1,70-79,USA,White (not Hispanic),Megan Lenz,Megan,Lenz,0,0,0,0,0
+Seattle,104718,26,G: IROX,Female,Caucasian,520,2,0,12.3,40.0653061224489,91,37,1,20-29,USA,White (not Hispanic),Bailey Strohauer,Bailey,Strohauer,0,0,0,0,0
+Seattle,105842,54,A: IFL,Male,Caucasian,350,2,1,10.1,26.1224489795918,656,147,1,50-59,USA,White (not Hispanic),Michael Tangen,Michael,Tangen,1,1,1,1,0
+Seattle,106136,52,A: IFL,Female,Caucasian,142,2,0,9.3,22.0679012345679,167,36,1,50-59,USA,White (not Hispanic),Kayla Wheeler,Kayla,Wheeler,0,0,0,0,0
+Seattle,104491,45,F: FOLFOX,Male,Caucasian,228,2,1,12.1,26.4134404674945,275,62,1,40-49,USA,White (not Hispanic),Gavin Bradesca,Gavin,Bradesca,0,0,0,0,0
+Seattle,104771,54,F: FOLFOX,Female,Caucasian,892,2,0,11.4,23.5883292204964,90,31,1,50-59,USA,White (not Hispanic),Jezerae Johnson,Jezerae,Johnson,0,0,1,1,0
+Seattle,105053,66,G: IROX,Male,Caucasian,270,2,0,12.3,23.3489229024943,84,24,1,60-69,USA,White (not Hispanic),Philip Ray,Philip,Ray,0,0,0,0,0
+Seattle,104940,47,A: IFL,Female,Caucasian,1372,1,0,13.3,26.0422405876951,56,22,0,40-49,USA,White (not Hispanic),Jenna Pratt,Jenna,Pratt,1,1,1,1,1
+Seattle,106083,52,G: IROX,Male,Other,507,2,1,14.2,21.7666948436179,102,18,1,50-59,USA,"Middle-Eastern, Arabic",Saalim el-Jabara,Saalim,el-Jabara,0,0,0,0,0
+Seattle,106297,66,G: IROX,Male,Caucasian,806,2,0,10.4,32.785895423258,110,14,1,60-69,USA,White (not Hispanic),David Schwenk,David,Schwenk,0,0,0,0,0
+Seattle,104645,54,G: IROX,Female,Caucasian,529,2,1,11.8,28.6635487528344,127,26,1,50-59,USA,White (not Hispanic),Colleen Slater,Colleen,Slater,0,0,0,0,0
+Seattle,104328,63,G: IROX,Male,Caucasian,893,2,NA,NA,20.5882352941176,NA,NA,0,60-69,USA,White (not Hispanic),Phillip Manning,Phillip,Manning,0,0,0,0,0
+Seattle,106217,47,A: IFL,Male,Caucasian,211,2,1,12,32,215,22,1,40-49,USA,White (not Hispanic),Conner Bellavance,Conner,Bellavance,0,0,0,0,0
+Seattle,105225,57,F: FOLFOX,Male,Caucasian,88,2,1,13.8,30.5632653061224,252,72,1,50-59,USA,White (not Hispanic),Keaton Bachrach,Keaton,Bachrach,0,0,0,0,0
+Seattle,106153,76,A: IFL,Male,Caucasian,346,2,1,10.2,NA,242,32,1,70-79,USA,White (not Hispanic),Kenneth Schmidt,Kenneth,Schmidt,0,0,0,0,0
+Seattle,106044,45,F: FOLFOX,Female,Caucasian,253,2,NA,NA,20.2768166089965,NA,NA,1,40-49,USA,White (not Hispanic),Kelcey Deleo,Kelcey,Deleo,0,0,0,0,0
+Seattle,106105,63,F: FOLFOX,Female,Caucasian,1295,2,1,10.9,25.5270807577934,141,19,1,60-69,USA,White (not Hispanic),Lindsey Wilcox,Lindsey,Wilcox,1,0,0,0,0
+Seattle,105962,56,G: IROX,Male,Caucasian,314,2,0,14,28.2698961937716,130,26,1,50-59,USA,White (not Hispanic),Brandon Cahill,Brandon,Cahill,1,1,1,1,0
+Seattle,105423,77,F: FOLFOX,Male,Caucasian,783,2,NA,NA,23.8445265158306,NA,NA,1,70-79,USA,White (not Hispanic),Robert Goddard,Robert,Goddard,1,1,1,1,0
+Seattle,105539,60,F: FOLFOX,Male,Asian,1046,2,0,12.4,29.8618285123967,138,46,NA,50-59,USA,Asian or Pacific Islander,Nitesh Le,Nitesh,Le,1,1,1,1,0
+Seattle,105868,61,A: IFL,Male,Caucasian,1013,2,0,10.7,37.3661511005354,99,19,1,60-69,USA,White (not Hispanic),Jason Weber,Jason,Weber,0,0,0,0,0
+Seattle,105272,49,G: IROX,Female,Asian,403,2,NA,NA,25.78125,NA,NA,1,40-49,USA,Asian or Pacific Islander,Neari Nguyen,Neari,Nguyen,0,0,0,0,0
+Seattle,105626,54,G: IROX,Male,Caucasian,307,2,1,12.5,31.5432098765432,153,36,1,50-59,USA,White (not Hispanic),Timothy Jackson,Timothy,Jackson,0,0,0,0,0
+Seattle,105837,72,A: IFL,Male,Caucasian,1008,2,0,14.9,30.2998750520616,37,28,1,70-79,USA,White (not Hispanic),Nicholas Behrens,Nicholas,Behrens,0,0,0,0,0
+Seattle,105918,71,A: IFL,Male,Caucasian,842,2,0,11.3,29.9928216972004,109,16,1,70-79,USA,White (not Hispanic),Nicklaus Burley,Nicklaus,Burley,0,0,0,0,0
+New York,108197,80,F: FOLFOX,Male,Caucasian,413,2,1,15,33.9309043402525,108,33,1,70-79,USA,White (not Hispanic),Tyler Smith,Tyler,Smith,0,0,0,0,0
+New York,107795,41,A: IFL,Female,African-Am,494,2,NA,NA,21.8962585034013,NA,NA,1,40-49,USA,Black (not Hispanic),Elizabeth Acosta,Elizabeth,Acosta,0,0,0,0,0
+New York,107412,50,G: IROX,Female,Caucasian,1043,2,1,12.6,28.203125,236,53,1,40-49,USA,White (not Hispanic),Bailey Wilhelm,Bailey,Wilhelm,0,0,0,0,0
+New York,107997,51,F: FOLFOX,Female,Caucasian,1361,1,0,12.1,31.1690291114159,132,30,1,50-59,USA,White (not Hispanic),Devin Payne,Devin,Payne,0,0,0,0,0
+New York,106772,57,F: FOLFOX,Male,Caucasian,488,2,NA,NA,31.3513513513513,NA,NA,1,50-59,USA,White (not Hispanic),Marcus White,Marcus,White,0,0,0,0,0
+New York,106708,67,G: IROX,Male,Caucasian,785,2,NA,NA,29.585798816568,NA,NA,1,60-69,USA,White (not Hispanic),Ian Synave,Ian,Synave,0,0,0,0,0
+New York,107825,53,F: FOLFOX,Male,Caucasian,751,2,NA,NA,32.2367551856255,NA,NA,1,50-59,USA,White (not Hispanic),Carter Johnson,Carter,Johnson,1,1,1,1,0
+New York,107981,57,F: FOLFOX,Male,Caucasian,1231,1,NA,NA,30.1292961868076,NA,NA,1,50-59,USA,White (not Hispanic),Brandon Clayton,Brandon,Clayton,1,0,0,0,0
+New York,107143,70,F: FOLFOX,Female,Caucasian,218,2,1,10.4,24.9915314840603,469,105,1,60-69,USA,White (not Hispanic),Charlotte Greathouse,Charlotte,Greathouse,0,0,0,0,0
+New York,106852,55,F: FOLFOX,Male,Caucasian,383,2,NA,NA,24.3097151205259,NA,NA,NA,50-59,USA,White (not Hispanic),Kenneth Cullen,Kenneth,Cullen,0,0,0,0,0
+New York,107735,80,F: FOLFOX,Female,Caucasian,1397,1,0,15,27.9292403746097,133,31,1,70-79,USA,White (not Hispanic),Alaysha Snow,Alaysha,Snow,0,0,0,0,0
+New York,107746,60,G: IROX,Female,Caucasian,359,2,0,12.5,24.0882231171666,97,46,NA,50-59,USA,White (not Hispanic),Brittany Verburg,Brittany,Verburg,0,0,0,0,0
+New York,107477,28,G: IROX,Female,Caucasian,712,2,1,12.1,15.4296875,80,18,1,20-29,USA,White (not Hispanic),Jessica Tynan,Jessica,Tynan,0,0,0,0,0
+New York,107305,52,F: FOLFOX,Male,Caucasian,942,2,NA,NA,31.1418685121107,NA,NA,1,50-59,USA,White (not Hispanic),Tristan Geanetta,Tristan,Geanetta,0,0,0,0,0
+New York,107270,66,G: IROX,Female,Caucasian,1612,1,1,12.1,20.703125,73,23,1,60-69,USA,White (not Hispanic),Kiersten Sanburg,Kiersten,Sanburg,0,0,0,0,0
+New York,107747,60,A: IFL,Female,Caucasian,902,2,0,9.6,18.359375,140,65,1,50-59,USA,White (not Hispanic),Brandie Meadows,Brandie,Meadows,0,0,0,0,0
+New York,107288,32,F: FOLFOX,Male,Asian,1386,1,0,14.1,19.2041522491349,115,18,1,30-39,USA,Asian or Pacific Islander,Ryan William,Ryan,William,0,0,1,1,0
+New York,107727,51,G: IROX,Male,Caucasian,450,2,0,12,25.6631236234798,75,31,1,50-59,USA,White (not Hispanic),Alexander Erickson,Alexander,Erickson,0,0,0,0,0
+New York,107688,57,G: IROX,Female,Caucasian,763,2,0,11.4,31.8763670264261,202,31,1,50-59,USA,White (not Hispanic),Erica Leming,Erica,Leming,0,0,0,0,0
+New York,106698,81,F: FOLFOX,Male,Caucasian,270,2,1,12.7,25.5937370619895,229,34,1,80-89,USA,White (not Hispanic),Damyon Ray,Damyon,Ray,1,1,1,1,0
+New York,107430,55,F: FOLFOX,Male,Caucasian,723,2,NA,NA,26.1285041264325,NA,NA,1,50-59,USA,White (not Hispanic),Jacob Lavelle,Jacob,Lavelle,0,0,0,0,0
+New York,106338,72,F: FOLFOX,Male,African-Am,391,2,NA,NA,NA,NA,NA,NA,70-79,USA,Black (not Hispanic),Lawrence Lujan,Lawrence,Lujan,0,0,0,0,0
+New York,108233,56,F: FOLFOX,Male,Caucasian,406,2,NA,NA,24.5140285358613,NA,NA,1,50-59,USA,White (not Hispanic),Jourdan Braddock,Jourdan,Braddock,1,0,0,0,0
+New York,107472,68,A: IFL,Male,African-Am,304,2,NA,NA,27.14324106423,NA,NA,1,60-69,USA,Black (not Hispanic),Jose Broze,Jose,Broze,0,0,0,0,0
+New York,107658,42,A: IFL,Female,Caucasian,131,2,NA,NA,24.0345665676478,NA,NA,NA,40-49,USA,White (not Hispanic),Hannah Anderson,Hannah,Anderson,1,1,1,1,0
+New York,106388,68,F: FOLFOX,Male,Caucasian,502,2,0,11.2,28.4673727822513,129,17,1,60-69,USA,White (not Hispanic),Nathan Dahmer,Nathan,Dahmer,0,0,0,0,0
+New York,107869,64,F: FOLFOX,Male,Caucasian,337,2,1,14.4,NA,194,27,1,60-69,USA,White (not Hispanic),Jacob Greene,Jacob,Greene,0,0,0,0,0
+New York,107194,50,A: IFL,Male,Caucasian,574,2,NA,NA,25.050505050505,NA,NA,1,40-49,USA,White (not Hispanic),Adam Olson,Adam,Olson,0,0,0,0,0
+New York,106651,58,G: IROX,Female,African-Am,958,2,0,13.6,30.0807823129251,61,32,NA,50-59,USA,Black (not Hispanic),Adrianna Rodriguez Escobedo,Adrianna,Rodriguez,0,0,0,0,0
+New York,108076,56,F: FOLFOX,Male,Caucasian,341,2,0,12.7,27.1296296296296,506,88,1,50-59,USA,White (not Hispanic),Luke Schulte,Luke,Schulte,0,0,0,0,0
+New York,108118,59,A: IFL,Female,Caucasian,897,2,1,14.4,35.9963269054178,130,21,NA,50-59,USA,White (not Hispanic),Lauren Martin,Lauren,Martin,1,1,1,1,1
+New York,108170,48,F: FOLFOX,Male,Caucasian,934,2,0,14.6,27.929550380025,295,32,NA,40-49,USA,White (not Hispanic),Carston Evans,Carston,Evans,0,0,0,0,0
+New York,108045,55,A: IFL,Female,Caucasian,360,2,0,14.3,30.5640121775356,11,17,1,50-59,USA,White (not Hispanic),Tiffany Turk,Tiffany,Turk,1,1,1,1,1
+New York,106354,35,A: IFL,Male,Caucasian,612,2,NA,NA,25.9515570934256,NA,NA,1,30-39,USA,White (not Hispanic),Gaetano Purdy,Gaetano,Purdy,0,0,0,0,0
+New York,107716,65,A: IFL,Male,Caucasian,723,2,NA,NA,30.4326530612244,NA,NA,1,60-69,USA,White (not Hispanic),Nathan Frank,Nathan,Frank,0,0,0,0,0
+New York,107108,55,G: IROX,Male,Caucasian,617,2,2,10.2,34.349173553719,225,29,NA,50-59,USA,White (not Hispanic),Elliott Hester,Elliott,Hester,0,0,0,0,0
+New York,108164,76,A: IFL,Male,Caucasian,1343,2,0,14,28.1675170068027,120,19,NA,70-79,USA,White (not Hispanic),Ryne Pray,Ryne,Pray,0,0,0,0,0
+New York,106858,35,G: IROX,Male,Caucasian,800,2,1,12.2,28.0387052965142,560,74,0,30-39,USA,White (not Hispanic),James Degraeve,James,Degraeve,0,0,0,0,0
+New York,107953,77,F: FOLFOX,Female,Caucasian,17,2,1,13.7,23.5294117647058,58,19,NA,70-79,USA,White (not Hispanic),Meghan Albright,Meghan,Albright,0,0,0,0,0
+New York,106348,62,G: IROX,Male,Other,1384,1,0,12.3,33.4876543209876,131,16,1,60-69,USA,"Middle-Eastern, Arabic",Daif el-Abdalla,Daif,el-Abdalla,0,0,0,0,0
+New York,107786,73,F: FOLFOX,Male,Caucasian,843,2,NA,NA,27.7551020408163,NA,NA,1,70-79,USA,White (not Hispanic),Anthony Kostelecky,Anthony,Kostelecky,1,1,1,1,0
+New York,106971,55,A: IFL,Male,Caucasian,377,2,NA,NA,25.4012345679012,NA,NA,0,50-59,USA,White (not Hispanic),Brandi Eggleston,Brandi,Eggleston,0,0,1,1,0
+New York,107963,58,F: FOLFOX,Female,Caucasian,501,2,NA,NA,24.4921875,NA,NA,1,50-59,USA,White (not Hispanic),Amanda Gulick,Amanda,Gulick,0,0,0,0,0
+New York,106700,56,A: IFL,Male,Caucasian,792,2,0,12.4,35.8530612244897,110,44,NA,50-59,USA,White (not Hispanic),Daniel Sherman-Fecht,Daniel,Sherman-Fecht,0,0,0,0,0
+New York,107249,43,F: FOLFOX,Female,Caucasian,778,2,0,11.5,24.8015873015873,63,16,1,40-49,USA,White (not Hispanic),Megan Couillard,Megan,Couillard,0,0,0,0,0
+New York,106663,57,F: FOLFOX,Female,Caucasian,409,2,0,13,30.6701130357625,85,20,1,50-59,USA,White (not Hispanic),Arianna Koch,Arianna,Koch,0,0,0,0,0
+New York,106595,65,A: IFL,Female,Caucasian,276,2,1,12.3,20.6925527817653,229,24,NA,60-69,USA,White (not Hispanic),Stevie Appie,Stevie,Appie,0,0,0,0,0
+New York,108266,59,F: FOLFOX,Male,Caucasian,234,2,1,10.3,22.093170054286,72,14,1,50-59,USA,White (not Hispanic),Grant Koundourakis,Grant,Koundourakis,0,0,0,0,0
+New York,106378,83,F: FOLFOX,Male,Caucasian,123,2,1,13.5,27.0691609977324,623,83,NA,80-89,USA,White (not Hispanic),Jerrod Carpenter,Jerrod,Carpenter,1,1,1,1,0
+New York,107342,65,G: IROX,Male,Caucasian,594,2,1,11,27.7840651878678,170,27,1,60-69,USA,White (not Hispanic),Joshua Weathers,Joshua,Weathers,0,0,0,0,0
+New York,107617,72,F: FOLFOX,Male,Caucasian,1021,2,0,16.2,28.3982932338915,137,18,1,70-79,USA,White (not Hispanic),Miles Stufflebeam,Miles,Stufflebeam,0,0,0,0,0
+New York,106453,52,G: IROX,Female,Hispanic,666,2,NA,NA,21.2305720237141,NA,NA,1,50-59,USA,Hispanic,Karla Sandoval,Karla,Sandoval,1,1,1,1,1
+New York,108287,74,A: IFL,Male,Caucasian,61,2,1,12,24.3096842383406,338,100,1,70-79,USA,White (not Hispanic),Jacob Korn,Jacob,Korn,0,0,0,0,0
+New York,108366,40,F: FOLFOX,Female,Caucasian,333,2,1,14.4,19.53125,70,28,1,30-39,USA,White (not Hispanic),Savannah Sadler,Savannah,Sadler,0,0,0,0,0
+New York,108033,68,F: FOLFOX,Female,African-Am,626,2,0,11.8,27.84008972921,97,17,1,60-69,USA,Black (not Hispanic),Cinthia Segura,Cinthia,Segura,0,0,0,0,0
+New York,106861,73,A: IFL,Female,Caucasian,244,2,0,11.1,27.5277008310249,85,28,1,70-79,USA,White (not Hispanic),Dakoda Kasch,Dakoda,Kasch,0,0,0,0,0
+New York,107530,72,F: FOLFOX,Female,Caucasian,185,2,0,11.4,22.7572995111639,406,71,1,70-79,USA,White (not Hispanic),Sarah Mutchler,Sarah,Mutchler,1,1,1,0,0
+New York,107867,47,A: IFL,Female,Asian,221,2,1,12.2,26.2335558041742,112,32,1,40-49,USA,Asian or Pacific Islander,Susie Chen,Susie,Chen,0,0,0,0,0
+New York,106400,68,G: IROX,Male,African-Am,1438,2,NA,NA,31.8910687091283,NA,NA,1,60-69,USA,Black (not Hispanic),Robert Quintana,Robert,Quintana,0,0,0,0,0
+New York,107909,65,A: IFL,Female,Caucasian,1096,2,1,14.2,28.515625,113,21,1,60-69,USA,White (not Hispanic),Florence Toelle,Florence,Toelle,0,0,0,0,0
+New York,108218,55,A: IFL,Female,Hispanic,597,2,0,11.1,24.7556481333119,89,35,1,50-59,USA,Hispanic,Taylor Salazar,Taylor,Salazar,0,0,0,0,0
+New York,107205,74,G: IROX,Male,Caucasian,496,2,NA,NA,22.3058317656543,NA,NA,1,70-79,USA,White (not Hispanic),Kyle Hammond,Kyle,Hammond,0,0,0,0,0
+New York,107467,65,G: IROX,Male,Caucasian,314,2,NA,NA,27.3456790123456,NA,NA,1,60-69,USA,White (not Hispanic),Michael Markarian,Michael,Markarian,0,0,0,0,0
+New York,107265,57,A: IFL,Female,Caucasian,301,2,0,11.9,21.5138585105238,295,118,1,50-59,USA,White (not Hispanic),Caitlin Randolph,Caitlin,Randolph,0,0,0,0,0
+New York,106726,55,A: IFL,Female,Caucasian,128,2,0,11.2,28.9811434378411,342,96,1,50-59,USA,White (not Hispanic),Kasydi Johnson,Kasydi,Johnson,0,0,0,0,0
+New York,107972,45,A: IFL,Male,Caucasian,770,2,0,15.2,25.5076698319941,148,19,1,40-49,USA,White (not Hispanic),Mark Blume,Mark,Blume,1,1,1,1,0
+New York,107609,59,A: IFL,Male,Caucasian,411,2,0,13.5,33.765589569161,102,22,NA,50-59,USA,White (not Hispanic),Robert Brewer,Robert,Brewer,0,0,0,0,0
+New York,106418,63,F: FOLFOX,Female,Caucasian,530,2,0,12.6,26.4704521264288,68,19,1,60-69,USA,White (not Hispanic),Morgan Duval,Morgan,Duval,0,0,0,0,0
+New York,108087,75,A: IFL,Female,Caucasian,1125,2,1,13,25.1531502292182,133,14,1,70-79,USA,White (not Hispanic),Emily Myhre,Emily,Myhre,0,0,0,0,0
+New York,106383,43,A: IFL,Female,Caucasian,456,2,0,9.9,20.5292512163284,83,17,1,40-49,USA,White (not Hispanic),Pandora Alps,Pandora,Alps,0,0,0,0,0
+New York,108381,59,A: IFL,Male,Caucasian,382,2,NA,NA,37.4691358024691,NA,NA,1,50-59,USA,White (not Hispanic),Wyatt Scott,Wyatt,Scott,0,0,0,0,0
+New York,107901,61,A: IFL,Female,Caucasian,351,2,1,11.4,23.6742067823403,413,36,1,60-69,USA,White (not Hispanic),Melissa Templeton-Cox,Melissa,Templeton-Cox,0,0,0,0,0
+New York,108075,69,A: IFL,Male,Caucasian,953,2,0,15.4,24.9795918367347,203,23,1,60-69,USA,White (not Hispanic),Hazen Malcolmson,Hazen,Malcolmson,0,0,0,0,0
+New York,107790,50,F: FOLFOX,Female,Caucasian,432,2,1,12.1,30.6574394463667,91,24,1,40-49,USA,White (not Hispanic),Raven Mulnix,Raven,Mulnix,1,1,1,1,1
+New York,107555,62,A: IFL,Female,Caucasian,1071,2,0,15.3,24.1868512110726,125,10,1,60-69,USA,White (not Hispanic),Morgan Mondragon,Morgan,Mondragon,0,0,0,0,0
+New York,107230,76,A: IFL,Male,Caucasian,394,2,1,13.8,24.8046875,89,16,1,70-79,USA,White (not Hispanic),Keanan Bufmack,Keanan,Bufmack,0,0,0,0,0
+New York,106762,59,A: IFL,Male,Hispanic,839,2,1,11.7,35.0334553717964,147,25,1,50-59,USA,Hispanic,Fernando Colin,Fernando,Colin,0,0,0,0,0
+New York,106722,73,F: FOLFOX,Male,Caucasian,843,2,0,10.9,32.3392937980986,61,17,1,70-79,USA,White (not Hispanic),Danyon Duross Akins,Danyon,Duross,0,0,0,0,0
+New York,108180,62,A: IFL,Male,Caucasian,405,2,1,9.8,33.0684030770212,298,54,NA,60-69,USA,White (not Hispanic),Nicolas Story,Nicolas,Story,0,0,0,0,0
+New York,107379,75,A: IFL,Female,Caucasian,497,2,0,11.8,16.8801939058171,283,34,1,70-79,USA,White (not Hispanic),Kitana Sollner,Kitana,Sollner,0,0,0,0,0
+Madrid,109504,75,F: FOLFOX,Male,Caucasian,304,2,2,13.3,23.020389487832,61,25,0,70-79,Spain,White (not Hispanic),Trent Conn,Trent,Conn,0,0,0,0,0
+Madrid,108548,49,A: IFL,Male,Caucasian,356,2,0,14.2,25.3592561284869,75,28,1,40-49,Spain,White (not Hispanic),Adam Mohr,Adam,Mohr,0,0,0,0,0
+Madrid,109599,45,F: FOLFOX,Male,Hispanic,687,2,1,11,23.7037037037037,245,14,1,40-49,Spain,Hispanic,Daniel Garcia Muniz,Daniel,Garcia,0,0,0,0,0
+Madrid,109724,60,F: FOLFOX,Male,Caucasian,31,2,0,15.8,28.4635311007771,112,23,1,50-59,Spain,White (not Hispanic),Cameron Reed,Cameron,Reed,0,0,0,0,0
+Madrid,108643,58,F: FOLFOX,Female,Caucasian,1397,2,0,14.4,28.8705234159779,156,16,1,50-59,Spain,White (not Hispanic),Miranda Saint Jr,Miranda,Saint,0,0,0,0,0
+Madrid,108500,79,F: FOLFOX,Male,Caucasian,761,2,1,13.9,35.3415246399788,112,68,1,70-79,Spain,White (not Hispanic),Michael Lehnerz,Michael,Lehnerz,0,0,0,0,0
+Madrid,109407,65,F: FOLFOX,Female,Caucasian,930,2,0,12.9,23.8343214228489,140,39,1,60-69,Spain,White (not Hispanic),Megan Barone,Megan,Barone,0,0,0,0,0
+Madrid,108569,67,F: FOLFOX,Male,Caucasian,315,2,NA,NA,25.5307712980381,NA,NA,NA,60-69,Spain,White (not Hispanic),Dylan Dawes,Dylan,Dawes,1,0,1,0,0
+Madrid,109082,63,F: FOLFOX,Female,Caucasian,283,2,0,12.9,27.5482093663911,81,24,1,60-69,Spain,White (not Hispanic),Olivia Karas,Olivia,Karas,1,1,1,1,0
+Madrid,108428,56,A: IFL,Female,Caucasian,333,2,2,13.3,29.8439125910509,128,28,0,50-59,Spain,White (not Hispanic),Alece Dasta,Alece,Dasta,0,0,0,0,0
+Madrid,109748,57,F: FOLFOX,Female,Caucasian,911,2,0,11.6,29.2011019283746,145,69,1,50-59,Spain,White (not Hispanic),Darcy Schwarzenberger,Darcy,Schwarzenberger,0,0,0,0,0
+Madrid,108798,64,A: IFL,Male,Caucasian,663,2,0,13.1,30.8357530614821,152,21,1,60-69,Spain,White (not Hispanic),Baxter Walker,Baxter,Walker,0,0,1,1,0
+Madrid,108488,54,A: IFL,Male,Caucasian,347,2,1,12.5,25.9918367346938,446,144,NA,50-59,Spain,White (not Hispanic),Nathan Domenico,Nathan,Domenico,0,0,0,0,0
+Madrid,108846,74,A: IFL,Male,Caucasian,533,2,0,13.4,27.4756294930181,169,36,1,70-79,Spain,White (not Hispanic),Douglas Straughn,Douglas,Straughn,0,0,0,0,0
+Madrid,108504,35,A: IFL,Female,Caucasian,306,2,0,10.5,21.2706297067777,70,18,NA,30-39,Spain,White (not Hispanic),Caitlin Yeo,Caitlin,Yeo,0,0,0,0,0
+Madrid,109730,67,F: FOLFOX,Female,Caucasian,596,2,0,12.8,24.3865264441396,88,20,1,60-69,Spain,White (not Hispanic),Hanna Donnelly,Hanna,Donnelly,0,0,0,0,0
+Madrid,108729,57,F: FOLFOX,Male,Caucasian,550,2,NA,NA,27.4810708491076,NA,NA,NA,50-59,Spain,White (not Hispanic),Jackson Hackenburg,Jackson,Hackenburg,0,0,0,0,0
+Madrid,108391,56,A: IFL,Male,Caucasian,798,2,1,13.7,26.7036235803136,146,29,1,50-59,Spain,White (not Hispanic),Jackson Tonkin,Jackson,Tonkin,0,0,0,0,0
+Madrid,109297,61,F: FOLFOX,Male,Caucasian,527,2,0,13.9,29.8148148148148,213,44,1,60-69,Spain,White (not Hispanic),Ghassan Peters,Ghassan,Peters,0,0,0,0,0
+Madrid,108452,62,F: FOLFOX,Male,Caucasian,1456,1,1,14.3,30.0116127159239,99,15,1,60-69,Spain,White (not Hispanic),Jacob Zezulka,Jacob,Zezulka,1,1,1,1,0
+Madrid,109388,41,F: FOLFOX,Male,Caucasian,1439,1,0,13.4,22.3148148148148,136,49,1,40-49,Spain,White (not Hispanic),Hayden Catron,Hayden,Catron,1,1,1,1,1
+Madrid,109555,65,F: FOLFOX,Male,Caucasian,1433,1,NA,NA,25.5965155914657,NA,NA,1,60-69,Spain,White (not Hispanic),Ryan French,Ryan,French,0,0,0,0,0
+Madrid,108783,65,A: IFL,Male,Caucasian,1184,2,0,13.3,31.4878892733564,70,21,0,60-69,Spain,White (not Hispanic),Dylan Mcconnell,Dylan,Mcconnell,0,0,0,0,0
+Madrid,108499,80,F: FOLFOX,Male,Caucasian,349,2,NA,NA,30.5882352941176,NA,NA,0,70-79,Spain,White (not Hispanic),Braden Bower,Braden,Bower,0,0,0,0,0
+Madrid,108427,61,F: FOLFOX,Male,Hispanic,397,2,0,15.2,22.8046900211552,302,58,NA,60-69,Spain,Hispanic,Joe Chavez,Joe,Chavez,0,0,1,1,0
+Madrid,108458,61,A: IFL,Male,Caucasian,393,2,1,13.2,21.9524793388429,115,27,1,60-69,Spain,White (not Hispanic),Mitchell Kirkland,Mitchell,Kirkland,0,0,0,0,0
+Madrid,109193,68,F: FOLFOX,Female,Caucasian,486,2,0,10,24.1609040310339,121,51,1,60-69,Spain,White (not Hispanic),Taylor Zielske,Taylor,Zielske,0,0,0,0,0
+Madrid,108884,58,A: IFL,Female,Caucasian,42,2,NA,NA,25.4580659041199,NA,NA,0,50-59,Spain,White (not Hispanic),Amanda Baker,Amanda,Baker,1,1,1,1,0
+Madrid,109379,71,F: FOLFOX,Male,Caucasian,821,2,0,14.5,30.8652386574464,125,21,NA,70-79,Spain,White (not Hispanic),Conner Cason,Conner,Cason,0,0,0,0,0
+Madrid,108804,56,A: IFL,Male,Caucasian,1372,1,0,12.2,22.6297577854671,105,18,1,50-59,Spain,White (not Hispanic),Timothy Pollet,Timothy,Pollet,0,0,0,0,0
+Madrid,108592,76,A: IFL,Male,Caucasian,392,2,1,13.4,27.7991245948745,133,42,1,70-79,Spain,White (not Hispanic),Zachary Cole,Zachary,Cole,0,0,0,0,0
+Madrid,108674,19,F: FOLFOX,Male,Asian,365,2,NA,NA,19.3079584775086,NA,NA,1,10-19,Spain,Asian or Pacific Islander,Jonathan Kemp,Jonathan,Kemp,0,0,0,0,0
+Madrid,108823,44,F: FOLFOX,Female,Caucasian,915,2,0,9,26.0145681581685,86,15,1,40-49,Spain,White (not Hispanic),Melissa White,Melissa,White,1,0,1,0,0
+Madrid,108450,57,A: IFL,Female,Caucasian,484,2,0,11.6,40.3515625,89,15,NA,50-59,Spain,White (not Hispanic),Courtney Puckett,Courtney,Puckett,0,0,0,0,0
+Madrid,109491,44,F: FOLFOX,Male,Caucasian,878,2,0,13.5,25.943693978033,83,25,1,40-49,Spain,White (not Hispanic),Tyler Rickman,Tyler,Rickman,1,0,1,0,0
+Madrid,108475,67,F: FOLFOX,Female,Hispanic,1520,1,NA,NA,NA,NA,NA,NA,60-69,Spain,Hispanic,Alexia Malouff-Chavez,Alexia,Malouff-Chavez,0,0,0,0,0
+Madrid,109438,50,F: FOLFOX,Male,Caucasian,683,2,0,10,23.7160458361262,120,18,1,40-49,Spain,White (not Hispanic),Tristan Lesser,Tristan,Lesser,1,1,1,1,0
+Madrid,108790,51,F: FOLFOX,Male,Caucasian,1566,2,0,15.3,22.2753099173553,59,26,0,50-59,Spain,White (not Hispanic),Brent King,Brent,King,0,0,0,0,0
+Madrid,108678,71,A: IFL,Male,Caucasian,362,2,0,12.4,31.7739318550567,112,39,1,70-79,Spain,White (not Hispanic),Jefferson Coleman,Jefferson,Coleman,0,0,0,0,0
+Madrid,109172,55,F: FOLFOX,Male,Caucasian,913,2,0,11.9,28.658390615916,161,48,1,50-59,Spain,White (not Hispanic),Eric Kalmbach,Eric,Kalmbach,0,0,0,0,0
+Barcelona,110047,81,F: FOLFOX,Female,Caucasian,725,2,0,11,31.2832616039613,64,21,NA,80-89,Spain,White (not Hispanic),Cierra Vigil-Ortega,Cierra,Vigil-Ortega,1,1,1,1,0
+Barcelona,110100,58,F: FOLFOX,Male,Caucasian,1430,1,0,13.8,32.3335726100933,90,23,NA,50-59,Spain,White (not Hispanic),William Evans,William,Evans,0,0,0,0,0
+Barcelona,109836,40,F: FOLFOX,Female,African-Am,1064,2,NA,NA,29.4839381320642,NA,NA,1,30-39,Spain,Black (not Hispanic),Kianna Guzman,Kianna,Guzman,0,0,0,0,0
+Barcelona,110655,62,F: FOLFOX,Male,Caucasian,413,2,NA,NA,26.1728395061728,NA,NA,1,60-69,Spain,White (not Hispanic),Ryan Fareed,Ryan,Fareed,0,0,0,0,0
+Barcelona,110084,69,F: FOLFOX,Male,Caucasian,509,2,1,10.8,26.8726338561384,198,46,1,60-69,Spain,White (not Hispanic),Eric Fontaine,Eric,Fontaine,0,0,0,0,0
+Barcelona,109769,77,F: FOLFOX,Male,Caucasian,299,2,1,11.2,28.4879474068663,78,43,NA,70-79,Spain,White (not Hispanic),Matthew Gribble,Matthew,Gribble,0,0,0,0,0
+Barcelona,110282,47,F: FOLFOX,Male,Caucasian,339,2,1,9.4,26.1224489795918,397,92,NA,40-49,Spain,White (not Hispanic),Chase Gallogly,Chase,Gallogly,0,0,0,0,0
+Barcelona,109864,61,F: FOLFOX,Male,Caucasian,597,2,1,12.2,27.2590890229499,83,28,1,60-69,Spain,White (not Hispanic),Robert Kearley,Robert,Kearley,0,0,0,0,0
+Barcelona,110335,68,F: FOLFOX,Female,Caucasian,21,2,NA,NA,25.7116620752984,NA,NA,NA,60-69,Spain,White (not Hispanic),Nina Babcock,Nina,Babcock,1,0,1,0,0
+Barcelona,110125,54,F: FOLFOX,Female,Caucasian,249,2,1,11.7,32.1361058601134,162,29,1,50-59,Spain,White (not Hispanic),Laurel Meier,Laurel,Meier,0,0,0,0,0
+Barcelona,109764,45,F: FOLFOX,Female,Caucasian,605,2,1,13.5,25.5588428665351,138,25,1,40-49,Spain,White (not Hispanic),Chelsea Sorvig,Chelsea,Sorvig,0,0,0,0,0
+Barcelona,109778,75,F: FOLFOX,Male,Caucasian,513,2,1,9.6,29.3209876543209,59,22,1,70-79,Spain,White (not Hispanic),Daniel Wills,Daniel,Wills,0,0,0,0,0
+Barcelona,109892,74,F: FOLFOX,Male,Caucasian,932,2,1,10.9,24.39446366782,152,37,1,70-79,Spain,White (not Hispanic),Jared Hankins,Jared,Hankins,0,0,0,0,0
+Barcelona,110634,68,F: FOLFOX,Male,Caucasian,1434,1,0,12,34.0203461487647,198,33,1,60-69,Spain,White (not Hispanic),Adam Smith,Adam,Smith,0,0,0,0,0
+Barcelona,109996,45,F: FOLFOX,Male,Caucasian,299,2,1,12.6,25.003302946228,432,63,NA,40-49,Spain,White (not Hispanic),Colin Bradshaw,Colin,Bradshaw,1,0,1,0,0
+Barcelona,110263,74,F: FOLFOX,Male,Caucasian,245,2,NA,NA,17.9270294154778,NA,NA,1,70-79,Spain,White (not Hispanic),Thomas Kastelic,Thomas,Kastelic,0,0,1,1,0
+Barcelona,110293,79,F: FOLFOX,Male,Caucasian,637,1,0,13.2,22.269387755102,75,23,1,70-79,Spain,White (not Hispanic),Eric Woods,Eric,Woods,0,0,0,0,0
+Barcelona,110226,54,F: FOLFOX,Female,Hispanic,1018,2,0,13.2,32.8731097961867,86,17,1,50-59,Spain,Hispanic,Patricia Luna-Danes,Patricia,Luna-Danes,0,0,0,0,0
+Barcelona,110593,67,F: FOLFOX,Female,Caucasian,1435,1,0,12.3,35.9281437125748,70,25,1,60-69,Spain,White (not Hispanic),Shayla Egan,Shayla,Egan,0,0,0,0,0
+Barcelona,110514,46,F: FOLFOX,Male,Caucasian,420,2,NA,NA,30.4829391298796,NA,NA,NA,40-49,Spain,White (not Hispanic),Nicholas Eckhout,Nicholas,Eckhout,0,0,0,0,0
+Barcelona,109794,52,F: FOLFOX,Female,Caucasian,318,2,0,12.3,23.2179930795847,90,36,0,50-59,Spain,White (not Hispanic),Samantha York,Samantha,York,0,0,0,0,0
+Barcelona,109826,39,F: FOLFOX,Male,African-Am,631,2,NA,NA,21.9478323873928,NA,NA,1,30-39,Spain,Black (not Hispanic),David Gaitan,David,Gaitan,0,0,0,0,0
+Barcelona,110517,72,F: FOLFOX,Male,Caucasian,497,2,1,10.5,25.6326530612244,418,83,NA,70-79,Spain,White (not Hispanic),William Kowalski,William,Kowalski,0,0,0,0,0
+Barcelona,110218,59,F: FOLFOX,Female,Hispanic,1486,2,1,13.3,36.7901662049861,84,13,1,50-59,Spain,Hispanic,Gabriella Cisneros,Gabriella,Cisneros,1,1,1,1,0
+Barcelona,110331,45,F: FOLFOX,Male,Caucasian,486,2,NA,NA,24.0007245501751,NA,NA,NA,40-49,Spain,White (not Hispanic),Demetrius Roskam,Demetrius,Roskam,0,0,0,0,0
+Barcelona,110574,65,F: FOLFOX,Female,Caucasian,661,2,0,11.1,30.297783933518,95,15,1,60-69,Spain,White (not Hispanic),Andromeda Mcgrorey,Andromeda,Mcgrorey,0,0,0,0,0
+Barcelona,110241,43,F: FOLFOX,Male,African-Am,1167,1,NA,NA,24.6181105533034,NA,NA,NA,40-49,Spain,Black (not Hispanic),Asher Cordero Murillo,Asher,Cordero,0,0,0,0,0
+Barcelona,110116,81,F: FOLFOX,Female,Caucasian,219,2,0,11.6,29.4321329639889,130,25,0,80-89,Spain,White (not Hispanic),Danielle Handshaw,Danielle,Handshaw,0,0,0,0,0
+Barcelona,110578,39,F: FOLFOX,Male,Hispanic,1237,1,0,11.6,35.4979304295386,106,21,NA,30-39,Spain,Hispanic,Joshua Diaz,Joshua,Diaz,1,1,1,1,0
+Barcelona,110577,74,F: FOLFOX,Male,Caucasian,165,2,NA,NA,21.7647058823529,NA,NA,1,70-79,Spain,White (not Hispanic),Aren Robinson,Aren,Robinson,0,0,0,0,0
+Barcelona,109973,57,F: FOLFOX,Male,Caucasian,634,2,NA,NA,28.28125,NA,NA,NA,50-59,Spain,White (not Hispanic),Levi Stanley,Levi,Stanley,0,0,0,0,0
+Barcelona,109760,59,F: FOLFOX,Female,Caucasian,500,2,0,10.7,32.2528297294007,213,23,1,50-59,Spain,White (not Hispanic),Johanna Coster,Johanna,Coster,0,0,0,0,0
+Barcelona,109831,68,F: FOLFOX,Female,African-Am,1164,1,1,10.4,22.8623685413808,63,14,NA,60-69,Spain,Black (not Hispanic),Vanessa Sotelo Juarez,Vanessa,Sotelo,0,0,0,0,0
+Barcelona,110085,44,F: FOLFOX,Male,Caucasian,439,2,0,11.2,25.3350019840664,99,34,1,40-49,Spain,White (not Hispanic),Jeremy Litten,Jeremy,Litten,0,0,0,0,0
+Barcelona,110484,63,F: FOLFOX,Male,Caucasian,500,2,NA,NA,42.8291882338088,NA,NA,NA,60-69,Spain,White (not Hispanic),Travis Glasgow,Travis,Glasgow,1,0,1,0,0
+Barcelona,110151,54,F: FOLFOX,Female,Caucasian,886,2,1,11.7,25.2993759487266,84,31,NA,50-59,Spain,White (not Hispanic),Nichole Rogers,Nichole,Rogers,0,0,0,0,0
+Barcelona,110083,83,F: FOLFOX,Female,African-Am,295,2,1,13.7,21.953125,99,40,1,80-89,Spain,Black (not Hispanic),Margot Morelos Aguilar,Margot,Morelos,1,1,1,1,1
+Barcelona,110159,68,F: FOLFOX,Female,Caucasian,1400,1,1,12.9,30.6040698605992,237,16,1,60-69,Spain,White (not Hispanic),Ingrid Crowe,Ingrid,Crowe,1,1,1,1,0
+Barcelona,110643,53,F: FOLFOX,Female,Caucasian,569,2,0,12.3,22.8511966701352,108,22,1,50-59,Spain,White (not Hispanic),Taylor Slavik,Taylor,Slavik,0,0,0,0,0
+Barcelona,109889,61,F: FOLFOX,Male,Caucasian,1404,2,1,11.7,26.7755102040816,376,60,1,60-69,Spain,White (not Hispanic),Aidan Gahagan,Aidan,Gahagan,1,1,1,1,0
+Rio de Janeiro,111063,55,F: FOLFOX,Male,Caucasian,1528,1,0,9.4,29.4753086419753,47,22,1,50-59,Brasil,White (not Hispanic),Harrison Straley,Harrison,Straley,0,0,0,0,0
+Rio de Janeiro,111010,73,F: FOLFOX,Male,Caucasian,446,2,1,14.5,30.703125,55,21,1,70-79,Brasil,White (not Hispanic),Zachary Crowther,Zachary,Crowther,0,0,0,0,0
+Rio de Janeiro,111295,57,F: FOLFOX,Male,Caucasian,168,2,1,12.6,29.2184075967859,124,20,NA,50-59,Brasil,White (not Hispanic),Saul Zawacki,Saul,Zawacki,1,1,1,1,0
+Rio de Janeiro,111210,61,F: FOLFOX,Female,Caucasian,131,2,NA,NA,28.1831546487862,NA,NA,0,60-69,Brasil,White (not Hispanic),Chelsie Kennedy,Chelsie,Kennedy,0,0,0,0,0
+Rio de Janeiro,111042,47,F: FOLFOX,Female,Caucasian,802,2,1,12.2,30.5995709285257,149,12,1,40-49,Brasil,White (not Hispanic),Lauren Blakley,Lauren,Blakley,0,0,0,0,0
+Rio de Janeiro,110942,66,F: FOLFOX,Male,Asian,1578,1,NA,NA,24.6913580246913,NA,NA,NA,60-69,Brasil,Asian or Pacific Islander,Rikk Xiong,Rikk,Xiong,0,0,0,0,0
+Rio de Janeiro,111055,54,F: FOLFOX,Female,Caucasian,568,2,NA,NA,20.6795224977043,NA,NA,NA,50-59,Brasil,White (not Hispanic),Hannah White,Hannah,White,0,0,0,0,0
+Rio de Janeiro,110708,85,F: FOLFOX,Male,Asian,0,1,NA,NA,NA,NA,NA,NA,80-89,Brasil,Asian or Pacific Islander,Anthony Martinez,Anthony,Martinez,0,0,0,0,0
+Rio de Janeiro,111331,67,F: FOLFOX,Male,Caucasian,1442,1,0,11.6,32.8027681660899,91,20,1,60-69,Brasil,White (not Hispanic),Jeffrey Page,Jeffrey,Page,0,0,0,0,0
+Rio de Janeiro,111003,58,F: FOLFOX,Female,Hawaii/Pacific,1108,1,0,13.5,26.6805411030176,153,30,1,50-59,Brasil,Asian or Pacific Islander,Mohra Her,Mohra,Her,1,1,1,1,1
+Rio de Janeiro,110878,83,F: FOLFOX,Male,Caucasian,383,1,NA,NA,25.3814685419092,NA,NA,NA,80-89,Brasil,White (not Hispanic),Michael Steinbach,Michael,Steinbach,1,1,1,1,0
+Rio de Janeiro,110780,43,F: FOLFOX,Male,Caucasian,945,2,0,12,27.4285714285714,142,20,1,40-49,Brasil,White (not Hispanic),Cooper Diamond,Cooper,Diamond,1,1,1,1,0
+Rio de Janeiro,110912,43,F: FOLFOX,Female,Asian,239,2,1,10.2,20.3004164187983,64,14,1,40-49,Brasil,Asian or Pacific Islander,Jastina Runyan,Jastina,Runyan,0,0,1,1,0
+Rio de Janeiro,110744,78,F: FOLFOX,Male,Caucasian,1001,2,1,12.1,27.5297619047619,88,17,1,70-79,Brasil,White (not Hispanic),Benjamin Kauffman,Benjamin,Kauffman,1,1,1,1,1
+Rio de Janeiro,111179,58,F: FOLFOX,Female,Caucasian,1508,2,NA,NA,32.5,NA,NA,1,50-59,Brasil,White (not Hispanic),Alisa Leon,Alisa,Leon,1,1,1,1,0
+Rio de Janeiro,110738,62,F: FOLFOX,Female,Caucasian,147,2,NA,NA,30.4113816854228,NA,NA,1,60-69,Brasil,White (not Hispanic),Cassidy Raschke,Cassidy,Raschke,0,0,0,0,0
+Rio de Janeiro,111298,64,F: FOLFOX,Female,Caucasian,871,2,1,9.3,27.8125,213,33,NA,60-69,Brasil,White (not Hispanic),Mikayla Oughton,Mikayla,Oughton,0,0,0,0,0
+Rio de Janeiro,111119,55,F: FOLFOX,Female,Caucasian,364,2,NA,NA,22.2816063833791,NA,NA,NA,50-59,Brasil,White (not Hispanic),Danielle Jeffress,Danielle,Jeffress,0,0,0,0,0
+Rio de Janeiro,110765,50,F: FOLFOX,Female,African-Am,957,2,0,10.1,22.1874999999999,154,37,NA,40-49,Brasil,Black (not Hispanic),Antonia Martinez,Antonia,Martinez,1,1,1,1,0
+Rio de Janeiro,111293,66,F: FOLFOX,Male,Caucasian,1467,1,1,15.4,24.7836734693877,78,33,1,60-69,Brasil,White (not Hispanic),Tristan Mallinger,Tristan,Mallinger,0,0,0,0,0
+Rio de Janeiro,111066,77,F: FOLFOX,Male,Caucasian,714,2,0,12.2,27.176852352623,109,35,1,70-79,Brasil,White (not Hispanic),Conner Blair,Conner,Blair,1,1,1,1,0
+Rio de Janeiro,110674,81,F: FOLFOX,Male,Caucasian,538,2,1,11.4,23.8343214228489,105,16,1,80-89,Brasil,White (not Hispanic),Dylan Stolz,Dylan,Stolz,0,0,0,0,0
+Rio de Janeiro,111228,75,F: FOLFOX,Female,Caucasian,211,2,2,10.6,22.3100936524453,259,24,NA,70-79,Brasil,White (not Hispanic),Amanda Gora,Amanda,Gora,0,0,0,0,0
+Rio de Janeiro,110768,44,F: FOLFOX,Female,Caucasian,931,2,1,10.7,24.1638321995464,289,58,NA,40-49,Brasil,White (not Hispanic),Meredith Archambault,Meredith,Archambault,0,0,0,0,0
+Rio de Janeiro,111094,54,F: FOLFOX,Male,African-Am,495,2,1,9.6,30.7070707070707,93,22,NA,50-59,Brasil,Black (not Hispanic),Miguel Morales,Miguel,Morales,0,0,0,0,0
+Rio de Janeiro,111187,60,F: FOLFOX,Female,Caucasian,359,2,1,13.3,22.4321133412042,195,32,1,50-59,Brasil,White (not Hispanic),Helena Fuentes,Helena,Fuentes,1,1,1,1,0
+Rio de Janeiro,110718,53,F: FOLFOX,Male,Caucasian,1027,2,1,12.9,27.6816608996539,265,116,1,50-59,Brasil,White (not Hispanic),Ethan Toussaint,Ethan,Toussaint,0,0,0,0,0
+Rio de Janeiro,111391,73,F: FOLFOX,Male,Caucasian,124,2,0,15.9,23.6196960195885,156,28,1,70-79,Brasil,White (not Hispanic),Greyson West,Greyson,West,0,0,0,0,0
+Rio de Janeiro,111000,50,F: FOLFOX,Male,Caucasian,637,2,0,14,NA,146,33,1,40-49,Brasil,White (not Hispanic),Dillon Rudolph,Dillon,Rudolph,0,0,0,0,0
+Rio de Janeiro,110869,22,F: FOLFOX,Female,African-Am,290,2,0,10.1,22.9590876585494,98,44,NA,20-29,Brasil,Black (not Hispanic),Elizabeth Luna,Elizabeth,Luna,0,0,0,0,0
+Rio de Janeiro,111401,58,F: FOLFOX,Female,African-Am,1097,1,0,12.3,26.7130409839004,74,25,NA,50-59,Brasil,Black (not Hispanic),Alexa Robles Rodriguez,Alexa,Robles,0,0,0,0,0
+Rio de Janeiro,110664,76,F: FOLFOX,Male,Caucasian,515,2,1,9.8,31.738775510204,87,15,1,70-79,Brasil,White (not Hispanic),Esa Roseboro,Esa,Roseboro,0,0,0,0,0
+Rio de Janeiro,110736,68,F: FOLFOX,Male,Caucasian,430,2,1,11.3,35.1673469387755,142,23,1,60-69,Brasil,White (not Hispanic),Tomas Goggin,Tomas,Goggin,0,0,0,0,0
+Rio de Janeiro,110997,64,F: FOLFOX,Male,Caucasian,534,2,1,11.2,24.2574092017775,302,74,1,60-69,Brasil,White (not Hispanic),Christopher Condon,Christopher,Condon,0,0,0,0,0
+Rio de Janeiro,110932,36,F: FOLFOX,Male,Hispanic,280,2,NA,NA,23.3747260774287,NA,NA,NA,30-39,Brasil,Hispanic,Eli Armijo,Eli,Armijo,0,0,0,0,0
+Rio de Janeiro,110853,53,F: FOLFOX,Male,Caucasian,1289,2,1,12.4,24.1115074646584,87,32,NA,50-59,Brasil,White (not Hispanic),Edward Erwin,Edward,Erwin,0,0,0,0,0
+Rio de Janeiro,111307,78,F: FOLFOX,Female,Caucasian,401,2,NA,NA,26.2629757785467,NA,NA,NA,70-79,Brasil,White (not Hispanic),Carson Witt,Carson,Witt,0,0,0,0,0
+Rio de Janeiro,110914,60,F: FOLFOX,Male,Caucasian,319,2,NA,NA,25.2408163265306,NA,NA,NA,50-59,Brasil,White (not Hispanic),Brandon Riggan,Brandon,Riggan,0,0,0,0,0
+Rio de Janeiro,110859,70,F: FOLFOX,Female,Caucasian,873,2,0,15,22.5340136054421,66,17,1,60-69,Brasil,White (not Hispanic),Jessica Masters,Jessica,Masters,1,1,1,1,0
+Rio de Janeiro,110747,48,F: FOLFOX,Male,Caucasian,1372,1,NA,NA,22.9946145124716,NA,NA,NA,40-49,Brasil,White (not Hispanic),Zachariah Satterfield,Zachariah,Satterfield,0,0,0,0,0
+Sao Paulo,111597,66,F: FOLFOX,Male,Caucasian,1344,2,1,15.1,34.5297429093908,80,29,NA,60-69,Brasil,White (not Hispanic),Jacob Presson,Jacob,Presson,0,0,0,0,0
+Sao Paulo,111608,70,F: FOLFOX,Male,Other,535,2,NA,NA,25.0675421497212,NA,NA,1,60-69,Brasil,"Middle-Eastern, Arabic",Faatin el-Zaki,Faatin,el-Zaki,0,0,0,0,0
+Sao Paulo,111478,55,F: FOLFOX,Male,Caucasian,1326,1,0,10.5,27.0562454346238,87,14,NA,50-59,Brasil,White (not Hispanic),Aleksei Williamson,Aleksei,Williamson,0,0,0,0,0
+Sao Paulo,111639,73,F: FOLFOX,Female,Hispanic,401,2,1,10.9,29.3359375,104,29,NA,70-79,Brasil,Hispanic,Kiana Lozano,Kiana,Lozano,0,0,0,0,0
+Sao Paulo,111501,54,F: FOLFOX,Male,Caucasian,585,2,1,10.2,23.4915997078159,272,29,1,50-59,Brasil,White (not Hispanic),Boris Alagic,Boris,Alagic,0,0,0,0,0
+Sao Paulo,111614,59,F: FOLFOX,Male,Caucasian,376,2,0,11.9,18.976926578201,425,89,NA,50-59,Brasil,White (not Hispanic),Jeffrey Graham,Jeffrey,Graham,0,0,0,0,0
+Sao Paulo,111636,49,F: FOLFOX,Male,Caucasian,1289,1,0,13.6,26.5460300397145,93,21,NA,40-49,Brasil,White (not Hispanic),Justin Leyva Jr,Justin,Leyva,0,0,0,0,0
+Sao Paulo,111699,67,F: FOLFOX,Male,Caucasian,632,2,1,11.9,32.3432122690367,88,16,NA,60-69,Brasil,White (not Hispanic),Zachary Summers,Zachary,Summers,0,0,0,0,0
+Sao Paulo,111809,59,F: FOLFOX,Male,Caucasian,566,2,NA,NA,27.4405991735537,NA,NA,1,50-59,Brasil,White (not Hispanic),Christopher Dore,Christopher,Dore,1,1,1,1,0
+Sao Paulo,111430,51,F: FOLFOX,Female,Caucasian,1346,2,NA,NA,31.0546875,NA,NA,1,50-59,Brasil,White (not Hispanic),Kelsey Waters,Kelsey,Waters,0,0,0,0,0
+Sao Paulo,111731,66,F: FOLFOX,Male,Caucasian,259,2,0,15.7,25.3120112355964,276,30,NA,60-69,Brasil,White (not Hispanic),Robert Lewis,Robert,Lewis,1,0,0,0,0
+Sao Paulo,111566,69,F: FOLFOX,Male,Caucasian,1286,2,0,12.4,24.8074738038126,87,30,NA,60-69,Brasil,White (not Hispanic),Brandon Miller,Brandon,Miller,0,0,0,0,0
+Sao Paulo,111488,55,F: FOLFOX,Female,Caucasian,1446,1,NA,NA,25.7116620752984,NA,NA,NA,50-59,Brasil,White (not Hispanic),Stephanie Delaney,Stephanie,Delaney,1,0,1,0,0
+Sao Paulo,111503,50,F: FOLFOX,Female,Caucasian,538,2,2,10.7,36.5126374295103,169,26,1,40-49,Brasil,White (not Hispanic),Solana Hancock-Bolen,Solana,Hancock-Bolen,0,0,0,0,0
+Sao Paulo,111695,70,F: FOLFOX,Male,Caucasian,159,2,2,10,25.217689834899,155,35,NA,60-69,Brasil,White (not Hispanic),William Dickman,William,Dickman,0,0,0,0,0
+Sao Paulo,111579,71,F: FOLFOX,Male,Caucasian,1228,1,NA,NA,34.6431135108142,NA,NA,1,70-79,Brasil,White (not Hispanic),Blake Dewind,Blake,Dewind,0,0,0,0,0
+Sao Paulo,111718,64,F: FOLFOX,Male,Caucasian,519,2,NA,NA,37.7226101774199,NA,NA,NA,60-69,Brasil,White (not Hispanic),Tyler Dickerson,Tyler,Dickerson,0,0,0,0,0
+Sao Paulo,111658,55,F: FOLFOX,Male,Caucasian,60,2,1,10,22.2367346938775,243,90,0,50-59,Brasil,White (not Hispanic),Trevor Adamson,Trevor,Adamson,0,0,0,0,0
+Sao Paulo,111884,59,F: FOLFOX,Male,Caucasian,324,2,NA,NA,23.2016483024276,NA,NA,1,50-59,Brasil,White (not Hispanic),Jacob Collins,Jacob,Collins,1,0,0,0,0
+Sao Paulo,111479,57,F: FOLFOX,Male,Caucasian,685,2,NA,NA,24.8015873015873,NA,NA,1,50-59,Brasil,White (not Hispanic),Justin Walker,Justin,Walker,0,0,0,0,0
+Sao Paulo,111632,46,F: FOLFOX,Male,Caucasian,1111,2,0,13.1,33.491874752279,74,18,NA,40-49,Brasil,White (not Hispanic),Samuel O'Hara,Samuel,O'Hara,0,0,0,0,0
+Sao Paulo,111782,59,F: FOLFOX,Male,Caucasian,296,2,1,12,28.5916824196597,117,29,NA,50-59,Brasil,White (not Hispanic),David Gillette,David,Gillette,0,0,0,0,0
+Sao Paulo,111617,74,F: FOLFOX,Male,Caucasian,521,2,1,14.6,28.9440923494794,200,33,1,70-79,Brasil,White (not Hispanic),Nicholas Boone,Nicholas,Boone,1,1,1,1,1
+Sao Paulo,111529,66,F: FOLFOX,Female,Caucasian,1524,1,0,10.1,38.1647785012608,108,20,NA,60-69,Brasil,White (not Hispanic),Weatherly Baker,Weatherly,Baker,0,0,0,0,0
+Sao Paulo,111469,63,F: FOLFOX,Male,Caucasian,1132,1,0,15.4,36.9076413150586,92,27,1,60-69,Brasil,White (not Hispanic),Brook Cross,Brook,Cross,1,1,1,1,0
+Sao Paulo,111806,38,F: FOLFOX,Female,Caucasian,445,2,NA,NA,27.2121645526741,NA,NA,NA,30-39,Brasil,White (not Hispanic),Milagros Horn,Milagros,Horn,0,0,0,0,0
+Sao Paulo,111482,57,F: FOLFOX,Male,Caucasian,1462,1,NA,NA,26.6696124226739,NA,NA,1,50-59,Brasil,White (not Hispanic),Seth Thompson,Seth,Thompson,0,0,0,0,0
+Sao Paulo,111576,60,F: FOLFOX,Male,Caucasian,655,2,NA,NA,35.9803055169801,NA,NA,1,50-59,Brasil,White (not Hispanic),Christopher Sheets,Christopher,Sheets,0,0,0,0,0
+Sao Paulo,111716,61,F: FOLFOX,Female,Caucasian,1033,2,NA,NA,19.5408631772268,NA,NA,1,60-69,Brasil,White (not Hispanic),Emily Montoya,Emily,Montoya,0,0,0,0,0
+Sao Paulo,111886,60,F: FOLFOX,Male,African-Am,135,2,NA,NA,23.8515159150079,NA,NA,1,50-59,Brasil,Black (not Hispanic),Avery Davila,Avery,Davila,1,1,1,1,0
+Sao Paulo,111499,73,F: FOLFOX,Female,Caucasian,326,2,1,10.6,19.6502770083102,316,30,NA,70-79,Brasil,White (not Hispanic),Samantha Doan,Samantha,Doan,0,0,1,1,0
+Sao Paulo,111494,45,F: FOLFOX,Male,Caucasian,1183,1,0,15.1,21.9102040816326,164,43,NA,40-49,Brasil,White (not Hispanic),Tyler Skaare,Tyler,Skaare,0,0,0,0,0
+Sao Paulo,111590,72,F: FOLFOX,Male,Hispanic,122,2,0,11.4,18.9370029036737,114,22,1,70-79,Brasil,Hispanic,Christopher Ramirez Rodriguez,Christopher,Ramirez,0,0,0,0,0
+Sao Paulo,111889,64,F: FOLFOX,Male,Caucasian,935,2,NA,NA,23.4555113769253,NA,NA,1,60-69,Brasil,White (not Hispanic),Garrett Palmer,Garrett,Palmer,1,1,1,1,1
+Sao Paulo,111754,58,F: FOLFOX,Female,Caucasian,488,2,NA,NA,28.1969212010364,NA,NA,1,50-59,Brasil,White (not Hispanic),Crystal Donegan,Crystal,Donegan,0,0,0,0,0
+Sao Paulo,111661,52,F: FOLFOX,Female,Caucasian,578,2,0,11.2,21.484375,142,34,NA,50-59,Brasil,White (not Hispanic),Grace Ray,Grace,Ray,0,0,1,1,0
+Sao Paulo,111497,53,F: FOLFOX,Female,Caucasian,1560,1,NA,NA,20.8665989258237,NA,NA,1,50-59,Brasil,White (not Hispanic),Emma West,Emma,West,0,0,0,0,0
+Sao Paulo,111819,63,F: FOLFOX,Female,Caucasian,674,2,NA,NA,29.7608376062246,NA,NA,1,60-69,Brasil,White (not Hispanic),Shantel Moltrer,Shantel,Moltrer,1,0,1,0,0
+Sao Paulo,111810,65,F: FOLFOX,Male,Caucasian,1380,2,0,14.4,26.5628654482274,81,21,1,60-69,Brasil,White (not Hispanic),Steven Mazurek,Steven,Mazurek,0,0,0,0,0
+Sao Paulo,111779,52,F: FOLFOX,Male,Caucasian,1363,2,NA,NA,27.993079584775,NA,NA,NA,50-59,Brasil,White (not Hispanic),Timothy Littleford,Timothy,Littleford,0,0,0,0,0
+Mexico City,112094,42,F: FOLFOX,Female,Caucasian,232,2,1,9.5,26.4660903217752,406,92,0,40-49,Mexico,White (not Hispanic),Hannah Baty,Hannah,Baty,0,0,0,0,0
+Mexico City,112050,56,F: FOLFOX,Female,Caucasian,1207,2,1,12.5,29.5457111671496,60,19,NA,50-59,Mexico,White (not Hispanic),Shae Tennant,Shae,Tennant,0,0,0,0,0
+Mexico City,112269,68,F: FOLFOX,Male,Caucasian,236,2,0,14.5,26.4158918005071,402,83,1,60-69,Mexico,White (not Hispanic),Corey Cohen,Corey,Cohen,0,0,0,0,0
+Mexico City,112001,62,F: FOLFOX,Male,Caucasian,1313,1,0,16.1,23.8287198781689,47,16,1,60-69,Mexico,White (not Hispanic),Anthony Lee,Anthony,Lee,0,0,0,0,0
+Mexico City,111930,59,F: FOLFOX,Male,Caucasian,413,2,1,15.5,26.8209876543209,84,18,NA,50-59,Mexico,White (not Hispanic),Mark Colagrosso,Mark,Colagrosso,0,0,0,0,0
+Mexico City,111977,77,F: FOLFOX,Male,Hispanic,1409,2,0,14.4,27.4586542103269,83,15,1,70-79,Mexico,Hispanic,Ezequiel Argumedo Jurado,Ezequiel,Argumedo,0,0,0,0,0
+Mexico City,112200,71,F: FOLFOX,Female,Caucasian,494,2,NA,NA,20.6035379812695,NA,NA,NA,70-79,Mexico,White (not Hispanic),Shea Mccrary Jr,Shea,Mccrary,0,0,0,0,0
+Mexico City,112407,55,F: FOLFOX,Male,Caucasian,973,2,NA,NA,30.4269495839171,NA,NA,1,50-59,Mexico,White (not Hispanic),Logan Shah,Logan,Shah,0,0,0,0,0
+Mexico City,112214,45,F: FOLFOX,Female,African-Am,1130,2,NA,NA,19.1995673336938,NA,NA,NA,40-49,Mexico,Black (not Hispanic),Cristina Acevedo,Cristina,Acevedo,1,1,1,1,1
+Mexico City,112274,35,F: FOLFOX,Male,Caucasian,980,1,NA,NA,26.3046019768307,NA,NA,1,30-39,Mexico,White (not Hispanic),Jeffrey Reams,Jeffrey,Reams,0,0,0,0,0
+Mexico City,112406,59,F: FOLFOX,Male,Caucasian,131,2,2,9.1,25.0761930481077,427,50,0,50-59,Mexico,White (not Hispanic),Peter Malle,Peter,Malle,1,1,1,1,0
+Mexico City,112272,69,F: FOLFOX,Male,Caucasian,322,2,1,11.8,21.1327134404057,126,21,1,60-69,Mexico,White (not Hispanic),Samuel Menard,Samuel,Menard,0,0,0,0,0
+Mexico City,112070,75,F: FOLFOX,Male,Caucasian,335,2,0,13,22.98190175237,209,17,0,70-79,Mexico,White (not Hispanic),Taylor Swenson,Taylor,Swenson,0,0,0,0,0
+Mexico City,112061,65,F: FOLFOX,Male,Caucasian,291,2,1,14.8,29.5619457135178,89,22,NA,60-69,Mexico,White (not Hispanic),Dru Severini,Dru,Severini,0,0,0,0,0
+Mexico City,111984,50,F: FOLFOX,Male,African-Am,1069,1,0,9.2,24.5551020408163,207,23,NA,40-49,Mexico,Black (not Hispanic),Jose Funes,Jose,Funes,0,0,0,0,0
+Mexico City,111968,63,F: FOLFOX,Male,Caucasian,1485,2,0,13,32.6596217639615,100,21,1,60-69,Mexico,White (not Hispanic),Matthew Berta,Matthew,Berta,1,1,1,0,0
+Mexico City,112218,75,F: FOLFOX,Male,Caucasian,557,2,1,13.8,29.653268313672,120,40,1,70-79,Mexico,White (not Hispanic),Kelby Thrasher,Kelby,Thrasher,0,0,0,0,0
+Mexico City,112109,59,F: FOLFOX,Male,Caucasian,1039,2,0,10.5,29.0430971512052,74,26,NA,50-59,Mexico,White (not Hispanic),Theodore Rawdon,Theodore,Rawdon,1,1,1,1,0
+Mexico City,112204,47,F: FOLFOX,Male,Caucasian,631,2,1,12.5,25.7275552140064,402,73,1,40-49,Mexico,White (not Hispanic),Christopher Cutter,Christopher,Cutter,1,1,1,1,0
+Mexico City,112342,63,F: FOLFOX,Male,Caucasian,1174,2,2,11.7,26.6360194699837,311,63,NA,60-69,Mexico,White (not Hispanic),Joshua Schwartz,Joshua,Schwartz,0,0,0,0,0
+Mexico City,112186,68,F: FOLFOX,Female,Caucasian,1464,1,0,12.4,30.226971207286,70,17,1,60-69,Mexico,White (not Hispanic),Kellan Wallace,Kellan,Wallace,0,0,0,0,0
+Mexico City,112401,42,F: FOLFOX,Female,Caucasian,1520,1,0,12.7,40.4478883524686,74,19,1,40-49,Mexico,White (not Hispanic),Stevie Looper,Stevie,Looper,0,0,0,0,0
+Mexico City,112308,61,F: FOLFOX,Male,African-Am,304,2,0,9.2,35.1851851851851,255,26,1,60-69,Mexico,Black (not Hispanic),Edgardo Fraire,Edgardo,Fraire,0,0,0,0,0
+Mexico City,111963,51,F: FOLFOX,Female,Caucasian,1269,2,NA,NA,31.826099579039,NA,NA,0,50-59,Mexico,White (not Hispanic),Alexis Mccullough,Alexis,Mccullough,0,0,0,0,0
+Mexico City,112398,82,F: FOLFOX,Female,Caucasian,79,2,1,11.5,16.7985561571567,75,31,1,80-89,Mexico,White (not Hispanic),Madeleine Arispe,Madeleine,Arispe,0,0,0,0,0
+Mexico City,112259,40,F: FOLFOX,Female,Caucasian,626,2,NA,NA,26.1810613943808,NA,NA,1,30-39,Mexico,White (not Hispanic),Victoria Nikiforov,Victoria,Nikiforov,0,0,0,0,0
+Mexico City,112370,67,F: FOLFOX,Female,Caucasian,784,1,1,13.1,28.7235996326905,38,20,NA,60-69,Mexico,White (not Hispanic),Kathryn Murrelle,Kathryn,Murrelle,0,0,0,0,0
+Mexico City,111981,72,F: FOLFOX,Female,Caucasian,187,1,0,12.3,24.1794798977646,82,21,1,70-79,Mexico,White (not Hispanic),Karen Christianson,Karen,Christianson,0,0,0,0,0
+Mexico City,111940,58,F: FOLFOX,Male,Caucasian,599,2,NA,NA,29.5918062647436,NA,NA,1,50-59,Mexico,White (not Hispanic),Ryan Robbins,Ryan,Robbins,0,0,0,0,0
+Mexico City,112027,55,F: FOLFOX,Male,Caucasian,1188,2,0,11.9,29.9755102040816,170,30,NA,50-59,Mexico,White (not Hispanic),Nicholas Leffert,Nicholas,Leffert,0,0,0,0,0
+Mexico City,111961,66,F: FOLFOX,Male,Caucasian,955,2,0,13.1,28.8933367768595,357,30,1,60-69,Mexico,White (not Hispanic),Jagr Jones,Jagr,Jones,0,0,0,0,0
+Mexico City,112171,60,F: FOLFOX,Female,Caucasian,559,2,1,10.9,36.6527800032046,414,124,1,50-59,Mexico,White (not Hispanic),Sierra Eliason,Sierra,Eliason,0,0,0,0,0
+Mexico City,112305,49,F: FOLFOX,Male,Caucasian,654,2,0,14.7,25.6653061224489,76,21,1,40-49,Mexico,White (not Hispanic),Collin Randolph,Collin,Randolph,0,0,0,0,0
+Mexico City,112257,37,F: FOLFOX,Female,Caucasian,207,2,NA,NA,18.8137356919875,NA,NA,NA,30-39,Mexico,White (not Hispanic),Ellen Romero,Ellen,Romero,0,0,1,1,0
+Mexico City,112117,46,F: FOLFOX,Female,Caucasian,807,1,0,12.4,28.4428911362284,61,18,1,40-49,Mexico,White (not Hispanic),Sara Stoddard,Sara,Stoddard,0,0,0,0,0
+Mexico City,112108,71,F: FOLFOX,Female,Hispanic,824,2,0,10.5,23.046875,61,15,1,70-79,Mexico,Hispanic,Tasia Albo,Tasia,Albo,1,1,1,1,0
+Mexico City,112393,80,F: FOLFOX,Male,Hispanic,1066,1,2,9.7,24.9770431588613,79,15,NA,70-79,Mexico,Hispanic,Gabriel Tamez,Gabriel,Tamez,0,0,1,1,0
+Mexico City,112291,57,F: FOLFOX,Female,Caucasian,596,2,1,12.4,43.823105271591,83,18,1,50-59,Mexico,White (not Hispanic),Caelan Jackson,Caelan,Jackson,0,0,0,0,0
+Mexico City,112053,67,F: FOLFOX,Female,African-Am,668,2,1,10.6,33.067867036011,112,16,NA,60-69,Mexico,Black (not Hispanic),Jenna Ortega,Jenna,Ortega,0,0,0,0,0
+Mexico City,112314,49,F: FOLFOX,Female,Caucasian,1242,2,1,11.8,21.9354838709677,52,15,1,40-49,Mexico,White (not Hispanic),Amber Sindt,Amber,Sindt,0,0,0,0,0
+Mexico City,112140,47,F: FOLFOX,Female,Caucasian,1273,1,NA,NA,32.9218106995884,NA,NA,1,40-49,Mexico,White (not Hispanic),Brittney Michel,Brittney,Michel,0,0,0,0,0
+Mexico City,112133,58,F: FOLFOX,Female,African-Am,771,2,NA,NA,32.4897959183673,NA,NA,1,50-59,Mexico,Black (not Hispanic),Samantha Lizarraga Chavez,Samantha,Lizarraga,1,1,1,1,1
+Mexico City,112007,45,F: FOLFOX,Male,Caucasian,309,2,NA,NA,27.993079584775,NA,NA,NA,40-49,Mexico,White (not Hispanic),Nathan Reimer,Nathan,Reimer,0,0,0,0,0
+Mexico City,112144,78,F: FOLFOX,Male,Caucasian,254,2,1,11.6,27.9661866417187,100,18,0,70-79,Mexico,White (not Hispanic),Hunter Woodward,Hunter,Woodward,0,0,0,0,0
+Mexico City,112013,65,F: FOLFOX,Male,Caucasian,381,2,1,11.9,21.4770866331982,58,35,NA,60-69,Mexico,White (not Hispanic),Tyler Mcgill,Tyler,Mcgill,0,0,0,0,0
+Mexico City,111972,76,F: FOLFOX,Male,Caucasian,91,2,0,9.2,24.835646457268,49,19,NA,70-79,Mexico,White (not Hispanic),Matthew Collum,Matthew,Collum,0,0,0,0,0
+Mexico City,112376,64,F: FOLFOX,Male,Caucasian,387,2,0,13.8,24.0929705215419,178,27,0,60-69,Mexico,White (not Hispanic),Thorin Shurmantine,Thorin,Shurmantine,1,0,1,0,0
+Mexico City,112417,63,F: FOLFOX,Male,African-Am,1327,2,0,10.8,20.0599818922589,114,23,1,60-69,Mexico,Black (not Hispanic),Anthony Archuleta,Anthony,Archuleta,0,0,0,0,0
+Mexico City,112382,53,F: FOLFOX,Female,Caucasian,777,2,NA,NA,38.9928111709134,NA,NA,NA,50-59,Mexico,White (not Hispanic),Zsanae Walpole,Zsanae,Walpole,1,1,1,1,1
+Mexico City,111935,41,F: FOLFOX,Female,African-Am,477,2,1,9.8,21.4308604390322,124,12,NA,40-49,Mexico,Black (not Hispanic),Gabriela Arce,Gabriela,Arce,0,0,0,0,0
+Mexico City,111974,63,F: FOLFOX,Male,Caucasian,1320,2,NA,NA,35.7278121449311,NA,NA,1,60-69,Mexico,White (not Hispanic),Julian Hunter,Julian,Hunter,0,0,0,0,0
+Mexico City,112074,67,F: FOLFOX,Male,Hispanic,668,2,0,18,40.9567901234567,141,18,1,60-69,Mexico,Hispanic,Jose Alvarez,Jose,Alvarez,0,0,0,0,0
+Mexico City,112408,68,F: FOLFOX,Female,Caucasian,468,2,0,10.6,26.266666666666602,98,37,1,60-69,Mexico,White (not Hispanic),Macaully Ennis,Macaully,Ennis,0,0,0,0,0
+Mexico City,112183,72,F: FOLFOX,Female,Caucasian,195,2,1,11.3,22.6052460586163,427,122,1,70-79,Mexico,White (not Hispanic),Arrianna George,Arrianna,George,0,0,0,0,0
+Mexico City,112360,68,F: FOLFOX,Male,African-Am,338,2,1,11.7,27.143050297458,371,68,0,60-69,Mexico,Black (not Hispanic),Luis Brown,Luis,Brown,0,0,0,0,0
+Mexico City,112154,77,F: FOLFOX,Male,Caucasian,1184,2,1,13.3,19.5061728395061,101,22,NA,70-79,Mexico,White (not Hispanic),Ryan Krokowski,Ryan,Krokowski,0,0,0,0,0
+Mexico City,112064,52,F: FOLFOX,Female,Caucasian,1481,2,0,11.5,22.9065743944636,292,39,NA,50-59,Mexico,White (not Hispanic),Audrey Kilburn,Audrey,Kilburn,0,0,0,0,0
+Mexico City,112312,66,F: FOLFOX,Male,Caucasian,1354,1,NA,NA,24.397172074233,NA,NA,1,60-69,Mexico,White (not Hispanic),Jacob Walker,Jacob,Walker,0,0,0,0,0
+Mexico City,111932,72,F: FOLFOX,Female,Caucasian,563,2,1,13.1,31.2385898008032,60,12,NA,70-79,Mexico,White (not Hispanic),Kiana Patterson,Kiana,Patterson,1,1,1,1,0
+Mexico City,112375,77,F: FOLFOX,Female,Caucasian,444,2,1,10.8,22.100449992742,154,44,NA,70-79,Mexico,White (not Hispanic),Kyria Winslow,Kyria,Winslow,0,0,1,1,0
+Mexico City,112340,63,F: FOLFOX,Male,Caucasian,186,2,2,11.4,22.4107625743645,506,51,1,60-69,Mexico,White (not Hispanic),Dillon Dalton,Dillon,Dalton,0,0,0,0,0
+Mexico City,112362,60,F: FOLFOX,Female,Hispanic,220,2,0,12.7,24.3158861340679,96,46,0,50-59,Mexico,Hispanic,Aliyah Quitter,Aliyah,Quitter,0,0,0,0,0
+Mexico City,112240,63,F: FOLFOX,Male,Other,1425,2,1,13.2,31.4564328405158,95,21,NA,60-69,Mexico,"Middle-Eastern, Arabic",Aatif el-Saade,Aatif,el-Saade,0,0,0,0,0
+Mexico City,112089,60,F: FOLFOX,Male,Caucasian,1309,2,1,13.7,35.1433478662967,223,53,1,50-59,Mexico,White (not Hispanic),Jake Schmid,Jake,Schmid,0,0,0,0,0
+Mexico City,112321,61,F: FOLFOX,Male,African-Am,174,2,1,10.3,36.5799772755965,244,38,1,60-69,Mexico,Black (not Hispanic),Antonio Salazar,Antonio,Salazar,0,0,0,0,0
+Mexico City,112318,71,F: FOLFOX,Female,African-Am,715,2,1,13.2,19.7055324211778,479,30,1,70-79,Mexico,Black (not Hispanic),Kristabel Baca,Kristabel,Baca,1,1,1,1,1
+Mexico City,112414,50,F: FOLFOX,Male,Caucasian,467,2,1,12.3,NA,80,17,1,40-49,Mexico,White (not Hispanic),Jimmy Allen Rowland,Jimmy,Allen,0,0,0,0,0
+Nur-Sultan,112463,62,F: FOLFOX,Female,Caucasian,869,2,NA,NA,35.0155817174515,NA,NA,NA,60-69,Kazakhstan,White (not Hispanic),Keila Wesson,Keila,Wesson,0,0,0,0,0
+Nur-Sultan,112448,61,F: FOLFOX,Female,Caucasian,1322,1,1,12.8,35.78125,94,17,1,60-69,Kazakhstan,White (not Hispanic),Ashley Fendel,Ashley,Fendel,0,0,0,0,0
+Nur-Sultan,112430,68,F: FOLFOX,Female,Caucasian,93,2,1,11,19.2299687825182,219,22,1,60-69,Kazakhstan,White (not Hispanic),Penelope Small,Penelope,Small,0,0,0,0,0
+Nur-Sultan,112481,68,F: FOLFOX,Female,Caucasian,1489,1,0,10.7,20.0941418456548,70,27,1,60-69,Kazakhstan,White (not Hispanic),Sophie Shilkus,Sophie,Shilkus,1,1,1,1,0
+Nur-Sultan,112456,76,F: FOLFOX,Female,Other,230,2,NA,NA,29.9986487095175,NA,NA,1,70-79,Kazakhstan,"Middle-Eastern, Arabic",Zakiyya al-Dia,Zakiyya,al-Dia,1,1,1,1,0
+Nur-Sultan,112420,26,F: FOLFOX,Male,Hispanic,10,2,1,10.9,29.7520661157024,89,11,1,20-29,Kazakhstan,Hispanic,Derek Trent,Derek,Trent,0,0,0,0,0
+Nur-Sultan,112488,69,F: FOLFOX,Female,Caucasian,426,2,1,10.2,NA,225,69,NA,60-69,Kazakhstan,White (not Hispanic),Lexy Rehder,Lexy,Rehder,0,0,0,0,0
+Nur-Sultan,112483,50,F: FOLFOX,Male,Caucasian,1315,2,0,14.1,26.4930256312043,106,24,1,40-49,Kazakhstan,White (not Hispanic),Cody Zarezadegan,Cody,Zarezadegan,0,0,0,0,0
+Nur-Sultan,112443,62,F: FOLFOX,Male,Caucasian,605,2,0,12,34.7839506172839,56,19,1,60-69,Kazakhstan,White (not Hispanic),Randall Erwin,Randall,Erwin,0,0,0,0,0
+Nur-Sultan,112484,65,F: FOLFOX,Male,Hispanic,1315,1,NA,NA,24.0220385674931,NA,NA,1,60-69,Kazakhstan,Hispanic,Carlos Madera-Calderon,Carlos,Madera-Calderon,1,1,1,1,0
+Nur-Sultan,112438,65,F: FOLFOX,Female,Caucasian,853,2,0,12.4,27.4500192570288,221,26,1,60-69,Kazakhstan,White (not Hispanic),Haylee Jones,Haylee,Jones,0,0,0,0,0
+Nur-Sultan,112460,50,F: FOLFOX,Male,Caucasian,323,2,NA,NA,27.6951331496786,NA,NA,1,40-49,Kazakhstan,White (not Hispanic),Michael Vessa,Michael,Vessa,1,1,1,1,0

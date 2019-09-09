@@ -12,11 +12,13 @@ author:
 creative_commons: CC BY
 output: 
   bookdown::word_document2: default
-  bookdown::html_document2: default
+  bookdown::html_document2: 
+    theme: flatly
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+                      fig.path = here::here("static/mockpaper/03-figs/"))
 ```
 
 

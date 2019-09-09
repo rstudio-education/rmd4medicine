@@ -62,10 +62,24 @@ mockdata %>%
 
 We have data from `r n_distinct(mockdata$arm)` arms: `r glue_collapse(arms, ", ", last = " and ")`. The number of participants per arm is as follows: 
 
-```{r echo=FALSE}
+```{r echo=TRUE, results='asis'}
 mockdata %>% 
   count(arm) %>% 
-  glue_data("{arm} has {n} participants")
+  glue_data("{arm} has {n} participants") %>% 
+  glue_collapse(sep = "\n") %>% 
+  knitr::kable()
+
+mockdata %>% 
+  count(arm) %>% 
+  glue_data("{arm} has {n} participants") %>% 
+  glue_collapse(sep = "\n") %>% 
+  tibble::enframe() %>% 
+  knitr::kable()
+
+mockdata %>% 
+  count(arm) %>% 
+  glue_data("{arm} has {n} participants") %>% 
+  glue_collapse(sep = "  \n") 
 ```
 
 
@@ -98,7 +112,7 @@ mockdata %>%
 
 ## Age
 
-```{r age-dist}
+```{r}
 ggplot(mockdata, aes(age)) +
   geom_histogram(color = 'white',
                  fill = "#0D0887FF",

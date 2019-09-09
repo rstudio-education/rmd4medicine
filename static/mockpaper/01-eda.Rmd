@@ -5,7 +5,7 @@ author:
   name: Alison Hill, Ph.D.
 - affiliation: University of Michigan
   name: Peter Higgins, MD, Ph.D.
-output: html_document
+output: distill::distill_article
 ---
 
 to do: what is `fu_time` when `fu_stat` is 1?

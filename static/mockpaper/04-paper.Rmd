@@ -12,8 +12,6 @@ author:
 creative_commons: CC BY
 output:
   bookdown::html_document2: default
-  bookdown::pdf_book:
-    base_format: rticles::peerj_article
 ---
 
 ```{r setup, include=FALSE}
