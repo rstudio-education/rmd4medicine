@@ -28,6 +28,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,   
   comment = "#>"
 )
+options(knitr.table.format = "markdown")
 ```
 
 ```{r packages, include=FALSE}
@@ -69,51 +70,77 @@ cloud link
 plot here times knitted so far
 
 ---
+class: pop-quiz
 
 # Pop quiz
 
-_(discuss with a neighbor)_
 
 Which of the following is **NOT** a part of R Markdown basic anatomy?
 
-1. Metadata (written in YAML).
+1. Metadata
 
-1. Text (written in Markdown).
+1. Text
 
-1. CSS.
+1. CSS
 
-1. Code (<i class="fab fa-r-project"></i> or other).
+1. Code
 
-1. Output.
+1. Output
+
+```{r echo=FALSE}
+countdown(minutes = 1)
+```
 
 
 ---
+class: pop-quiz
 
-# Match these! 
+# Pop quiz
 
-_(discuss with a neighbor)_
+## Mad libs style
 
-.pull-left[
+```markdown
+ ___________ is written at the top between `---` in ________.
+    noun                                             syntax
+                                                     
+  ______ is written in Markdown.
+   noun         
+  
+  ______ is written in R (or other programming language).
+   noun   
+   
+  The ______ package evaluates the code and produces the ______.
+       noun                                               noun
+```
 
-+ Metadata
+_psst: answers on next slide..._
 
-+ text
+```{r echo=FALSE}
+countdown(minutes = 2)
+```
 
-+ Code
+---
+class: pop-quiz
 
-+ Output
-]
 
-.pull-right[
+# Pop quiz
 
-+ Markdown
+## Answers
 
-+ `knitr`
+```markdown
+ Metadata is written at the top between `---` in YAML.
+   (noun)                                      (syntax)
+                                                     
+  Text is written in Markdown.
+ (noun)         
+  
+  Code is written in R (or other programming language).
+ (noun)   
+   
+  The knitr package evaluates the code and produces the output.
+     (noun)                                             (noun) 
+```
 
-+ <i class="fab fa-r-project"></i> (or other programming language)
-
-+ YAML
-]
 
 ---
 class: middle, center
@@ -131,24 +158,13 @@ class: your-turn
 Let's all take a look at this R Markdown document together.
 
 
-
-.pull-left[
-
-Add or edit text...
+Add or edit...
 
 + Headers
 + Lists (<i class="fas fa-list-ul"></i> or <i class="fas fa-list-ol"></i>)
 + Text formatting like **bold** or _italics_
-]
-
-.pull-right[
-
-Add or edit code...
-
-+ Chunk labels
 + Chunk options
 
-]
 
 ```{r echo = FALSE}
 countdown(minutes = 5)
@@ -166,11 +182,15 @@ class: middle, center, inverse
 
 # Output formats
 
---
-
-What do you want to make?
 
 ---
+class: middle, center
+
+```{r echo=FALSE,out.width="50%"}
+knitr::include_graphics("images/outputs.png")
+```
+
+???
 
 Built in formats (in the `rmarkdown` package)
 
@@ -179,17 +199,38 @@ versus
 extensions (different packages that extend output formats available to you)
 
 ---
+class: middle, center
+
+
+```{r echo=FALSE, out.width="40%", fig.link="https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats"}
+knitr::include_graphics("images/rmdbase-formats.png")
+```
+
+https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats
+
+---
 class: your-turn
 
 # Your turn
 
 ## Use a different built-in format
 
+.pull-left[
+
 Use the drop-down menu for the `r emo::ji("yarn")` **Knit** button and try:
 
 1. Knitting to Word
 
 1. Knitting to PDF
+
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics("images/knit-dropdown.png")
+```
+
+]
 
 ```{r echo = FALSE}
 countdown(minutes = 2)
@@ -212,6 +253,14 @@ yml_empty() %>%
   asis_yaml_output()
 ```
 
+???
+
+This is a great way to "control" your knit button!
+
+Notice that when you knit, it respects those output options in your YAML.
+
+This way you "save" your output options
+
 ---
 class: your-turn
 
@@ -225,7 +274,9 @@ You just used the drop-down `r emo::ji("yarn")` **Knit** button to knit to Word 
 
 1. Change your YAML to the right...
 
-1. Click `r emo::ji("yarn")` **Knit** - what do you notice?
+1. Be __very careful__ about indentation and `:` here!!
+
+1. `r emo::ji("yarn")` **Knit** to Word again- is there a TOC?
 
 ]
 
@@ -237,18 +288,37 @@ yml_empty() %>%
   yml_title("Your title here") %>% 
   yml_output(html_document(toc = TRUE, toc_float = TRUE, theme = "flatly"), 
              word_document(toc = TRUE), 
-             pdf_document()) %>% 
+             pdf_document()
+             ) %>% 
   asis_yaml_output()
 ```
 
 ]
 
 
-
 ```{r echo = FALSE}
-countdown(minutes = 2)
+countdown(minutes = 1)
 ```
 
+---
+
+# What is hard about YAML?
+
+.pull-left[
+![](https://media.giphy.com/media/Nt2cPxzpKhbCE/giphy.gif)
+]
+
+.pull-right[
++ Indentations matter
+
++ Rarely informative error messages
+
++ Knowing which output options are relevant for different formats (i.e., Word, PDF, HTML, etc.)
+
++ Easy to forget the right `key`
+
++ Easy to forget the possible `values` for a given `key`
+]
 ---
 class: your-turn
 
@@ -256,17 +326,36 @@ class: your-turn
 
 ## Use an extension package
 
-.pull-left[
 
-1. Edit your YAML again! Change the `output:` key to `distill::distill_article()` (note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)
+1. Edit your YAML again! Change the `output:` key to only `distill::distill_article` 
+
+1. Save the document; click on the dropdown `r emo::ji("yarn")` **Knit** button- what do you notice?
 
 1. `r emo::ji("yarn")` **Knit** to distill_article.
 
-1. _If this was easy, add a table of contents._
-]
+1. _If this was easy, add a table of contents too._
 
-.pull-right[
+_psst...answers on the next slide..._
 
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
+
+.footnote[(note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)]
+
+???
+
+At this point, I'm going to stick with the distill_article output format for the rest of this session.
+
+---
+class: your-turn
+
+# Your turn
+
+## Answer: Use an extension package
+
+.pull-left[
 ```{r echo = FALSE}
 yml_empty() %>% 
   yml_author("Your name here") %>% 
@@ -276,20 +365,16 @@ yml_empty() %>%
 ```
 ]
 
+.pull-right[
 ```{r echo = FALSE}
-countdown(minutes = 2)
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(distill::distill_article(toc = TRUE)) %>% 
+  asis_yaml_output()
 ```
+]
 
-
----
-name: distill_article
-
-
-
-
-???
-
-At this point, I'm going to stick with the distill_article output format for the rest of this session.
 
 ---
 class: middle, center, inverse
@@ -301,7 +386,7 @@ class: middle, center, inverse
 
 --
 
-# Tables
+# Custom typed tables
 
 ---
 
@@ -331,10 +416,8 @@ class: center
 | 01:50 - 02:00 |         | *Break*  |
 | 02:00 - 02:45 | 2       | Tables   |
 | 02:45 - 03:00 |         | *Break*  |
-| 03:00 - 03:50 | 3       | Workflow |
-| 03:50 - 04:00 |         | *Break*  |
-| 04:00 - 04:45 | 4       | Graphics |
-| 04:45 - 05:00 | 5       | Wrap-up  |
+
+Table: Demo of simple table syntax.
 ```
 ]
 
@@ -349,12 +432,112 @@ class: center
 | 01:50 - 02:00 |         | *Break*  |
 | 02:00 - 02:45 | 2       | Tables   |
 | 02:45 - 03:00 |         | *Break*  |
-| 03:00 - 03:50 | 3       | Workflow |
-| 03:50 - 04:00 |         | *Break*  |
-| 04:00 - 04:45 | 4       | Graphics |
-| 04:45 - 05:00 | 5       | Wrap-up  |
+
+Table: Demo of simple table syntax.
 
 ]
+
+---
+class: your-turn
+
+# Your turn
+
+## Type up a Markdown table
+
+.pull-left[
+
+Using pipes `|`, create a table to list the 3 treatment arms. It should look like this:
+
+| Arm | Drug   |
+|:----|:-------|
+| A   | IFL    |
+| F   | FOLFOX |
+| G   | IROX   |
+Table: Treatment arms.
+
+]
+
+.pull-right[
+
+![](https://qph.fs.quoracdn.net/main-qimg-637b91293b153c5cd40419c0872c2186)
+
+]
+
+_psst...answers on the next slide..._
+
+```{r echo=FALSE}
+countdown(minutes = 2)
+```
+
+---
+class: your-turn
+
+# Your turn
+
+## Answers: Make a Markdown table
+
+```markdown
+| Arm | Drug   |
+|:----|:-------|
+| A   | IFL    |
+| F   | FOLFOX |
+| G   | IROX   |
+Table: Treatment arms.
+```
+
+
+---
+class: center, middle
+
+# Two table types
+
+
+.pull-left[
+
+### for your eyes mainly
+
+```{r echo=FALSE}
+knitr::include_graphics("images/tables-you.jpg")
+```
+
+
+]
+
+--
+
+.pull-right[
+
+### for other people's eyes too
+
+```{r echo=FALSE}
+knitr::include_graphics("images/tables-them.jpg")
+```
+]
+
+---
+
+.pull-left[
+
+![](images/imani-_TuIdedBPwQ-unsplash.jpg)
+]
+
+.pull-right[
+![](images/gear_shift.jpg)
+]
+
+.footnote[Images from [Unsplash](https://unsplash.com/photos/_TuIdedBPwQ) and [Wikipedia](https://commons.wikimedia.org/wiki/File:FIAT_500L_gear_shift.jpg)]
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
+</span> 
+
+--
+
+# EDA Tables
 
 ---
 
@@ -363,8 +546,133 @@ class: center
 ```{r}
 mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
   mutate(fu_fct = fct_recode(as.factor(fu_stat), 
-                             "Lived" = "1", "Died" = "2"))  
+                             "Lived" = "1", 
+                             "Died" = "2")) %>% 
+  mutate_at(vars(starts_with("ae_")), ~as.factor(.))
 ```
+
+---
+
+# EDA tables: `skimr`
+
+
+```{r skim, message=FALSE, warning=FALSE}
+library(skimr)
+
+# smell test (n's, NAs, etc)
+mockdata %>% 
+  select(fu_fct, starts_with("ae_")) %>% 
+  skimr::skim()
+```
+
+---
+
+````
+```{r skim-kable, results='asis'}`r ''`
+mockdata %>% 
+  select(fu_fct, starts_with("ae_")) %>% 
+  skim() %>% 
+  kable()
+```
+````
+
+```{r skim-kable, results='asis', echo=FALSE}
+mockdata %>% 
+  select(fu_fct, starts_with("ae_")) %>% 
+  skim() %>% 
+  kable()
+```
+
+
+---
+
+# EDA tables: `janitor`
+
+Good for 1- and 2-way frequency tables (or `tabyl`s)
+
+let's count number of participants by arm, then add by site too
+
+.pull-left[
+
+```{r}
+mockdata %>% 
+  tabyl(arm)
+```
+
+] 
+
+--
+
+.pull-right[
+
+```{r}
+mockdata %>% 
+  tabyl(arm) %>% 
+  adorn_totals("row") %>%
+  adorn_pct_formatting()
+```
+
+]
+
+---
+
+.pull-left[
+
+````
+```{r results='asis'}`r ''`
+mockdata %>% 
+  tabyl(arm, fu_fct) %>%
+  knitr::kable()
+```
+````
+
+```{r results='asis', echo=FALSE}
+mockdata %>% 
+  tabyl(arm, fu_fct) %>%
+  knitr::kable()
+```
+
+] 
+
+--
+
+.pull-right[
+
+````
+```{r results='asis'}`r ''`
+mockdata %>% 
+  tabyl(arm, fu_fct) %>% 
+  adorn_totals("row") %>%
+  adorn_percentages("row") %>%
+  adorn_pct_formatting(digits = 2) %>%
+  adorn_ns() %>%
+  knitr::kable()
+```
+````
+
+```{r results='asis', echo=FALSE}
+mockdata %>% 
+  tabyl(arm, fu_fct) %>% 
+  adorn_totals("row") %>%
+  adorn_percentages("row") %>%
+  adorn_pct_formatting(digits = 2) %>%
+  adorn_ns() %>%
+  knitr::kable()
+```
+
+]
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
+</span> 
+
+--
+
+# Table One
 
 ---
 
@@ -413,126 +721,34 @@ class: your-turn
 
 ## Make a table one
 
-1. Take the current table one in the doc, and add using the `+` age and bmi
+Take the current table one in the doc, and add the variables `age` and `bmi` to the table. Hint: use the formula `arm ~ sex + age + bmi`
 
 ---
+class: middle, center, inverse
 
-# Table Two
-
-an adverse events table
-
-maybe do some fancier regex worthy stuff to be able to cast all of the adverse events as factors easily
-
-that was a good test- see how tableone deals with factors versus numbers
-
-think about when pfootnote should be TRUE
-
-```{r results='asis'}
-mockdata <- mockdata %>% 
-  mutate(low_wbc = as.factor(low_wbc))
-labels(mockdata) <- c(age = "Age, years", sex = "Gender")
-mockdata %>% 
-  tableby(arm ~ low_wbc + neuropathy + blood_clot, data = .) %>% 
-  summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=FALSE,
-          title = "Table One: Demographics") ->
-table_two
-table_two
-```
-
-
----
-class: center, middle
-
-# Two table types
-
-
-.pull-left[
-
-# <i class="fas fa-search-plus"></i>
-
-Exploratory Data Analysis
-
-(for you)
-
-]
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
+</span> 
 
 --
 
-.pull-right[
-
-# <i class="fas fa-notes-medical"></i>
-
-Actual Data Analysis
-
-(for other people)
-mental model: separate
-]
+# Table Two
 
 ---
 
-# EDA tables: `skimr`
+# Table Two: adverse events
 
-
-```{r skim, message=FALSE, warning=FALSE}
-library(skimr)
-
-# smell test (n's, NAs, etc)
-mockdata %>% 
-  select(fu_fct) %>% 
-  skimr::skim() %>% 
-  kable()
-```
-
-
----
-
-# EDA tables: `janitor`
-
-Good for 1- and 2-way frequency tables (or `tabyl`s)
-
----
-
-# Interactive tables
-
-online options: DT
-
----
-
-print + online
-
-gt
-
-```{r}
-# a 1-way tabyl
-mockdata %>% 
-  tabyl(sex) %>% 
-  adorn_totals("row") %>%
-  adorn_pct_formatting() %>% 
-  gt::gt()
-```
-
-
-
----
-
-.pull-left[
-
-```{r}
-mockdata_gender <- mockdata %>% 
-  tableby(arm ~ sex, data = .) %>% 
+````
+```{r results='asis'}`r ''`
+tab2 <- mockdata %>% 
+  tableby(arm ~ ae_low_wbc + ae_neuropathy + ae_blood_clot, data = .) %>% 
   summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=TRUE,
-          title = "Table One: Demographics")
-labels(mockdata_gender) <- c(sex = "Gender")
+          pfootnote=FALSE,
+          title = "Adverse Events")
+tab2
 ```
-]
-
-.pull-right[
-```{r results='asis'}
-mockdata_gender
-```
-]
+````
 
 
 ---

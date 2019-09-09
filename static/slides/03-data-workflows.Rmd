@@ -148,12 +148,6 @@ knitr::include_graphics("images/horst_here.png")
 ]
 
 
----
-
-# Images
-
-I know I said Markdown earlier, but `knitr::include_graphics`
-
 
 ---
 class: middle, center, inverse
@@ -214,11 +208,7 @@ class: middle, center, inverse
 
 # Header references
 
----
 
-# Figure references
-
-`knitr::include_graphics`
 
 ---
 
@@ -228,7 +218,7 @@ class: middle, center, inverse
 
 # Add cross-references
 
-To a section, a figure, and a table in the text.
+To a section and a table in the text.
 
 ```{r echo = FALSE}
 countdown(minutes = 5)
@@ -237,6 +227,39 @@ countdown(minutes = 5)
 ---
 
 bibliography
+
+---
+
+
+See [citations](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citations)
+
+.pull-left[
+
+    1. Blah blah [see @R-blogdown, pp. 33-35; also @R-knitr, ch. 1].
+
+    2. Blah blah [@R-blogdown, pp. 33-35].
+
+    3. Blah blah [@R-blogdown; @R-knitr].
+
+    4. Yihui says blah [-@R-blogdown].
+
+    5. @R-blogdown says blah.
+]
+
+.pull-right[
+Generates these in-text citation styles:
+
+1. Blah blah [see @R-blogdown, pp. 33-35; also @R-knitr, ch. 1].
+
+2. Blah blah [@R-blogdown, pp. 33-35].
+
+3. Blah blah [@R-blogdown; @R-knitr].
+
+4. Yihui says blah [-@R-blogdown].
+
+5. @R-blogdown says blah.
+
+]
 
 ---
 class: middle, center

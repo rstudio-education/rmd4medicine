@@ -108,6 +108,15 @@ knitr::include_graphics("images/wiki-rstudio.png")
 ]
 
 ---
+background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
+
+??? 
+
+We are not here today to solve science's replication crisis.
+
+What I do think R Markdown can help you with today is your own research confidence crisis.
+
+---
 # Let's play a quick game
 
 .pull-left[
@@ -130,6 +139,8 @@ knitr::include_graphics("images/neverever.jpg")
 
 ]
 
+---
+background-image: url(https://media.giphy.com/media/d3QGYTziFiDL2/giphy.gif)
 
 ---
 
@@ -738,6 +749,17 @@ countdown(minutes = 2)
 how can we make it easier on ourselves to explore the code in here?
 
 show how to add chunk labels and view in IDE interactively
+
+Labeling chunks:
+
+Yes
+
++ alphanumeric characters (`a-z`, `A-Z`, `0-9`)
++ slashes (`/`) or dashes (`-`)
+
+No
+
++ `_` underscores
 
 ---
 

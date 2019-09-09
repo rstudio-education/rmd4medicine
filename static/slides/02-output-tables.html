@@ -4,7 +4,7 @@
     <title>Outputs &amp; Tables</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-09-04" />
+    <meta name="date" content="2019-09-08" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -51,51 +51,77 @@ cloud link
 plot here times knitted so far
 
 ---
+class: pop-quiz
 
 # Pop quiz
 
-_(discuss with a neighbor)_
 
 Which of the following is **NOT** a part of R Markdown basic anatomy?
 
-1. Metadata (written in YAML).
+1. Metadata
 
-1. Text (written in Markdown).
+1. Text
 
-1. CSS.
+1. CSS
 
-1. Code (&lt;i class="fab fa-r-project"&gt;&lt;/i&gt; or other).
+1. Code
 
-1. Output.
+1. Output
+
+<div class="countdown" id="timer_5d75d6fc" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 
 
 ---
+class: pop-quiz
 
-# Match these! 
+# Pop quiz
 
-_(discuss with a neighbor)_
+## Mad libs style
 
-.pull-left[
+```markdown
+ ___________ is written at the top between `---` in ________.
+    noun                                             syntax
+                                                     
+  ______ is written in Markdown.
+   noun         
+  
+  ______ is written in R (or other programming language).
+   noun   
+   
+  The ______ package evaluates the code and produces the ______.
+       noun                                               noun
+```
 
-+ Metadata
+_psst: answers on next slide..._
 
-+ text
+<div class="countdown" id="timer_5d75d7a2" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 
-+ Code
+---
+class: pop-quiz
 
-+ Output
-]
 
-.pull-right[
+# Pop quiz
 
-+ Markdown
+## Answers
 
-+ `knitr`
+```markdown
+ Metadata is written at the top between `---` in YAML.
+   (noun)                                      (syntax)
+                                                     
+  Text is written in Markdown.
+ (noun)         
+  
+  Code is written in R (or other programming language).
+ (noun)   
+   
+  The knitr package evaluates the code and produces the output.
+     (noun)                                             (noun) 
+```
 
-+ &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; (or other programming language)
-
-+ YAML
-]
 
 ---
 class: middle, center
@@ -113,26 +139,15 @@ class: your-turn
 Let's all take a look at this R Markdown document together.
 
 
-
-.pull-left[
-
-Add or edit text...
+Add or edit...
 
 + Headers
 + Lists (&lt;i class="fas fa-list-ul"&gt;&lt;/i&gt; or &lt;i class="fas fa-list-ol"&gt;&lt;/i&gt;)
 + Text formatting like **bold** or _italics_
-]
-
-.pull-right[
-
-Add or edit code...
-
-+ Chunk labels
 + Chunk options
 
-]
 
-<div class="countdown" id="timer_5d702830" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d75d5fc" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -148,11 +163,13 @@ class: middle, center, inverse
 
 # Output formats
 
---
-
-What do you want to make?
 
 ---
+class: middle, center
+
+&lt;img src="images/outputs.png" width="50%" /&gt;
+
+???
 
 Built in formats (in the `rmarkdown` package)
 
@@ -161,11 +178,21 @@ versus
 extensions (different packages that extend output formats available to you)
 
 ---
+class: middle, center
+
+
+&lt;a href="https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats" target="_blank"&gt;&lt;img src="images/rmdbase-formats.png" width="40%" /&gt;&lt;/a&gt;
+
+https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats
+
+---
 class: your-turn
 
 # Your turn
 
 ## Use a different built-in format
+
+.pull-left[
 
 Use the drop-down menu for the 🧶 **Knit** button and try:
 
@@ -173,7 +200,14 @@ Use the drop-down menu for the 🧶 **Knit** button and try:
 
 1. Knitting to PDF
 
-<div class="countdown" id="timer_5d7027d0" style="right:0;bottom:0;" data-warnwhen="0">
+]
+
+.pull-right[
+&lt;img src="images/knit-dropdown.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+]
+
+<div class="countdown" id="timer_5d75d5df" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -196,6 +230,14 @@ output:
 ---
 ```
 
+???
+
+This is a great way to "control" your knit button!
+
+Notice that when you knit, it respects those output options in your YAML.
+
+This way you "save" your output options
+
 ---
 class: your-turn
 
@@ -209,7 +251,9 @@ You just used the drop-down 🧶 **Knit** button to knit to Word and PDF.
 
 1. Change your YAML to the right...
 
-1. Click 🧶 **Knit** - what do you notice?
+1. Be __very careful__ about indentation and `:` here!!
+
+1. 🧶 **Knit** to Word again- is there a TOC?
 
 ]
 
@@ -233,11 +277,29 @@ output:
 ]
 
 
-
-<div class="countdown" id="timer_5d702768" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_5d75d5f4" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
+---
+
+# What is hard about YAML?
+
+.pull-left[
+![](https://media.giphy.com/media/Nt2cPxzpKhbCE/giphy.gif)
+]
+
+.pull-right[
++ Indentations matter
+
++ Rarely informative error messages
+
++ Knowing which output options are relevant for different formats (i.e., Word, PDF, HTML, etc.)
+
++ Easy to forget the right `key`
+
++ Easy to forget the possible `values` for a given `key`
+]
 ---
 class: your-turn
 
@@ -245,17 +307,36 @@ class: your-turn
 
 ## Use an extension package
 
-.pull-left[
 
-1. Edit your YAML again! Change the `output:` key to `distill::distill_article()` (note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)
+1. Edit your YAML again! Change the `output:` key to only `distill::distill_article` 
+
+1. Save the document; click on the dropdown 🧶 **Knit** button- what do you notice?
 
 1. 🧶 **Knit** to distill_article.
 
-1. _If this was easy, add a table of contents._
-]
+1. _If this was easy, add a table of contents too._
 
-.pull-right[
+_psst...answers on the next slide..._
 
+<div class="countdown" id="timer_5d75d5eb" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+.footnote[(note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)]
+
+???
+
+At this point, I'm going to stick with the distill_article output format for the rest of this session.
+
+---
+class: your-turn
+
+# Your turn
+
+## Answer: Use an extension package
+
+.pull-left[
 ```yaml
 ---
 author: Your name here
@@ -265,20 +346,18 @@ output: distill::distill_article
 ```
 ]
 
-<div class="countdown" id="timer_5d70269e" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
-
+.pull-right[
+```yaml
 ---
-name: distill_article
+author: Your name here
+title: Your title here
+output:
+  distill::distill_article:
+    toc: true
+---
+```
+]
 
-
-
-
-???
-
-At this point, I'm going to stick with the distill_article output format for the rest of this session.
 
 ---
 class: middle, center, inverse
@@ -290,7 +369,7 @@ class: middle, center, inverse
 
 --
 
-# Tables
+# Custom typed tables
 
 ---
 
@@ -320,10 +399,8 @@ class: center
 | 01:50 - 02:00 |         | *Break*  |
 | 02:00 - 02:45 | 2       | Tables   |
 | 02:45 - 03:00 |         | *Break*  |
-| 03:00 - 03:50 | 3       | Workflow |
-| 03:50 - 04:00 |         | *Break*  |
-| 04:00 - 04:45 | 4       | Graphics |
-| 04:45 - 05:00 | 5       | Wrap-up  |
+
+Table: Demo of simple table syntax.
 ```
 ]
 
@@ -338,12 +415,108 @@ class: center
 | 01:50 - 02:00 |         | *Break*  |
 | 02:00 - 02:45 | 2       | Tables   |
 | 02:45 - 03:00 |         | *Break*  |
-| 03:00 - 03:50 | 3       | Workflow |
-| 03:50 - 04:00 |         | *Break*  |
-| 04:00 - 04:45 | 4       | Graphics |
-| 04:45 - 05:00 | 5       | Wrap-up  |
+
+Table: Demo of simple table syntax.
 
 ]
+
+---
+class: your-turn
+
+# Your turn
+
+## Type up a Markdown table
+
+.pull-left[
+
+Using pipes `|`, create a table to list the 3 treatment arms. It should look like this:
+
+| Arm | Drug   |
+|:----|:-------|
+| A   | IFL    |
+| F   | FOLFOX |
+| G   | IROX   |
+Table: Treatment arms.
+
+]
+
+.pull-right[
+
+![](https://qph.fs.quoracdn.net/main-qimg-637b91293b153c5cd40419c0872c2186)
+
+]
+
+_psst...answers on the next slide..._
+
+<div class="countdown" id="timer_5d75d5bf" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+# Your turn
+
+## Answers: Make a Markdown table
+
+```markdown
+| Arm | Drug   |
+|:----|:-------|
+| A   | IFL    |
+| F   | FOLFOX |
+| G   | IROX   |
+Table: Treatment arms.
+```
+
+
+---
+class: center, middle
+
+# Two table types
+
+
+.pull-left[
+
+### for your eyes mainly
+
+&lt;img src="images/tables-you.jpg" width="3691" /&gt;
+
+
+]
+
+--
+
+.pull-right[
+
+### for other people's eyes too
+
+&lt;img src="images/tables-them.jpg" width="3691" /&gt;
+]
+
+---
+
+.pull-left[
+
+![](images/imani-_TuIdedBPwQ-unsplash.jpg)
+]
+
+.pull-right[
+![](images/gear_shift.jpg)
+]
+
+.footnote[Images from [Unsplash](https://unsplash.com/photos/_TuIdedBPwQ) and [Wikipedia](https://commons.wikimedia.org/wiki/File:FIAT_500L_gear_shift.jpg)]
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# EDA Tables
 
 ---
 
@@ -353,7 +526,9 @@ class: center
 ```r
 mockdata &lt;- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %&gt;%
   mutate(fu_fct = fct_recode(as.factor(fu_stat), 
-                             "Lived" = "1", "Died" = "2"))  
+                             "Lived" = "1", 
+                             "Died" = "2")) %&gt;% 
+  mutate_at(vars(starts_with("ae_")), ~as.factor(.))
 #&gt; Parsed with column specification:
 #&gt; cols(
 #&gt;   .default = col_double(),
@@ -361,15 +536,176 @@ mockdata &lt;- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %&gt;%
 #&gt;   sex = col_character(),
 #&gt;   race = col_character(),
 #&gt;   age_ord = col_character(),
+#&gt;   site = col_character(),
+#&gt;   country = col_character(),
 #&gt;   ethnicity = col_character(),
 #&gt;   name = col_character(),
 #&gt;   first_name = col_character(),
-#&gt;   last_name = col_character(),
-#&gt;   site = col_character(),
-#&gt;   country = col_character()
+#&gt;   last_name = col_character()
 #&gt; )
 #&gt; See spec(...) for full column specifications.
 ```
+
+---
+
+# EDA tables: `skimr`
+
+
+
+```r
+library(skimr)
+
+# smell test (n's, NAs, etc)
+mockdata %&gt;% 
+  select(fu_fct, starts_with("ae_")) %&gt;% 
+  skimr::skim()
+#&gt; Skim summary statistics
+#&gt;  n obs: 1499 
+#&gt;  n variables: 6 
+#&gt; 
+#&gt; ── Variable type:factor ────────────────────────────────────────────────────────────────────────────────
+#&gt;       variable missing complete    n n_unique                 top_counts
+#&gt;  ae_blood_clot       0     1499 1499        2      0: 1435, 1: 64, NA: 0
+#&gt;    ae_diarrhea       0     1499 1499        2     0: 1201, 1: 298, NA: 0
+#&gt;     ae_low_wbc       0     1499 1499        2     0: 1231, 1: 268, NA: 0
+#&gt;  ae_neuropathy       0     1499 1499        2     0: 1270, 1: 229, NA: 0
+#&gt;    ae_vomiting       0     1499 1499        2     0: 1229, 1: 270, NA: 0
+#&gt;         fu_fct       0     1499 1499        2 Die: 1356, Liv: 143, NA: 0
+#&gt;  ordered
+#&gt;    FALSE
+#&gt;    FALSE
+#&gt;    FALSE
+#&gt;    FALSE
+#&gt;    FALSE
+#&gt;    FALSE
+```
+
+---
+
+````
+```{r skim-kable, results='asis'}
+mockdata %&gt;% 
+  select(fu_fct, starts_with("ae_")) %&gt;% 
+  skim() %&gt;% 
+  kable()
+```
+````
+
+Skim summary statistics  
+ n obs: 1499    
+ n variables: 6    
+
+Variable type: factor
+
+|   variable    | missing | complete |  n   | n_unique |         top_counts         | ordered |
+|---------------|---------|----------|------|----------|----------------------------|---------|
+| ae_blood_clot |    0    |   1499   | 1499 |    2     |   0: 1435, 1: 64, NA: 0    |  FALSE  |
+|  ae_diarrhea  |    0    |   1499   | 1499 |    2     |   0: 1201, 1: 298, NA: 0   |  FALSE  |
+|  ae_low_wbc   |    0    |   1499   | 1499 |    2     |   0: 1231, 1: 268, NA: 0   |  FALSE  |
+| ae_neuropathy |    0    |   1499   | 1499 |    2     |   0: 1270, 1: 229, NA: 0   |  FALSE  |
+|  ae_vomiting  |    0    |   1499   | 1499 |    2     |   0: 1229, 1: 270, NA: 0   |  FALSE  |
+|    fu_fct     |    0    |   1499   | 1499 |    2     | Die: 1356, Liv: 143, NA: 0 |  FALSE  |
+
+
+---
+
+# EDA tables: `janitor`
+
+Good for 1- and 2-way frequency tables (or `tabyl`s)
+
+let's count number of participants by arm, then add by site too
+
+.pull-left[
+
+
+```r
+mockdata %&gt;% 
+  tabyl(arm)
+#&gt;        arm   n   percent
+#&gt;     A: IFL 428 0.2855237
+#&gt;  F: FOLFOX 691 0.4609740
+#&gt;    G: IROX 380 0.2535023
+```
+
+] 
+
+--
+
+.pull-right[
+
+
+```r
+mockdata %&gt;% 
+  tabyl(arm) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_pct_formatting()
+#&gt;        arm    n percent
+#&gt;     A: IFL  428   28.6%
+#&gt;  F: FOLFOX  691   46.1%
+#&gt;    G: IROX  380   25.4%
+#&gt;      Total 1499  100.0%
+```
+
+]
+
+---
+
+.pull-left[
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  tabyl(arm, fu_fct) %&gt;%
+  knitr::kable()
+```
+````
+
+
+|arm       | Lived| Died|
+|:---------|-----:|----:|
+|A: IFL    |    18|  410|
+|F: FOLFOX |    99|  592|
+|G: IROX   |    26|  354|
+
+] 
+
+--
+
+.pull-right[
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  tabyl(arm, fu_fct) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_percentages("row") %&gt;%
+  adorn_pct_formatting(digits = 2) %&gt;%
+  adorn_ns() %&gt;%
+  knitr::kable()
+```
+````
+
+
+|arm       |Lived        |Died          |
+|:---------|:------------|:-------------|
+|A: IFL    |4.21%  (18)  |95.79%  (410) |
+|F: FOLFOX |14.33%  (99) |85.67%  (592) |
+|G: IROX   |6.84%  (26)  |93.16%  (354) |
+|Total     |9.54% (143)  |90.46% (1356) |
+
+]
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;4 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Table One
 
 ---
 
@@ -436,486 +772,34 @@ class: your-turn
 
 ## Make a table one
 
-1. Take the current table one in the doc, and add using the `+` age and bmi
+Take the current table one in the doc, and add the variables `age` and `bmi` to the table. Hint: use the formula `arm ~ sex + age + bmi`
 
 ---
+class: middle, center, inverse
 
-# Table Two
-
-an adverse events table
-
-maybe do some fancier regex worthy stuff to be able to cast all of the adverse events as factors easily
-
-that was a good test- see how tableone deals with factors versus numbers
-
-think about when pfootnote should be TRUE
-
-
-```r
-mockdata &lt;- mockdata %&gt;% 
-  mutate(low_wbc = as.factor(low_wbc))
-labels(mockdata) &lt;- c(age = "Age, years", sex = "Gender")
-mockdata %&gt;% 
-  tableby(arm ~ low_wbc + neuropathy + blood_clot, data = .) %&gt;% 
-  summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=FALSE,
-          title = "Table One: Demographics") -&gt;
-table_two
-table_two
-```
-
-
-Table: Table One: Demographics
-
-|                            | A: IFL (N=428) | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499) | p value|
-|:---------------------------|:--------------:|:-----------------:|:---------------:|:--------------:|-------:|
-|**low_wbc**                 |                |                   |                 |                | &lt; 0.001|
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;0         |  359 (83.9%)   |    509 (73.7%)    |   354 (93.2%)   |  1222 (81.5%)  |        |
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;1         |   69 (16.1%)   |    182 (26.3%)    |    26 (6.8%)    |  277 (18.5%)   |        |
-|**neuropathy**              |                |                   |                 |                | &lt; 0.001|
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;Mean (SD) |  0.16 (0.37)   |    0.21 (0.41)    |   0.07 (0.25)   |  0.16 (0.37)   |        |
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;Range     |  0.00 - 1.00   |    0.00 - 1.00    |   0.00 - 1.00   |  0.00 - 1.00   |        |
-|**blood_clot**              |                |                   |                 |                |   0.267|
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;Mean (SD) |  0.06 (0.24)   |    0.05 (0.21)    |   0.04 (0.19)   |  0.05 (0.22)   |        |
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;Range     |  0.00 - 1.00   |    0.00 - 1.00    |   0.00 - 1.00   |  0.00 - 1.00   |        |
-
-
----
-class: center, middle
-
-# Two table types
-
-
-.pull-left[
-
-# &lt;i class="fas fa-search-plus"&gt;&lt;/i&gt;
-
-Exploratory Data Analysis
-
-(for you)
-
-]
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;5 &lt;/strong&gt;
+&lt;/span&gt; 
 
 --
 
-.pull-right[
-
-# &lt;i class="fas fa-notes-medical"&gt;&lt;/i&gt;
-
-Actual Data Analysis
-
-(for other people)
-mental model: separate
-]
+# Table Two
 
 ---
 
-# EDA tables: `skimr`
+# Table Two: adverse events
 
-
-
-```r
-library(skimr)
-
-# smell test (n's, NAs, etc)
-mockdata %&gt;% 
-  select(fu_fct) %&gt;% 
-  skimr::skim() %&gt;% 
-  kable()
-#&gt; Skim summary statistics  
-#&gt;  n obs: 1499    
-#&gt;  n variables: 1    
-#&gt; 
-#&gt; Variable type: factor
-#&gt; 
-#&gt;  variable    missing    complete     n      n_unique            top_counts            ordered 
-#&gt; ----------  ---------  ----------  ------  ----------  ----------------------------  ---------
-#&gt;   fu_fct        0         1499      1499       2        Die: 1356, Liv: 143, NA: 0     FALSE
-```
-
-
----
-
-# EDA tables: `janitor`
-
-Good for 1- and 2-way frequency tables (or `tabyl`s)
-
----
-
-# Interactive tables
-
-online options: DT
-
----
-
-print + online
-
-gt
-
-
-```r
-# a 1-way tabyl
-mockdata %&gt;% 
-  tabyl(sex) %&gt;% 
-  adorn_totals("row") %&gt;%
-  adorn_pct_formatting() %&gt;% 
-  gt::gt()
-```
-
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#qenctjhhyr .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #000000;
-  font-size: 16px;
-  background-color: #FFFFFF;
-  /* table.background.color */
-  width: auto;
-  /* table.width */
-  border-top-style: solid;
-  /* table.border.top.style */
-  border-top-width: 2px;
-  /* table.border.top.width */
-  border-top-color: #A8A8A8;
-  /* table.border.top.color */
-  border-bottom-style: solid;
-  /* table.border.bottom.style */
-  border-bottom-width: 2px;
-  /* table.border.bottom.width */
-  border-bottom-color: #A8A8A8;
-  /* table.border.bottom.color */
-}
-
-#qenctjhhyr .gt_heading {
-  background-color: #FFFFFF;
-  /* heading.background.color */
-  border-bottom-color: #FFFFFF;
-}
-
-#qenctjhhyr .gt_title {
-  color: #000000;
-  font-size: 125%;
-  /* heading.title.font.size */
-  padding-top: 4px;
-  /* heading.top.padding */
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#qenctjhhyr .gt_subtitle {
-  color: #000000;
-  font-size: 85%;
-  /* heading.subtitle.font.size */
-  padding-top: 2px;
-  padding-bottom: 2px;
-  /* heading.bottom.padding */
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#qenctjhhyr .gt_bottom_border {
-  border-bottom-style: solid;
-  /* heading.border.bottom.style */
-  border-bottom-width: 2px;
-  /* heading.border.bottom.width */
-  border-bottom-color: #A8A8A8;
-  /* heading.border.bottom.color */
-}
-
-#qenctjhhyr .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#qenctjhhyr .gt_col_heading {
-  color: #000000;
-  background-color: #FFFFFF;
-  /* column_labels.background.color */
-  font-size: 16px;
-  /* column_labels.font.size */
-  font-weight: initial;
-  /* column_labels.font.weight */
-  vertical-align: middle;
-  padding: 10px;
-  margin: 10px;
-  overflow-x: hidden;
-}
-
-#qenctjhhyr .gt_columns_top_border {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-}
-
-#qenctjhhyr .gt_columns_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-}
-
-#qenctjhhyr .gt_sep_right {
-  border-right: 5px solid #FFFFFF;
-}
-
-#qenctjhhyr .gt_group_heading {
-  padding: 8px;
-  color: #000000;
-  background-color: #FFFFFF;
-  /* row_group.background.color */
-  font-size: 16px;
-  /* row_group.font.size */
-  font-weight: initial;
-  /* row_group.font.weight */
-  border-top-style: solid;
-  /* row_group.border.top.style */
-  border-top-width: 2px;
-  /* row_group.border.top.width */
-  border-top-color: #A8A8A8;
-  /* row_group.border.top.color */
-  border-bottom-style: solid;
-  /* row_group.border.bottom.style */
-  border-bottom-width: 2px;
-  /* row_group.border.bottom.width */
-  border-bottom-color: #A8A8A8;
-  /* row_group.border.bottom.color */
-  vertical-align: middle;
-}
-
-#qenctjhhyr .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #000000;
-  background-color: #FFFFFF;
-  /* row_group.background.color */
-  font-size: 16px;
-  /* row_group.font.size */
-  font-weight: initial;
-  /* row_group.font.weight */
-  border-top-style: solid;
-  /* row_group.border.top.style */
-  border-top-width: 2px;
-  /* row_group.border.top.width */
-  border-top-color: #A8A8A8;
-  /* row_group.border.top.color */
-  border-bottom-style: solid;
-  /* row_group.border.bottom.style */
-  border-bottom-width: 2px;
-  /* row_group.border.bottom.width */
-  border-bottom-color: #A8A8A8;
-  /* row_group.border.bottom.color */
-  vertical-align: middle;
-}
-
-#qenctjhhyr .gt_striped {
-  background-color: #f2f2f2;
-}
-
-#qenctjhhyr .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#qenctjhhyr .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#qenctjhhyr .gt_row {
-  padding: 8px;
-  /* row.padding */
-  margin: 10px;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#qenctjhhyr .gt_stub {
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #A8A8A8;
-  padding-left: 12px;
-}
-
-#qenctjhhyr .gt_summary_row {
-  color: #000000;
-  background-color: #FFFFFF;
-  /* summary_row.background.color */
-  padding: 8px;
-  /* summary_row.padding */
-  text-transform: inherit;
-  /* summary_row.text_transform */
-}
-
-#qenctjhhyr .gt_grand_summary_row {
-  color: #000000;
-  background-color: #FFFFFF;
-  /* grand_summary_row.background.color */
-  padding: 8px;
-  /* grand_summary_row.padding */
-  text-transform: inherit;
-  /* grand_summary_row.text_transform */
-}
-
-#qenctjhhyr .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-}
-
-#qenctjhhyr .gt_first_grand_summary_row {
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #A8A8A8;
-}
-
-#qenctjhhyr .gt_table_body {
-  border-top-style: solid;
-  /* table_body.border.top.style */
-  border-top-width: 2px;
-  /* table_body.border.top.width */
-  border-top-color: #A8A8A8;
-  /* table_body.border.top.color */
-  border-bottom-style: solid;
-  /* table_body.border.bottom.style */
-  border-bottom-width: 2px;
-  /* table_body.border.bottom.width */
-  border-bottom-color: #A8A8A8;
-  /* table_body.border.bottom.color */
-}
-
-#qenctjhhyr .gt_footnotes {
-  border-top-style: solid;
-  /* footnotes.border.top.style */
-  border-top-width: 2px;
-  /* footnotes.border.top.width */
-  border-top-color: #A8A8A8;
-  /* footnotes.border.top.color */
-}
-
-#qenctjhhyr .gt_footnote {
-  font-size: 90%;
-  /* footnote.font.size */
-  margin: 0px;
-  padding: 4px;
-  /* footnote.padding */
-}
-
-#qenctjhhyr .gt_sourcenotes {
-  border-top-style: solid;
-  /* sourcenotes.border.top.style */
-  border-top-width: 2px;
-  /* sourcenotes.border.top.width */
-  border-top-color: #A8A8A8;
-  /* sourcenotes.border.top.color */
-}
-
-#qenctjhhyr .gt_sourcenote {
-  font-size: 90%;
-  /* sourcenote.font.size */
-  padding: 4px;
-  /* sourcenote.padding */
-}
-
-#qenctjhhyr .gt_center {
-  text-align: center;
-}
-
-#qenctjhhyr .gt_left {
-  text-align: left;
-}
-
-#qenctjhhyr .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#qenctjhhyr .gt_font_normal {
-  font-weight: normal;
-}
-
-#qenctjhhyr .gt_font_bold {
-  font-weight: bold;
-}
-
-#qenctjhhyr .gt_font_italic {
-  font-style: italic;
-}
-
-#qenctjhhyr .gt_super {
-  font-size: 65%;
-}
-
-#qenctjhhyr .gt_footnote_glyph {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="qenctjhhyr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  
-  <tr>
-    <th class="gt_col_heading gt_columns_bottom_border gt_columns_top_border gt_left" rowspan="1" colspan="1">sex</th>
-    <th class="gt_col_heading gt_columns_bottom_border gt_columns_top_border gt_center" rowspan="1" colspan="1">n</th>
-    <th class="gt_col_heading gt_columns_bottom_border gt_columns_top_border gt_left" rowspan="1" colspan="1">percent</th>
-  </tr>
-  <body class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">Female</td>
-      <td class="gt_row gt_right">583</td>
-      <td class="gt_row gt_left">38.9%</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left gt_striped">Male</td>
-      <td class="gt_row gt_right gt_striped">916</td>
-      <td class="gt_row gt_left gt_striped">61.1%</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Total</td>
-      <td class="gt_row gt_right">1499</td>
-      <td class="gt_row gt_left">100.0%</td>
-    </tr>
-  </body>
-  
-  
-</table></div>
-
-
-
----
-
-.pull-left[
-
-
-```r
-mockdata_gender &lt;- mockdata %&gt;% 
-  tableby(arm ~ sex, data = .) %&gt;% 
+````
+```{r results='asis'}
+tab2 &lt;- mockdata %&gt;% 
+  tableby(arm ~ ae_low_wbc + ae_neuropathy + ae_blood_clot, data = .) %&gt;% 
   summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=TRUE,
-          title = "Table One: Demographics")
-labels(mockdata_gender) &lt;- c(sex = "Gender")
+          pfootnote=FALSE,
+          title = "Adverse Events")
+tab2
 ```
-]
-
-.pull-right[
-
-```r
-mockdata_gender
-```
-
-
-Table: Table One: Demographics
-
-|                         | A: IFL (N=428) | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499) |  p value|
-|:------------------------|:--------------:|:-----------------:|:---------------:|:--------------:|--------:|
-|**Gender**               |                |                   |                 |                | 0.190^1^|
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;Female |  151 (35.3%)   |    280 (40.5%)    |   152 (40.0%)   |  583 (38.9%)   |         |
-|&amp;nbsp;&amp;nbsp;&amp;nbsp;Male   |  277 (64.7%)   |    411 (59.5%)    |   228 (60.0%)   |  916 (61.1%)   |         |
-1. Pearson's Chi-squared test
-]
+````
 
 
 ---
@@ -935,7 +819,7 @@ To exclude, use your `knitr` code chunk options (do not delete!)
 
 add text to frame the table and what it is showing
 
-<div class="countdown" id="timer_5d7024f0" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d75d61d" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -948,7 +832,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d702495" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d75d6f2" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

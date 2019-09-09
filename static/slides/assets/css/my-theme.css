@@ -43,7 +43,7 @@ a:hover, a:active, a:focus {
 
 .remark-inline-code { 
   color: #2c6793;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .remark-code-line-highlighted { 
@@ -250,7 +250,7 @@ div.my-footer span {
     bottom: 2px;
 }
 
-.your-turn {
+.your-turn, .your-turn h2 {
   background-color: #bed3ec;
   color: #1f5386;
 }
@@ -258,7 +258,7 @@ div.my-footer span {
 .your-turn h1 {
   color: #fff;
   text-shadow: 1px 1px 2px #1f5386;
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
 .your-turn h1:before {
@@ -272,9 +272,13 @@ div.my-footer span {
     padding-right: 10px;
 }
 
-h1#pop-quiz {
+.pop-quiz h1, h1#pop-quiz {
   color: #E7553C;
-  font-size: 4em;
+  font-size: 3.5em;
+}
+
+.pop-quiz h2, h2#pop-quiz {
+  color: #E7553C;
 }
 
 h1#pop-quiz:before {
@@ -286,3 +290,30 @@ h1#pop-quiz:before {
     float: left;
     background-size: 70px;
 }
+
+.live-code {
+  background-color: #2f5275;
+  color: #fff;
+}
+
+.live-code h1 {
+  color: #fff;
+  text-shadow: 1px 1px 2px #1f5386;
+  font-size: 3.5em;
+}
+
+.live-code h1:before {
+    content: "";
+    display: inline-block;
+    background: url("../Live-code.png") no-repeat;
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-size: 100px;
+    padding-right: 50px;
+}
+
+.live-code .remark-inline-code {
+  color: #fff
+}
+

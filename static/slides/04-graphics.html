@@ -4,7 +4,7 @@
     <title>Graphics for Communication</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-09-01" />
+    <meta name="date" content="2019-09-08" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -37,14 +37,436 @@ class: title-slide, center, middle
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
 
-&lt;!-- this ends up being the title slide since seal = FALSE--&gt;
-
 ---
 layout: true
 
 &lt;div class="my-footer"&gt;&lt;span&gt;rstudio.cloud/link&lt;/span&gt;&lt;/div&gt;
 
-&lt;!-- this adds the link footer to all slides, depends on my-footer class in css--&gt;
+
+---
+exclude: true
+
+at this point, we should be within a bookdown with html and word doc output options?
+
+Or an rticles with bookdown under the hood?
+
+Final: end with powerpoint with graphics
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Get figures in
+
+---
+class: your-turn
+
+# Your turn
+
+A warm-up exercise! Open up our doc. It has several figures coded using the `ggplot2` package. 
+
+1. Knit the document to the `bookdown::html_document2` format &amp;mdash; behold!
+
+1. Add output options to this format to use one of the bootswatch themes and include a floating table of contents.
+
+1. Knit to `bookdown::word_document2` (no options)- how does it look?
+
+1. _If this was easy, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?_
+
+_psst...next slide has answers..._
+
+<div class="countdown" id="timer_5d74b348" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+class: your-turn
+
+# Answer
+
+```yaml
+---
+output:
+  bookdown::html_document2:
+    theme: flatly
+    toc: true
+    toc_float: true
+  bookdown::word_document2: default
+  distill::distill_article:
+    toc: true
+---
+```
+
+---
+class: inverse, middle
+
+
+.pull-left[
+
+![](https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png)&lt;!-- --&gt;
+
+]
+
+--
+
+.pull-right[
+
+[`ggplot2` package](https://ggplot2.tidyverse.org/)
+
+[`ggplot2` cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+
+[R4DS chapter](https://r4ds.had.co.nz/data-visualisation.html)
+
+]
+
+
+---
+
+# Chunk options
+
+
+https://yihui.name/knitr/options/#plots
+
+
+
+---
+
+# Goal plot
+
+
+
+.pull-left[
+&lt;img src="04-graphics_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
+
+]
+
+.pull-right[
+&lt;img src="04-graphics_files/figure-html/unnamed-chunk-6-1.png" width="504" /&gt;
+
+]
+
+
+---
+
+That is where we are going
+
+How are we going to get there?
+
+First, we need to learn about how to include a single plot in your article.
+
+EASY JUST MAKE &amp; KNIT!
+
+---
+
+But sometimes it doesn't look quite right. 
+
+- fig resolution
+- fig size
+
+---
+
+
+
+---
+
+&lt;img src="04-graphics_files/figure-html/unnamed-chunk-8-1.png" width="1440" /&gt;
+
+
+---
+class: live-code
+
+# Live code demo
+
+We take the first plot and together we:
+
+1. Label the chunk
+
+1. Add a figure caption _(watch what happens if we don't label it first!)_
+
+1. Align figure to the right, center
+
+
+
+---
+
+first introduce `knitr::include_graphics` for static images
+
+---
+
+
+.pull-left[
+
+
+```r
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#447099",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+
+]
+
+.pull-right[
+![](04-graphics_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+.pull-left[
+
+````
+```{r}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#447099",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+````
+
+![](04-graphics_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+]
+
+--
+
+.pull-right[
+
+````
+```{r fig.retina=3}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#447099",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+````
+
+&lt;img src="04-graphics_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
+]
+
+---
+
+now you have to 
+1. label the chunk
+1. add `fig.cap` 
+
+![Age distribution](04-graphics_files/figure-html/unnamed-chunk-12-1.png)
+
+???
+
+You must label the chunk for the figure caption to show up
+
+---
+
+# Caption a figure
+
+.pull-left[
+
+````
+```{r pressure-plot, fig.cap='Look!'}
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+]
+
+.pull-right[
+.center[
+
+&lt;img src="04-graphics_files/figure-html/pressure-plot-1.png" width="75%" /&gt;
+
+**Fig. 1:** Look!]
+
+]
+
+---
+
+# Cross-reference a figure
+
+.pull-left[
+
+See Figure `\@ref(fig:pressure-plot)`.
+
+````
+```{r pressure-plot}
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+]
+
+.pull-right[
+
+See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
+
+.center[
+
+&lt;img src="04-graphics_files/figure-html/unnamed-chunk-13-1.png" width="75%" /&gt;
+
+]
+
+]
+
+---
+
+# Figure references
+
+for static images
+
+`knitr::include_graphics`
+
+
+---
+class: your-turn
+
+# Your turn
+
+take one of the plots in the doc, add some `knitr` chunk options to it to:
+
+1. Add a chunk label
+1. Increase the figure resolution
+1. Add a figure caption
+1. _If this was easy, try to change the figure alignment (and its caption) to the center._
+
+<div class="countdown" id="timer_5d74b1fe" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Combine figures in output
+
+---
+
+do multi-panel here
+
+`cowplot` or `patchwork` for multi-panel plots
+
+---
+
+# Cross-references to figures
+
+Once you have:
+
+✔️ A labeled chunk that produces a plot
+
+✔️ A figure caption using `fig.cap`
+
+Then you can have:
+
+## Cross-references! 
+
+
+---
+class: live-code
+
+# Live code demo
+
+We take the first plot and together we:
+
+1. Add an in-text reference to the figure using `\@ref(fig:age-dist)`
+
+1. Knit and behold
+
+
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Get figures out
+
+---
+
+# Exporting plots
+
+cover ggsave for outputting figures
+
+
+```r
+ggsave()
+```
+
+---
+
+
+```
+## Help on topic 'ggsave' was found in the following packages:
+## 
+##   * ggplot2
+##   * cowplot
+```
+
+---
+
+
+```
+## Help on topic 'ggsave' was found in the following packages:
+## 
+##   * ggplot2
+##   * cowplot
+```
+
+
+---
+
+setting `fig.path` as a code chunk option
+
+---
+class: live-code
+
+# Live code demo
+
+We take the first plot and together we:
+
+1. Add `fig.path="figs/"` as a `knitr` code chunk option _(watch what happens if we don't include the backslash!)_
+
+1. Knit and behold
+
+---
+class: your-turn
+
+# Your turn: Add figure path to setup chunk
+
+Remember our old friend, the `knitr` setup chunk? 
+
+1. Add `fig.path="figs/"` to the *global* setup chunk
+
+1. Save and knit- what do you notice?
+
+<div class="countdown" id="timer_5d74b2ff" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
 
 ---
 
@@ -59,19 +481,9 @@ graphics type output (https://r4ds.had.co.nz/graphics-for-communication.html#oth
 
 ---
 
-setting `fig.path`
-
----
-
-adding figure captions with `fig.cap` + in text references
-
----
-
-`cowplot` or `patchwork` for multi-panel plots
-
----
-
 Add in powerpoint output format here, natural place with graphics for communication
+
+when they do this, let them play with `scico` palettes in a your turn
 
 ---
 class: middle, center
@@ -98,7 +510,7 @@ class: middle, center, inverse
 
 # Time to wrap-up!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d6c3a8c" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d74b0da" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

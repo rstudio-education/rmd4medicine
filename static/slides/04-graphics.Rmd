@@ -27,6 +27,11 @@ options(htmltools.dir.version = FALSE)
 
 ```{r packages, include=FALSE}
 library(countdown)
+library(tidyverse)
+library(scico)
+library(cowplot)
+library(ymlthis)
+theme_set(theme_minimal())
 ```
 
 
@@ -46,14 +51,499 @@ class: title-slide, center, middle
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
 
-<!-- this ends up being the title slide since seal = FALSE-->
-
 ---
 layout: true
 
 <div class="my-footer"><span>rstudio.cloud/link</span></div>
 
-<!-- this adds the link footer to all slides, depends on my-footer class in css-->
+
+---
+exclude: true
+
+at this point, we should be within a bookdown with html and word doc output options?
+
+Or an rticles with bookdown under the hood?
+
+Final: end with powerpoint with graphics
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+</span> 
+
+# Get figures in
+
+---
+class: your-turn
+
+# Your turn
+
+A warm-up exercise! Open up our doc. It has several figures coded using the `ggplot2` package. 
+
+1. Knit the document to the `bookdown::html_document2` format &mdash; behold!
+
+1. Add output options to this format to use one of the bootswatch themes and include a floating table of contents.
+
+1. Knit to `bookdown::word_document2` (no options)- how does it look?
+
+1. _If this was easy, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?_
+
+_psst...next slide has answers..._
+
+```{r echo=FALSE}
+countdown(minutes = 5)
+```
+
+
+---
+class: your-turn
+
+# Answer
+
+```{r echo = FALSE}
+yml_empty() %>% 
+  yml_output(bookdown::html_document2(theme = "flatly", toc = TRUE, toc_float = TRUE),
+             bookdown::word_document2(),
+             distill::distill_article(toc = TRUE)) %>% 
+  asis_yaml_output()
+```
+
+---
+class: inverse, middle
+
+
+.pull-left[
+
+```{r echo=FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png")
+```
+
+]
+
+--
+
+.pull-right[
+
+[`ggplot2` package](https://ggplot2.tidyverse.org/)
+
+[`ggplot2` cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+
+[R4DS chapter](https://r4ds.had.co.nz/data-visualisation.html)
+
+]
+
+
+---
+
+# Chunk options
+
+
+https://yihui.name/knitr/options/#plots
+
+
+
+---
+
+# Goal plot
+
+```{r include=FALSE, fig.show='hide', results='hide'}
+mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", 
+                             "Died" = "2"))  
+
+# calculate proportion survived by arm
+prop_surv <- mockdata %>% 
+  count(arm, fu_fct, name = "by_surv", .drop = FALSE) %>% 
+  add_count(arm, wt = by_surv, name = "arm_total") %>% 
+  mutate(prop = by_surv/arm_total) %>% 
+  filter(fu_fct == "Lived")
+
+# barplot of percent survival by arm
+surv_bar <- ggplot(prop_surv, aes(x = arm, y = prop)) +
+  geom_col() +
+  labs(y= "Percent Survived", x= "Study Arm") +
+  scale_y_continuous(labels = scales::percent_format(accuracy = .1))
+
+# distributions of survival time by arms (in days censored)
+surv_violin <- ggplot(mockdata) +
+  aes(x=arm, y = fu_time, fill = fu_fct, group = interaction(arm, fu_fct)) +
+  geom_violin(alpha = .6,
+              colour = NA, 
+              na.rm = TRUE, 
+              position = position_dodge()) +
+  geom_boxplot(alpha = .8,
+               outlier.colour = "black",
+               colour = "white",
+               width = .2, 
+               outlier.size = 2, 
+               na.rm = TRUE, 
+               position = position_dodge(width = .9),
+               show.legend = FALSE) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Study Arm") +
+  scale_fill_scico_d(palette = 'cork', 
+                     name = "Follow-up status:") +
+  theme(legend.position = "top")
+```
+
+.pull-left[
+```{r echo=FALSE, fig.retina=3}
+surv_bar
+```
+
+]
+
+.pull-right[
+```{r echo=FALSE, fig.retina=3}
+surv_violin
+```
+
+]
+
+
+---
+
+That is where we are going
+
+How are we going to get there?
+
+First, we need to learn about how to include a single plot in your article.
+
+EASY JUST MAKE & KNIT!
+
+---
+
+But sometimes it doesn't look quite right. 
+
+- fig resolution
+- fig size
+
+---
+
+```{r echo=FALSE}
+library(ggbeeswarm)
+surv_bee <- ggplot(mockdata) +
+  aes(x = arm, 
+      y = fu_time, 
+      fill = arm, 
+      group = interaction(arm,fu_fct)) +
+  geom_quasirandom(alpha = 0.3, 
+              colour = "black", 
+              dodge.width = .9) +
+  geom_boxplot(width = .3, 
+               outlier.shape = NA, 
+               na.rm = TRUE, 
+               position = position_dodge(width = .9)) +
+  labs(y= "Survival Time in \nDays (Censored)", x = "Study Arm") +
+  scale_fill_scico_d(palette = 'lapaz', 
+                     guide = FALSE, 
+                     begin = .3, 
+                     end = .8)
+```
+
+---
+
+```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=20}
+plot_grid(surv_bar, surv_violin, labels = "AUTO")
+```
+
+
+---
+class: live-code
+
+# Live code demo
+
+We take the first plot and together we:
+
+1. Label the chunk
+
+1. Add a figure caption _(watch what happens if we don't label it first!)_
+
+1. Align figure to the right, center
+
+
+
+---
+
+first introduce `knitr::include_graphics` for static images
+
+---
+
+
+.pull-left[
+
+```{r age-dist, fig.show='hide'}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#447099",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+
+]
+
+.pull-right[
+```{r ref.label='age-dist', echo=FALSE}
+
+```
+
+]
+
+---
+
+.pull-left[
+
+````
+```{r}`r ''`
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#447099",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+````
+
+```{r ref.label='age-dist', echo=FALSE}
+
+```
+]
+
+--
+
+.pull-right[
+
+````
+```{r fig.retina=3}`r ''`
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#447099",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+````
+
+```{r ref.label='age-dist', echo=FALSE, fig.retina=3}
+
+```
+]
+
+---
+
+now you have to 
+1. label the chunk
+1. add `fig.cap` 
+
+```{r ref.label='age-dist', echo=FALSE, fig.cap="Age distribution"}
+
+```
+
+???
+
+You must label the chunk for the figure caption to show up
+
+---
+
+# Caption a figure
+
+.pull-left[
+
+````
+```{r pressure-plot, fig.cap='Look!'}`r ''`
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+]
+
+.pull-right[
+.center[
+
+```{r pressure-plot, out.width='75%', echo = FALSE, fig.retina = 3}
+plot(pressure, type = 'b', pch = 19)
+```
+
+**Fig. 1:** Look!]
+
+]
+
+---
+
+# Cross-reference a figure
+
+.pull-left[
+
+See Figure `\@ref(fig:pressure-plot)`.
+
+````
+```{r pressure-plot}`r ''`
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+]
+
+.pull-right[
+
+See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
+
+.center[
+
+```{r ref.label = 'pressure-plot', out.width='75%', echo = FALSE, fig.retina = 3}
+```
+
+]
+
+]
+
+---
+
+# Figure references
+
+for static images
+
+`knitr::include_graphics`
+
+
+---
+class: your-turn
+
+# Your turn
+
+take one of the plots in the doc, add some `knitr` chunk options to it to:
+
+1. Add a chunk label
+1. Increase the figure resolution
+1. Add a figure caption
+1. _If this was easy, try to change the figure alignment (and its caption) to the center._
+
+```{r echo=FALSE}
+countdown(minutes = 3)
+```
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">2</strong>
+</span> 
+
+# Combine figures in output
+
+---
+
+do multi-panel here
+
+`cowplot` or `patchwork` for multi-panel plots
+
+---
+
+# Cross-references to figures
+
+Once you have:
+
+`r emo::ji("heavy_check_mark")` A labeled chunk that produces a plot
+
+`r emo::ji("heavy_check_mark")` A figure caption using `fig.cap`
+
+Then you can have:
+
+## Cross-references! 
+
+
+---
+class: live-code
+
+# Live code demo
+
+We take the first plot and together we:
+
+1. Add an in-text reference to the figure using `\@ref(fig:age-dist)`
+
+1. Knit and behold
+
+
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">3</strong>
+</span> 
+
+# Get figures out
+
+---
+
+# Exporting plots
+
+cover ggsave for outputting figures
+
+```{r eval=FALSE}
+ggsave()
+```
+
+---
+
+```{r echo=FALSE, printr.help.sections="usage"}
+library(printr)
+?ggsave
+```
+
+---
+
+```{r echo=FALSE, printr.help.sections="arguments"}
+library(printr)
+?ggsave
+```
+
+
+---
+
+setting `fig.path` as a code chunk option
+
+---
+class: live-code
+
+# Live code demo
+
+We take the first plot and together we:
+
+1. Add `fig.path="figs/"` as a `knitr` code chunk option _(watch what happens if we don't include the backslash!)_
+
+1. Knit and behold
+
+---
+class: your-turn
+
+# Your turn: Add figure path to setup chunk
+
+Remember our old friend, the `knitr` setup chunk? 
+
+1. Add `fig.path="figs/"` to the *global* setup chunk
+
+1. Save and knit- what do you notice?
+
+```{r echo=FALSE}
+countdown(minutes = 2)
+```
+
 
 ---
 
@@ -68,19 +558,9 @@ graphics type output (https://r4ds.had.co.nz/graphics-for-communication.html#oth
 
 ---
 
-setting `fig.path`
-
----
-
-adding figure captions with `fig.cap` + in text references
-
----
-
-`cowplot` or `patchwork` for multi-panel plots
-
----
-
 Add in powerpoint output format here, natural place with graphics for communication
+
+when they do this, let them play with `scico` palettes in a your turn
 
 ---
 class: middle, center
