@@ -28,9 +28,10 @@ Welcome to the [R Markdown for Medicine](https://rmd4medicine.netlify.com/worksh
     + The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:
 
         ```{r pkg-list, eval=FALSE}
-        install.packages(c("rmarkdown", "distill", "bookdown",
-                           "tidyverse", "here", "janitor", "skimr", 
-                           "flextable", "arsenal", "scico", "cowplot"))
+        install.packages(c("rmarkdown", "tidyverse", "distill", 
+                           "bookdown", "rticles", "janitor",
+                           "skimr", "here", "scico", "tableone",
+                           "flextable", "arsenal", "cowplot"))
         ```
     
 1. Don't forget your power cord!

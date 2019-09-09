@@ -21,9 +21,9 @@ R Markdown for Medicine: <br>From Data to Manuscript
 | 01:50 - 02:00 | *Break* :coffee:                       |
 | 02:00 - 02:45 | Session 2 (Outputs & Tables)           |
 | 02:45 - 03:00 | *Break* :tea:                          |
-| 03:00 - 03:50 | Session 3 (Data & Workflows)           |
+| 03:00 - 03:50 | Session 3 (Graphics for Communication) |
 | 03:50 - 04:00 | *Break* :potable\_water:               |
-| 04:00 - 04:45 | Session 4 (Graphics for Communication) |
+| 04:00 - 04:45 | Session 4 (Data & Workflows)           |
 | 04:45 - 05:00 | Wrap-up / Overtime                     |
 
 <br>
@@ -150,9 +150,10 @@ complete the following prework:
         line:
         
         ``` r
-        install.packages(c("rmarkdown", "distill", "bookdown",
-                           "tidyverse", "here", "janitor", "skimr", 
-                           "flextable", "arsenal", "scico", "cowplot"))
+        install.packages(c("rmarkdown", "tidyverse", "distill", 
+                           "bookdown", "rticles", "janitor",
+                           "skimr", "here", "scico", "tableone",
+                           "flextable", "arsenal", "cowplot"))
         ```
 
 4.  Don’t forget your power cord\!
