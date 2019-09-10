@@ -10,7 +10,7 @@ output:
     seal: false 
     lib_dir: libs
     nature:
-      highlightStyle: tomorrow-night-eighties
+      highlightStyle: dracula
       highlightLanguage: ["r", "yaml", "markdown"]
       slideNumberFormat: "" 
       highlightLines: true
@@ -584,13 +584,14 @@ knitr::include_graphics("images/ppt.png")
 ]
 
 ---
-class: middle, center, inverse
+class: middle, center
 
+# `r emo::ji("stopwatch")`
 
-# Time to wrap-up!
+# Time for a break!
 
 ```{r echo = FALSE}
-countdown(minutes = 15, update_every = 15)
+countdown(minutes = 10, update_every = 15)
 ```
 
 

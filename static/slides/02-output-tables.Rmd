@@ -10,7 +10,7 @@ output:
     seal: false 
     lib_dir: libs
     nature:
-      highlightStyle: tomorrow-night-eighties
+      highlightStyle: dracula
       highlightLanguage: ["r", "yaml", "markdown"]
       slideNumberFormat: "" 
       highlightLines: true

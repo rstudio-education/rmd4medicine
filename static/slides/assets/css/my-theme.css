@@ -250,7 +250,7 @@ div.my-footer span {
     bottom: 2px;
 }
 
-.your-turn, .your-turn h2 {
+.your-turn {
   background-color: #bed3ec;
   color: #1f5386;
 }
@@ -271,6 +271,11 @@ div.my-footer span {
     background-size: 100px;
     padding-right: 10px;
 }
+
+.your-turn h2, .your-turn h3 {
+  color: #1f5386 !important;
+}
+
 
 .pop-quiz h1, h1#pop-quiz {
   color: #E7553C;
@@ -313,7 +318,7 @@ h1#pop-quiz:before {
     padding-right: 50px;
 }
 
-.live-code .remark-inline-code {
+.live-code .remark-inline-code, .your-turn .remark-inline-code {
   color: #fff
 }
 

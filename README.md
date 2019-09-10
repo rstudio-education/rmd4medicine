@@ -153,7 +153,7 @@ the following prework:
                            "bookdown", "rticles", "here", "gt",
                            "skimr", "scico", "janitor", "arsenal",
                            "tableone", "flextable", "cowplot",
-                           "survminer", "survival"))
+                           "survminer", "survival", "revealjs"))
         ```
 
 4.  Don’t forget your power cord\!

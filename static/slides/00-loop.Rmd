@@ -10,7 +10,7 @@ output:
     lib_dir: libs
     nature:
       # autoplay: 5000
-      highlightStyle: github
+      highlightStyle: dracula
       slideNumberFormat: "" 
       highlightLines: true
       countIncrementalSlides: false

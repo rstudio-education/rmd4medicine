@@ -28,7 +28,7 @@ Welcome to the [R Markdown for Medicine](/) workshop! We look forward to meeting
                            "bookdown", "rticles", "here", "gt",
                            "skimr", "scico", "janitor", "arsenal",
                            "tableone", "flextable", "cowplot",
-                           "survminer", "survival"))
+                           "survminer", "survival", "revealjs"))
         ```
     
 1. Don't forget your power cord!
