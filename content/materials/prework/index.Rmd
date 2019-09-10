@@ -27,7 +27,8 @@ Welcome to the [R Markdown for Medicine](/) workshop! We look forward to meeting
         install.packages(c("rmarkdown", "tidyverse", "distill", 
                            "bookdown", "rticles", "here", "gt",
                            "skimr", "scico", "janitor", "arsenal",
-                           "tableone", "flextable", "cowplot"))
+                           "tableone", "flextable", "cowplot",
+                           "survminer", "survival"))
         ```
     
 1. Don't forget your power cord!

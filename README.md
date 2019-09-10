@@ -152,7 +152,8 @@ the following prework:
         install.packages(c("rmarkdown", "tidyverse", "distill", 
                            "bookdown", "rticles", "here", "gt",
                            "skimr", "scico", "janitor", "arsenal",
-                           "tableone", "flextable", "cowplot"))
+                           "tableone", "flextable", "cowplot",
+                           "survminer", "survival"))
         ```
 
 4.  Don’t forget your power cord\!
@@ -160,10 +161,8 @@ the following prework:
 On the day of the workshop, I’ll provide you with an RStudio Cloud
 project that contains all of the course materials. We will use the
 software listed above only as an important backup should there be
-problems with the on-site internet connection.
-
-*(note: these slides are intentionally a loop and will play on
-autoadvance)*
+problems with the on-site internet
+connection.
 
 -----
 
