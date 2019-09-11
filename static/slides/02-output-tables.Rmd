@@ -215,9 +215,9 @@ class: your-turn
 
 Use the drop-down menu for the `r emo::ji("yarn")` **Knit** button and try:
 
-1. Knitting to Word
+1. Knit to Word
 
-1. Knitting to PDF
+1. Knit to PDF
 
 ]
 
@@ -371,6 +371,90 @@ yml_empty() %>%
 ```
 ]
 
+---
+class: middle
+
+# Pop quiz
+
+.pull-left[
+How do you add a single output **format** to your YAML?
+
+```yaml
+---
+output: html_document: default
+---
+output: html_document
+---
+output_format: html_document
+---
+```
+
+]
+
+.pull-right[
+How do you add an output **option** to a format in your YAML?
+
+```yaml
+---
+output: 
+  html_document: 
+    toc: true
+---
+output: 
+  html_document: toc
+---
+output_format: html_document(toc: true)
+---
+```
+
+]
+
+---
+class: middle
+
+# Pop quiz
+
+.pull-left[
+How do you add another output **format** to your YAML?
+
+```yaml
+---
+output: 
+  html_document: default
+  word_document: default
+---
+output: 
+  html_document()
+  word_document()
+---
+```
+
+]
+
+.pull-right[
+How do you now add output **options** to your YAML?
+
+```yaml
+---
+output: 
+  html_document: 
+    toc: true
+  word_document: default
+---
+output: 
+  html_document(toc: true)
+  word_document()
+---
+```
+
+]
+
+---
+class: middle, center, inverse
+
+# Tables
+
+![](https://media.giphy.com/media/i9c6lFmOSXKZW/giphy.gif)
 
 ---
 class: middle, center, inverse
@@ -449,7 +533,6 @@ Using pipes `|`, create a table to list the 3 treatment arms. It should look lik
 | A   | IFL    |
 | F   | FOLFOX |
 | G   | IROX   |
-Table: Treatment arms.
 
 ]
 
@@ -472,15 +555,27 @@ class: your-turn
 
 ## Answers: Make a Markdown table
 
+.pull-left[
 ```markdown
 | Arm | Drug   |
 |:----|:-------|
 | A   | IFL    |
 | F   | FOLFOX |
 | G   | IROX   |
-Table: Treatment arms.
 ```
+]
 
+.pull-right[
+```markdown
+|Arm|Drug|
+|:---|:---|
+|A|IFL|
+|F|FOLFOX|
+|G|IROX|
+```
+]
+
+Spacing actually doesn't matter - it mainly helps your eyeballs.
 
 ---
 class: center, middle

@@ -85,7 +85,7 @@ background-size: 100%
 class: bottom, center
 
 .pull-left[
-## Alison Hill, RStudio    
+## Alison Hill  
 [<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
 [<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)  
 ]
@@ -141,7 +141,7 @@ class: bottom, center
 class: center
 background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
 
-# "Replication crisis?" 
+# Replication crisis? 
 
 ???
 
@@ -304,9 +304,6 @@ class: middle, center, inverse
 
 # Metadata
 
---
-
-Your document's control panel
 
 ---
 
@@ -403,9 +400,6 @@ class: inverse, center, middle
 
 # Text
 
---
-
-What do you want/need to say?
 
 
 ---
@@ -646,9 +640,6 @@ class: inverse, center, middle
 
 # <i class="fab fa-r-project"></i> `code`
 
---
-
-But other languages available!
 
 ---
 
@@ -694,11 +685,8 @@ class: inverse, center, middle
 
 --
 
-# `code` output
+# Output
 
---
-
-<i class="fas fa-chart-bar"></i> + <i class="fas fa-table"></i>
 
 ---
 

@@ -64,7 +64,7 @@ Which of the following is **NOT** a part of R Markdown basic anatomy?
 
 1. Output
 
-<div class="countdown" id="timer_5d77e307" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d789189" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -92,7 +92,7 @@ class: pop-quiz
 
 _psst: answers on next slide..._
 
-<div class="countdown" id="timer_5d77e3d3" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d788e50" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -143,7 +143,7 @@ Add or edit...
 + Chunk options
 
 
-<div class="countdown" id="timer_5d77e59b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d788e62" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -192,9 +192,9 @@ class: your-turn
 
 Use the drop-down menu for the 🧶 **Knit** button and try:
 
-1. Knitting to Word
+1. Knit to Word
 
-1. Knitting to PDF
+1. Knit to PDF
 
 ]
 
@@ -203,7 +203,7 @@ Use the drop-down menu for the 🧶 **Knit** button and try:
 
 ]
 
-<div class="countdown" id="timer_5d77e3d5" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d788ef7" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -273,7 +273,7 @@ output:
 ]
 
 
-<div class="countdown" id="timer_5d77e67c" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d78913d" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -314,7 +314,7 @@ class: your-turn
 
 _psst...answers on the next slide..._
 
-<div class="countdown" id="timer_5d77e43d" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d788ee1" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -354,6 +354,90 @@ output:
 ```
 ]
 
+---
+class: middle
+
+# Pop quiz
+
+.pull-left[
+How do you add a single output **format** to your YAML?
+
+```yaml
+---
+output: html_document: default
+---
+output: html_document
+---
+output_format: html_document
+---
+```
+
+]
+
+.pull-right[
+How do you add an output **option** to a format in your YAML?
+
+```yaml
+---
+output: 
+  html_document: 
+    toc: true
+---
+output: 
+  html_document: toc
+---
+output_format: html_document(toc: true)
+---
+```
+
+]
+
+---
+class: middle
+
+# Pop quiz
+
+.pull-left[
+How do you add another output **format** to your YAML?
+
+```yaml
+---
+output: 
+  html_document: default
+  word_document: default
+---
+output: 
+  html_document()
+  word_document()
+---
+```
+
+]
+
+.pull-right[
+How do you now add output **options** to your YAML?
+
+```yaml
+---
+output: 
+  html_document: 
+    toc: true
+  word_document: default
+---
+output: 
+  html_document(toc: true)
+  word_document()
+---
+```
+
+]
+
+---
+class: middle, center, inverse
+
+# Tables
+
+![](https://media.giphy.com/media/i9c6lFmOSXKZW/giphy.gif)
 
 ---
 class: middle, center, inverse
@@ -432,7 +516,6 @@ Using pipes `|`, create a table to list the 3 treatment arms. It should look lik
 | A   | IFL    |
 | F   | FOLFOX |
 | G   | IROX   |
-Table: Treatment arms.
 
 ]
 
@@ -444,7 +527,7 @@ Table: Treatment arms.
 
 _psst...answers on the next slide..._
 
-<div class="countdown" id="timer_5d77e525" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d788f40" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -455,15 +538,27 @@ class: your-turn
 
 ## Answers: Make a Markdown table
 
+.pull-left[
 ```markdown
 | Arm | Drug   |
 |:----|:-------|
 | A   | IFL    |
 | F   | FOLFOX |
 | G   | IROX   |
-Table: Treatment arms.
 ```
+]
 
+.pull-right[
+```markdown
+|Arm|Drug|
+|:---|:---|
+|A|IFL|
+|F|FOLFOX|
+|G|IROX|
+```
+]
+
+Spacing actually doesn't matter - it mainly helps your eyeballs.
 
 ---
 class: center, middle
@@ -559,13 +654,13 @@ mockdata %&gt;%
 #&gt;  n obs: 1499 
 #&gt;  n variables: 6 
 #&gt; 
-#&gt; ── Variable type:factor ────────────────────────────────────────────────────────────────────
+#&gt; ── Variable type:factor ──────────────────────────────────────────────────────────────────────────
 #&gt;       variable missing complete    n n_unique                 top_counts
-#&gt;  ae_blood_clot       0     1499 1499        2      0: 1435, 1: 64, NA: 0
-#&gt;    ae_diarrhea       0     1499 1499        2     0: 1201, 1: 298, NA: 0
-#&gt;     ae_low_wbc       0     1499 1499        2     0: 1231, 1: 268, NA: 0
-#&gt;  ae_neuropathy       0     1499 1499        2     0: 1270, 1: 229, NA: 0
-#&gt;    ae_vomiting       0     1499 1499        2     0: 1229, 1: 270, NA: 0
+#&gt;  ae_blood_clot       0     1499 1499        2      0: 1434, 1: 65, NA: 0
+#&gt;    ae_diarrhea       0     1499 1499        2     0: 1218, 1: 281, NA: 0
+#&gt;     ae_low_wbc       0     1499 1499        2     0: 1252, 1: 247, NA: 0
+#&gt;  ae_neuropathy       0     1499 1499        2     0: 1281, 1: 218, NA: 0
+#&gt;    ae_vomiting       0     1499 1499        2     0: 1243, 1: 256, NA: 0
 #&gt;         fu_fct       0     1499 1499        2 Die: 1356, Liv: 143, NA: 0
 #&gt;  ordered
 #&gt;    FALSE
@@ -595,11 +690,11 @@ Variable type: factor
 
 |   variable    | missing | complete |  n   | n_unique |         top_counts         | ordered |
 |---------------|---------|----------|------|----------|----------------------------|---------|
-| ae_blood_clot |    0    |   1499   | 1499 |    2     |   0: 1435, 1: 64, NA: 0    |  FALSE  |
-|  ae_diarrhea  |    0    |   1499   | 1499 |    2     |   0: 1201, 1: 298, NA: 0   |  FALSE  |
-|  ae_low_wbc   |    0    |   1499   | 1499 |    2     |   0: 1231, 1: 268, NA: 0   |  FALSE  |
-| ae_neuropathy |    0    |   1499   | 1499 |    2     |   0: 1270, 1: 229, NA: 0   |  FALSE  |
-|  ae_vomiting  |    0    |   1499   | 1499 |    2     |   0: 1229, 1: 270, NA: 0   |  FALSE  |
+| ae_blood_clot |    0    |   1499   | 1499 |    2     |   0: 1434, 1: 65, NA: 0    |  FALSE  |
+|  ae_diarrhea  |    0    |   1499   | 1499 |    2     |   0: 1218, 1: 281, NA: 0   |  FALSE  |
+|  ae_low_wbc   |    0    |   1499   | 1499 |    2     |   0: 1252, 1: 247, NA: 0   |  FALSE  |
+| ae_neuropathy |    0    |   1499   | 1499 |    2     |   0: 1281, 1: 218, NA: 0   |  FALSE  |
+|  ae_vomiting  |    0    |   1499   | 1499 |    2     |   0: 1243, 1: 256, NA: 0   |  FALSE  |
 |    fu_fct     |    0    |   1499   | 1499 |    2     | Die: 1356, Liv: 143, NA: 0 |  FALSE  |
 
 
@@ -815,7 +910,7 @@ To exclude, use your `knitr` code chunk options (do not delete!)
 
 add text to frame the table and what it is showing
 
-<div class="countdown" id="timer_5d77e35e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d788f2d" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -828,7 +923,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d77e4ff" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d789187" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>
