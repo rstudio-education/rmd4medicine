@@ -65,81 +65,40 @@ class: middle, center
 https://rstd.io/rmd4medicine-cloud
 
 ---
+class: middle, center
+
+| Time          | Activity                                |
+|:--------------|:----------------------------------------|
+| 01:00 - 01:50 | Session 1 (R Markdown Anatomy)          |
+| 01:50 - 02:00 | *Break* `r emo::ji("coffee")`           |
+| 02:00 - 02:45 | Session 2 (Outputs & Tables)            |
+| 02:45 - 03:00 | *Break* `r emo::ji("tea")`              |
+| 03:00 - 03:50 | Session 3 (Graphics for Communication)  |
+| 03:50 - 04:00 | *Break* `r emo::ji("potable_water")`    |
+| 04:00 - 04:45 | Session 4 (Data & Workflows)            |
+| 04:45 - 05:00 | Wrap-up / Overtime                      |
+
+---
 background-image: url(images/hello.jpg)
-background-position: center center
+background-position: top center
 background-size: 100%
-
-cloud link
-introduce self
-
----
-class: middle, center
-
-# Ph.D. student > Assistant Professor
+class: bottom, center
 
 .pull-left[
-```{r echo = FALSE, out.width="50%"}
-knitr::include_graphics("images/wiki-sas.png")
-```
+## Alison Hill, RStudio    
+[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
+[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)  
 ]
 
 .pull-right[
-```{r echo = FALSE, out.width="50%"}
-knitr::include_graphics("images/wiki-r.png")
-```
+## Peter Higgins  
+[<i class="fab fa-github"></i> @higgi13425](https://github.com/higgi13425)  
+[<i class="fab fa-twitter"></i> @ibddoctor](https://twitter.com/ibddoctor)
+
+## Daniel Chen  
+[<i class="fab fa-github"></i> @chendaniely](https://github.com/chendaniely)  
+[<i class="fab fa-twitter"></i> @chendaniely](https://twitter.com/chendaniely)
 ]
-
----
-class: middle, center
-
-# Assistant > Associate Professor/PI
-
-.pull-left[
-```{r echo = FALSE, out.width="50%"}
-knitr::include_graphics("images/wiki-r.png")
-```
-]
-
-.pull-right[
-```{r echo = FALSE, out.width="50%"}
-knitr::include_graphics("images/wiki-rstudio.png")
-```
-]
-
----
-background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
-
-??? 
-
-We are not here today to solve science's replication crisis.
-
-What I do think R Markdown can help you with today is your own research confidence crisis.
-
----
-# Let's play a quick game
-
-.pull-left[
-### Never have I ever...
-
-1. Copy/pasted figures into a paper
-
-1. Had to re-run analyses because a data entry error was found
-
-1. Had to redo anything in a paper to respond to a reviewer's question or suggestion
-
-1. Had a shadow of doubt t
-
-]
-
-.pull-right[
-```{r echo=FALSE, out.width="50%", fig.align="center"}
-knitr::include_graphics("images/neverever.jpg")
-```
-
-]
-
----
-background-image: url(https://media.giphy.com/media/d3QGYTziFiDL2/giphy.gif)
 
 ---
 
@@ -177,17 +136,40 @@ background-image: url(https://media.giphy.com/media/d3QGYTziFiDL2/giphy.gif)
 ]
 
 
+
 ---
+class: center
+background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
 
-bit more on "why Rmd for medicine?"
+# "Replication crisis?" 
 
-Your current workflow may look like (no shame!):
+???
 
-Enter data into Excel file
+We are not here today to solve science or medicine's replication crisis.
 
-HIPAA-compliant transfer of data :)
 
-You do some wrangling in combo of Excel/SPSS/SAS
+What I do think R Markdown can help you with today when you leave here is to tackle two other crises: one I think of as the confidence crisis...
+
+
+---
+class: center
+background-image: url(https://media.giphy.com/media/OPZZ6KWJOZ3AA/source.gif)
+
+# Confidence crisis
+
+---
+class: center
+background-image: url(https://dickbrouwer.com/img/meeting_cheese.png)
+background-size: contain
+
+
+# `r emo::ji("cheese")` Cheese crisis `r emo::ji("cheese")`
+
+
+
+.footnote[https://dickbrouwer.com/blog/a-guide-to-better-meetings/]
+
+
 
 ---
 class: middle, center
@@ -207,6 +189,10 @@ knitr::include_graphics("images/word.png")
 .pull-right[
 
 ### Content &rarr; presentation
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("images/rmd-file.png")
+```
 
 ]
 
@@ -228,7 +214,8 @@ Try to identify these parts of the document:
 
 1. The **code**
 
-If this was easy, try to find all code that produces a **table**, then all code that produces a **plot**.
+_If this was easy_, try to find all code that produces a **table**.  
+Find all code that produces a **plot**.
 
 
 
