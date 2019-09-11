@@ -21,6 +21,8 @@
 
 
 
+
+
 class: title-slide, center, middle
 
 &lt;span class="fa-stack fa-4x"&gt;
@@ -71,20 +73,23 @@ background-size: 100%
 class: bottom, center
 
 .pull-left[
-## Alison Hill  
+### Alison Hill  
 [&lt;i class="fab fa-github"&gt;&lt;/i&gt; @apreshill](https://github.com/apreshill)  
-[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)
+
+### Peter Higgins  
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @higgi13425](https://github.com/higgi13425)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @ibddoctor](https://twitter.com/ibddoctor)
 ]
 
 .pull-right[
-## Peter Higgins  
-[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @higgi13425](https://github.com/higgi13425)  
-[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @ibddoctor](https://twitter.com/ibddoctor)
-
-## Daniel Chen  
+### Daniel Chen  
 [&lt;i class="fab fa-github"&gt;&lt;/i&gt; @chendaniely](https://github.com/chendaniely)  
 [&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @chendaniely](https://twitter.com/chendaniely)
+
 ]
+
+.footnote[All content is CC-BY. All art (unless otherwise noted) is by [Desirée De Leon](https://desiree.rbind.io/), CC-BY-SA.]
 
 ---
 
@@ -147,8 +152,6 @@ class: bottom, center
 
 ]
 
-
-
 ---
 class: center
 background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
@@ -159,9 +162,7 @@ background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
 
 We are not here today to solve science or medicine's replication crisis.
 
-
 What I do think R Markdown can help you with today when you leave here is to tackle two other crises: one I think of as the confidence crisis...
-
 
 ---
 class: center
@@ -174,14 +175,9 @@ class: center
 background-image: url(https://dickbrouwer.com/img/meeting_cheese.png)
 background-size: contain
 
-
 # 🧀 Cheese crisis 🧀
 
-
-
 .footnote[https://dickbrouwer.com/blog/a-guide-to-better-meetings/]
-
-
 
 ---
 class: middle, center
@@ -244,13 +240,12 @@ class: middle, inverse, center
 
 # Same ~~doll~~ source
 
-# Different dress
+# Different occasions
 
 ---
 class: middle, center
 
 # `html_document`
-
 
 &lt;img src="images/doll.png" width="40%" /&gt;
 
@@ -261,7 +256,6 @@ class: your-turn
 
 Find a partner and look at `01-eda.Rmd` together. 
 Look at the source, then 🧶 **Knit** to HTML.
-
 
 Try to identify these parts in the source and the output:
 
@@ -276,13 +270,9 @@ Try to identify these parts in the source and the output:
 _If this was easy_, try to find all code that produces a **table**. 
 Find all code that produces a **plot**.
 
-
-
-<div class="countdown" id="timer_5d79049e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79808f" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-
-
 
 ---
 name: 01-formative
@@ -290,7 +280,9 @@ name: 01-formative
 # Basic anatomy I
 
 .pull-left[
+
 show "raw" doc
+
 ]
 
 .pull-right[
@@ -306,15 +298,12 @@ show "raw" doc
 ---
 class: center, middle
 
-# Now we knit
-
 &lt;img src="images/Knit-to-html.jpg" width="50%" /&gt;
-
 
 ---
 class: center, middle
 
-![](images/doc-live.jpg)
+&lt;img src="images/doc-live.jpg" width="50%" /&gt;
 
 ---
 name: 02-formative
@@ -322,7 +311,9 @@ name: 02-formative
 # Basic anatomy II
 
 .pull-left[
+
 show output screenshot
+
 ]
 
 .pull-right[
@@ -351,7 +342,6 @@ class: middle, center
 ---
 class: middle, center, inverse
 
-
 &lt;span class="fa-stack fa-4x"&gt;
   &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
   &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1 &lt;/strong&gt;
@@ -361,67 +351,48 @@ class: middle, center, inverse
 
 # Metadata
 
-
 ---
 
 # metadata: YAML
 
 .pull-left[
 
-_"YAML Ain't Markup Language"_
++ _"YAML Ain't Markup Language"_
 
-acronym not helpful, what does it mean, key: value pairs
-
-think "metadata"
++ `key: value` pairs
 
 ```yaml
 ---
 output: html_document
 ---
 ```
+
 ]
 
 .pull-right[
+
 &lt;img src="images/orchestra.jpg" width="75%" style="display: block; margin: auto;" /&gt;
 
 ]
-
 
 ---
 class: middle, center
 
 # Output options
 
---
-
-The `output:` key in your YAML
-
---
-nesting matters
-
-
 ---
-class: your-turn
 
-# Your turn
-
-## Edit your YAML
+# Save output options in your YAML
 
 .pull-left[
 
-1. Add your name as first author
-
-1. Change the title to something you might actually write
-
-1. Add a floating table of contents
-
-1. Add a theme ([pick one](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style))
-
-1. 🧶 **Knit** to HTML.
-
-]
-
-.pull-right[
+```yaml
+---
+author: Your name here
+title: Your title here
+output: html_document
+---
+```
 
 ```yaml
 ---
@@ -430,18 +401,56 @@ title: Your title here
 output:
   html_document:
     toc: true
-    toc_float: true
-    theme: flatly
 ---
 ```
 
+
 ]
 
-<div class="countdown" id="timer_5d7904d9" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+.pull-right[
+
+&lt;img src="images/orchestra.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+class: your-turn
+
+# Your turn
+
+## Edit your YAML
+
+Use `?html_document` from your R console to:
+
+1. Add a floating table of contents
+
+1. Add a theme
+
+🧶 **Knit** to HTML to see the output.
+
+__If this was easy__, try to embed the `Rmd` source code within the document and provide a link that can be used by readers to download the code.
+
+_psst...answers on the next slide..._
+
+<div class="countdown" id="timer_5d797d72" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
+---
+class: your-turn
 
+# Answers
+
+```yaml
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    code_download: true
+---
+```
 
 ---
 class: inverse, center, middle
@@ -454,8 +463,6 @@ class: inverse, center, middle
 --
 
 # Text
-
-
 
 ---
 
@@ -499,7 +506,6 @@ class: inverse, center, middle
 
 ![](images/rmd-nav.png)
 
-
 ---
 
 # &lt;center&gt;Text&lt;/center&gt;
@@ -526,7 +532,6 @@ of modern medicine.
 
 ]
 
-
 ---
 class: top
 
@@ -535,6 +540,7 @@ class: top
 --
 
 .pull-left[
+
 ```markdown
 Indeed, parents whose children are  
 vaccinated no longer have to worry about  
@@ -555,6 +561,7 @@ roll out in developing countries:
 1. rotavirus
 1. meningitis A
 ```
+
 ]
 
 --
@@ -626,7 +633,6 @@ Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ]
 
-
 ---
 name: 03-formative
 class: middle
@@ -653,8 +659,7 @@ How do you add headers in Markdown?
 
 .pull-right[
 
-
-What about bulleted lists in Markdown? Numbered?
+What about lists? Bulleted? Numbered?
 
 `! Item 1`
 
@@ -679,7 +684,7 @@ class: your-turn
 
 1. 🧶 **Knit** to HTML.
 
-<div class="countdown" id="timer_5d790638" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d797f1c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -693,8 +698,7 @@ class: inverse, center, middle
 
 --
 
-# &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; `code`
-
+# &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; Code
 
 ---
 
@@ -704,21 +708,140 @@ class: inverse, center, middle
 
 ````
 ```{r}
-med &lt;- rep("rmd", 4)
-med
+mockdata %&gt;% 
+  tally()
 ```
 ````
 
+What happens to this chunk?
+
 ]
+
+--
 
 .pull-right[
 
 
 ```r
-med &lt;- rep("rmd", 4)
-med
-#&gt; [1] "rmd" "rmd" "rmd" "rmd"
+mockdata %&gt;% 
+  tally()
+#&gt; # A tibble: 1 x 1
+#&gt;       n
+#&gt;   &lt;int&gt;
+#&gt; 1  1499
 ```
+
+]
+
+---
+
+# Code chunks
+
+.pull-left[
+
+````
+```{r}
+num_sites &lt;- mockdata %&gt;% 
+  count(site)
+```
+````
+
+What happens to this chunk?
+
+]
+
+--
+
+.pull-right[
+
+
+```r
+num_sites &lt;- mockdata %&gt;% 
+  count(site)
+```
+
+  
+]
+
+---
+
+# Code chunks
+
+.pull-left[
+
+````
+```{r}
+num_sites &lt;- mockdata %&gt;% 
+  count(site)
+num_sites
+```
+````
+
+]
+
+--
+
+.pull-right[
+
+
+```r
+num_sites &lt;- mockdata %&gt;% 
+  count(site)
+num_sites
+#&gt; # A tibble: 18 x 2
+#&gt;    site               n
+#&gt;    &lt;chr&gt;          &lt;int&gt;
+#&gt;  1 Ann Arbor        100
+#&gt;  2 Barcelona         50
+#&gt;  3 Boston           100
+#&gt;  4 Chapel Hill      100
+#&gt;  5 Denver           100
+#&gt;  6 Gainesville      100
+#&gt;  7 Los Angeles      100
+#&gt;  8 Madrid            50
+#&gt;  9 Mexico City       84
+#&gt; 10 New Haven        100
+#&gt; 11 New York         100
+#&gt; 12 Nur-Sultan        15
+#&gt; 13 Portland         100
+#&gt; 14 Rio de Janeiro    50
+#&gt; 15 Rochester        100
+#&gt; 16 Sao Paulo         50
+#&gt; 17 Seattle          100
+#&gt; 18 St. Louis        100
+```
+
+  
+]
+
+---
+
+# Code chunks
+
+.pull-left[
+
+````
+```{r}
+ggplot(mockdata, aes(x = arm, fill = arm)) +
+  geom_bar()
+```
+````
+
+What about this one?
+
+]
+
+--
+
+.pull-right[
+
+
+```r
+ggplot(mockdata, aes(x = arm, fill = arm)) +
+  geom_bar()
+```
+
+&lt;img src="01-rmd-anatomy_files/figure-html/unnamed-chunk-19-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -728,9 +851,51 @@ med
 
 button or
 
-Command (or Cmd) `⌘` + Option (or Alt) `⌥` +  `i`
+Command (or Cmd) `⌘` + Option (or Alt) `⌥` +  `i` (Mac)
 
-Ctrl + Alt + `i`
+Ctrl + Alt + `i` (Windows/Linux)
+
+---
+
+# Run chunks
+
+.pull-left[
+interactively (show button)
+]
+
+.pull-right[
+whole doc (knit button or run all chunks or )
+]
+
+---
+class: your-turn
+
+# Your turn
+
+## Add a chunk
+
+.pull-left[
+
+1. Try adding this chunk to the right:
+
+1. Run the current chunk; examine error message (**hint: `glimpse` is a function that depends on the `tidyverse` 📦)
+
+1. 🧶 **Knit** to HTML.
+
+]
+
+.pull-right[
+````
+```{r}
+glimpse(mockdata)
+```
+````
+]
+
+<div class="countdown" id="timer_5d797e17" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
 
 ---
 class: inverse, center, middle
@@ -749,13 +914,193 @@ class: inverse, center, middle
 
 # Chunk options
 
+.pull-left[
 
-+ echo
-+ eval
-+ include
+````
+```{r echo=FALSE, results='hide'}
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
++ Place between curly braces&lt;br&gt;`{r option=value}`
+
++ Multiple options separated by commas&lt;br&gt;`{r option1=value, option2=value}`
+
++ Careful! The `r` part is the **code engine** (other engines possible)
+
+]
+
+---
+
+.pull-left[
+
+### Frequently used 
+
++ `echo`
++ `eval=TRUE`
++ `include=TRUE`
 + results
-+ out.width (skip for when we get to figures)
-+ fig.show (skip for when we get to figures)
++ error
+
+]
+
+. pull-right[
+
+### Special for figures
+
++ out.width
++ fig.show
+
+]
+
+---
+
+.left-column[
+# Default options
+]
+
+.right-column[
+
+```r
+str(knitr::opts_chunk$get())
+#&gt; List of 53
+#&gt;  $ eval         : logi TRUE
+#&gt;  $ echo         : logi TRUE
+#&gt;  $ results      : chr "markup"
+#&gt;  $ tidy         : logi FALSE
+#&gt;  $ tidy.opts    : NULL
+#&gt;  $ collapse     : logi TRUE
+#&gt;  $ prompt       : logi FALSE
+#&gt;  $ comment      : chr "#&gt;"
+#&gt;  $ highlight    : logi TRUE
+#&gt;  $ strip.white  : logi TRUE
+#&gt;  $ size         : chr "normalsize"
+#&gt;  $ background   : chr "#F7F7F7"
+#&gt;  $ cache        : logi FALSE
+#&gt;  $ cache.path   : chr "01-rmd-anatomy_cache/html/"
+#&gt;  $ cache.vars   : NULL
+#&gt;  $ cache.lazy   : logi TRUE
+#&gt;  $ dependson    : NULL
+#&gt;  $ autodep      : logi FALSE
+#&gt;  $ cache.rebuild: logi FALSE
+#&gt;  $ fig.keep     : chr "high"
+#&gt;  $ fig.show     : chr "asis"
+#&gt;  $ fig.align    : chr "default"
+#&gt;  $ fig.path     : chr "01-rmd-anatomy_files/figure-html/"
+#&gt;  $ dev          : chr "png"
+#&gt;  $ dev.args     : NULL
+#&gt;  $ dpi          : num 72
+#&gt;  $ fig.ext      : NULL
+#&gt;  $ fig.width    : num 7
+#&gt;  $ fig.height   : num 7
+#&gt;  $ fig.env      : chr "figure"
+#&gt;  $ fig.cap      : NULL
+#&gt;  $ fig.scap     : NULL
+#&gt;  $ fig.lp       : chr "fig:"
+#&gt;  $ fig.subcap   : NULL
+#&gt;  $ fig.pos      : chr ""
+#&gt;  $ out.width    : NULL
+#&gt;  $ out.height   : NULL
+#&gt;  $ out.extra    : NULL
+#&gt;  $ fig.retina   : num 1
+#&gt;  $ external     : logi TRUE
+#&gt;  $ sanitize     : logi FALSE
+#&gt;  $ interval     : num 1
+#&gt;  $ aniopts      : chr "controls,loop"
+#&gt;  $ warning      : logi TRUE
+#&gt;  $ error        : logi FALSE
+#&gt;  $ message      : logi TRUE
+#&gt;  $ render       : NULL
+#&gt;  $ ref.label    : NULL
+#&gt;  $ child        : NULL
+#&gt;  $ engine       : chr "R"
+#&gt;  $ split        : logi FALSE
+#&gt;  $ include      : logi TRUE
+#&gt;  $ purl         : logi TRUE
+```
+
+]
+
+---
+
+# Chunk labels
+
+.pull-left[
+
+````
+```{r peek, echo=FALSE, results='hide'}
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
++ Place between curly braces `{r label}`
+
++ Separated options with commas `{r label, option1=value}`
+
++ Careful! No duplicate chunk labels
+
+    ```
+    Error in parse_block(g[-1], g[1], params.src) : 
+      duplicate label 'peek'
+    Calls: &lt;Anonymous&gt; ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block
+    Execution halted
+    ```
+
+]
+
+???
+
+how can we make it easier on ourselves to explore the code in here?
+
+show how to add chunk labels and view in IDE interactively
+
+---
+
+Add slide here on pet versus livestock
+
+.pull-left[
+
+]
+
+.pull-right[
+
+]
+
+.footnote[https://masalmon.eu/2017/08/08/chunkpets/]
+
+---
+
+# A good chunk label
+
+.pull-left[
+
+### Yes
+
++ `a-z`
++ `A-Z`
++ `0-9`
++ `/`
++ `-`
+
+]
+
+.pull-right[
+
+### No
+
++ `_`
++ spaces
++ everything else!
+
+]
 
 
 ---
@@ -763,44 +1108,38 @@ class: your-turn
 
 # Your turn
 
-## Change chunk options
+## Add chunk options &amp; labels
 
-1. give some ideas here
+.pull-left[
 
-1. 🧶 **Knit** to HTML.
+1. Use chunk options on our `glimpse` chunk added earlier. Try:
+  + Hide the code, show only the output
+  + Hide everything, but still run the code
+  + Hide the output, show only the code, but still run the code
+  
+1. Add a label to this chunk.
 
+1. 🧶 **Knit** to HTML to see the effects.
 
-<div class="countdown" id="timer_5d790649" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+]
+
+.pull-right[
+````
+```{r}
+glimpse(mockdata)
+```
+````
+]
+
+<div class="countdown" id="timer_5d798008" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-
-
----
-
-# Chunk labels
-
-how can we make it easier on ourselves to explore the code in here?
-
-show how to add chunk labels and view in IDE interactively
-
-Labeling chunks:
-
-Yes
-
-+ alphanumeric characters (`a-z`, `A-Z`, `0-9`)
-+ slashes (`/`) or dashes (`-`)
-
-No
-
-+ `_` underscores
 
 ---
 
 # The setup chunk
 
-Have one, make include false, global options
 
-have another one for loading packages
 
 .pull-left[
 
@@ -818,9 +1157,28 @@ knitr::opts_chunk$set(
 
 .pull-right[
 
++ A special chunk label: `setup`
 
++ Typically the first chunk
+
++ All following chunks will use these options (i.e., sets global chunk options)
+
++ **Tip**: set `include=FALSE`
+
++ You can (and should) use individual chunk options too
 
 ]
+
+---
+
+# Danger
+
+```
+Error in parse_block(g[-1], g[1], params.src) : 
+  duplicate label 'setup'
+Calls: &lt;Anonymous&gt; ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block
+Execution halted
+```
 
 ---
 class: your-turn
@@ -829,16 +1187,18 @@ class: your-turn
 
 ## New data dump! 📰
 
-1. Data from more sites just came in! Replace `mockboston` in the file `mockbsd`. How many sites do we have now?
+Data from more sites just came in &amp;mdash; we now have data for Boston, Seattle, and Denver.
+
+1. Replace `mockboston` in the file `mockbsd`. 
+
+1. 🧶 **Knit** to HTML. Do you see data for all 3 sites?
 
 1. Clean up the chunks (split, combine, label as you see fit)
 
 1. Use the RStudio outline pane; rejoice!
 
-1. 🧶 **Knit** to HTML.
 
-
-<div class="countdown" id="timer_5d7905cc" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d797fbb" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -978,7 +1338,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d790416" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d797d8a" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

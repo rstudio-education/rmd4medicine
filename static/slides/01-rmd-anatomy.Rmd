@@ -32,6 +32,17 @@ knitr::opts_chunk$set(
 
 ```{r packages, include=FALSE}
 library(countdown)
+library(ymlthis)
+library(tidyverse)
+ggplot2::theme_set(ggplot2::theme_minimal())
+```
+
+```{r load-data, include=FALSE}
+mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", 
+                             "Died" = "2")) %>% 
+  mutate_at(vars(starts_with("ae_")), ~as.factor(.))
 ```
 
 
@@ -85,20 +96,23 @@ background-size: 100%
 class: bottom, center
 
 .pull-left[
-## Alison Hill  
+### Alison Hill  
 [<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
-[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)  
+[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+
+### Peter Higgins  
+[<i class="fab fa-github"></i> @higgi13425](https://github.com/higgi13425)  
+[<i class="fab fa-twitter"></i> @ibddoctor](https://twitter.com/ibddoctor)
 ]
 
 .pull-right[
-## Peter Higgins  
-[<i class="fab fa-github"></i> @higgi13425](https://github.com/higgi13425)  
-[<i class="fab fa-twitter"></i> @ibddoctor](https://twitter.com/ibddoctor)
-
-## Daniel Chen  
+### Daniel Chen  
 [<i class="fab fa-github"></i> @chendaniely](https://github.com/chendaniely)  
 [<i class="fab fa-twitter"></i> @chendaniely](https://twitter.com/chendaniely)
+
 ]
+
+.footnote[All content is CC-BY. All art (unless otherwise noted) is by [Desirée De Leon](https://desiree.rbind.io/), CC-BY-SA.]
 
 ---
 
@@ -135,8 +149,6 @@ class: bottom, center
 
 ]
 
-
-
 ---
 class: center
 background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
@@ -147,9 +159,7 @@ background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
 
 We are not here today to solve science or medicine's replication crisis.
 
-
 What I do think R Markdown can help you with today when you leave here is to tackle two other crises: one I think of as the confidence crisis...
-
 
 ---
 class: center
@@ -162,14 +172,9 @@ class: center
 background-image: url(https://dickbrouwer.com/img/meeting_cheese.png)
 background-size: contain
 
-
 # `r emo::ji("cheese")` Cheese crisis `r emo::ji("cheese")`
 
-
-
 .footnote[https://dickbrouwer.com/blog/a-guide-to-better-meetings/]
-
-
 
 ---
 class: middle, center
@@ -240,13 +245,12 @@ class: middle, inverse, center
 
 # Same ~~doll~~ source
 
-# Different dress
+# Different occasions
 
 ---
 class: middle, center
 
 # `html_document`
-
 
 ```{r echo=FALSE, out.width="40%"}
 knitr::include_graphics("images/doll.png")
@@ -259,7 +263,6 @@ class: your-turn
 
 Find a partner and look at `01-eda.Rmd` together. 
 Look at the source, then `r emo::ji("yarn")` **Knit** to HTML.
-
 
 Try to identify these parts in the source and the output:
 
@@ -274,13 +277,9 @@ Try to identify these parts in the source and the output:
 _If this was easy_, try to find all code that produces a **table**. 
 Find all code that produces a **plot**.
 
-
-
 ```{r echo = FALSE}
 countdown(minutes = 5)
 ```
-
-
 
 ---
 name: 01-formative
@@ -288,7 +287,9 @@ name: 01-formative
 # Basic anatomy I
 
 .pull-left[
+
 show "raw" doc
+
 ]
 
 .pull-right[
@@ -304,17 +305,16 @@ show "raw" doc
 ---
 class: center, middle
 
-# Now we knit
-
 ```{r knit-html, echo=FALSE, out.width="50%"}
 knitr::include_graphics("images/Knit-to-html.jpg")
 ```
 
-
 ---
 class: center, middle
 
-![](images/doc-live.jpg)
+```{r do-live, echo=FALSE, out.width="50%"}
+knitr::include_graphics("images/doc-live.jpg")
+```
 
 ---
 name: 02-formative
@@ -322,7 +322,9 @@ name: 02-formative
 # Basic anatomy II
 
 .pull-left[
+
 show output screenshot
+
 ]
 
 .pull-right[
@@ -351,7 +353,6 @@ class: middle, center
 ---
 class: middle, center, inverse
 
-
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
   <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
@@ -361,47 +362,69 @@ class: middle, center, inverse
 
 # Metadata
 
-
 ---
 
 # metadata: YAML
 
 .pull-left[
 
-_"YAML Ain't Markup Language"_
++ _"YAML Ain't Markup Language"_
 
-acronym not helpful, what does it mean, key: value pairs
-
-think "metadata"
++ `key: value` pairs
 
 ```{r echo = FALSE}
-library(ymlthis)
 yml_empty() %>% 
   yml_output(html_document()) %>% 
   asis_yaml_output()
 ```
+
 ]
 
 .pull-right[
+
 ```{r echo=FALSE, out.width="75%", fig.align='center'}
 knitr::include_graphics("images/orchestra.jpg")
 ```
 
 ]
 
-
 ---
 class: middle, center
 
 # Output options
 
---
+---
 
-The `output:` key in your YAML
+# Save output options in your YAML
 
---
-nesting matters
+.pull-left[
 
+```{r echo = FALSE}
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document()) %>% 
+  asis_yaml_output()
+```
+
+```{r echo = FALSE}
+yml_empty() %>% 
+  yml_author("Your name here") %>% 
+  yml_title("Your title here") %>% 
+  yml_output(html_document(toc = TRUE)) %>% 
+  asis_yaml_output()
+```
+
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width="75%", fig.align='center'}
+knitr::include_graphics("images/orchestra.jpg")
+```
+
+]
 
 ---
 class: your-turn
@@ -410,40 +433,35 @@ class: your-turn
 
 ## Edit your YAML
 
-.pull-left[
-
-1. Add your name as first author
-
-1. Change the title to something you might actually write
+Use `?html_document` from your R console to:
 
 1. Add a floating table of contents
 
-1. Add a theme ([pick one](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style))
+1. Add a theme
 
-1. `r emo::ji("yarn")` **Knit** to HTML.
+`r emo::ji("yarn")` **Knit** to HTML to see the output.
 
-]
+__If this was easy__, try to embed the `Rmd` source code within the document and provide a link that can be used by readers to download the code.
 
-.pull-right[
+_psst...answers on the next slide..._
 
 ```{r echo = FALSE}
-library(ymlthis)
+countdown(minutes = 3)
+```
+
+---
+class: your-turn
+
+# Answers
+
+```{r echo = FALSE}
 yml_empty() %>% 
-  yml_author("Your name here") %>% 
-  yml_title("Your title here") %>% 
   yml_output(html_document(toc = TRUE,
                            toc_float = TRUE,
-                           theme = "flatly")) %>% 
+                           theme = "flatly",
+                           code_download = TRUE)) %>% 
   asis_yaml_output()
 ```
-
-]
-
-```{r echo = FALSE}
-countdown(minutes = 4)
-```
-
-
 
 ---
 class: inverse, center, middle
@@ -456,8 +474,6 @@ class: inverse, center, middle
 --
 
 # Text
-
-
 
 ---
 
@@ -501,7 +517,6 @@ class: inverse, center, middle
 
 ![](images/rmd-nav.png)
 
-
 ---
 
 # <center>Text</center>
@@ -528,7 +543,6 @@ of modern medicine.
 
 ]
 
-
 ---
 class: top
 
@@ -537,6 +551,7 @@ class: top
 --
 
 .pull-left[
+
 ```markdown
 Indeed, parents whose children are  
 vaccinated no longer have to worry about  
@@ -557,6 +572,7 @@ roll out in developing countries:
 1. rotavirus
 1. meningitis A
 ```
+
 ]
 
 --
@@ -628,7 +644,6 @@ Receiving rubella vaccination, Brazil, 2008.
 ![](http://bit.ly/VaccineBySandraRugio)
 ]
 
-
 ---
 name: 03-formative
 class: middle
@@ -655,8 +670,7 @@ How do you add headers in Markdown?
 
 .pull-right[
 
-
-What about bulleted lists in Markdown? Numbered?
+What about lists? Bulleted? Numbered?
 
 `! Item 1`
 
@@ -695,8 +709,7 @@ class: inverse, center, middle
 
 --
 
-# <i class="fab fa-r-project"></i> `code`
-
+# <i class="fab fa-r-project"></i> Code
 
 ---
 
@@ -706,18 +719,108 @@ class: inverse, center, middle
 
 ````
 ```{r}`r ''`
-med <- rep("rmd", 4)
-med
+mockdata %>% 
+  tally()
+```
+````
+
+What happens to this chunk?
+
+]
+
+--
+
+.pull-right[
+
+```{r}
+mockdata %>% 
+  tally()
+```
+
+]
+
+---
+
+# Code chunks
+
+.pull-left[
+
+````
+```{r}`r ''`
+num_sites <- mockdata %>% 
+  count(site)
+```
+````
+
+What happens to this chunk?
+
+]
+
+--
+
+.pull-right[
+
+```{r}
+num_sites <- mockdata %>% 
+  count(site)
+```
+
+  
+]
+
+---
+
+# Code chunks
+
+.pull-left[
+
+````
+```{r}`r ''`
+num_sites <- mockdata %>% 
+  count(site)
+num_sites
 ```
 ````
 
 ]
 
+--
+
 .pull-right[
 
 ```{r}
-med <- rep("rmd", 4)
-med
+num_sites <- mockdata %>% 
+  count(site)
+num_sites
+```
+
+  
+]
+
+---
+
+# Code chunks
+
+.pull-left[
+
+````
+```{r}`r ''`
+ggplot(mockdata, aes(x = arm, fill = arm)) +
+  geom_bar()
+```
+````
+
+What about this one?
+
+]
+
+--
+
+.pull-right[
+
+```{r fig.retina=3, out.width="80%", fig.align='center'}
+ggplot(mockdata, aes(x = arm, fill = arm)) +
+  geom_bar()
 ```
 
 ]
@@ -728,9 +831,51 @@ med
 
 button or
 
-Command (or Cmd) `⌘` + Option (or Alt) `⌥` +  `i`
+Command (or Cmd) `⌘` + Option (or Alt) `⌥` +  `i` (Mac)
 
-Ctrl + Alt + `i`
+Ctrl + Alt + `i` (Windows/Linux)
+
+---
+
+# Run chunks
+
+.pull-left[
+interactively (show button)
+]
+
+.pull-right[
+whole doc (knit button or run all chunks or )
+]
+
+---
+class: your-turn
+
+# Your turn
+
+## Add a chunk
+
+.pull-left[
+
+1. Try adding this chunk to the right:
+
+1. Run the current chunk; examine error message (**hint: `glimpse` is a function that depends on the `tidyverse` `r emo::ji("package")`)
+
+1. `r emo::ji("yarn")` **Knit** to HTML.
+
+]
+
+.pull-right[
+````
+```{r}`r ''`
+glimpse(mockdata)
+```
+````
+]
+
+```{r echo = FALSE}
+countdown(minutes = 2)
+```
+
 
 ---
 class: inverse, center, middle
@@ -749,13 +894,138 @@ class: inverse, center, middle
 
 # Chunk options
 
+.pull-left[
 
-+ echo
-+ eval
-+ include
+````
+```{r echo=FALSE, results='hide'}`r ''`
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
++ Place between curly braces<br>`{r option=value}`
+
++ Multiple options separated by commas<br>`{r option1=value, option2=value}`
+
++ Careful! The `r` part is the **code engine** (other engines possible)
+
+]
+
+---
+
+.pull-left[
+
+### Frequently used 
+
++ `echo`
++ `eval=TRUE`
++ `include=TRUE`
 + results
-+ out.width (skip for when we get to figures)
-+ fig.show (skip for when we get to figures)
++ error
+
+]
+
+. pull-right[
+
+### Special for figures
+
++ out.width
++ fig.show
+
+]
+
+---
+
+.left-column[
+# Default options
+]
+
+.right-column[
+```{r}
+str(knitr::opts_chunk$get())
+```
+
+]
+
+---
+
+# Chunk labels
+
+.pull-left[
+
+````
+```{r peek, echo=FALSE, results='hide'}`r ''`
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
++ Place between curly braces `{r label}`
+
++ Separated options with commas `{r label, option1=value}`
+
++ Careful! No duplicate chunk labels
+
+    ```
+    Error in parse_block(g[-1], g[1], params.src) : 
+      duplicate label 'peek'
+    Calls: <Anonymous> ... process_file -> split_file -> lapply -> FUN -> parse_block
+    Execution halted
+    ```
+
+]
+
+???
+
+how can we make it easier on ourselves to explore the code in here?
+
+show how to add chunk labels and view in IDE interactively
+
+---
+
+Add slide here on pet versus livestock
+
+.pull-left[
+
+]
+
+.pull-right[
+
+]
+
+.footnote[https://masalmon.eu/2017/08/08/chunkpets/]
+
+---
+
+# A good chunk label
+
+.pull-left[
+
+### Yes
+
++ `a-z`
++ `A-Z`
++ `0-9`
++ `/`
++ `-`
+
+]
+
+.pull-right[
+
+### No
+
++ `_`
++ spaces
++ everything else!
+
+]
 
 
 ---
@@ -763,44 +1033,38 @@ class: your-turn
 
 # Your turn
 
-## Change chunk options
+## Add chunk options & labels
 
-1. give some ideas here
+.pull-left[
 
-1. `r emo::ji("yarn")` **Knit** to HTML.
+1. Use chunk options on our `glimpse` chunk added earlier. Try:
+  + Hide the code, show only the output
+  + Hide everything, but still run the code
+  + Hide the output, show only the code, but still run the code
+  
+1. Add a label to this chunk.
 
+1. `r emo::ji("yarn")` **Knit** to HTML to see the effects.
+
+]
+
+.pull-right[
+````
+```{r}`r ''`
+glimpse(mockdata)
+```
+````
+]
 
 ```{r echo = FALSE}
-countdown(minutes = 2)
+countdown(minutes = 5)
 ```
-
-
----
-
-# Chunk labels
-
-how can we make it easier on ourselves to explore the code in here?
-
-show how to add chunk labels and view in IDE interactively
-
-Labeling chunks:
-
-Yes
-
-+ alphanumeric characters (`a-z`, `A-Z`, `0-9`)
-+ slashes (`/`) or dashes (`-`)
-
-No
-
-+ `_` underscores
 
 ---
 
 # The setup chunk
 
-Have one, make include false, global options
 
-have another one for loading packages
 
 .pull-left[
 
@@ -818,9 +1082,28 @@ knitr::opts_chunk$set(
 
 .pull-right[
 
++ A special chunk label: `setup`
 
++ Typically the first chunk
+
++ All following chunks will use these options (i.e., sets global chunk options)
+
++ **Tip**: set `include=FALSE`
+
++ You can (and should) use individual chunk options too
 
 ]
+
+---
+
+# Danger
+
+```
+Error in parse_block(g[-1], g[1], params.src) : 
+  duplicate label 'setup'
+Calls: <Anonymous> ... process_file -> split_file -> lapply -> FUN -> parse_block
+Execution halted
+```
 
 ---
 class: your-turn
@@ -829,13 +1112,15 @@ class: your-turn
 
 ## New data dump! `r emo::ji("newspaper")`
 
-1. Data from more sites just came in! Replace `mockboston` in the file `mockbsd`. How many sites do we have now?
+Data from more sites just came in &mdash; we now have data for Boston, Seattle, and Denver.
+
+1. Replace `mockboston` in the file `mockbsd`. 
+
+1. `r emo::ji("yarn")` **Knit** to HTML. Do you see data for all 3 sites?
 
 1. Clean up the chunks (split, combine, label as you see fit)
 
 1. Use the RStudio outline pane; rejoice!
-
-1. `r emo::ji("yarn")` **Knit** to HTML.
 
 
 ```{r echo = FALSE}
