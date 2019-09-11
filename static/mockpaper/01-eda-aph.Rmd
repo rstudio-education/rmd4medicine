@@ -31,7 +31,9 @@ theme_set(theme_minimal())
 
 ```{r import-data}
 mockdata <- read_csv(here("static/mockpaper/data/mockbsd.csv")) %>% 
-  mutate(fu_fct = as.factor(fu_stat))
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", 
+                             "Died" = "2"))  
 ```
 
 ```{r include=FALSE}

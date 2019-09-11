@@ -1,4 +1,4 @@
-case,age,arm,sex,race,fu.time,fu.stat,ps,hgb,bmi,alk.phos,ast,mdquality.s,age.ord,site,country
+case,age,arm,sex,race,fu_time,fu_stat,ps,hgb,bmi,alk_phos,ast,mdquality_s,age_ord,site,country
 92694,64,A: IFL,Male,Hispanic,1145,2,0,16.8,38.9739229024943,101,25,1,60-69,Boston,USA
 92522,71,G: IROX,Male,Hispanic,551,2,0,15.3,25.5270807577934,82,25,1,70-79,Boston,USA
 92475,51,A: IFL,Female,Caucasian,623,2,0,13.6,20.6764433875016,434,36,1,50-59,Boston,USA

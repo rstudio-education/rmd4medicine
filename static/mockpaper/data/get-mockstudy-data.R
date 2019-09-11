@@ -9,6 +9,9 @@ library(tidyverse)
 # load the data
 data(mockstudy)
 
+mockstudy <- mockstudy %>% 
+  janitor::clean_names()
+
 # add sites in 
 mock_sites <- mockstudy %>% 
   mutate(site = c(rep("Portland", 100), rep("Ann Arbor", 100), rep("St. Louis", 100),
@@ -30,7 +33,6 @@ mock_sites %>%
 
 # to generate random names, need to do some recoding of race variable
 mock_names <- mock_sites %>% 
-  janitor::clean_names() %>% 
   mutate(race = replace_na(race, "Other")) %>% 
   # note that "Other" gets mapped to "Middle-Eastern, Arabic"
   mutate(ethnicity = case_when(

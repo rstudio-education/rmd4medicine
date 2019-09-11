@@ -19,19 +19,32 @@ output:
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
       in_header: assets/header.html  
+params:
+  palette: berlin
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-```
-
-```{r packages, include=FALSE}
 library(countdown)
 library(tidyverse)
 library(scico)
 library(cowplot)
 library(ymlthis)
-theme_set(theme_minimal())
+ggplot2::theme_set(ggplot2::theme_minimal())
+```
+
+```{r load-data, include=FALSE}
+mockdata_all <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>% 
+  mutate_at(vars(starts_with("ae_")), ~as.factor(.)) %>% 
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", 
+                             "Died" = "2"))  
+
+# see my note below re: sites
+mockdata <- mockdata_all %>% 
+  filter(!site == "Nur-Sultan")
+
+source('figs.R')
 ```
 
 
@@ -64,53 +77,6 @@ at this point, we should be within a bookdown with html and word doc output opti
 
 Or an rticles with bookdown under the hood?
 
-Final: end with powerpoint with graphics
-
----
-class: middle, center, inverse
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
-</span> 
-
-# Get figures in
-
----
-class: your-turn
-
-# Your turn
-
-A warm-up exercise! Open up our doc. It has several figures coded using the `ggplot2` package. 
-
-1. Knit the document to the `bookdown::html_document2` format &mdash; behold!
-
-1. Add output options to this format to use one of the bootswatch themes and include a floating table of contents.
-
-1. Knit to `bookdown::word_document2` (no options)- how does it look?
-
-1. _If this was easy, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?_
-
-_psst...next slide has answers..._
-
-```{r echo=FALSE}
-countdown(minutes = 5)
-```
-
-
----
-class: your-turn
-
-# Answer
-
-```{r echo = FALSE}
-yml_empty() %>% 
-  yml_output(bookdown::html_document2(theme = "flatly", toc = TRUE, toc_float = TRUE),
-             bookdown::word_document2(),
-             distill::distill_article(toc = TRUE)) %>% 
-  asis_yaml_output()
-```
-
 ---
 class: inverse, middle
 
@@ -135,7 +101,102 @@ knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/
 
 ]
 
+---
+class: middle, center, inverse
 
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+</span> 
+
+# Get figures in
+
+---
+class: your-turn
+
+# Your turn: Part 1 of 3
+
+A warm-up exercise! Open `03-draft.Rmd`. It has 4 figures coded using the `ggplot2` package.
+
+1. Knit the document to the `bookdown::html_document2` format &mdash; behold!
+
+1. Add output options to this format to use one of the [bootswatch themes](https://rmarkdown.rstudio.com/docs/reference/html_document.html) and include a [floating table of contents](https://rmarkdown.rstudio.com/docs/reference/html_document.html#floating-table-of-contents).
+
+1. Knit to `bookdown::word_document2` (no options)- how does it look?
+
+__If this was easy__, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?
+
+_psst...next slide has answers..._
+
+```{r echo=FALSE}
+countdown(minutes = 5)
+```
+
+
+---
+class: your-turn
+
+# Answer
+
+```{r echo = FALSE}
+yml_empty() %>% 
+  yml_output(bookdown::html_document2(theme = "flatly", toc = TRUE, toc_float = TRUE),
+             bookdown::word_document2(),
+             distill::distill_article(toc = TRUE)) %>% 
+  asis_yaml_output()
+```
+
+Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
+
+---
+class: middle, center
+
+```{r fig.show="hold", out.width='25%', echo = FALSE, fig.retina=3}
+age_histogram
+surv_pct_plot
+surv_days_plot
+ae_pct_plot
+```
+
+???
+
+so, how did we get a figure into R Markdown?
+
+Answer: it has to print!
+
+---
+class: your-turn
+
+# Your turn: Part 2 of 3
+
+Now go through `03-draft-revised.Rmd` and read through the "Note to Peter" at the top. It now has 5 figures coded using the `ggplot2` package.
+
+.pull-left[
+
+```{r eval=FALSE}
+# demographics?
+# maybe combine into a multi-panel plot?
+age_density
+age_boxplot
+
+# treatment response? another multi-panel?
+surv_pct_plot
+surv_days_plot
+
+# adverse events?
+ae_pct_plot
+```
+]
+
+.pull-right[
+1. Add new code chunks containing plots you wish to include where you want them to go in the document.
+
+1. Edit the code chunk options as you need to.
+]
+
+```{r echo=FALSE}
+countdown(minutes = 5)
+```
 ---
 
 # Chunk options
@@ -149,56 +210,16 @@ https://yihui.name/knitr/options/#plots
 
 # Goal plot
 
-```{r include=FALSE, fig.show='hide', results='hide'}
-mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
-  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
-                             "Lived" = "1", 
-                             "Died" = "2"))  
-
-# calculate proportion survived by arm
-prop_surv <- mockdata %>% 
-  count(arm, fu_fct, name = "by_surv", .drop = FALSE) %>% 
-  add_count(arm, wt = by_surv, name = "arm_total") %>% 
-  mutate(prop = by_surv/arm_total) %>% 
-  filter(fu_fct == "Lived")
-
-# barplot of percent survival by arm
-surv_bar <- ggplot(prop_surv, aes(x = arm, y = prop)) +
-  geom_col() +
-  labs(y= "Percent Survived", x= "Study Arm") +
-  scale_y_continuous(labels = scales::percent_format(accuracy = .1))
-
-# distributions of survival time by arms (in days censored)
-surv_violin <- ggplot(mockdata) +
-  aes(x=arm, y = fu_time, fill = fu_fct, group = interaction(arm, fu_fct)) +
-  geom_violin(alpha = .6,
-              colour = NA, 
-              na.rm = TRUE, 
-              position = position_dodge()) +
-  geom_boxplot(alpha = .8,
-               outlier.colour = "black",
-               colour = "white",
-               width = .2, 
-               outlier.size = 2, 
-               na.rm = TRUE, 
-               position = position_dodge(width = .9),
-               show.legend = FALSE) +
-  labs(y= "Survival Time in \nDays (Censored)", x= "Study Arm") +
-  scale_fill_scico_d(palette = 'cork', 
-                     name = "Follow-up status:") +
-  theme(legend.position = "top")
-```
-
 .pull-left[
 ```{r echo=FALSE, fig.retina=3}
-surv_bar
+surv_pct_plot
 ```
 
 ]
 
 .pull-right[
 ```{r echo=FALSE, fig.retina=3}
-surv_violin
+surv_days_plot
 ```
 
 ]
@@ -247,7 +268,7 @@ surv_bee <- ggplot(mockdata) +
 ---
 
 ```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=20}
-plot_grid(surv_bar, surv_violin, labels = "AUTO")
+plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
 ```
 
 
@@ -499,20 +520,6 @@ cover ggsave for outputting figures
 ggsave()
 ```
 
----
-
-```{r echo=FALSE, printr.help.sections="usage"}
-library(printr)
-?ggsave
-```
-
----
-
-```{r echo=FALSE, printr.help.sections="arguments"}
-library(printr)
-?ggsave
-```
-
 
 ---
 
@@ -557,12 +564,6 @@ graphics type output (https://r4ds.had.co.nz/graphics-for-communication.html#oth
 `knitr` options for fig resolution
 
 ---
-
-Add in powerpoint output format here, natural place with graphics for communication
-
-when they do this, let them play with `scico` palettes in a your turn
-
----
 class: middle, center
 
 # Change your mental model
@@ -572,7 +573,7 @@ class: middle, center
 ### Content = presentation
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/ppt.png")
+knitr::include_graphics("images/word.png")
 ```
 
 ]

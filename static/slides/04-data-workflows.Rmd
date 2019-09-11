@@ -236,6 +236,22 @@ knitr::include_graphics("images/rstudio-newproj.png")
 ---
 class: middle, center
 
+
+# <i class="far fa-keyboard"></i>
+
+Equivalent to:
+_File > New Project...>_ New or Existing
+
+```{r, eval = FALSE}
+library(usethis)
+create_project(here::here())
+```
+
+.footnote[https://usethis.r-lib.org/reference/create_package.html]
+
+---
+class: middle, center
+
 .pull-left[
 # <i class="fas fa-mouse-pointer"></i>
 
@@ -271,6 +287,13 @@ class: middle, center
 
 ![](images/rstudio-blankrmd.png)
 ]
+
+---
+class: live-code
+
+# Live code demo
+
+We make our first R project from scratch with a single R Markdown file inside.
 
 ---
 
@@ -753,6 +776,17 @@ knitr::include_graphics("https://raw.githubusercontent.com/rstudio/rmarkdown/gh-
 
 .footnote[https://bookdown.org/yihui/rmarkdown/parameterized-reports.html,<br>
 https://rmarkdown.rstudio.com/lesson-6.html]
+
+---
+
+# More
+
++ [`redoc` `r emo::ji("package")`](https://noamross.github.io/redoc/)
+
++ [`spelling` `r emo::ji("package")`](https://docs.ropensci.org/spelling/)
+
++ [`wordcountaddin` `r emo::ji("package")`](https://github.com/benmarwick/wordcountaddin)
+
 
 ---
 class: inverse, middle, center

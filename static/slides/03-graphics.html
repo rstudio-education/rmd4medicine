@@ -50,58 +50,6 @@ at this point, we should be within a bookdown with html and word doc output opti
 
 Or an rticles with bookdown under the hood?
 
-Final: end with powerpoint with graphics
-
----
-class: middle, center, inverse
-
-&lt;span class="fa-stack fa-4x"&gt;
-  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1&lt;/strong&gt;
-&lt;/span&gt; 
-
-# Get figures in
-
----
-class: your-turn
-
-# Your turn
-
-A warm-up exercise! Open up our doc. It has several figures coded using the `ggplot2` package. 
-
-1. Knit the document to the `bookdown::html_document2` format &amp;mdash; behold!
-
-1. Add output options to this format to use one of the bootswatch themes and include a floating table of contents.
-
-1. Knit to `bookdown::word_document2` (no options)- how does it look?
-
-1. _If this was easy, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?_
-
-_psst...next slide has answers..._
-
-<div class="countdown" id="timer_5d77e2d5" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
-
----
-class: your-turn
-
-# Answer
-
-```yaml
----
-output:
-  bookdown::html_document2:
-    theme: flatly
-    toc: true
-    toc_float: true
-  bookdown::word_document2: default
-  distill::distill_article:
-    toc: true
----
-```
-
 ---
 class: inverse, middle
 
@@ -124,7 +72,103 @@ class: inverse, middle
 
 ]
 
+---
+class: middle, center, inverse
 
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Get figures in
+
+---
+class: your-turn
+
+# Your turn: Part 1 of 3
+
+A warm-up exercise! Open `03-draft.Rmd`. It has 4 figures coded using the `ggplot2` package.
+
+1. Knit the document to the `bookdown::html_document2` format &amp;mdash; behold!
+
+1. Add output options to this format to use one of the [bootswatch themes](https://rmarkdown.rstudio.com/docs/reference/html_document.html) and include a [floating table of contents](https://rmarkdown.rstudio.com/docs/reference/html_document.html#floating-table-of-contents).
+
+1. Knit to `bookdown::word_document2` (no options)- how does it look?
+
+__If this was easy__, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?
+
+_psst...next slide has answers..._
+
+<div class="countdown" id="timer_5d781b29" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+class: your-turn
+
+# Answer
+
+```yaml
+---
+output:
+  bookdown::html_document2:
+    theme: flatly
+    toc: true
+    toc_float: true
+  bookdown::word_document2: default
+  distill::distill_article:
+    toc: true
+---
+```
+
+Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
+
+---
+class: middle, center
+
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-1.png" width="25%" /&gt;&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-2.png" width="25%" /&gt;&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-3.png" width="25%" /&gt;&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-4.png" width="25%" /&gt;
+
+???
+
+so, how did we get a figure into R Markdown?
+
+Answer: it has to print!
+
+---
+class: your-turn
+
+# Your turn: Part 2 of 3
+
+Now go through `03-draft-revised.Rmd` and read through the "Note to Peter" at the top. It now has 5 figures coded using the `ggplot2` package.
+
+.pull-left[
+
+
+```r
+# demographics?
+# maybe combine into a multi-panel plot?
+age_density
+age_boxplot
+
+# treatment response? another multi-panel?
+surv_pct_plot
+surv_days_plot
+
+# adverse events?
+ae_pct_plot
+```
+]
+
+.pull-right[
+1. Add new code chunks containing plots you wish to include where you want them to go in the document.
+
+1. Edit the code chunk options as you need to.
+]
+
+<div class="countdown" id="timer_5d781c4c" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 ---
 
 # Chunk options
@@ -138,15 +182,13 @@ https://yihui.name/knitr/options/#plots
 
 # Goal plot
 
-
-
 .pull-left[
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-7-1.png" width="504" /&gt;
 
 ]
 
 .pull-right[
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-6-1.png" width="504" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-8-1.png" width="504" /&gt;
 
 ]
 
@@ -174,7 +216,7 @@ But sometimes it doesn't look quite right.
 
 ---
 
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-8-1.png" width="1440" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-10-1.png" width="1440" /&gt;
 
 
 ---
@@ -217,7 +259,7 @@ ggplot(mockdata, aes(age)) +
 ]
 
 .pull-right[
-![](03-graphics_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](03-graphics_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -239,7 +281,7 @@ ggplot(mockdata, aes(age)) +
 ```
 ````
 
-![](03-graphics_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](03-graphics_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 ]
 
 --
@@ -260,7 +302,7 @@ ggplot(mockdata, aes(age)) +
 ```
 ````
 
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-13-1.png" width="504" /&gt;
 ]
 
 ---
@@ -269,7 +311,7 @@ now you have to
 1. label the chunk
 1. add `fig.cap` 
 
-![Age distribution](03-graphics_files/figure-html/unnamed-chunk-12-1.png)
+![Age distribution](03-graphics_files/figure-html/unnamed-chunk-14-1.png)
 
 ???
 
@@ -320,7 +362,7 @@ See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
 
 .center[
 
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-13-1.png" width="75%" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-15-1.png" width="75%" /&gt;
 
 ]
 
@@ -347,7 +389,7 @@ take one of the plots in the doc, add some `knitr` chunk options to it to:
 1. Add a figure caption
 1. _If this was easy, try to change the figure alignment (and its caption) to the center._
 
-<div class="countdown" id="timer_5d77e56b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d781c11" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -416,26 +458,6 @@ cover ggsave for outputting figures
 ggsave()
 ```
 
----
-
-
-```
-## Help on topic 'ggsave' was found in the following packages:
-## 
-##   * ggplot2
-##   * cowplot
-```
-
----
-
-
-```
-## Help on topic 'ggsave' was found in the following packages:
-## 
-##   * ggplot2
-##   * cowplot
-```
-
 
 ---
 
@@ -463,7 +485,7 @@ Remember our old friend, the `knitr` setup chunk?
 
 1. Save and knit- what do you notice?
 
-<div class="countdown" id="timer_5d77e395" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d781b9b" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -480,12 +502,6 @@ graphics type output (https://r4ds.had.co.nz/graphics-for-communication.html#oth
 `knitr` options for fig resolution
 
 ---
-
-Add in powerpoint output format here, natural place with graphics for communication
-
-when they do this, let them play with `scico` palettes in a your turn
-
----
 class: middle, center
 
 # Change your mental model
@@ -494,7 +510,7 @@ class: middle, center
 
 ### Content = presentation
 
-&lt;img src="images/ppt.png" width="2835" /&gt;
+&lt;img src="images/word.png" width="2093" /&gt;
 
 ]
 
@@ -511,7 +527,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d77e4ab" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d781dc3" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

@@ -213,6 +213,23 @@ Pick one
 ---
 class: middle, center
 
+
+# &lt;i class="far fa-keyboard"&gt;&lt;/i&gt;
+
+Equivalent to:
+_File &gt; New Project...&gt;_ New or Existing
+
+
+```r
+library(usethis)
+create_project(here::here())
+```
+
+.footnote[https://usethis.r-lib.org/reference/create_package.html]
+
+---
+class: middle, center
+
 .pull-left[
 # &lt;i class="fas fa-mouse-pointer"&gt;&lt;/i&gt;
 
@@ -244,6 +261,13 @@ class: middle, center
 
 ![](images/rstudio-blankrmd.png)
 ]
+
+---
+class: live-code
+
+# Live code demo
+
+We make our first R project from scratch with a single R Markdown file inside.
 
 ---
 
@@ -372,7 +396,7 @@ class: middle, center, inverse
 
 To a section and a table in the text.
 
-<div class="countdown" id="timer_5d77fadc" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d78064a" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -438,7 +462,7 @@ __Too much?__ Look at `04-manuscript-alison.Rmd`, 🧶 __Knit__. Then do 2 and 3
 
 __Not enough?__ See next slide for building a graphical user interface for parameters.
 
-<div class="countdown" id="timer_5d77fc22" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d780371" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -506,7 +530,7 @@ output:
 
 .pull-right[
 
-![](04-data-workflows_files/figure-html/unnamed-chunk-19-1.gif)&lt;!-- --&gt;
+![](04-data-workflows_files/figure-html/unnamed-chunk-20-1.gif)&lt;!-- --&gt;
 
 
 ]
@@ -518,7 +542,7 @@ class: middle, center, inverse
 
 # Time to wrap-up!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d77faa9" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d780315" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -549,7 +573,7 @@ class: middle, center
 
 # Presentations
 
-&lt;img src="04-data-workflows_files/figure-html/unnamed-chunk-22-1.gif" width="50%" /&gt;
+&lt;img src="04-data-workflows_files/figure-html/unnamed-chunk-23-1.gif" width="50%" /&gt;
 
 https://bookdown.org/yihui/rmarkdown/presentations.html
 
@@ -706,6 +730,17 @@ class: middle
 
 .footnote[https://bookdown.org/yihui/rmarkdown/parameterized-reports.html,&lt;br&gt;
 https://rmarkdown.rstudio.com/lesson-6.html]
+
+---
+
+# More
+
++ [`redoc` 📦](https://noamross.github.io/redoc/)
+
++ [`spelling` 📦](https://docs.ropensci.org/spelling/)
+
++ [`wordcountaddin` 📦](https://github.com/benmarwick/wordcountaddin)
+
 
 ---
 class: inverse, middle, center
