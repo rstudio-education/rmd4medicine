@@ -178,7 +178,7 @@ class: middle, center
 
 .pull-left[
 
-### Content = presentation
+### Source &harr; output
 
 ```{r echo=FALSE, out.width="50%"}
 knitr::include_graphics("images/word.png")
@@ -188,7 +188,7 @@ knitr::include_graphics("images/word.png")
 
 .pull-right[
 
-### Content &rarr; presentation
+### Source &rarr; output
 
 ```{r echo=FALSE, out.width="50%"}
 knitr::include_graphics("images/rmd-file.png")
@@ -197,24 +197,81 @@ knitr::include_graphics("images/rmd-file.png")
 ]
 
 ---
+class: middle, center
+
+# Change your mental model
+
+.pull-left[
+
+### Source &harr; output
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("images/haba-elise.jpg")
+```
+
+]
+
+.pull-right[
+
+### Source &rarr; output
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("images/doll.png")
+```
+
+]
+
+---
+background-image: url(images/welliewishers/Slide1.png)
+background-size: cover
+class: top, center
+
+.footnote[https://www.americangirl.com/shop/c/welliewishers]
+
+---
+background-image: url(images/welliewishers/Slide2.png)
+background-size: cover
+class: top, center
+
+.footnote[https://www.americangirl.com/shop/c/welliewishers]
+
+---
+class: middle, inverse, center
+
+# Same ~~doll~~ source
+
+# Different dress
+
+---
+class: middle, center
+
+# `html_document`
+
+
+```{r echo=FALSE, out.width="40%"}
+knitr::include_graphics("images/doll.png")
+```
+
+---
 class: your-turn
 
 # Your turn
 
-## .Rmd anatomy
+Find a partner and look at `01-eda.Rmd` together. 
+Look at the source, then `r emo::ji("yarn")` **Knit** to HTML.
 
-Find a partner, and take a look at this R Markdown document together. 
 
-
-Try to identify these parts of the document:
+Try to identify these parts in the source and the output:
 
 1. The **metadata**
 
-1. The **text** (not code)
+1. The **text** 
 
 1. The **code**
 
-_If this was easy_, try to find all code that produces a **table**.  
+1. The **output**
+
+_If this was easy_, try to find all code that produces a **table**. 
 Find all code that produces a **plot**.
 
 

@@ -99,7 +99,7 @@ __If this was easy__, add `distill::distill_article` as an output format (consid
 
 _psst...next slide has answers..._
 
-<div class="countdown" id="timer_5d781b29" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d789984" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -109,6 +109,7 @@ class: your-turn
 
 # Answer
 
+.pull-left[
 ```yaml
 ---
 output:
@@ -121,6 +122,22 @@ output:
     toc: true
 ---
 ```
+]
+
+.pull-right[
+````
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  comment = "##",
+  R.options = list(width = 60)
+)
+```
+````
+
+]
 
 Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
 
@@ -166,7 +183,7 @@ ae_pct_plot
 1. Edit the code chunk options as you need to.
 ]
 
-<div class="countdown" id="timer_5d781c4c" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d789846" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 ---
@@ -177,20 +194,6 @@ ae_pct_plot
 https://yihui.name/knitr/options/#plots
 
 
-
----
-
-# Goal plot
-
-.pull-left[
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-7-1.png" width="504" /&gt;
-
-]
-
-.pull-right[
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-8-1.png" width="504" /&gt;
-
-]
 
 
 ---
@@ -214,9 +217,7 @@ But sometimes it doesn't look quite right.
 
 
 
----
 
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-10-1.png" width="1440" /&gt;
 
 
 ---
@@ -245,21 +246,25 @@ first introduce `knitr::include_graphics` for static images
 
 
 ```r
-ggplot(mockdata, aes(age)) +
+age_histogram &lt;- 
+  ggplot(mockdata, aes(age)) +
   geom_histogram(color = 'white',
-                 fill = "#447099",
+                 fill = scico::scico(1, 
+                                     begin = .3, 
+                                     palette = params$palette),
                  bins = 20) +
   labs(x = "Age", 
        y = "Count") +
   scale_y_continuous(
     breaks = scales::pretty_breaks()
   )
+age_histogram
 ```
 
 ]
 
 .pull-right[
-![](03-graphics_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](03-graphics_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -269,19 +274,11 @@ ggplot(mockdata, aes(age)) +
 
 ````
 ```{r}
-ggplot(mockdata, aes(age)) +
-  geom_histogram(color = 'white',
-                 fill = "#447099",
-                 bins = 20) +
-  labs(x = "Age", 
-       y = "Count") +
-  scale_y_continuous(
-    breaks = scales::pretty_breaks()
-  )
+age_histogram
 ```
 ````
 
-![](03-graphics_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](03-graphics_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
 ]
 
 --
@@ -290,19 +287,11 @@ ggplot(mockdata, aes(age)) +
 
 ````
 ```{r fig.retina=3}
-ggplot(mockdata, aes(age)) +
-  geom_histogram(color = 'white',
-                 fill = "#447099",
-                 bins = 20) +
-  labs(x = "Age", 
-       y = "Count") +
-  scale_y_continuous(
-    breaks = scales::pretty_breaks()
-  )
+age_histogram
 ```
 ````
 
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-13-1.png" width="504" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-10-1.png" width="504" height="50%" /&gt;
 ]
 
 ---
@@ -311,7 +300,7 @@ now you have to
 1. label the chunk
 1. add `fig.cap` 
 
-![Age distribution](03-graphics_files/figure-html/unnamed-chunk-14-1.png)
+![Age histogram](03-graphics_files/figure-html/unnamed-chunk-11-1.png)
 
 ???
 
@@ -362,7 +351,7 @@ See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
 
 .center[
 
-&lt;img src="03-graphics_files/figure-html/unnamed-chunk-15-1.png" width="75%" /&gt;
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-12-1.png" width="75%" /&gt;
 
 ]
 
@@ -389,7 +378,7 @@ take one of the plots in the doc, add some `knitr` chunk options to it to:
 1. Add a figure caption
 1. _If this was easy, try to change the figure alignment (and its caption) to the center._
 
-<div class="countdown" id="timer_5d781c11" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d7897d9" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -407,7 +396,56 @@ class: middle, center, inverse
 
 do multi-panel here
 
-`cowplot` or `patchwork` for multi-panel plots
+`cowplot` for multi-panel plots
+
+---
+class: live-code
+
+# Live code demo
+
+We combine `age_density` and `age_boxplot` with the `cowplot` package.
+
+
+```r
+plot_grid(age_density, age_boxplot, labels = "AUTO")
+```
+
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: your-turn
+
+# Your turn
+
+## Make a plot grid
+
+1. Combine `surv_pct_plot` and `surv_days_plot` with the `cowplot` package.
+
+1. Label the chunk and be sure you set up you `fig.path` correctly.
+
+1. Knit to determine the best chunk options for `fig.retina`, `fig.asp`, and `out.width`
+
+
+_psst...my answers on the next slide..._
+
+<div class="countdown" id="timer_5d7897b9" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+# Answers
+
+````
+```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=20}
+plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
+```
+````
+
+&lt;img src="03-graphics_files/figure-html/unnamed-chunk-16-1.png" width="720" style="display: block; margin: auto;" /&gt;
+
 
 ---
 
@@ -485,7 +523,7 @@ Remember our old friend, the `knitr` setup chunk?
 
 1. Save and knit- what do you notice?
 
-<div class="countdown" id="timer_5d781b9b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d789928" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -527,7 +565,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d781dc3" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d7896da" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

@@ -138,6 +138,7 @@ class: your-turn
 
 # Answer
 
+.pull-left[
 ```{r echo = FALSE}
 yml_empty() %>% 
   yml_output(bookdown::html_document2(theme = "flatly", toc = TRUE, toc_float = TRUE),
@@ -145,6 +146,22 @@ yml_empty() %>%
              distill::distill_article(toc = TRUE)) %>% 
   asis_yaml_output()
 ```
+]
+
+.pull-right[
+````
+```{r setup, include=FALSE}`r ''`
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  comment = "##",
+  R.options = list(width = 60)
+)
+```
+````
+
+]
 
 Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
 
@@ -206,24 +223,6 @@ https://yihui.name/knitr/options/#plots
 
 
 
----
-
-# Goal plot
-
-.pull-left[
-```{r echo=FALSE, fig.retina=3}
-surv_pct_plot
-```
-
-]
-
-.pull-right[
-```{r echo=FALSE, fig.retina=3}
-surv_days_plot
-```
-
-]
-
 
 ---
 
@@ -265,11 +264,7 @@ surv_bee <- ggplot(mockdata) +
                      end = .8)
 ```
 
----
 
-```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=20}
-plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
-```
 
 
 ---
@@ -296,22 +291,26 @@ first introduce `knitr::include_graphics` for static images
 
 .pull-left[
 
-```{r age-dist, fig.show='hide'}
-ggplot(mockdata, aes(age)) +
+```{r age-hist, fig.show='hide'}
+age_histogram <- 
+  ggplot(mockdata, aes(age)) +
   geom_histogram(color = 'white',
-                 fill = "#447099",
+                 fill = scico::scico(1, 
+                                     begin = .3, 
+                                     palette = params$palette),
                  bins = 20) +
   labs(x = "Age", 
        y = "Count") +
   scale_y_continuous(
     breaks = scales::pretty_breaks()
   )
+age_histogram
 ```
 
 ]
 
 .pull-right[
-```{r ref.label='age-dist', echo=FALSE}
+```{r ref.label='age-hist', echo=FALSE}
 
 ```
 
@@ -323,19 +322,11 @@ ggplot(mockdata, aes(age)) +
 
 ````
 ```{r}`r ''`
-ggplot(mockdata, aes(age)) +
-  geom_histogram(color = 'white',
-                 fill = "#447099",
-                 bins = 20) +
-  labs(x = "Age", 
-       y = "Count") +
-  scale_y_continuous(
-    breaks = scales::pretty_breaks()
-  )
+age_histogram
 ```
 ````
 
-```{r ref.label='age-dist', echo=FALSE}
+```{r ref.label='age-hist', echo=FALSE}
 
 ```
 ]
@@ -346,19 +337,11 @@ ggplot(mockdata, aes(age)) +
 
 ````
 ```{r fig.retina=3}`r ''`
-ggplot(mockdata, aes(age)) +
-  geom_histogram(color = 'white',
-                 fill = "#447099",
-                 bins = 20) +
-  labs(x = "Age", 
-       y = "Count") +
-  scale_y_continuous(
-    breaks = scales::pretty_breaks()
-  )
+age_histogram
 ```
 ````
 
-```{r ref.label='age-dist', echo=FALSE, fig.retina=3}
+```{r ref.label='age-hist', echo=FALSE, fig.retina=3, out.height="50%"}
 
 ```
 ]
@@ -369,7 +352,7 @@ now you have to
 1. label the chunk
 1. add `fig.cap` 
 
-```{r ref.label='age-dist', echo=FALSE, fig.cap="Age distribution"}
+```{r ref.label='age-hist', echo=FALSE, fig.cap="Age histogram"}
 
 ```
 
@@ -470,7 +453,55 @@ class: middle, center, inverse
 
 do multi-panel here
 
-`cowplot` or `patchwork` for multi-panel plots
+`cowplot` for multi-panel plots
+
+---
+class: live-code
+
+# Live code demo
+
+We combine `age_density` and `age_boxplot` with the `cowplot` package.
+
+```{r fig.retina=3, fig.asp=.5, out.width="70%", fig.align='center'}
+plot_grid(age_density, age_boxplot, labels = "AUTO")
+```
+
+
+---
+class: your-turn
+
+# Your turn
+
+## Make a plot grid
+
+1. Combine `surv_pct_plot` and `surv_days_plot` with the `cowplot` package.
+
+1. Label the chunk and be sure you set up you `fig.path` correctly.
+
+1. Knit to determine the best chunk options for `fig.retina`, `fig.asp`, and `out.width`
+
+
+_psst...my answers on the next slide..._
+
+```{r echo=FALSE}
+countdown(minutes = 5)
+```
+
+---
+class: your-turn
+
+# Answers
+
+````
+```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=20}`r ''`
+plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
+```
+````
+
+```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=10, fig.align='center'}
+plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
+```
+
 
 ---
 
