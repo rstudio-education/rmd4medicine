@@ -58,30 +58,6 @@ layout: true
 <div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
 
 ---
-
-plot here times knitted so far
-
----
-
-# Pop quiz: 
-
-_(discuss with a neighbor)_
-
-What are keys you'll typically want to use in the YAML?
-
-1. The document `title`
-
-1. The document `date`
-
-1. The document `output` format
-
-1. The document's `eval` option
-
-1. The document's `author`
-
-1. The document's `packages`
-
----
 class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
@@ -295,14 +271,6 @@ class: live-code
 
 We make our first R project from scratch with a single R Markdown file inside.
 
----
-
-Whenever you refer to a file with a relative path it will look for it here.
-
-- project organization 
-
-- naming files
-
 
 ---
 class: middle, center, inverse
@@ -322,6 +290,8 @@ class: center
 ```{r echo=FALSE}
 knitr::include_graphics("images/Data.jpg")
 ```
+
+???
 
 save a local copy, keep raw data raw
 
@@ -359,39 +329,6 @@ knitr::include_graphics("images/horst_here.png")
 ]
 
 https://whattheyforgot.org/project-oriented-workflow.html#setwd
-
-
----
-
-.footnote[https://whattheyforgot.org/safe-paths.html]
-
-
----
-
-# Use `bookdown`
-
-Try changing output format in your YAML to a bookdown one for single docs
-
-.pull-left[
-
-```{r echo = FALSE}
-yml_empty() %>% 
-  yml_output(html_document()) %>% 
-  asis_yaml_output()
-```
-
-]
-
-.pull-right[
-
-```{r echo = FALSE}
-yml_empty() %>% 
-  yml_output(bookdown::html_document2()) %>% 
-  asis_yaml_output()
-```
-
-]
-
 
 ---
 class: middle, center, inverse
