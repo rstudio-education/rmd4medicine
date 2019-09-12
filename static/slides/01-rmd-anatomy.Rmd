@@ -128,8 +128,7 @@ class: bottom, center
 
 ]
 
-.footnote[All content is CC-BY.<br>
-All art (unless otherwise noted) is by [Desirée De Leon](https://desiree.rbind.io/), CC-BY-NC-ND.]
+.footnote[All content is CC-BY. All art (unless otherwise noted) is by [Desirée De Leon](https://desiree.rbind.io/), CC-BY-NC-ND.]
 
 ---
 background-image: url(images/deardata.jpg)
