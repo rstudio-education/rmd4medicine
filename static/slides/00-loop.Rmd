@@ -64,6 +64,7 @@ class: middle, center
 # <i class="fas fa-wifi"></i>
 
 Wifi network name
+
 `Omni Meeting`
 ]
 

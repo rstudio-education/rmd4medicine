@@ -64,7 +64,8 @@ class: middle, center
 .pull-left[
 # <i class="fas fa-wifi"></i>
 
-Wifi network name
+Wifi network name  
+
 `Omni Meeting`
 ]
 
