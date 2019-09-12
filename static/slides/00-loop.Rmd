@@ -64,12 +64,15 @@ class: middle, center
 # <i class="fas fa-wifi"></i>
 
 Wifi network name
+`Omni Meeting`
 ]
 
 .pull-left[
 # <i class="fas fa-key"></i>
 
 Wifi password
+
+`rmedicine`
 ]
 
 
