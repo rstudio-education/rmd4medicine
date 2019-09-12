@@ -4,7 +4,7 @@
     <title>Graphics for Communication</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-09-10" />
+    <meta name="date" content="2019-09-12" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -99,7 +99,7 @@ __If this was easy__, add `distill::distill_article` as an output format (consid
 
 _psst...next slide has answers..._
 
-<div class="countdown" id="timer_5d789984" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79cb4c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -128,21 +128,25 @@ output:
 ````
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  echo = TRUE,
-  warning = TRUE,
-  message = TRUE,
-  comment = "##",
-  R.options = list(width = 60)
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  comment = NA,
+  R.options = list(width = 70)
 )
 ```
 ````
 
+Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
+
 ]
 
-Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
+
 
 ---
 class: middle, center
+
+# The line-up
 
 &lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-1.png" width="25%" /&gt;&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-2.png" width="25%" /&gt;&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-3.png" width="25%" /&gt;&lt;img src="03-graphics_files/figure-html/unnamed-chunk-4-4.png" width="25%" /&gt;
 
@@ -183,7 +187,7 @@ ae_pct_plot
 1. Edit the code chunk options as you need to.
 ]
 
-<div class="countdown" id="timer_5d789846" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79cb3b" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 ---
@@ -378,7 +382,7 @@ take one of the plots in the doc, add some `knitr` chunk options to it to:
 1. Add a figure caption
 1. _If this was easy, try to change the figure alignment (and its caption) to the center._
 
-<div class="countdown" id="timer_5d7897d9" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79cbf8" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -429,7 +433,7 @@ class: your-turn
 
 _psst...my answers on the next slide..._
 
-<div class="countdown" id="timer_5d7897b9" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79cdae" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -523,7 +527,7 @@ Remember our old friend, the `knitr` setup chunk?
 
 1. Save and knit- what do you notice?
 
-<div class="countdown" id="timer_5d789928" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79cd9a" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -565,7 +569,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d7896da" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d79cda3" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

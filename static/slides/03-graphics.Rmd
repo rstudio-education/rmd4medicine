@@ -152,21 +152,25 @@ yml_empty() %>%
 ````
 ```{r setup, include=FALSE}`r ''`
 knitr::opts_chunk$set(
-  echo = TRUE,
-  warning = TRUE,
-  message = TRUE,
-  comment = "##",
-  R.options = list(width = 60)
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  comment = NA,
+  R.options = list(width = 70)
 )
 ```
 ````
 
+Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
+
 ]
 
-Distill is much less chatty than other outputs due to default `knitr` code chunk options: https://rstudio.github.io/distill/basics.html#code-blocks
+
 
 ---
 class: middle, center
+
+# The line-up
 
 ```{r fig.show="hold", out.width='25%', echo = FALSE, fig.retina=3}
 age_histogram
