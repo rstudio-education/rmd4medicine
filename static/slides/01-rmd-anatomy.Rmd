@@ -84,7 +84,7 @@ class: middle, center
 
 # Go here and log in (free):
 
-https://rstd.io/rmd4medicine-cloud
+cloud link
 
 ---
 class: middle, center
@@ -103,7 +103,7 @@ class: middle, center
 ---
 layout: true
 
-<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
+<div class="my-footer"><span>https://rmd4medicine.netlify.com</span></div>
 
 ---
 background-image: url(images/hello.jpg)
