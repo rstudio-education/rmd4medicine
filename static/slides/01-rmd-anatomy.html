@@ -92,6 +92,13 @@ class: bottom, center
 .footnote[All content is CC-BY. All art (unless otherwise noted) is by [Desirée De Leon](https://desiree.rbind.io/), CC-BY-SA.]
 
 ---
+background-image: url(images/deardata.jpg)
+background-size: 50%
+
+.footnote[https://www.dear-data.com/]
+
+
+---
 
 
 
@@ -156,11 +163,11 @@ class: bottom, center
 class: center
 background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
 
-# Replication crisis? 
+# Reproducibility crisis? 
 
 ???
 
-We are not here today to solve science or medicine's replication crisis.
+We are not here today to solve science or medicine's reproducibility crisis.
 
 What I do think R Markdown can help you with today when you leave here is to tackle two other crises: one I think of as the confidence crisis...
 
@@ -270,30 +277,22 @@ Try to identify these parts in the source and the output:
 _If this was easy_, try to find all code that produces a **table**. 
 Find all code that produces a **plot**.
 
-<div class="countdown" id="timer_5d79808f" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d799c12" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
-name: 01-formative
+class: live-code
 
 # Basic anatomy I
 
-.pull-left[
-
-show "raw" doc
-
-]
-
-.pull-right[
+We look at the source anatomy together:
 
 1. The **metadata**
 
 1. The **text** 
 
 1. The **code**
-
-]
     
 ---
 class: center, middle
@@ -306,17 +305,11 @@ class: center, middle
 &lt;img src="images/doc-live.jpg" width="50%" /&gt;
 
 ---
-name: 02-formative
+class: live-code
 
 # Basic anatomy II
 
-.pull-left[
-
-show output screenshot
-
-]
-
-.pull-right[
+We look at the output anatomy together:
 
 1. The **metadata**
 
@@ -326,11 +319,12 @@ show output screenshot
 
 1. The **output**
 
-]
 
 ---
 background-image: url(images/rmarkdown_wizards.png)
-background-size: cover
+background-size: contain
+
+.footnote[Art by [Allison Horst](https://twitter.com/allison_horst?lang=en)]
 
 ---
 class: middle, center
@@ -357,13 +351,12 @@ class: middle, center, inverse
 
 .pull-left[
 
-+ _"YAML Ain't Markup Language"_
+_"YAML Ain't Markup Language"_
 
-+ `key: value` pairs
 
 ```yaml
 ---
-output: html_document
+key: value
 ---
 ```
 
@@ -388,16 +381,12 @@ class: middle, center
 
 ```yaml
 ---
-author: Your name here
-title: Your title here
 output: html_document
 ---
 ```
 
 ```yaml
 ---
-author: Your name here
-title: Your title here
 output:
   html_document:
     toc: true
@@ -432,7 +421,7 @@ __If this was easy__, try to embed the `Rmd` source code within the document and
 
 _psst...answers on the next slide..._
 
-<div class="countdown" id="timer_5d797d72" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d799d1a" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -672,23 +661,6 @@ What about lists? Bulleted? Numbered?
 ]
 
 ---
-class: your-turn
-
-# Your turn
-
-## Organize your text
-
-1. Add headers as you see fit in our current document.
-
-1. Test out using RStudio outline pane; rejoice!
-
-1. 🧶 **Knit** to HTML.
-
-<div class="countdown" id="timer_5d797f1c" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
----
 class: inverse, center, middle
 
 &lt;span class="fa-stack fa-4x"&gt;
@@ -698,7 +670,7 @@ class: inverse, center, middle
 
 --
 
-# &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; Code
+# &lt;i class="fab fa-r-project"&gt;&lt;/i&gt; code
 
 ---
 
@@ -713,7 +685,7 @@ mockdata %&gt;%
 ```
 ````
 
-What happens to this chunk?
+What is the fate of this chunk?
 
 ]
 
@@ -746,7 +718,7 @@ num_sites &lt;- mockdata %&gt;%
 ```
 ````
 
-What happens to this chunk?
+What fate do you predict here?
 
 ]
 
@@ -841,7 +813,7 @@ ggplot(mockdata, aes(x = arm, fill = arm)) +
   geom_bar()
 ```
 
-&lt;img src="01-rmd-anatomy_files/figure-html/unnamed-chunk-19-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="01-rmd-anatomy_files/figure-html/unnamed-chunk-17-1.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -868,36 +840,6 @@ whole doc (knit button or run all chunks or )
 ]
 
 ---
-class: your-turn
-
-# Your turn
-
-## Add a chunk
-
-.pull-left[
-
-1. Try adding this chunk to the right:
-
-1. Run the current chunk; examine error message (**hint: `glimpse` is a function that depends on the `tidyverse` 📦)
-
-1. 🧶 **Knit** to HTML.
-
-]
-
-.pull-right[
-````
-```{r}
-glimpse(mockdata)
-```
-````
-]
-
-<div class="countdown" id="timer_5d797e17" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
-
----
 class: inverse, center, middle
 
 &lt;span class="fa-stack fa-4x"&gt;
@@ -909,7 +851,6 @@ class: inverse, center, middle
 
 # Output
 
-
 ---
 
 # Chunk options
@@ -917,7 +858,7 @@ class: inverse, center, middle
 .pull-left[
 
 ````
-```{r echo=FALSE, results='hide'}
+```{r}
 glimpse(mockdata)
 ```
 ````
@@ -926,36 +867,162 @@ glimpse(mockdata)
 
 .pull-right[
 
-+ Place between curly braces&lt;br&gt;`{r option=value}`
 
-+ Multiple options separated by commas&lt;br&gt;`{r option1=value, option2=value}`
-
-+ Careful! The `r` part is the **code engine** (other engines possible)
+```r
+glimpse(mockdata)
+#&gt; Observations: 1,499
+#&gt; Variables: 26
+#&gt; $ case          &lt;dbl&gt; 110754, 99706, 105271, 105001, 112263, 86205, 9950…
+#&gt; $ age           &lt;dbl&gt; 67, 74, 50, 71, 69, 56, 50, 57, 51, 63, 61, 59, 61…
+#&gt; $ arm           &lt;chr&gt; "F: FOLFOX", "A: IFL", "A: IFL", "G: IROX", "F: FO…
+#&gt; $ sex           &lt;chr&gt; "Male", "Female", "Female", "Female", "Female", "M…
+#&gt; $ race          &lt;chr&gt; "Caucasian", "Caucasian", "Caucasian", "Caucasian"…
+#&gt; $ fu_time       &lt;dbl&gt; 922, 270, 175, 128, 233, 120, 369, 421, 387, 363, …
+#&gt; $ fu_stat       &lt;dbl&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2,…
+#&gt; $ ps            &lt;dbl&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1,…
+#&gt; $ hgb           &lt;dbl&gt; 11.5, 10.7, 11.1, 12.6, 13.0, 10.2, 13.3, 12.1, 13…
+#&gt; $ bmi           &lt;dbl&gt; 25.09861, 19.49786, NA, 29.42922, 26.35352, 19.036…
+#&gt; $ alk_phos      &lt;dbl&gt; 160, 290, 700, 771, 350, 569, 162, 152, 231, 492, …
+#&gt; $ ast           &lt;dbl&gt; 35, 52, 100, 68, 35, 27, 16, 12, 25, 18, 45, 16, 5…
+#&gt; $ mdquality_s   &lt;dbl&gt; NA, 1, 1, 1, NA, 1, 1, 1, 1, 1, NA, NA, 1, 0, 1, 1…
+#&gt; $ age_ord       &lt;chr&gt; "60-69", "70-79", "40-49", "70-79", "60-69", "50-5…
+#&gt; $ site          &lt;chr&gt; "Portland", "Portland", "Portland", "Portland", "P…
+#&gt; $ country       &lt;chr&gt; "USA", "USA", "USA", "USA", "USA", "USA", "USA", "…
+#&gt; $ ethnicity     &lt;chr&gt; "White (not Hispanic)", "White (not Hispanic)", "W…
+#&gt; $ name          &lt;chr&gt; "Barrett Wafford", "Shelby Moore", "Farrah Morgan"…
+#&gt; $ first_name    &lt;chr&gt; "Barrett", "Shelby", "Farrah", "Brianna", "Kareema…
+#&gt; $ last_name     &lt;chr&gt; "Wafford", "Moore", "Morgan", "Rasico", "el-Saleh"…
+#&gt; $ ae_low_wbc    &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_neuropathy &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_diarrhea   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_vomiting   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_blood_clot &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ fu_fct        &lt;fct&gt; Died, Died, Died, Died, Died, Died, Died, Died, Di…
+```
 
 ]
 
 ---
 
+# echo
+
 .pull-left[
 
-### Frequently used 
-
-+ `echo`
-+ `eval=TRUE`
-+ `include=TRUE`
-+ results
-+ error
+````
+```{r echo=FALSE}
+glimpse(mockdata)
+```
+````
 
 ]
 
-. pull-right[
+.pull-right[
 
-### Special for figures
 
-+ out.width
-+ fig.show
+```
+#&gt; Observations: 1,499
+#&gt; Variables: 26
+#&gt; $ case          &lt;dbl&gt; 110754, 99706, 105271, 105001, 112263, 86205, 9950…
+#&gt; $ age           &lt;dbl&gt; 67, 74, 50, 71, 69, 56, 50, 57, 51, 63, 61, 59, 61…
+#&gt; $ arm           &lt;chr&gt; "F: FOLFOX", "A: IFL", "A: IFL", "G: IROX", "F: FO…
+#&gt; $ sex           &lt;chr&gt; "Male", "Female", "Female", "Female", "Female", "M…
+#&gt; $ race          &lt;chr&gt; "Caucasian", "Caucasian", "Caucasian", "Caucasian"…
+#&gt; $ fu_time       &lt;dbl&gt; 922, 270, 175, 128, 233, 120, 369, 421, 387, 363, …
+#&gt; $ fu_stat       &lt;dbl&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2,…
+#&gt; $ ps            &lt;dbl&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1,…
+#&gt; $ hgb           &lt;dbl&gt; 11.5, 10.7, 11.1, 12.6, 13.0, 10.2, 13.3, 12.1, 13…
+#&gt; $ bmi           &lt;dbl&gt; 25.09861, 19.49786, NA, 29.42922, 26.35352, 19.036…
+#&gt; $ alk_phos      &lt;dbl&gt; 160, 290, 700, 771, 350, 569, 162, 152, 231, 492, …
+#&gt; $ ast           &lt;dbl&gt; 35, 52, 100, 68, 35, 27, 16, 12, 25, 18, 45, 16, 5…
+#&gt; $ mdquality_s   &lt;dbl&gt; NA, 1, 1, 1, NA, 1, 1, 1, 1, 1, NA, NA, 1, 0, 1, 1…
+#&gt; $ age_ord       &lt;chr&gt; "60-69", "70-79", "40-49", "70-79", "60-69", "50-5…
+#&gt; $ site          &lt;chr&gt; "Portland", "Portland", "Portland", "Portland", "P…
+#&gt; $ country       &lt;chr&gt; "USA", "USA", "USA", "USA", "USA", "USA", "USA", "…
+#&gt; $ ethnicity     &lt;chr&gt; "White (not Hispanic)", "White (not Hispanic)", "W…
+#&gt; $ name          &lt;chr&gt; "Barrett Wafford", "Shelby Moore", "Farrah Morgan"…
+#&gt; $ first_name    &lt;chr&gt; "Barrett", "Shelby", "Farrah", "Brianna", "Kareema…
+#&gt; $ last_name     &lt;chr&gt; "Wafford", "Moore", "Morgan", "Rasico", "el-Saleh"…
+#&gt; $ ae_low_wbc    &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_neuropathy &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_diarrhea   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_vomiting   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ ae_blood_clot &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+#&gt; $ fu_fct        &lt;fct&gt; Died, Died, Died, Died, Died, Died, Died, Died, Di…
+```
 
 ]
+
+---
+
+# eval
+
+.pull-left[
+
+````
+```{r eval=FALSE}
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
+
+```r
+glimpse(mockdata)
+```
+
+]
+
+---
+
+# include
+
+.pull-left[
+
+````
+```{r include=FALSE}
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
+
+
+]
+
+---
+
+# Chunk options
+
+.pull-left[
+
+````
+```{r echo=TRUE, results='hide'}
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
+
+```r
+glimpse(mockdata)
+```
+
+]
+
++ Place between curly braces&lt;br&gt;`{r option=value}`
+
++ Multiple options separated by commas&lt;br&gt;`{r option1=value, option2=value}`
+
++ Careful! The `r` part is the **code engine** (other engines possible)
 
 ---
 
@@ -1131,7 +1198,7 @@ glimpse(mockdata)
 ````
 ]
 
-<div class="countdown" id="timer_5d798008" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d799cba" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -1170,17 +1237,6 @@ knitr::opts_chunk$set(
 ]
 
 ---
-
-# Danger
-
-```
-Error in parse_block(g[-1], g[1], params.src) : 
-  duplicate label 'setup'
-Calls: &lt;Anonymous&gt; ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block
-Execution halted
-```
-
----
 class: your-turn
 
 # Your turn
@@ -1198,104 +1254,9 @@ Data from more sites just came in &amp;mdash; we now have data for Boston, Seatt
 1. Use the RStudio outline pane; rejoice!
 
 
-<div class="countdown" id="timer_5d797fbb" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d799dbe" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-
-
----
-name: 04-formative
-
-When you change the code chunk names, what did *not* change?
-
-1. YAML 
-1. Markdown
-1. R code 
-1. R output
-1. `knitr` code chunk options
-
-(for answer reveal, maybe show empty "template")
-
-
----
-anatomy pic
-
-# How it all fits together
-
----
-
-
-.left-column[
-&lt;span class="fa-stack fa-4x"&gt;
-  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
-&lt;/span&gt; 
-]
-
-.right-column[
-
-# How does R Markdown work?
-
-1. 🤷
-
-1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
-
-1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
-
-]
-
----
-class: top
-
-.left-column[
-&lt;span class="fa-stack fa-4x"&gt;
-  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
-&lt;/span&gt; 
-
-]
-
-
-.right-column[
-
-# How *does* R Markdown work?
-
-1. 🤷 (✔️)
-
-1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (🧙‍♂️)
-
-1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (✔️)
-
-]
-
----
-class: middle, center
-
-&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
-
-
-&gt; "In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
-
---
-
-&gt; The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
-
---
-
-&gt; The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
-
---
-
-&gt; &amp;mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
-
----
-class: center, middle
-
-# Foreshadowing
-
-
-&lt;img src="images/outputs.png" width="40%" /&gt;
-
 
 ---
 class: middle, center
@@ -1338,7 +1299,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d797d8a" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d799a42" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>
