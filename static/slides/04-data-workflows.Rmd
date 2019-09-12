@@ -340,38 +340,6 @@ class: middle, center, inverse
 
 --
 
-# Cross-references
-
----
-
-# Header references
-
-
-
----
-
-# Table references
-
----
-
-# Add cross-references
-
-To a section and a table in the text.
-
-```{r echo = FALSE}
-countdown(minutes = 5)
-```
-
----
-class: middle, center, inverse
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
-</span> 
-
---
-
 # Bibliography
 
 ---
@@ -379,18 +347,6 @@ class: middle, center, inverse
 
 See [citations](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citations)
 
-.pull-left[
-
-    1. Blah blah [see @R-blogdown, pp. 33-35; also @R-knitr, ch. 1].
-
-    2. Blah blah [@R-blogdown, pp. 33-35].
-
-    3. Blah blah [@R-blogdown; @R-knitr].
-
-    4. Yihui says blah [-@R-blogdown].
-
-    5. @R-blogdown says blah.
-]
 
 .pull-right[
 Generates these in-text citation styles:
