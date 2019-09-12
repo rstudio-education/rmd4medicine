@@ -1,6 +1,6 @@
 ---
 title: 'Session 03: Graphics for Communication'
-draft: true
+draft: false
 date: '2019-08-29'
 categories: []
 tags: []
@@ -18,26 +18,3 @@ links:
 ```{r echo=FALSE}
 knitr::include_url("/slides/03-graphics.html")
 ```
-
-# In this session, you will:
-
-1. Knit the same document to a different output format from an extension package ([`bookdown::html_document2`](https://bookdown.org/yihui/rmarkdown/bookdown-output.html#a-single-document))
-
-1. Knit a new document to a slide presentation ([`powerpoint_presentation`](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html))
-
-1. Export your figures to a place you can find on your computer so you can share and re-use them. (can I use `knitr::fig.path` with `here` package??)
-
-1. Add figure captions using `knitr` chunk options.
-
-1. Add cross-references in text to figures.
-
-1. Make a multi-panel plot.
-
-
-# Relevant resources
-
-+ [Linking rticles to bookdown](https://bookdown.org/yihui/rmarkdown/rticles-bookdown.html)
-+ [R4DS Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
-+ [R Markdown: The Definitive Guide chapter on PowerPoint presentations](https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html)
-+ [R Markdown docs on `powerpoint_presentation` output format](https://rmarkdown.rstudio.com/docs/reference/powerpoint_presentation.html)
-+ [RStudio webinar _Make PowerPoint Presentations with R Markdown_ ](https://resources.rstudio.com/webinars/make-powerpoint-presentations-with-r-markdown-nathan-stephens)

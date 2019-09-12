@@ -1,6 +1,6 @@
 ---
 title: 'Session 02: Outputs & Tables'
-draft: true
+draft: false
 date: '2019-08-29'
 featured: no
 lastmod: '2019-09-09T11:21:55-07:00'
@@ -21,38 +21,3 @@ weight: 3
 knitr::include_url("/slides/02-output-tables.html")
 ```
 
-# Episodes
-
-1. Output formats
-
-1. Typed tables
-
-1. EDA tables
-
-1. Table one
-
-1. Table two
-
-# In this session, you will:
-
-1. Knit the same document to different built-in output formats (Word and PDF) using the knit button.
-
-1. Knit the same document to different built-in output formats (Word and PDF) using the YAML to store output options.
-
-1. Knit the same document to a different output format from an extension package (`distill::distill_article`) by changing the YAML.
-
-1. Make a markdown table.
-
-1. Make a table one.
-
-# Output formats used 
-
-+ HTML
-+ Word
-+ PDF
-+ `distill::distill_article`
-
-# Relevant resources
-
-+ [R4DS R Markdown formats](https://r4ds.had.co.nz/r-markdown-formats.html)
-+ [R Markdown: The Definitive Guide on output formats](https://bookdown.org/yihui/rmarkdown/output-formats.html)
