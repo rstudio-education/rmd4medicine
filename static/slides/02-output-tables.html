@@ -4,7 +4,7 @@
     <title>Outputs &amp; Tables</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2019-09-10" />
+    <meta name="date" content="2019-09-12" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
@@ -14,6 +14,8 @@
   </head>
   <body>
     <textarea id="source">
+
+
 
 
 
@@ -44,7 +46,81 @@ layout: true
 
 ---
 
-plot here times knitted so far
+
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
+&lt;/span&gt; 
+]
+
+.right-column[
+
+# How does R Markdown work?
+
+1. 🤷
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
+
+]
+
+---
+class: top
+
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
+&lt;/span&gt; 
+
+]
+
+
+.right-column[
+
+# How *does* R Markdown work?
+
+1. 🤷 (✔️)
+
+1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (🧙‍♂️)
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (✔️)
+
+]
+
+---
+class: middle, center
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+
+&gt; "In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
+
+--
+
+&gt; The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
+
+--
+
+&gt; The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
+
+--
+
+&gt; &amp;mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+---
+class: center, middle
+
+# Foreshadowing
+
+
+&lt;img src="images/outputs.png" width="40%" /&gt;
+
+??? 
+
+but first a pop quiz...
 
 ---
 class: pop-quiz
@@ -64,17 +140,14 @@ Which of the following is **NOT** a part of R Markdown basic anatomy?
 
 1. Output
 
-<div class="countdown" id="timer_5d789189" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-
 
 ---
-class: pop-quiz
+class: your-turn
 
-# Pop quiz
 
-## Mad libs style
+# Your turn
+
+## Mad libs style &amp;mdash; with a neighbor
 
 ```markdown
  ___________ is written at the top between `---` in ________.
@@ -92,15 +165,15 @@ class: pop-quiz
 
 _psst: answers on next slide..._
 
-<div class="countdown" id="timer_5d788e50" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_5d79ca7f" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
-class: pop-quiz
+class: your-turn
 
 
-# Pop quiz
+# Your turn
 
 ## Answers
 
@@ -130,20 +203,22 @@ class: your-turn
 
 # Your turn
 
-## Spruce up the doc
+Find a partner and look at `02-progress.Rmd` together. 
+Look at the source, then 🧶 **Knit**.
 
-Let's all take a look at this R Markdown document together.
+Answer the following questions:
 
+1. What is the output **format**?
 
-Add or edit...
+1. Are there any output **options**?
 
-+ Headers
-+ Lists (&lt;i class="fas fa-list-ul"&gt;&lt;/i&gt; or &lt;i class="fas fa-list-ol"&gt;&lt;/i&gt;)
-+ Text formatting like **bold** or _italics_
-+ Chunk options
+1. Are any `knitr` **global** chunk options set?
 
+1. Anything in the code look foreign to you? 
 
-<div class="countdown" id="timer_5d788e62" style="right:0;bottom:0;" data-warnwhen="0">
+1. Anything in the output (or not in the output) surprise you?
+
+<div class="countdown" id="timer_5d79caac" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -203,7 +278,7 @@ Use the drop-down menu for the 🧶 **Knit** button and try:
 
 ]
 
-<div class="countdown" id="timer_5d788ef7" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79ca44" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -273,7 +348,7 @@ output:
 ]
 
 
-<div class="countdown" id="timer_5d78913d" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79caef" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -310,11 +385,11 @@ class: your-turn
 
 1. 🧶 **Knit** to distill_article.
 
-1. _If this was easy, add a table of contents too._
+**If this was easy**, add a table of contents too.
 
 _psst...answers on the next slide..._
 
-<div class="countdown" id="timer_5d788ee1" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79cda2" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -330,7 +405,7 @@ class: your-turn
 
 # Your turn
 
-## Answer: Use an extension package
+## Answer
 
 .pull-left[
 ```yaml
@@ -368,11 +443,11 @@ output: html_document: default
 ---
 output: html_document
 ---
-output_format: html_document
----
 ```
 
 ]
+
+--
 
 .pull-right[
 How do you add an output **option** to a format in your YAML?
@@ -384,9 +459,7 @@ output:
     toc: true
 ---
 output: 
-  html_document: toc
----
-output_format: html_document(toc: true)
+  html_document(toc=true)
 ---
 ```
 
@@ -414,6 +487,9 @@ output:
 
 ]
 
+--
+
+
 .pull-right[
 How do you now add output **options** to your YAML?
 
@@ -425,8 +501,8 @@ output:
   word_document: default
 ---
 output: 
-  html_document(toc: true)
-  word_document()
+  html_document(toc=true)
+  word_document(default)
 ---
 ```
 
@@ -451,18 +527,6 @@ class: middle, center, inverse
 
 # Custom typed tables
 
----
-
-Some deep thoughts on tables and R Markdown here
-
-jen's simplicity versus complexity
-
-also tables from you (usually words) versus tables from R (usually numbers)
-
-for print versus online versus word
-
-for eda versus publication
-
 
 ---
 class: center
@@ -480,7 +544,6 @@ class: center
 | 02:00 - 02:45 | 2       | Tables   |
 | 02:45 - 03:00 |         | *Break*  |
 
-Table: Demo of simple table syntax.
 ```
 ]
 
@@ -496,8 +559,6 @@ Table: Demo of simple table syntax.
 | 02:00 - 02:45 | 2       | Tables   |
 | 02:45 - 03:00 |         | *Break*  |
 
-Table: Demo of simple table syntax.
-
 ]
 
 ---
@@ -507,9 +568,15 @@ class: your-turn
 
 ## Type up a Markdown table
 
+Find this section:
+
+```markdown
+&lt;--TODO: add markdown table of treatment arms here--&gt;
+```
+
 .pull-left[
 
-Using pipes `|`, create a table to list the 3 treatment arms. It should look like this:
+Using pipes `|`, make this table:
 
 | Arm | Drug   |
 |:----|:-------|
@@ -527,8 +594,8 @@ Using pipes `|`, create a table to list the 3 treatment arms. It should look lik
 
 _psst...answers on the next slide..._
 
-<div class="countdown" id="timer_5d788f40" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_5d79cc30" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -536,7 +603,7 @@ class: your-turn
 
 # Your turn
 
-## Answers: Make a Markdown table
+## Answers
 
 .pull-left[
 ```markdown
@@ -646,65 +713,59 @@ mockdata &lt;- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %&gt;%
 ```r
 library(skimr)
 
-# smell test (n's, NAs, etc)
 mockdata %&gt;% 
-  select(fu_fct, starts_with("ae_")) %&gt;% 
+  select(age, fu_fct) %&gt;% 
   skimr::skim()
 #&gt; Skim summary statistics
 #&gt;  n obs: 1499 
-#&gt;  n variables: 6 
+#&gt;  n variables: 2 
 #&gt; 
-#&gt; ── Variable type:factor ──────────────────────────────────────────────────────────────────────────
-#&gt;       variable missing complete    n n_unique                 top_counts
-#&gt;  ae_blood_clot       0     1499 1499        2      0: 1434, 1: 65, NA: 0
-#&gt;    ae_diarrhea       0     1499 1499        2     0: 1218, 1: 281, NA: 0
-#&gt;     ae_low_wbc       0     1499 1499        2     0: 1252, 1: 247, NA: 0
-#&gt;  ae_neuropathy       0     1499 1499        2     0: 1281, 1: 218, NA: 0
-#&gt;    ae_vomiting       0     1499 1499        2     0: 1243, 1: 256, NA: 0
-#&gt;         fu_fct       0     1499 1499        2 Die: 1356, Liv: 143, NA: 0
+#&gt; ── Variable type:factor ────────────────────────────────────────────────────────────────
+#&gt;  variable missing complete    n n_unique                 top_counts
+#&gt;    fu_fct       0     1499 1499        2 Die: 1356, Liv: 143, NA: 0
 #&gt;  ordered
 #&gt;    FALSE
-#&gt;    FALSE
-#&gt;    FALSE
-#&gt;    FALSE
-#&gt;    FALSE
-#&gt;    FALSE
+#&gt; 
+#&gt; ── Variable type:numeric ───────────────────────────────────────────────────────────────
+#&gt;  variable missing complete    n  mean    sd p0 p25 p50 p75 p100     hist
+#&gt;       age       0     1499 1499 59.99 11.52 19  52  61  68   88 ▁▁▂▅▇▇▅▁
 ```
 
 ---
 
 ````
-```{r skim-kable, results='asis'}
+```{r results='asis'}
 mockdata %&gt;% 
-  select(fu_fct, starts_with("ae_")) %&gt;% 
-  skim() %&gt;% 
+  select(age, fu_fct) %&gt;% 
+  skimr::skim() %&gt;% 
   kable()
 ```
 ````
 
 Skim summary statistics  
  n obs: 1499    
- n variables: 6    
+ n variables: 2    
 
 Variable type: factor
 
-|   variable    | missing | complete |  n   | n_unique |         top_counts         | ordered |
-|---------------|---------|----------|------|----------|----------------------------|---------|
-| ae_blood_clot |    0    |   1499   | 1499 |    2     |   0: 1434, 1: 65, NA: 0    |  FALSE  |
-|  ae_diarrhea  |    0    |   1499   | 1499 |    2     |   0: 1218, 1: 281, NA: 0   |  FALSE  |
-|  ae_low_wbc   |    0    |   1499   | 1499 |    2     |   0: 1252, 1: 247, NA: 0   |  FALSE  |
-| ae_neuropathy |    0    |   1499   | 1499 |    2     |   0: 1281, 1: 218, NA: 0   |  FALSE  |
-|  ae_vomiting  |    0    |   1499   | 1499 |    2     |   0: 1243, 1: 256, NA: 0   |  FALSE  |
-|    fu_fct     |    0    |   1499   | 1499 |    2     | Die: 1356, Liv: 143, NA: 0 |  FALSE  |
+| variable | missing | complete |  n   | n_unique |         top_counts         | ordered |
+|----------|---------|----------|------|----------|----------------------------|---------|
+|  fu_fct  |    0    |   1499   | 1499 |    2     | Die: 1356, Liv: 143, NA: 0 |  FALSE  |
+
+Variable type: numeric
+
+| variable | missing | complete |  n   | mean  |  sd   | p0 | p25 | p50 | p75 | p100 |   hist   |
+|----------|---------|----------|------|-------|-------|----|-----|-----|-----|------|----------|
+|   age    |    0    |   1499   | 1499 | 59.99 | 11.52 | 19 | 52  | 61  | 68  |  88  | ▁▁▂▅▇▇▅▁ |
 
 
 ---
 
 # EDA tables: `janitor`
 
-Good for 1- and 2-way frequency tables (or `tabyl`s)
+Good for 1- and 2-way frequency tables with categorical variables
 
-let's count number of participants by arm, then add by site too
+Count number of participants by `arm`, then add by status (`fu_fct`) too
 
 .pull-left[
 
@@ -787,6 +848,57 @@ mockdata %&gt;%
 ]
 
 ---
+class: your-turn
+
+# Your turn
+
+## Fix this `tabyl`
+
+Find this section:
+```markdown
+&lt;--TODO: make this print better with knitr::kable + code chunks--&gt;
+```
+
+Make this `tabyl` print nicely when knitted.
+
+
+```r
+mockdata %&gt;% 
+  tabyl(arm) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_pct_formatting() 
+```
+
+_psst: answers on next slide..._
+
+<div class="countdown" id="timer_5d79ca48" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+# Answer
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  tabyl(arm) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_pct_formatting() %&gt;% 
+  knitr::kable()
+```
+````
+
+
+|arm       |    n|percent |
+|:---------|----:|:-------|
+|A: IFL    |  428|28.6%   |
+|F: FOLFOX |  691|46.1%   |
+|G: IROX   |  380|25.4%   |
+|Total     | 1499|100.0%  |
+
+---
 class: middle, center, inverse
 
 &lt;span class="fa-stack fa-4x"&gt;
@@ -863,7 +975,24 @@ class: your-turn
 
 ## Make a table one
 
-Take the current table one in the doc, and add the variables `age` and `bmi` to the table. Hint: use the formula `arm ~ sex + age + bmi`
+Find this section:
+
+```markdown
+&lt;--TODO: add age and bmi here--&gt;
+```
+
+1. Add the variables `age` and `bmi` to the table. (__hint:__ use the formula `arm ~ sex + var1 + var2`)
+
+1. Look at the next code chunk. It uses a different package, `tableone::CreateTableOne`. You only need one "table one", so pick which one you using your code chunks (don't delete!).
+
+1. Add/subtract variables from your table one as you like.
+
+(Note: leave this `layout="l-body-outset"` part alone- I'll explain!)
+
+<div class="countdown" id="timer_5d79ca7b" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
 
 ---
 class: middle, center, inverse
@@ -878,43 +1007,67 @@ class: middle, center, inverse
 # Table Two
 
 ---
-
-# Table Two: adverse events
-
-````
-```{r results='asis'}
-tab2 &lt;- mockdata %&gt;% 
-  tableby(arm ~ ae_low_wbc + ae_neuropathy + ae_blood_clot, data = .) %&gt;% 
-  summary(digits = 2, digits.p = 3, digits.pct=1, 
-          pfootnote=FALSE,
-          title = "Adverse Events")
-tab2
-```
-````
-
-
----
 class: your-turn
 
 # Your turn
 
-## Spruce up the tables
+## Table two
 
-pick one table to include?
-+ Not fond of so many decimal places?
-+ Edit the summary function to add `digit` arguments between the parentheses,
-like `digits = 2, digits.p = 3, digits.pct=1`
-+ You can also edit the labels for the variables in the labels function.
+Find this section:
+```
+&lt;--TODO: add adverse events table--&gt;
+```
 
-To exclude, use your `knitr` code chunk options (do not delete!)
+1. Find the code chunk started for you. 
 
-add text to frame the table and what it is showing
+1. Code and print a table called `ae_tab` that summarizes 2+ variables that start with `ae_`.
 
-<div class="countdown" id="timer_5d788f2d" style="right:0;bottom:0;" data-warnwhen="0">
+__If this was easy__, edit the `summary()` function to modify the number of [digits](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html#modify-the-number-of-digits-used). Or add [labels](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html#add-labels).
+
+_psst...answers on next slide..._
+
+<div class="countdown" id="timer_5d79ccbc" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
+---
+class: your-turn
 
+# Answer
+
+````
+```{r results='asis', layout="l-body-outset"}
+ae_tab &lt;- mockdata %&gt;% 
+  tableby(
+    arm ~ ae_blood_clot + ae_vomiting + ae_diarrhea + ae_neuropathy + ae_low_wbc, 
+    data = .) %&gt;% 
+  summary(digits = 2, 
+          digits.p = 3, 
+          digits.pct = 1)
+ae_tab
+```
+````
+
+---
+
+
+|                    | A: IFL (N=428) | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499) | p value|
+|:-------------------|:--------------:|:-----------------:|:---------------:|:--------------:|-------:|
+|**ae_blood_clot**   |                |                   |                 |                |   0.742|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  411 (96.0%)   |    658 (95.2%)    |   365 (96.1%)   |  1434 (95.7%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   17 (4.0%)    |     33 (4.8%)     |    15 (3.9%)    |   65 (4.3%)    |        |
+|**ae_vomiting**     |                |                   |                 |                |   0.006|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  339 (79.2%)   |    571 (82.6%)    |   333 (87.6%)   |  1243 (82.9%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   89 (20.8%)   |    120 (17.4%)    |   47 (12.4%)    |  256 (17.1%)   |        |
+|**ae_diarrhea**     |                |                   |                 |                |   0.001|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  339 (79.2%)   |    546 (79.0%)    |   333 (87.6%)   |  1218 (81.3%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   89 (20.8%)   |    145 (21.0%)    |   47 (12.4%)    |  281 (18.7%)   |        |
+|**ae_neuropathy**   |                |                   |                 |                | &lt; 0.001|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  354 (82.7%)   |    580 (83.9%)    |   347 (91.3%)   |  1281 (85.5%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   74 (17.3%)   |    111 (16.1%)    |    33 (8.7%)    |  218 (14.5%)   |        |
+|**ae_low_wbc**      |                |                   |                 |                | &lt; 0.001|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  354 (82.7%)   |    551 (79.7%)    |   347 (91.3%)   |  1252 (83.5%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   74 (17.3%)   |    140 (20.3%)    |    33 (8.7%)    |  247 (16.5%)   |        |
 
 ---
 class: middle, center
@@ -923,7 +1076,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d789187" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d79cb06" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

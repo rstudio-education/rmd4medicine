@@ -318,7 +318,11 @@ h1#pop-quiz:before {
     padding-right: 50px;
 }
 
-.live-code .remark-inline-code, .your-turn .remark-inline-code {
-  color: #fff
+.live-code .remark-inline-code {
+  color: #fff;
+}
+
+.your-turn .remark-inline-code {
+  color: #1f5386;
 }
 
