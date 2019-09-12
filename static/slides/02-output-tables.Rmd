@@ -204,13 +204,6 @@ class: your-turn
      (noun)                                             (noun) 
 ```
 
-
----
-class: middle, center
-background-image: url(images/pierre-acobas-nbD0VmKnPrI-unsplash.jpg)
-background-position: right
-background-size: contain
-
 ---
 class: your-turn
 
@@ -312,9 +305,10 @@ Does your current YAML look like this?
 yml_empty() %>% 
   yml_author("Your name here") %>% 
   yml_title("Your title here") %>% 
-  yml_output(html_document(toc = TRUE,
-                           toc_float = TRUE,
-                           theme = "flatly")) %>% 
+  yml_output(html_document(toc = TRUE, toc_float = TRUE, theme = "flatly"), 
+             word_document(), 
+             pdf_document()
+             )  %>% 
   asis_yaml_output()
 ```
 
@@ -331,7 +325,7 @@ class: your-turn
 
 # Your turn
 
-## Use your YAML instead
+## Add output options with your YAML
 
 .pull-left[
 
