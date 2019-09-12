@@ -38,11 +38,7 @@ ggplot2::theme_set(ggplot2::theme_minimal())
 ```
 
 ```{r load-data, include=FALSE}
-mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
-  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
-                             "Lived" = "1", 
-                             "Died" = "2")) %>% 
-  mutate_at(vars(starts_with("ae_")), ~as.factor(.))
+mockdata <- read_csv(here::here("static/mockpaper/data/mockboston.csv")) 
 ```
 
 
@@ -115,6 +111,13 @@ class: bottom, center
 .footnote[All content is CC-BY. All art (unless otherwise noted) is by [Desirée De Leon](https://desiree.rbind.io/), CC-BY-SA.]
 
 ---
+background-image: url(images/deardata.jpg)
+background-size: 50%
+
+.footnote[https://www.dear-data.com/]
+
+
+---
 
 ```{r child="what-is-rmd.Rmd"}
 
@@ -153,11 +156,11 @@ class: bottom, center
 class: center
 background-image: url(https://media.giphy.com/media/11fDMHAzihB8D6/source.gif)
 
-# Replication crisis? 
+# Reproducibility crisis? 
 
 ???
 
-We are not here today to solve science or medicine's replication crisis.
+We are not here today to solve science or medicine's reproducibility crisis.
 
 What I do think R Markdown can help you with today when you leave here is to tackle two other crises: one I think of as the confidence crisis...
 
@@ -261,7 +264,7 @@ class: your-turn
 
 # Your turn
 
-Find a partner and look at `01-eda.Rmd` together. 
+Find a partner and look at `01-explore.Rmd` together. 
 Look at the source, then `r emo::ji("yarn")` **Knit** to HTML.
 
 Try to identify these parts in the source and the output:
@@ -274,33 +277,26 @@ Try to identify these parts in the source and the output:
 
 1. The **output**
 
-_If this was easy_, try to find all code that produces a **table**. 
-Find all code that produces a **plot**.
+**If this was easy**, try to find all code that produces a *plot*.
+
+_psst...`01-explore-alison-params.Rmd` is also there..._
 
 ```{r echo = FALSE}
 countdown(minutes = 5)
 ```
 
 ---
-name: 01-formative
+class: live-code
 
 # Basic anatomy I
 
-.pull-left[
-
-show "raw" doc
-
-]
-
-.pull-right[
+We look at the source anatomy for `01-explore.Rmd` together:
 
 1. The **metadata**
 
 1. The **text** 
 
 1. The **code**
-
-]
     
 ---
 class: center, middle
@@ -317,17 +313,11 @@ knitr::include_graphics("images/doc-live.jpg")
 ```
 
 ---
-name: 02-formative
+class: live-code
 
 # Basic anatomy II
 
-.pull-left[
-
-show output screenshot
-
-]
-
-.pull-right[
+We look at the output anatomy for `01-explore.Rmd` together:
 
 1. The **metadata**
 
@@ -337,11 +327,12 @@ show output screenshot
 
 1. The **output**
 
-]
 
 ---
 background-image: url(images/rmarkdown_wizards.png)
-background-size: cover
+background-size: contain
+
+.footnote[Art by [Allison Horst](https://twitter.com/allison_horst?lang=en)]
 
 ---
 class: middle, center
@@ -368,14 +359,13 @@ class: middle, center, inverse
 
 .pull-left[
 
-+ _"YAML Ain't Markup Language"_
+_"YAML Ain't Markup Language"_
 
-+ `key: value` pairs
 
-```{r echo = FALSE}
-yml_empty() %>% 
-  yml_output(html_document()) %>% 
-  asis_yaml_output()
+```yaml
+---
+key: value
+---
 ```
 
 ]
@@ -401,16 +391,12 @@ class: middle, center
 
 ```{r echo = FALSE}
 yml_empty() %>% 
-  yml_author("Your name here") %>% 
-  yml_title("Your title here") %>% 
   yml_output(html_document()) %>% 
   asis_yaml_output()
 ```
 
 ```{r echo = FALSE}
 yml_empty() %>% 
-  yml_author("Your name here") %>% 
-  yml_title("Your title here") %>% 
   yml_output(html_document(toc = TRUE)) %>% 
   asis_yaml_output()
 ```
@@ -439,9 +425,11 @@ Use `?html_document` from your R console to:
 
 1. Add a theme
 
+1. Use the "kable" method to print data frames (more on this later!) 
+
 `r emo::ji("yarn")` **Knit** to HTML to see the output.
 
-__If this was easy__, try to embed the `Rmd` source code within the document and provide a link that can be used by readers to download the code.
+**If this was easy**, try to embed the `Rmd` source code to download.
 
 _psst...answers on the next slide..._
 
@@ -459,6 +447,7 @@ yml_empty() %>%
   yml_output(html_document(toc = TRUE,
                            toc_float = TRUE,
                            theme = "flatly",
+                           df_print = "kable",
                            code_download = TRUE)) %>% 
   asis_yaml_output()
 ```
@@ -683,23 +672,6 @@ What about lists? Bulleted? Numbered?
 ]
 
 ---
-class: your-turn
-
-# Your turn
-
-## Organize your text
-
-1. Add headers as you see fit in our current document.
-
-1. Test out using RStudio outline pane; rejoice!
-
-1. `r emo::ji("yarn")` **Knit** to HTML.
-
-```{r echo = FALSE}
-countdown(minutes = 2)
-```
-
----
 class: inverse, center, middle
 
 <span class="fa-stack fa-4x">
@@ -709,7 +681,7 @@ class: inverse, center, middle
 
 --
 
-# <i class="fab fa-r-project"></i> Code
+# <i class="fab fa-r-project"></i> code
 
 ---
 
@@ -720,11 +692,11 @@ class: inverse, center, middle
 ````
 ```{r}`r ''`
 mockdata %>% 
-  tally()
+  distinct(arm)
 ```
 ````
 
-What happens to this chunk?
+What is the fate of this chunk?
 
 ]
 
@@ -734,7 +706,7 @@ What happens to this chunk?
 
 ```{r}
 mockdata %>% 
-  tally()
+  distinct(arm)
 ```
 
 ]
@@ -747,12 +719,11 @@ mockdata %>%
 
 ````
 ```{r}`r ''`
-num_sites <- mockdata %>% 
-  count(site)
+n_sites <- n_distinct(mockdata$site)
 ```
 ````
 
-What happens to this chunk?
+What fate do you predict here?
 
 ]
 
@@ -761,8 +732,7 @@ What happens to this chunk?
 .pull-right[
 
 ```{r}
-num_sites <- mockdata %>% 
-  count(site)
+n_sites <- n_distinct(mockdata$site)
 ```
 
   
@@ -776,9 +746,8 @@ num_sites <- mockdata %>%
 
 ````
 ```{r}`r ''`
-num_sites <- mockdata %>% 
-  count(site)
-num_sites
+n_sites <- n_distinct(mockdata$site)
+n_sites
 ```
 ````
 
@@ -789,9 +758,8 @@ num_sites
 .pull-right[
 
 ```{r}
-num_sites <- mockdata %>% 
-  count(site)
-num_sites
+n_sites <- n_distinct(mockdata$site)
+n_sites
 ```
 
   
@@ -805,8 +773,10 @@ num_sites
 
 ````
 ```{r}`r ''`
-ggplot(mockdata, aes(x = arm, fill = arm)) +
-  geom_bar()
+ggplot(mockdata, aes(x = arm, 
+                     y = n, 
+                     fill = arm)) +
+  geom_col()
 ```
 ````
 
@@ -818,9 +788,11 @@ What about this one?
 
 .pull-right[
 
-```{r fig.retina=3, out.width="80%", fig.align='center'}
-ggplot(mockdata, aes(x = arm, fill = arm)) +
-  geom_bar()
+```{r fig.retina=3, out.width="70%", fig.align='center'}
+ggplot(mockdata, aes(x = arm, 
+                     y = n, 
+                     fill = arm)) +
+  geom_col()
 ```
 
 ]
@@ -848,36 +820,6 @@ whole doc (knit button or run all chunks or )
 ]
 
 ---
-class: your-turn
-
-# Your turn
-
-## Add a chunk
-
-.pull-left[
-
-1. Try adding this chunk to the right:
-
-1. Run the current chunk; examine error message (**hint: `glimpse` is a function that depends on the `tidyverse` `r emo::ji("package")`)
-
-1. `r emo::ji("yarn")` **Knit** to HTML.
-
-]
-
-.pull-right[
-````
-```{r}`r ''`
-glimpse(mockdata)
-```
-````
-]
-
-```{r echo = FALSE}
-countdown(minutes = 2)
-```
-
-
----
 class: inverse, center, middle
 
 <span class="fa-stack fa-4x">
@@ -889,7 +831,6 @@ class: inverse, center, middle
 
 # Output
 
-
 ---
 
 # Chunk options
@@ -897,7 +838,7 @@ class: inverse, center, middle
 .pull-left[
 
 ````
-```{r echo=FALSE, results='hide'}`r ''`
+```{r}`r ''`
 glimpse(mockdata)
 ```
 ````
@@ -906,36 +847,105 @@ glimpse(mockdata)
 
 .pull-right[
 
-+ Place between curly braces<br>`{r option=value}`
-
-+ Multiple options separated by commas<br>`{r option1=value, option2=value}`
-
-+ Careful! The `r` part is the **code engine** (other engines possible)
+```{r}
+glimpse(mockdata)
+```
 
 ]
 
 ---
 
+# echo
+
 .pull-left[
 
-### Frequently used 
-
-+ `echo`
-+ `eval=TRUE`
-+ `include=TRUE`
-+ results
-+ error
+````
+```{r echo=FALSE}`r ''`
+glimpse(mockdata)
+```
+````
 
 ]
 
-. pull-right[
+.pull-right[
 
-### Special for figures
-
-+ out.width
-+ fig.show
+```{r echo=FALSE}
+glimpse(mockdata)
+```
 
 ]
+
+---
+
+# eval
+
+.pull-left[
+
+````
+```{r eval=FALSE}`r ''`
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
+```{r eval=FALSE}
+glimpse(mockdata)
+```
+
+]
+
+---
+
+# include
+
+.pull-left[
+
+````
+```{r include=FALSE}`r ''`
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
+```{r include=FALSE}
+glimpse(mockdata)
+```
+
+]
+
+---
+
+# Chunk options
+
+.pull-left[
+
+````
+```{r echo=TRUE, results='hide'}`r ''`
+glimpse(mockdata)
+```
+````
+
+]
+
+.pull-right[
+
+```{r echo=TRUE, results='hide'}
+glimpse(mockdata)
+```
+
+]
+
++ Place between curly braces<br>`{r option=value}`
+
++ Multiple options separated by commas<br>`{r option1=value, option2=value}`
+
++ Careful! The `r` part is the **code engine** (other engines possible)
 
 ---
 
@@ -966,11 +976,17 @@ glimpse(mockdata)
 
 .pull-right[
 
-+ Place between curly braces `{r label}`
++ Place between curly braces<br>`{r label}`
 
-+ Separated options with commas `{r label, option1=value}`
++ Separated options with commas<br>`{r label, option1=value}`
 
 + Careful! No duplicate chunk labels
+
+    ````
+    ```{r peek}`r ''`
+    head(mockdata)
+    ```
+    ````
 
     ```
     Error in parse_block(g[-1], g[1], params.src) : 
@@ -1002,63 +1018,37 @@ Add slide here on pet versus livestock
 .footnote[https://masalmon.eu/2017/08/08/chunkpets/]
 
 ---
+class: middle, center
 
 # A good chunk label
 
 .pull-left[
 
-### Yes
+### Good
 
-+ `a-z`
-+ `A-Z`
-+ `0-9`
-+ `/`
-+ `-`
+`a-z`
 
-]
+`A-Z`
 
-.pull-right[
+`0-9`
 
-### No
+`/`
 
-+ `_`
-+ spaces
-+ everything else!
-
-]
-
-
----
-class: your-turn
-
-# Your turn
-
-## Add chunk options & labels
-
-.pull-left[
-
-1. Use chunk options on our `glimpse` chunk added earlier. Try:
-  + Hide the code, show only the output
-  + Hide everything, but still run the code
-  + Hide the output, show only the code, but still run the code
-  
-1. Add a label to this chunk.
-
-1. `r emo::ji("yarn")` **Knit** to HTML to see the effects.
+`-`
 
 ]
 
 .pull-right[
-````
-```{r}`r ''`
-glimpse(mockdata)
-```
-````
-]
 
-```{r echo = FALSE}
-countdown(minutes = 5)
-```
+### Bad
+
+`_`
+
+spaces
+
+everything else!
+
+]
 
 ---
 
@@ -1095,17 +1085,6 @@ knitr::opts_chunk$set(
 ]
 
 ---
-
-# Danger
-
-```
-Error in parse_block(g[-1], g[1], params.src) : 
-  duplicate label 'setup'
-Calls: <Anonymous> ... process_file -> split_file -> lapply -> FUN -> parse_block
-Execution halted
-```
-
----
 class: your-turn
 
 # Your turn
@@ -1118,97 +1097,18 @@ Data from more sites just came in &mdash; we now have data for Boston, Seattle, 
 
 1. `r emo::ji("yarn")` **Knit** to HTML. Do you see data for all 3 sites?
 
-1. Clean up the chunks (split, combine, label as you see fit)
+1. Clean up the chunks (split, combine, label, use options as you see fit)
 
 1. Use the RStudio outline pane; rejoice!
+
+**If this was easy**, try to use a parameter for the data file.
+
+_psst...`01-explore-alison-params.Rmd` is still there..._
 
 
 ```{r echo = FALSE}
 countdown(minutes = 5)
 ```
-
-
----
-name: 04-formative
-
-When you change the code chunk names, what did *not* change?
-
-1. YAML 
-1. Markdown
-1. R code 
-1. R output
-1. `knitr` code chunk options
-
-(for answer reveal, maybe show empty "template")
-
-
----
-anatomy pic
-
-# How it all fits together
-
----
-
-```{r child="how-rmd-works.Rmd"}
-
-```
-
----
-class: top
-
-.left-column[
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"></i>
-  <strong class="fa-stack-1x" style="color: #fff;">?</strong>
-</span> 
-
-]
-
-
-.right-column[
-
-# How *does* R Markdown work?
-
-1. `r emo::ji("shrug")` (`r emo::ji("heavy_check_mark")`)
-
-1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (`r emo::ji("wizard")`)
-
-1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (`r emo::ji("heavy_check_mark")`)
-
-]
-
----
-class: middle, center
-
-```{r echo = FALSE, out.width="25%", fig.align="center"}
-knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png")
-```
-
-
-> "In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
-
---
-
-> The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
-
---
-
-> The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
-
---
-
-> &mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
-
----
-class: center, middle
-
-# Foreshadowing
-
-
-```{r echo=FALSE, out.width="40%"}
-knitr::include_graphics("images/outputs.png")
-```
-
 
 ---
 class: middle, center

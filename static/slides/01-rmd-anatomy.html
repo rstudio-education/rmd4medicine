@@ -261,7 +261,7 @@ class: your-turn
 
 # Your turn
 
-Find a partner and look at `01-eda.Rmd` together. 
+Find a partner and look at `01-explore.Rmd` together. 
 Look at the source, then 🧶 **Knit** to HTML.
 
 Try to identify these parts in the source and the output:
@@ -274,10 +274,11 @@ Try to identify these parts in the source and the output:
 
 1. The **output**
 
-_If this was easy_, try to find all code that produces a **table**. 
-Find all code that produces a **plot**.
+**If this was easy**, try to find all code that produces a *plot*.
 
-<div class="countdown" id="timer_5d799c12" style="right:0;bottom:0;" data-warnwhen="0">
+_psst...`01-explore-alison-params.Rmd` is also there..._
+
+<div class="countdown" id="timer_5d79b236" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -286,7 +287,7 @@ class: live-code
 
 # Basic anatomy I
 
-We look at the source anatomy together:
+We look at the source anatomy for `01-explore.Rmd` together:
 
 1. The **metadata**
 
@@ -309,7 +310,7 @@ class: live-code
 
 # Basic anatomy II
 
-We look at the output anatomy together:
+We look at the output anatomy for `01-explore.Rmd` together:
 
 1. The **metadata**
 
@@ -415,13 +416,15 @@ Use `?html_document` from your R console to:
 
 1. Add a theme
 
+1. Use the "kable" method to print data frames (more on this later!) 
+
 🧶 **Knit** to HTML to see the output.
 
-__If this was easy__, try to embed the `Rmd` source code within the document and provide a link that can be used by readers to download the code.
+**If this was easy**, try to embed the `Rmd` source code to download.
 
 _psst...answers on the next slide..._
 
-<div class="countdown" id="timer_5d799d1a" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d79b47f" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -437,6 +440,7 @@ output:
     toc: true
     toc_float: true
     theme: flatly
+    df_print: kable
     code_download: true
 ---
 ```
@@ -681,7 +685,7 @@ class: inverse, center, middle
 ````
 ```{r}
 mockdata %&gt;% 
-  tally()
+  distinct(arm)
 ```
 ````
 
@@ -696,11 +700,13 @@ What is the fate of this chunk?
 
 ```r
 mockdata %&gt;% 
-  tally()
-#&gt; # A tibble: 1 x 1
-#&gt;       n
-#&gt;   &lt;int&gt;
-#&gt; 1  1499
+  distinct(arm)
+#&gt; # A tibble: 3 x 1
+#&gt;   arm      
+#&gt;   &lt;chr&gt;    
+#&gt; 1 A: IFL   
+#&gt; 2 F: FOLFOX
+#&gt; 3 G: IROX
 ```
 
 ]
@@ -713,8 +719,7 @@ mockdata %&gt;%
 
 ````
 ```{r}
-num_sites &lt;- mockdata %&gt;% 
-  count(site)
+n_sites &lt;- n_distinct(mockdata$site)
 ```
 ````
 
@@ -728,8 +733,7 @@ What fate do you predict here?
 
 
 ```r
-num_sites &lt;- mockdata %&gt;% 
-  count(site)
+n_sites &lt;- n_distinct(mockdata$site)
 ```
 
   
@@ -743,9 +747,8 @@ num_sites &lt;- mockdata %&gt;%
 
 ````
 ```{r}
-num_sites &lt;- mockdata %&gt;% 
-  count(site)
-num_sites
+n_sites &lt;- n_distinct(mockdata$site)
+n_sites
 ```
 ````
 
@@ -757,30 +760,9 @@ num_sites
 
 
 ```r
-num_sites &lt;- mockdata %&gt;% 
-  count(site)
-num_sites
-#&gt; # A tibble: 18 x 2
-#&gt;    site               n
-#&gt;    &lt;chr&gt;          &lt;int&gt;
-#&gt;  1 Ann Arbor        100
-#&gt;  2 Barcelona         50
-#&gt;  3 Boston           100
-#&gt;  4 Chapel Hill      100
-#&gt;  5 Denver           100
-#&gt;  6 Gainesville      100
-#&gt;  7 Los Angeles      100
-#&gt;  8 Madrid            50
-#&gt;  9 Mexico City       84
-#&gt; 10 New Haven        100
-#&gt; 11 New York         100
-#&gt; 12 Nur-Sultan        15
-#&gt; 13 Portland         100
-#&gt; 14 Rio de Janeiro    50
-#&gt; 15 Rochester        100
-#&gt; 16 Sao Paulo         50
-#&gt; 17 Seattle          100
-#&gt; 18 St. Louis        100
+n_sites &lt;- n_distinct(mockdata$site)
+n_sites
+#&gt; [1] 1
 ```
 
   
@@ -794,8 +776,10 @@ num_sites
 
 ````
 ```{r}
-ggplot(mockdata, aes(x = arm, fill = arm)) +
-  geom_bar()
+ggplot(mockdata, aes(x = arm, 
+                     y = n, 
+                     fill = arm)) +
+  geom_col()
 ```
 ````
 
@@ -809,11 +793,13 @@ What about this one?
 
 
 ```r
-ggplot(mockdata, aes(x = arm, fill = arm)) +
-  geom_bar()
+ggplot(mockdata, aes(x = arm, 
+                     y = n, 
+                     fill = arm)) +
+  geom_col()
 ```
 
-&lt;img src="01-rmd-anatomy_files/figure-html/unnamed-chunk-17-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="01-rmd-anatomy_files/figure-html/unnamed-chunk-17-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -870,34 +856,13 @@ glimpse(mockdata)
 
 ```r
 glimpse(mockdata)
-#&gt; Observations: 1,499
-#&gt; Variables: 26
-#&gt; $ case          &lt;dbl&gt; 110754, 99706, 105271, 105001, 112263, 86205, 9950…
-#&gt; $ age           &lt;dbl&gt; 67, 74, 50, 71, 69, 56, 50, 57, 51, 63, 61, 59, 61…
-#&gt; $ arm           &lt;chr&gt; "F: FOLFOX", "A: IFL", "A: IFL", "G: IROX", "F: FO…
-#&gt; $ sex           &lt;chr&gt; "Male", "Female", "Female", "Female", "Female", "M…
-#&gt; $ race          &lt;chr&gt; "Caucasian", "Caucasian", "Caucasian", "Caucasian"…
-#&gt; $ fu_time       &lt;dbl&gt; 922, 270, 175, 128, 233, 120, 369, 421, 387, 363, …
-#&gt; $ fu_stat       &lt;dbl&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2,…
-#&gt; $ ps            &lt;dbl&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1,…
-#&gt; $ hgb           &lt;dbl&gt; 11.5, 10.7, 11.1, 12.6, 13.0, 10.2, 13.3, 12.1, 13…
-#&gt; $ bmi           &lt;dbl&gt; 25.09861, 19.49786, NA, 29.42922, 26.35352, 19.036…
-#&gt; $ alk_phos      &lt;dbl&gt; 160, 290, 700, 771, 350, 569, 162, 152, 231, 492, …
-#&gt; $ ast           &lt;dbl&gt; 35, 52, 100, 68, 35, 27, 16, 12, 25, 18, 45, 16, 5…
-#&gt; $ mdquality_s   &lt;dbl&gt; NA, 1, 1, 1, NA, 1, 1, 1, 1, 1, NA, NA, 1, 0, 1, 1…
-#&gt; $ age_ord       &lt;chr&gt; "60-69", "70-79", "40-49", "70-79", "60-69", "50-5…
-#&gt; $ site          &lt;chr&gt; "Portland", "Portland", "Portland", "Portland", "P…
-#&gt; $ country       &lt;chr&gt; "USA", "USA", "USA", "USA", "USA", "USA", "USA", "…
-#&gt; $ ethnicity     &lt;chr&gt; "White (not Hispanic)", "White (not Hispanic)", "W…
-#&gt; $ name          &lt;chr&gt; "Barrett Wafford", "Shelby Moore", "Farrah Morgan"…
-#&gt; $ first_name    &lt;chr&gt; "Barrett", "Shelby", "Farrah", "Brianna", "Kareema…
-#&gt; $ last_name     &lt;chr&gt; "Wafford", "Moore", "Morgan", "Rasico", "el-Saleh"…
-#&gt; $ ae_low_wbc    &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_neuropathy &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_diarrhea   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_vomiting   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_blood_clot &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ fu_fct        &lt;fct&gt; Died, Died, Died, Died, Died, Died, Died, Died, Di…
+#&gt; Observations: 3
+#&gt; Variables: 5
+#&gt; $ arm      &lt;chr&gt; "A: IFL", "F: FOLFOX", "G: IROX"
+#&gt; $ site     &lt;chr&gt; "Boston", "Boston", "Boston"
+#&gt; $ country  &lt;chr&gt; "USA", "USA", "USA"
+#&gt; $ n_target &lt;dbl&gt; 34, 34, 34
+#&gt; $ n        &lt;dbl&gt; 20, 13, 17
 ```
 
 ]
@@ -920,34 +885,13 @@ glimpse(mockdata)
 
 
 ```
-#&gt; Observations: 1,499
-#&gt; Variables: 26
-#&gt; $ case          &lt;dbl&gt; 110754, 99706, 105271, 105001, 112263, 86205, 9950…
-#&gt; $ age           &lt;dbl&gt; 67, 74, 50, 71, 69, 56, 50, 57, 51, 63, 61, 59, 61…
-#&gt; $ arm           &lt;chr&gt; "F: FOLFOX", "A: IFL", "A: IFL", "G: IROX", "F: FO…
-#&gt; $ sex           &lt;chr&gt; "Male", "Female", "Female", "Female", "Female", "M…
-#&gt; $ race          &lt;chr&gt; "Caucasian", "Caucasian", "Caucasian", "Caucasian"…
-#&gt; $ fu_time       &lt;dbl&gt; 922, 270, 175, 128, 233, 120, 369, 421, 387, 363, …
-#&gt; $ fu_stat       &lt;dbl&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2,…
-#&gt; $ ps            &lt;dbl&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1,…
-#&gt; $ hgb           &lt;dbl&gt; 11.5, 10.7, 11.1, 12.6, 13.0, 10.2, 13.3, 12.1, 13…
-#&gt; $ bmi           &lt;dbl&gt; 25.09861, 19.49786, NA, 29.42922, 26.35352, 19.036…
-#&gt; $ alk_phos      &lt;dbl&gt; 160, 290, 700, 771, 350, 569, 162, 152, 231, 492, …
-#&gt; $ ast           &lt;dbl&gt; 35, 52, 100, 68, 35, 27, 16, 12, 25, 18, 45, 16, 5…
-#&gt; $ mdquality_s   &lt;dbl&gt; NA, 1, 1, 1, NA, 1, 1, 1, 1, 1, NA, NA, 1, 0, 1, 1…
-#&gt; $ age_ord       &lt;chr&gt; "60-69", "70-79", "40-49", "70-79", "60-69", "50-5…
-#&gt; $ site          &lt;chr&gt; "Portland", "Portland", "Portland", "Portland", "P…
-#&gt; $ country       &lt;chr&gt; "USA", "USA", "USA", "USA", "USA", "USA", "USA", "…
-#&gt; $ ethnicity     &lt;chr&gt; "White (not Hispanic)", "White (not Hispanic)", "W…
-#&gt; $ name          &lt;chr&gt; "Barrett Wafford", "Shelby Moore", "Farrah Morgan"…
-#&gt; $ first_name    &lt;chr&gt; "Barrett", "Shelby", "Farrah", "Brianna", "Kareema…
-#&gt; $ last_name     &lt;chr&gt; "Wafford", "Moore", "Morgan", "Rasico", "el-Saleh"…
-#&gt; $ ae_low_wbc    &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_neuropathy &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_diarrhea   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_vomiting   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ ae_blood_clot &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-#&gt; $ fu_fct        &lt;fct&gt; Died, Died, Died, Died, Died, Died, Died, Died, Di…
+#&gt; Observations: 3
+#&gt; Variables: 5
+#&gt; $ arm      &lt;chr&gt; "A: IFL", "F: FOLFOX", "G: IROX"
+#&gt; $ site     &lt;chr&gt; "Boston", "Boston", "Boston"
+#&gt; $ country  &lt;chr&gt; "USA", "USA", "USA"
+#&gt; $ n_target &lt;dbl&gt; 34, 34, 34
+#&gt; $ n        &lt;dbl&gt; 20, 13, 17
 ```
 
 ]
@@ -1108,11 +1052,17 @@ glimpse(mockdata)
 
 .pull-right[
 
-+ Place between curly braces `{r label}`
++ Place between curly braces&lt;br&gt;`{r label}`
 
-+ Separated options with commas `{r label, option1=value}`
++ Separated options with commas&lt;br&gt;`{r label, option1=value}`
 
 + Careful! No duplicate chunk labels
+
+    ````
+    ```{r peek}
+    head(mockdata)
+    ```
+    ````
 
     ```
     Error in parse_block(g[-1], g[1], params.src) : 
@@ -1144,63 +1094,37 @@ Add slide here on pet versus livestock
 .footnote[https://masalmon.eu/2017/08/08/chunkpets/]
 
 ---
+class: middle, center
 
 # A good chunk label
 
 .pull-left[
 
-### Yes
+### Good
 
-+ `a-z`
-+ `A-Z`
-+ `0-9`
-+ `/`
-+ `-`
+`a-z`
 
-]
+`A-Z`
 
-.pull-right[
+`0-9`
 
-### No
+`/`
 
-+ `_`
-+ spaces
-+ everything else!
-
-]
-
-
----
-class: your-turn
-
-# Your turn
-
-## Add chunk options &amp; labels
-
-.pull-left[
-
-1. Use chunk options on our `glimpse` chunk added earlier. Try:
-  + Hide the code, show only the output
-  + Hide everything, but still run the code
-  + Hide the output, show only the code, but still run the code
-  
-1. Add a label to this chunk.
-
-1. 🧶 **Knit** to HTML to see the effects.
+`-`
 
 ]
 
 .pull-right[
-````
-```{r}
-glimpse(mockdata)
-```
-````
-]
 
-<div class="countdown" id="timer_5d799cba" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+### Bad
+
+`_`
+
+spaces
+
+everything else!
+
+]
 
 ---
 
@@ -1249,12 +1173,16 @@ Data from more sites just came in &amp;mdash; we now have data for Boston, Seatt
 
 1. 🧶 **Knit** to HTML. Do you see data for all 3 sites?
 
-1. Clean up the chunks (split, combine, label as you see fit)
+1. Clean up the chunks (split, combine, label, use options as you see fit)
 
 1. Use the RStudio outline pane; rejoice!
 
+**If this was easy**, try to use a parameter for the data file.
 
-<div class="countdown" id="timer_5d799dbe" style="right:0;bottom:0;" data-warnwhen="0">
+_psst...`01-explore-alison-params.Rmd` is still there..._
+
+
+<div class="countdown" id="timer_5d79b2d2" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -1299,7 +1227,7 @@ class: middle, center
 
 # Time for a break!
 
-<div class="countdown blink-colon noupdate-15" id="timer_5d799a42" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown blink-colon noupdate-15" id="timer_5d79b387" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>
