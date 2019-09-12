@@ -31,6 +31,7 @@ library(scico)
 library(cowplot)
 library(ymlthis)
 ggplot2::theme_set(ggplot2::theme_minimal())
+episode_counter <- 0
 ```
 
 ```{r load-data, include=FALSE}
@@ -106,7 +107,7 @@ class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">1</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 # Get figures in
@@ -114,17 +115,17 @@ class: middle, center, inverse
 ---
 class: your-turn
 
-# Your turn: Part 1 of 3
+# Your turn: Part 1 of 2
 
-A warm-up exercise! Open `03-draft.Rmd`. It has 4 figures coded using the `ggplot2` package.
+**WARM-UP**: open `03-draft.Rmd` and read the source file. It has several figures coded using the `ggplot2` package.
 
 1. Knit the document to the `bookdown::html_document2` format &mdash; behold!
 
-1. Add output options to this format to use one of the [bootswatch themes](https://rmarkdown.rstudio.com/docs/reference/html_document.html) and include a [floating table of contents](https://rmarkdown.rstudio.com/docs/reference/html_document.html#floating-table-of-contents).
+1. Add output options to this format to use one of the [bootswatch themes](https://rmarkdown.rstudio.com/docs/reference/html_document.html) and include a [floating table of contents](https://rmarkdown.rstudio.com/docs/reference/html_document.html#floating-table-of-contents). *(hint: `?html_document`)*
 
 1. Knit to `bookdown::word_document2` (no options)- how does it look?
 
-__If this was easy__, add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?
+1. Add `distill::distill_article` as an output format (consider adding a TOC too) and knit- what differences do you see between this and the `bookdown::html_document2` format?
 
 _psst...next slide has answers..._
 
@@ -165,8 +166,6 @@ Distill is much less chatty than other outputs due to default `knitr` code chunk
 
 ]
 
-
-
 ---
 class: middle, center
 
@@ -179,129 +178,85 @@ surv_days_plot
 ae_pct_plot
 ```
 
-???
-
-so, how did we get a figure into R Markdown?
-
-Answer: it has to print!
-
 ---
-class: your-turn
 
-# Your turn: Part 2 of 3
-
-Now go through `03-draft-revised.Rmd` and read through the "Note to Peter" at the top. It now has 5 figures coded using the `ggplot2` package.
+# Including plots
 
 .pull-left[
-
-```{r eval=FALSE}
-# demographics?
-# maybe combine into a multi-panel plot?
-age_density
-age_boxplot
-
-# treatment response? another multi-panel?
-surv_pct_plot
-surv_days_plot
-
-# adverse events?
-ae_pct_plot
+```{r age-hist-print1, fig.show='hide'}
+# PLOT: Age distribution -------------------------------------------------------
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = scico(1, 
+                              begin = .3, 
+                              palette = "berlin"),
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
 ```
+
+Will this print?
+
 ]
+
+--
 
 .pull-right[
-1. Add new code chunks containing plots you wish to include where you want them to go in the document.
+```{r ref.label='age-hist-print1', echo=FALSE}
+```
 
-1. Edit the code chunk options as you need to.
 ]
 
-```{r echo=FALSE}
-countdown(minutes = 5)
-```
 ---
 
-# Chunk options
-
-
-https://yihui.name/knitr/options/#plots
-
-
-
-
----
-
-That is where we are going
-
-How are we going to get there?
-
-First, we need to learn about how to include a single plot in your article.
-
-EASY JUST MAKE & KNIT!
-
----
-
-But sometimes it doesn't look quite right. 
-
-- fig resolution
-- fig size
-
----
-
-```{r echo=FALSE}
-library(ggbeeswarm)
-surv_bee <- ggplot(mockdata) +
-  aes(x = arm, 
-      y = fu_time, 
-      fill = arm, 
-      group = interaction(arm,fu_fct)) +
-  geom_quasirandom(alpha = 0.3, 
-              colour = "black", 
-              dodge.width = .9) +
-  geom_boxplot(width = .3, 
-               outlier.shape = NA, 
-               na.rm = TRUE, 
-               position = position_dodge(width = .9)) +
-  labs(y= "Survival Time in \nDays (Censored)", x = "Study Arm") +
-  scale_fill_scico_d(palette = 'lapaz', 
-                     guide = FALSE, 
-                     begin = .3, 
-                     end = .8)
-```
-
-
-
-
----
-class: live-code
-
-# Live code demo
-
-We take the first plot and together we:
-
-1. Label the chunk
-
-1. Add a figure caption _(watch what happens if we don't label it first!)_
-
-1. Align figure to the right, center
-
-
-
----
-
-first introduce `knitr::include_graphics` for static images
-
----
-
+# Including plots
 
 .pull-left[
-
-```{r age-hist, fig.show='hide'}
+```{r age-hist}
+# PLOT: Age distribution -------------------------------------------------------
 age_histogram <- 
   ggplot(mockdata, aes(age)) +
   geom_histogram(color = 'white',
-                 fill = scico::scico(1, 
-                                     begin = .3, 
-                                     palette = params$palette),
+                 fill = scico(1, 
+                              begin = .3, 
+                              palette = "berlin"),
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count") +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks()
+  )
+```
+
+What about this?
+
+]
+
+--
+
+.pull-right[
+```{r ref.label='age-hist', echo=FALSE}
+```
+
+]
+
+
+---
+
+# Including plots
+
+.pull-left[
+```{r age-hist-print, fig.show='hide'}
+# PLOT: Age distribution -------------------------------------------------------
+age_histogram <- 
+  ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = scico(1, 
+                              begin = .3, 
+                              palette = "berlin"),
                  bins = 20) +
   labs(x = "Age", 
        y = "Count") +
@@ -313,14 +268,62 @@ age_histogram
 
 ]
 
-.pull-right[
-```{r ref.label='age-hist', echo=FALSE}
+--
 
+.pull-right[
+```{r ref.label='age-hist-print', echo=FALSE}
+```
+
+]
+
+???
+
+
+so, how did we get a figure into R Markdown?
+
+Answer: it has to print!
+
+---
+class: middle, center, inverse
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
+</span> 
+
+# Chunk options for plots
+
+---
+
+# Chunk options for plots
+
+- fig resolution
+- fig size
+- [fig "device"](https://r4ds.had.co.nz/graphics-for-communication.html#other-important-options)
+
+.footnote[https://yihui.name/knitr/options/#plots]
+
+
+---
+
+# Figure resolution
+
+.pull-left[
+
+```{r ref.label='age-hist-print', fig.show='hide'}
+```
+
+]
+
+.pull-right[
+```{r ref.label='age-hist-print', echo=FALSE}
 ```
 
 ]
 
 ---
+
+# fig.retina
 
 .pull-left[
 
@@ -330,8 +333,7 @@ age_histogram
 ```
 ````
 
-```{r ref.label='age-hist', echo=FALSE}
-
+```{r ref.label='age-hist-print', echo=FALSE, out.width="70%"}
 ```
 ]
 
@@ -345,49 +347,110 @@ age_histogram
 ```
 ````
 
-```{r ref.label='age-hist', echo=FALSE, fig.retina=3, out.height="50%"}
+```{r ref.label='age-hist-print', echo=FALSE, fig.retina=3, out.width="70%"}
 
 ```
 ]
 
 ---
 
-now you have to 
-1. label the chunk
-1. add `fig.cap` 
+# out.width
 
-```{r ref.label='age-hist', echo=FALSE, fig.cap="Age histogram"}
+.pull-left[
 
+````
+```{r fig.retina=3, out.width="70%"}`r ''`
+age_histogram
+```
+````
+
+```{r ref.label='age-hist-print', echo=FALSE, out.width="70%", fig.retina=3}
+```
+]
+
+--
+
+.pull-right[
+
+````
+```{r fig.retina=3, out.width="10%"}`r ''`
+age_histogram
+```
+````
+
+```{r ref.label='age-hist-print', echo=FALSE, fig.retina=3, out.width="10%"}
+
+```
+
+See also:
+
++ `fig.width`
++ `fig.height` 
++ `fig.asp`
+
+https://r4ds.had.co.nz/graphics-for-communication.html#figure-sizing
+
+]
+
+
+---
+
+# fig.cap
+
+For the `ae_pct_plot`, I followed [these recommendations](https://www.bmj.com/content/355/bmj.i5078).
+
+````
+```{r fig.cap="BMJ, 2016 paper", echo=FALSE}`r ''`
+knitr::include_graphics(here::here("images/F3.large.jpg"))
+```
+````
+
+
+
+```{r fig.cap="BMJ, 2016 paper", out.width='25%', echo=FALSE}
+knitr::include_graphics(here::here("static/slides/images/F3.large.jpg"))
 ```
 
 ???
 
-You must label the chunk for the figure caption to show up
+This is how you can also add static figures. You could use R Markdown, but with knitr you can also include a figure caption. As you might have noticed in your output, this ends up numbered. 
+
+---
+class: live-code
+
+# Live code demo
+
+We open up `03-draft.Rmd` and take the static image and together we:
+
+1. Label that chunk
+
+1. Add a cross-reference like `see Figure \@ref(fig:bmj)`
+
+1. Try again with `counts-by-site` code chunk: `see Figure \@ref(fig:counts-by-site)` _(watch what happens if try to cross-reference without a caption!)_
+
+.footnote[Cross-referencing only works in these output packages: distill, bookdown, blogdown]
 
 ---
 
 # Caption a figure
 
-.pull-left[
-
 ````
-```{r pressure-plot, fig.cap='Look!'}`r ''`
-plot(pressure, type = 'b', pch = 19)
+```{r age-plot, echo=FALSE, fig.cap='Age distributions'}`r ''`
+age_histogram
 ```
 ````
 
-]
-
-.pull-right[
 .center[
 
-```{r pressure-plot, out.width='75%', echo = FALSE, fig.retina = 3}
-plot(pressure, type = 'b', pch = 19)
+```{r age-plot, out.width='25%', echo = FALSE, fig.retina = 3}
+age_histogram
 ```
 
-**Fig. 1:** Look!]
+**Fig. 1:** Age distributions
 
 ]
+
+
 
 ---
 
@@ -395,11 +458,11 @@ plot(pressure, type = 'b', pch = 19)
 
 .pull-left[
 
-See Figure `\@ref(fig:pressure-plot)`.
+See Figure `\@ref(fig:age-plot)`.
 
 ````
-```{r pressure-plot}`r ''`
-plot(pressure, type = 'b', pch = 19)
+```{r age-plot, echo=FALSE, fig.cap='Age distributions'}`r ''`
+age_histogram
 ```
 ````
 
@@ -407,11 +470,11 @@ plot(pressure, type = 'b', pch = 19)
 
 .pull-right[
 
-See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
+See Figure [1]().
 
 .center[
 
-```{r ref.label = 'pressure-plot', out.width='75%', echo = FALSE, fig.retina = 3}
+```{r ref.label = 'age-plot', out.width='70%', echo = FALSE, fig.retina = 3, fig.cap='Age distributions'}
 ```
 
 ]
@@ -420,51 +483,87 @@ See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
 
 ---
 
-# Figure references
+# Key takeaway
 
-for static images
+Once you have:
 
-`knitr::include_graphics`
+`r emo::ji("heavy_check_mark")` A labeled chunk that produces a plot
 
+`r emo::ji("heavy_check_mark")` A figure caption using `fig.cap`
+
+Then you can have:
+
+### Cross-references!*
+
+.footnote[\* and you are using distill, bookdown, or blogdown output formats]
 
 ---
 class: your-turn
 
-# Your turn
+# Your turn: Part 2 of 2
 
-take one of the plots in the doc, add some `knitr` chunk options to it to:
+Now go through `03-draft-revised.Rmd` and read the source, then knit.
 
-1. Add a chunk label
-1. Increase the figure resolution
-1. Add a figure caption
-1. _If this was easy, try to change the figure alignment (and its caption) to the center._
+.pull-left[
+
+```{r eval=FALSE}
+# demographics-----------------------------
+age_density # multi-panel?    <-ignore this
+age_boxplot # multi-panel?    <-ignore this
+demo_tab
+
+# treatment response @ follow-up-----------
+surv_pct_plot # multi-panel?  <-ignore this
+surv_days_plot # multi-panel? <-ignore this
+fu_tab
+
+# adverse events---------------------------
+ae_pct_plot
+ae_tab
+```
+]
+
+.pull-right[
+1. Add new code chunks containing tables and plots where you want.
+
+1. Edit the code chunk options as you need to.
+
+1. Add headers and other Markdown formatting as you see fit.
+
+1. Feel free to add figure captions and in text cross-references.
+]
 
 ```{r echo=FALSE}
-countdown(minutes = 3)
+countdown(minutes = 5)
 ```
+
 
 ---
 class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">2</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
+
 
 # Combine figures in output
 
 ---
 
-do multi-panel here
+# Arrange plots in a grid
 
-`cowplot` for multi-panel plots
+
+`cowplot::plot_grid()` for multi-panel plots
+
+.footnote[https://wilkelab.org/cowplot/articles/plot_grid.html]
 
 ---
 class: live-code
 
 # Live code demo
 
-We combine `age_density` and `age_boxplot` with the `cowplot` package.
+We start with `03-draft-revised.Rmd` and combine `age_density` and `age_boxplot` with the `cowplot` package.
 
 ```{r fig.retina=3, fig.asp=.5, out.width="70%", fig.align='center'}
 plot_grid(age_density, age_boxplot, labels = "AUTO")
@@ -478,17 +577,15 @@ class: your-turn
 
 ## Make a plot grid
 
-1. Combine `surv_pct_plot` and `surv_days_plot` with the `cowplot` package.
+Open up your `03-draft-revised.Rmd`.
 
-1. Label the chunk and be sure you set up you `fig.path` correctly.
-
-1. Knit to determine the best chunk options for `fig.retina`, `fig.asp`, and `out.width`
+Combine `surv_pct_plot` and `surv_days_plot` with `cowplot::plot_grid()`.
 
 
 _psst...my answers on the next slide..._
 
 ```{r echo=FALSE}
-countdown(minutes = 5)
+countdown(minutes = 3)
 ```
 
 ---
@@ -497,42 +594,14 @@ class: your-turn
 # Answers
 
 ````
-```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=20}`r ''`
+```{r echo=FALSE, fig.retina=3, fig.asp=.5, fig.width=20}`r ''`
 plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
 ```
 ````
 
-```{r echo = FALSE, fig.retina=3, fig.asp=.5, fig.width=10, fig.align='center'}
+```{r echo=FALSE, fig.retina=3, fig.asp=.5, fig.width=10, fig.align='center'}
 plot_grid(surv_pct_plot, surv_days_plot, labels = "AUTO")
 ```
-
-
----
-
-# Cross-references to figures
-
-Once you have:
-
-`r emo::ji("heavy_check_mark")` A labeled chunk that produces a plot
-
-`r emo::ji("heavy_check_mark")` A figure caption using `fig.cap`
-
-Then you can have:
-
-## Cross-references! 
-
-
----
-class: live-code
-
-# Live code demo
-
-We take the first plot and together we:
-
-1. Add an in-text reference to the figure using `\@ref(fig:age-dist)`
-
-1. Knit and behold
-
 
 
 ---
@@ -540,7 +609,7 @@ class: middle, center, inverse
 
 <span class="fa-stack fa-4x">
   <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">3</strong>
+  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
 </span> 
 
 # Get figures out
@@ -549,8 +618,6 @@ class: middle, center, inverse
 
 # Exporting plots
 
-cover ggsave for outputting figures
-
 ```{r eval=FALSE}
 ggsave()
 ```
@@ -558,66 +625,62 @@ ggsave()
 
 ---
 
-setting `fig.path` as a code chunk option
+# fig.path
+
+````
+```{r ae-plot, fig.path="figs/", echo=FALSE}`r ''`
+ae_pct_plot
+```
+````
+
+```{r ae-plot, echo=FALSE, fig.retina=3, out.width='70%', fig.asp=.5}
+ae_pct_plot
+```
+
 
 ---
 class: live-code
 
 # Live code demo
 
-We take the first plot and together we:
+We open up `03-draft-revised.Rmd` and together we:
 
-1. Add `fig.path="figs/"` as a `knitr` code chunk option _(watch what happens if we don't include the backslash!)_
+1. Add `fig.path="figs/"` as a `knitr` code chunk option for a single plot _(watch what happens if we don't include the backslash!)_
 
 1. Knit and behold
 
+1. We add a global `setup` chunk, if we have time.
+
 ---
-class: your-turn
+class: live-code
 
-# Your turn: Add figure path to setup chunk
+# A global `setup` chunk
 
-Remember our old friend, the `knitr` setup chunk? 
+One chunk to rule them all
 
-1. Add `fig.path="figs/"` to the *global* setup chunk
+````
+```{r setup, include = FALSE}`r ''`
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  fig.retina = 3,
+  fig.path = here::here("alison-figs/")
+)
+```
+````
 
-1. Save and knit- what do you notice?
+---
+
+# `r emo::ji("star")` Tip
+
+http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/
 
 ```{r echo=FALSE}
-countdown(minutes = 2)
+knitr::include_url("http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/")
 ```
 
 
----
-
-`knitr` options for controlling size (https://r4ds.had.co.nz/graphics-for-communication.html#figure-sizing)
-
----
-
-graphics type output (https://r4ds.had.co.nz/graphics-for-communication.html#other-important-options)
-
----
-`knitr` options for fig resolution
-
----
-class: middle, center
-
-# Change your mental model
-
-.pull-left[
-
-### Content = presentation
-
-```{r echo=FALSE}
-knitr::include_graphics("images/word.png")
-```
-
-]
-
-.pull-right[
-
-### Content &rarr; presentation
-
-]
 
 ---
 class: middle, center
