@@ -38,8 +38,8 @@ hero_media = "rmd4med-sq.jpg"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [cta]
-  url = "https://r-medicine.com/#registration"
-  label = "Register Now"
+  url = "https://rstd.io/rmd4medicine-cloud"
+  label = "CLOUD Now"
   icon_pack = ""
   icon = ""
   
