@@ -52,10 +52,20 @@ class: title-slide, center, middle
 
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
+
+---
+class: middle, center
+
+# <i class="fas fa-cloud"></i>
+
+# Go here and log in (free):
+
+https://rstd.io/rmd4medicine-cloud
+
 ---
 layout: true
 
-<div class="my-footer"><span>https://rmd4medicine.netlify.com</span></div>
+<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
 
 ---
 class: middle, center, inverse

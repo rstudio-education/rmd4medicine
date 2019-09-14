@@ -38,10 +38,10 @@ hero_media = "rmd4med-sq.jpg"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [cta]
-  url = "https://github.com/rstudio-education/rmd4medicine"
-  label = "GitHub"
-  icon_pack = ""
-  icon = ""
+  url = "/materials/"
+  label = "Start Here"
+  icon_pack = "fas"
+  icon = "door-open"
   
 [cta_alt]
   url = "about"
@@ -58,3 +58,5 @@ A four-hour workshop that will take you on a tour of how to get from data to man
 + How to add tables for different outputs
 + Workflows for working with data
 + How to include and style graphics
+
+This is the website for a workshop by [Dr. Alison Hill](https://alison.rbind.io/) from [RStudio](https://www.rstudio.com/). It was last updated for the [R / Medicine conference](https://r-medicine.com/) on 2019-09-12.

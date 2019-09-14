@@ -84,7 +84,7 @@ class: middle, center
 
 # Go here and log in (free):
 
-cloud link
+https://rstd.io/rmd4medicine-cloud
 
 ---
 class: middle, center
@@ -103,7 +103,7 @@ class: middle, center
 ---
 layout: true
 
-<div class="my-footer"><span>https://rmd4medicine.netlify.com</span></div>
+<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
 
 ---
 background-image: url(images/hello.jpg)
@@ -1024,16 +1024,9 @@ how can we make it easier on ourselves to explore the code in here?
 show how to add chunk labels and view in IDE interactively
 
 ---
+class: middle, center
 
-Add slide here on pet versus livestock
-
-.pull-left[
-
-]
-
-.pull-right[
-
-]
+# Pet or livestock?
 
 .footnote[https://masalmon.eu/2017/08/08/chunkpets/]
 
@@ -1046,15 +1039,13 @@ class: middle, center
 
 ### Good
 
-`a-z`
+`myplot`
 
-`A-Z`
+`my-plot`
 
-`0-9`
+`myPlot`
 
-`/`
-
-`-`
+`myplot1`
 
 ]
 
@@ -1062,9 +1053,9 @@ class: middle, center
 
 ### Bad
 
-`_`
+`my_plot`
 
-spaces
+`my plot`
 
 everything else!
 

@@ -44,9 +44,6 @@ class: title-slide, center, middle
 
 #### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
 
-<!-- this ends up being the title slide since seal = FALSE-->
-
-???
 
 ---
 class: middle, center
@@ -55,7 +52,7 @@ class: middle, center
 
 # Go here and log in (free):
 
-cloud link
+https://rstd.io/rmd4medicine-cloud
 
 ---
 class: middle, center
