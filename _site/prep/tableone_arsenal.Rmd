@@ -1,0 +1,105 @@
+---
+title: "Building Table One for a Clinical Study"
+author: "Peter D.R. Higgins"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+editor_options:
+  chunk_output_type: console
+---
+
+We will start by loading libraries and data.
+
+```{r setup, messages = FALSE}
+library(arsenal)
+library(knitr)
+library(survival)
+library(tidyverse)
+data(mockstudy)
+library(magrittr)
+library(keyring)
+library(REDCapR)
+```
+
+```{r inspect data}
+dim(mockstudy)
+glimpse(mockstudy)
+```
+
+### Basic Table 1
+Let's make a basic Table 1 grouped by arm
+with details on sex and age in each group.
+
+```{r summarize grouped, messages = FALSE, results="asis"}
+#summary by groups
+tab1 <- tableby(arm ~ sex + age, data = mockstudy)
+summary(tab1, text=TRUE)
+```
+###  Table 1 without groups
+Let's make a Table 1 - but ungrouped, with stats on BMI, sex, Age
+in each group.
+
+```{r summarize ungrouped, warnings = FALSE, messages = FALSE}
+#summary without groups
+tab.noby <- tableby(~ bmi + sex +age, data = mockstudy)
+summary(tab.noby)
+```
+###  Table 1 grouped, build right hand side
+Let's make a Table 1 by arm, with stats on ps, sex, Age
+in each group.
+
+```{r summarize selected}
+myvars <- names(mockstudy)
+rhs <- paste(myvars[8:10], collapse = '+')
+rhs 
+
+as.formula(paste('arm ~', rhs))
+
+summary(tableby(as.formula(paste('arm ~', rhs)), data=mockstudy))
+```
+
+###  Table 1 digit control
+Let's make a Table 1 but now control # of digits
+
+```{r control digits in summary}
+summary(tableby(arm ~ sex + fu.time, data=mockstudy), digits=4, digits.p =2, digits.pct =1)
+```
+
+
+###  Table 1 out to word document
+Let's make a Table 1 and write to MS Word
+
+```{r summarize to word document}
+tab1 <- tableby(arm ~ sex + age, data = mockstudy)
+write2word(tab1, file = 'table1.docx')
+```
+
+###  Table 1 with new data
+Let's make a Table 1 with a new dataset from REDCap
+We will assign arms 1 and 2, then make a table one
+
+```{r pull in fake data from REDCap Oklahoma}
+fake_df <- REDCapR::redcap_read_oneshot(
+  redcap_uri = "https://bbmc.ouhsc.edu/redcap/api/",  
+  token      = "F304DEC3793FECC3B6DEEFF66302CAD3"
+)$data
+```
+
+```{r assign arms to fake_df}
+#assign arms
+fake_df$arm <- c(rep(1,250), rep(2, 250))
+fake_df$race<- as.factor(fake_df$race)
+```
+
+
+```{r build tableone for fake data}
+rhs <- paste(names(fake_df[c(8:11)]), collapse = '+')
+tab2 <- summary(tableby(as.formula(paste('arm ~', rhs)), data=fake_df), pfootnote=TRUE)
+tab2
+# write2word(tab2, file = 'table3.docx')
+# write2html(tab2, "~/table3.html")
+```
+
+
+

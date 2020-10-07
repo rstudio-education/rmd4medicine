@@ -1,0 +1,21 @@
+---
+output: html_document
+---
+.left-column[
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"></i>
+  <strong class="fa-stack-1x" style="color: #fff;">?</strong>
+</span> 
+]
+
+.right-column[
+
+# How does R Markdown work?
+
+1. `r emo::ji("shrug")`
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
+
+]

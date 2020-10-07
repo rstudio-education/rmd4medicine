@@ -1,7 +1,7 @@
 ---
 title: "Outputs & Tables"
 session: "02"
-subtitle: "R Markdown for Medicine"
+subtitle: "R Markdown for Pharma"
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
@@ -37,6 +37,8 @@ library(ymlthis)
 library(tidyverse)
 library(arsenal)
 library(janitor)
+library(knitr)
+library(gt)
 ```
 
 ```{r load-data, include=FALSE}
@@ -44,7 +46,7 @@ mockdata <- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %>%
   mutate(fu_fct = fct_recode(as.factor(fu_stat), 
                              "Lived" = "1", 
                              "Died" = "2")) %>% 
-  mutate_at(vars(starts_with("ae_")), ~as.factor(.))
+  mutate(across(starts_with("ae_"), as.factor))
 ```
 
 
@@ -61,7 +63,7 @@ class: title-slide, center, middle
 
 ### `r rmarkdown::metadata$author` &#183; RStudio
 
-#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+#### [rmd4pharma.netlify.app/](https://rmd4pharma.netlify.app/)
 
 
 ---
@@ -71,12 +73,12 @@ class: middle, center
 
 # Go here and log in (free):
 
-https://rstd.io/rmd4medicine-cloud
+<https://rstd.io/rmd4pharma-cloud>
 
 ---
 layout: true
 
-<div class="my-footer"><span>https://rstd.io/rmd4medicine-cloud</span></div>
+<div class="my-footer"><span>https://rmd4pharma.netlify.app/</span></div>
 
 
 ---
@@ -703,164 +705,157 @@ class: middle, center, inverse
 ```
 
 ---
+class: middle
 
-# EDA tables: `skimr`
+.left-column[
 
+```{r out.width='50%', echo=FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/rstudio/gt/master/man/figures/logo.svg")
+```
 
-```{r skim, message=FALSE, warning=FALSE}
-library(skimr)
+]
 
-mockdata %>% 
-  select(age, fu_fct) %>% 
-  skimr::skim()
+.right-column[
+# the gt package
+
+<https://gt.rstudio.com/>
+]
+
+---
+background-image: url(https://gt.rstudio.com/reference/figures/gt_parts_of_a_table.svg)
+background-size: contain
+
+---
+background-image: url(https://gt.rstudio.com/reference/figures/gt_workflow_diagram.svg)
+background-size: contain
+
+---
+class: middle
+
+.pull-left[
+```{r}
+mockdata %>%
+  count(arm) %>% 
+  gt()
+```
+]
+
+--
+
+.pull-right[
+```{r}
+mockdata %>%
+  count(arm, sex) %>% 
+  pivot_wider(names_from = sex, 
+              values_from = n) %>% 
+  gt()
+```
+
+]
+
+---
+class: middle
+
+.left-column[
+
+![](http://www.danieldsjoberg.com/gtsummary/reference/figures/logo.png)
+]
+
+.right-column[
+# the gtsummary package
+
+<http://www.danieldsjoberg.com/gtsummary/index.html>
+]
+
+---
+class: middle
+
+# Simple frequency table
+
+```{r}
+library(gtsummary)
+mockdata %>%
+  select(arm) %>% 
+  tbl_summary()
 ```
 
 ---
 
-````
-```{r results='asis'}`r ''`
-mockdata %>% 
-  select(age, fu_fct) %>% 
-  skimr::skim() %>% 
-  kable()
-```
-````
-
-```{r skim-kable, results='asis', echo=FALSE}
-mockdata %>% 
-  select(age, fu_fct) %>% 
-  skimr::skim() %>% 
-  kable()
-```
-
-
----
-
-# EDA tables: `janitor`
-
-Good for 1- and 2-way frequency tables with categorical variables
-
-Count number of participants by `arm`, then add by status (`fu_fct`) too
+## Cross-tables
 
 .pull-left[
 
 ```{r}
-mockdata %>% 
-  tabyl(arm)
+library(gtsummary)
+mockdata %>%
+  select(fu_fct, arm) %>% 
+  tbl_summary(by = fu_fct)
 ```
-
-] 
+]
 
 --
 
 .pull-right[
 
 ```{r}
+library(gtsummary)
+mockdata %>%
+  select(fu_fct, arm) %>% 
+  tbl_cross(
+    row = arm,
+    col = fu_fct,
+    percent = "cell",
+    label = fu_fct ~ "Follow-up")
+```
+]
+
+
+---
+class: middle
+
+## A `tbl_summary()`
+
+.left-column[
+```{r sum-tbl, results='hide', warning=FALSE, message=FALSE}
+library(gtsummary)
 mockdata %>% 
-  tabyl(arm) %>% 
-  adorn_totals("row") %>%
-  adorn_pct_formatting()
+  select(arm, sex) %>% 
+  tbl_summary(by = arm) %>% 
+  add_p() %>% 
+  add_overall()
+```
+]
+
+.right-column[
+```{r ref.label='sum-tbl', echo=FALSE}
+
 ```
 
 ]
 
 ---
+class: middle
 
-.pull-left[
+# A bigger `tbl_summary()`
 
-````
-```{r results='asis'}`r ''`
+.left-column[
+
+```{r big-sum-tbl, results='hide', warning=FALSE, message=FALSE}
+library(gtsummary)
 mockdata %>% 
-  tabyl(arm, fu_fct) %>%
-  knitr::kable()
+  select(arm, 
+         starts_with("ae")) %>% 
+  tbl_summary(by = arm)  
 ```
-````
+]
 
-```{r results='asis', echo=FALSE}
-mockdata %>% 
-  tabyl(arm, fu_fct) %>%
-  knitr::kable()
-```
+.right-column[
+```{r ref.label='big-sum-tbl', echo=FALSE}
 
-] 
-
---
-
-.pull-right[
-
-````
-```{r results='asis'}`r ''`
-mockdata %>% 
-  tabyl(arm, fu_fct) %>% 
-  adorn_totals("row") %>%
-  adorn_percentages("row") %>%
-  adorn_pct_formatting(digits = 2) %>%
-  adorn_ns() %>%
-  knitr::kable()
-```
-````
-
-```{r results='asis', echo=FALSE}
-mockdata %>% 
-  tabyl(arm, fu_fct) %>% 
-  adorn_totals("row") %>%
-  adorn_percentages("row") %>%
-  adorn_pct_formatting(digits = 2) %>%
-  adorn_ns() %>%
-  knitr::kable()
 ```
 
 ]
 
----
-class: your-turn
-
-# Your turn
-
-## Fix this `tabyl`
-
-Find this section:
-```markdown
-<--TODO: make this print better with knitr::kable + code chunks-->
-```
-
-Make this `tabyl` print nicely when knitted.
-
-```{r results='hide'}
-mockdata %>% 
-  tabyl(arm) %>% 
-  adorn_totals("row") %>%
-  adorn_pct_formatting() 
-```
-
-_psst: answers on next slide..._
-
-```{r echo=FALSE}
-countdown(minutes = 3)
-```
-
----
-class: your-turn
-
-# Answer
-
-````
-```{r results='asis'}`r ''`
-mockdata %>% 
-  tabyl(arm) %>% 
-  adorn_totals("row") %>%
-  adorn_pct_formatting() %>% 
-  knitr::kable()
-```
-````
-
-```{r results='asis', echo=FALSE}
-mockdata %>% 
-  tabyl(arm) %>% 
-  adorn_totals("row") %>%
-  adorn_pct_formatting() %>% 
-  knitr::kable()
-```
 
 ---
 class: middle, center, inverse
@@ -876,136 +871,56 @@ class: middle, center, inverse
 
 ---
 
-# Table One from `arsenal`
-
-
 ```{r}
-tableby(arm ~ sex, data = mockdata) 
+library(gtsummary)
+mockdata %>% 
+  select(age, fu_fct) %>% 
+  tbl_summary()
 ```
 
---
-
-
 ```{r}
-tableby(arm ~ sex, data = mockdata) %>% 
-  summary()
+library(gtsummary)
+mockdata %>% 
+  select(sex, age, bmi, arm) %>% 
+  tbl_summary(by = arm) %>% 
+  add_p()
 ```
-
 
 ---
 
-# One more step!
-
-For R Markdown pretty printing...
-
-````
-```{r results='asis'}`r ''`
-tableby(arm ~ sex, data = mockdata) %>% 
-  summary()
-```
-````
-
-```{r results= 'asis', echo=FALSE}
-tableby(arm ~ sex, data = mockdata) %>% 
-  summary()
+```{r}
+library(gtsummary)
+mockdata %>% 
+  select(sex, age, bmi, arm) %>% 
+  tbl_summary(by = arm, 
+              type = all_continuous() ~ "continuous2") %>% 
+  add_p()
 ```
 
-???
 
-This is a new knitr chunk option- the results option.
 
 ---
 class: your-turn
 
 # Your turn
 
-## Make a table one
+## Make an adverse events table
 
 Find this section:
 
 ```markdown
-<--TODO: add age and bmi here-->
+<!--TODO: add adverse events table-->
 ```
 
-1. Add the variables `age` and `bmi` to the table. (__hint:__ use the formula `arm ~ sex + var1 + var2`)
+1. When you select variables, add all that start with "ae" (hint: `starts_with("string"))`.
 
-1. Look at the next code chunk. It uses a different package, `tableone::CreateTableOne`. You only need one "table one", so pick which one you using your code chunks (don't delete!).
+1. Make the table grouped by treatment arm.
 
-1. Add/subtract variables from your table one as you like.
-
-(Note: leave this `layout="l-body-outset"` part alone- I'll explain!)
 
 ```{r echo=FALSE}
 countdown(minutes = 3)
 ```
 
-
----
-class: middle, center, inverse
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #fff;"></i>
-  <strong class="fa-stack-1x" style="color:#2f5275;">`r (episode_counter <- episode_counter + 1)` </strong>
-</span> 
-
---
-
-# Table Two
-
----
-class: your-turn
-
-# Your turn
-
-## Table two
-
-Find this section:
-```
-<--TODO: add adverse events table-->
-```
-
-1. Find the code chunk started for you. 
-
-1. Code and print a table called `ae_tab` that summarizes 2+ variables that start with `ae_`.
-
-__If this was easy__, edit the `summary()` function to modify the number of [digits](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html#modify-the-number-of-digits-used). Or add [labels](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html#add-labels).
-
-_psst...answers on next slide..._
-
-```{r echo = FALSE}
-countdown(minutes = 5)
-```
-
----
-class: your-turn
-
-# Answer
-
-````
-```{r results='asis', layout="l-body-outset"}`r ''`
-ae_tab <- mockdata %>% 
-  tableby(
-    arm ~ ae_blood_clot + ae_vomiting + ae_diarrhea + ae_neuropathy + ae_low_wbc, 
-    data = .) %>% 
-  summary(digits = 2, 
-          digits.p = 3, 
-          digits.pct = 1)
-ae_tab
-```
-````
-
----
-
-```{r results='asis', echo=FALSE}
-ae_tab <- mockdata %>% 
-  tableby(
-    arm ~ ae_blood_clot + ae_vomiting + ae_diarrhea + ae_neuropathy + ae_low_wbc, 
-    data = .) %>% 
-  summary(digits = 2, 
-          digits.p = 3, 
-          digits.pct = 1)
-ae_tab
-```
 
 ---
 class: middle, center

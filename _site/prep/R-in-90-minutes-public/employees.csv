@@ -1,0 +1,140 @@
+LastName,FirstName,Department,Location,Teams,Function,HireDate,lon,lat
+Albukrek,Ferit,Engineering,"Jamaica Plain, MA","Hosted, Connect","VP, Engineering",2018-10-10,-71.121097,42.309661
+Allaire,JJ,Engineering,"West Newton, MA","Modeling, IDE",CEO,2009-01-01,-71.22633,42.348912
+Alkaya,Taner,Engineering,"Studio City, CA",Hosted,QA Engineer,2019-05-20,-118.392751,34.139082
+Allen,Jeffrey,Engineering,"Richardson, TX","Connect, RSPM",Engineering lead,2013-08-05,-96.729721,32.948179
+Andrade,Ricardo,Engineering,"Austin, TX","Connect, RSPM",Software Engineer (Security),2018-03-19,-97.771258,30.326374
+Arendt,Cole,Solutions Engineering,"Raleigh, NC","Connect, Solutions Engineering",Solutions Engineer,2017-11-15,-82.164013,35.447916
+Atkins,Aron,Engineering,"Arlington, MA",Connect,Software Engineer,2015-02-02,-71.167083,42.417695
+Averick,Mara,Engineering,"Marblehead, MA",Tidyverse,Developer Advocate,2017-11-06,-70.83484,42.49284
+Bajan,Becky,People Operations,"Richmond, VA",People Operations,People Operations Partner,2018-04-16,-77.492834,37.626617
+Beckwith,Ming,Engineering,"Medford, MA",Hosted,Software Engineer,2017-09-25,-71.459405,42.446396
+Bethell,Robert,Marketing,"Portland, ME",Marketing,Marketing Manager,2017-10-16,-70.262393,43.658784
+Blair,James,Solutions Engineering,"Herriman, UT",Solutions Engineering,Solutions Engineer,2018-05-21,-112.03299,40.51411
+Blum,Ron,Engineering,"Cambridge, MA",IDE,QA Engineer,2017-08-14,-71.132947,42.380442
+Bowsher,Phil,Sales,"Indianapolis, IN","Customer Success, Life Sciences",Director Life Sciences Practice,2015-09-28,-86.13216,39.775092
+Brennan,Jessica,People Operations,"Salem, MA",People Operations,Payroll and Benefits Partner,2015-11-16,-70.873647,42.642845
+Bryan,Jenny,Engineering,"BC, Canada",Tidyverse,Software Engineer,2017-01-03,-125.0032,53.99983
+Buch,Dan,Engineering,"Pittsburgh, PA",Connect,Software Engineer,2019-03-18,-79.950968,40.47441
+Burke,Shawn,Finance,"Hamilton, MA",Finance,"VP, Finance",2019-02-04,-70.879123,42.635443
+Calies,Nathan,Support,"Golden, CO",Support,Technical Support Engineer,2018-07-09,-105.245659,39.718539
+Carney,Bill,Marketing,"Medway, MA",Marketing,Marketing Director,2014-02-17,-71.427663,42.156282
+Carome,Anne,Marketing,"Boston, MA",Marketing,Marketing and Events Manager,2016-10-03,-71.026964,42.370567
+Cetinkaya-Rundel,Mine,Education,"Durham, NC",Education,Data Scientist and Professional Educator (PT),2016-07-01,-79.023205,35.850295
+Chadwick,Lauren,Sales,"Atlanta, GA","Customer Success, Life Sciences",Customer Success Rep,2018-04-23,-84.47405,33.844371
+Chang,Winston,Engineering,"Minneapolis, MN",Shiny,Software Engineer,2012-08-20,-93.254518,45.096587
+Chaudhari,Chaita,Engineering,"Austin, TX",Connect,QA Engineer,2016-03-01,-97.771258,30.326374
+Chen,Richard,Engineering,"Sunnyvale, CA",IDE,QA Engineer,2018-10-08,-122.026548,37.385697
+Cheng,Joe,Engineering,"Sammamish, WA",Shiny,CTO,2009-09-21,-122.010131,47.669312
+Clark,Jay,Support,"Patchogue, NY",Support,Technical Support Engineer,2017-04-24,-73.01511,40.76565
+Clemens,Jim,Sales,"Center Harbor, NH","Customer Success, Enterprise Advocate","VP, Sales",2015-04-13,-71.466212,43.69387
+Conroy,Adam,Engineering,"Somerville, MA",IDE,Software Engineer,2018-08-01,-71.098896,42.38092
+Crisan,Emily,Support,"Columbus, OH",Support,Technical Support Engineer,2018-04-02,-83.013402,40.100924
+Csardi,Gabor,Engineering,UK,Tidyverse,Software Engineer,2017-04-10,-2.69531,54.75844
+Curran,Jonathan,Engineering,"Arvada, CO",Connect,Software Engineer,2017-05-08,-105.223945,39.522014
+de Vries,Andrie,Solutions Engineering,UK,"Solutions Engineering, Partners",Solutions Engineer,2017-11-15,-2.69531,54.75844
+Dempsey,Rachael,Sales,"Dorchester, MA",Enterprise Advocate,Enterprise Advocate,2017-10-09,-71.042158,42.291413
+Demsko,Michael Jr.,Sales,"Brooklyn, NY",Enterprise Advocate,Enterprise Advocate,2018-06-22,-73.989319,40.694481
+Dipert,Alan,Engineering,"Lake Forest, CA",Shiny,Software Engineer,2017-05-08,-117.693074,33.64079
+Dunnington,Dewey,Engineering,"Addison, VT",Tidyverse,"Intern, ggplot2",2019-05-01,-73.302622,44.088667
+Dykiel,Hadrien,Sales,"Denver, CO","Customer Success, Insurance",Customer Success Rep,2017-10-09,-105.115977,39.744773
+Engeln,Mark,Sales,"Santa Ana, CA",Customer Success,Customer Success Rep,2016-10-17,-117.858473,33.74822
+Falbel,Daniel,Engineering,"São Paulo, Brazil",Modeling,Software Engineer,2019-04-01,-46.63611,-23.5475
+Feinhauer,Karl,Engineering,"Grand Prairie, TX",IDE,Software Engineer,2017-05-08,-97.009389,32.776671
+Filz,Tonya,Sales,"Westfield, IN",Customer Success,Manager - Customer Success Team,2017-03-13,-86.12749,40.04282
+Forest,Josh,Engineering,"Falmouth, ME","Hosted, Internal Systems",Site Reliability Engineer,2018-09-04,-70.270696,43.73928
+Fowler,Sarah,Engineering,"Brooklyn, NY",Hosted,Software Engineer,2019-04-29,-73.989319,40.694481
+Francois,Romain,Engineering,"Montpellier, France",Tidyverse,Software Engineer,2018-04-09,3.87723,43.61092
+Gadrow,Amanda,Support,"Pickerington, OH",Support,Support and QA Leader,2016-03-15,-82.7535,39.88423
+Ganie,Saudia,People Operations,"Plainfield, NJ",People Operations,Technical Recruiting Lead,2019-04-01,-74.414995,40.615202
+Gartland,Kevin,Engineering,"Lakewood, OH",Connect,QA Engineer,2018-07-16,-81.79819,41.48199
+Gladu,Elisa,Marketing,"Austin, TX",Marketing,Field Marketing Specialist,2019-02-19,-97.771258,30.326374
+Gold,Alex,Solutions Engineering,"Washington, DC",Solutions Engineering,Solutions Engineer,2019-03-11,-77.036366,38.895112
+Gregory,Mel,Engineering,"Seattle, WA",Hosted,Software Engineer,2016-08-15,-122.332071,47.60621
+Grolemund,Garrett,Education,"Clearwater, FL",Education,Data Scientist and Professional Educator,2012-09-04,-82.800102999999993,27.965853
+Hadley,Darby,Engineering,"Austin, TX","IDE, Hosted",QA Engineer,2015-10-19,-97.771258,30.326374
+Hankens,Kevin,Engineering,"Salem, MA",RSPM,Software Engineer,2017-11-09,-70.873647,42.642845
+Hayden,Kevin,Sales,"Marblehead, MA","Customer Success, Financial Services",Major Accounts Executive,2019-02-11,-70.83484,42.49284
+Hecht,Jennifer,People Operations,"Brookline, MA",People Operations,"VP, People Operations",2018-04-02,-71.088745,42.308198
+Held,Max,Engineering,Germany,Tidyverse,Software Engineer - Contract,2019-05-01,10.5,51.5
+Henry,Lionel,Engineering,Belgium,Tidyverse,Software Engineer,2016-10-01,4,50.83333
+Hester,Jim,Engineering,"Solon, OH",Tidyverse,Software Engineer,2016-01-11,-81.440322,41.386753
+Hill,Alison,Education,"Lake Oswego, OR",Education,Data Scientist and Professional Educator,2018-10-22,-122.691388,45.408374
+Holloway,Shane,Engineering,"Colorado Springs, CO","Connect, Business Automation",Software Engineer,2019-04-01,-104.857828,38.861469
+Horwitz,Kaitlyn,G&A,"Nashville, TN","G&A, People Operations",Acting Business Manager,2018-10-01,-86.778098,36.165688
+Howe,Carl,Education,"Stow, MA",Education,Director of Education,2018-04-30,-71.50562,42.43704
+Hurst,Dave,Marketing,"Mountain View, CA",Partners,Business Development Director,2017-10-09,-122.01774,37.388556
+Iannone,Richard,Engineering,"Oakville, ON","Shiny, Publishing",Software Engineer,2018-03-12,-79.68292,43.45011
+Jackson,Scott,Engineering,"Philadelphia, PA",Connect,Software Engineer,2017-01-16,-75.11787,40.001811
+Kawaf,Tareef,G&A,"Lincoln, MA",G&A,President,2013-03-15,-71.30395,42.42593
+Kearney,Derrick,Engineering,"Lafayette, IN","IDE, Connect",QA Engineer,2017-11-01,-86.889633,40.417778
+Keydana,Sigrid,Engineering,"Munich, Germany",Modeling,Applied Researcher,2018-06-01,11.57549,48.13743
+Kephart,Curtis,Marketing,"Portland, OR",Marketing,Mktg Community Leader,2018-02-01,-122.690794,45.507856
+Kietzman,Ben,Engineering,"Pembroke, VA",Ursa,Software Engineer,2018-11-12,-80.63895,37.31957
+Kim,Emily,Engineering,"Portland, OR",RSPM,"Intern, RSPM",2019-05-13,-122.690794,45.507856
+Kipp,Andrew,Engineering,"Seattle, WA",Hosted,Software Engineer,2013-05-20,-122.332071,47.60621
+Knast,Peter,Sales,"Huntington Beach, CA",Enterprise Advocate,Director of Worldwide New Business,2014-02-01,-117.999227,33.660297
+Kress,Stephen,Engineering,"Double Oak, TX",Connect,Software Engineer,2018-02-08,-97.00016,33.013546
+Kuhn,Max,Engineering,"Waterford, CT","Tidyverse, Modeling",Software Engineer,2016-11-19,-72.156576,41.36173
+Kuo,Kevin,Engineering,"Kirkland, WA",Modeling,Software Engineer,2017-07-31,-122.208735,47.681488
+Lands,Matt,IT,"Burbank, CA",Business Automation,Software Engineer,2018-11-01,-118.292773,34.200993
+Lang,Jeremy,Sales,"Arlington, MA",Customer Success,"VP, Customer Success",2019-04-01,-71.167083,42.417695
+Leker,Brenna,Engineering,"Alexandria, VA",Connect,Software Engineer,2017-11-27,-77.04692,38.80484
+Lin,Greg,Engineering,"Bellaire, TX",RSPM,Software Engineer,2018-08-01,-95.460905,29.704019
+Lopp,Sean,Solutions Engineering,"Littleton, CO","Connect, RSPM, Solutions Engineering",Solutions Engineer,2015-11-30,-105.011797,39.545917
+Marchetti,Michael,Engineering,"Victor, NY",Connect,Software Engineer,2018-07-02,-77.426906,42.973715
+Masiello,Katie,Sales,"Seattle, WA",Customer Success,Customer Success Rep,2019-05-06,-122.332071,47.60621
+Mccombie,Richard,Support,UK,Support,Technical Support Engineer,2019-03-25,-2.69531,54.75844
+McKinney,Wes,Engineering,"Nashville, TN",Ursa,Software Architect,2018-04-18,-86.778098,36.165688
+McPherson,Jonathan,Engineering,"Kirkland, WA",IDE,Engineering lead,2013-05-06,-122.208735,47.681488
+Medina,Karen,Engineering,"Boston, MA",Hosted,Software Engineer,2018-04-23,-71.026964,42.370567
+Milnes,Jason,Sales,"Allison Park, PA","Customer Success, Life Sciences",Major Accounts Executive,2018-11-16,-79.95867,40.55951
+Mock,Thomas,Sales,"Dallas, TX",Customer Success,Customer Success Rep,2018-08-01,-96.790329,32.781179
+Ng,Carmen,Finance,"Newtonville, MA",Finance,Controller,2017-08-07,-71.203666,42.350097
+Noble,Toni,Engineering,"Boston, MA",Connect,QA Engineer,2017-10-09,-71.026964,42.370567
+Nolen,Steve,Engineering,"Philadelphia, PA","Hosted, Internal Systems",Site Reliability Engineer,2016-07-01,-75.11787,40.001811
+O'Briant,Kelly,Solutions Engineering,"Arlington, VA",Solutions Engineering,Solutions Engineer,2018-06-04,-77.099113,38.885484
+Oberg,Roger,Marketing,"Austin, TX","Marketing, Partners","VP, Marketing",2014-01-16,-97.771258,30.326374
+Overholt,Kristopher,Solutions Engineering,"Austin, TX",Solutions Engineering,Solutions Engineer,2018-11-15,-97.771258,30.326374
+Parry,Josiah,Sales,"Cambridge, MA",Customer Success,Customer Success Rep,2019-04-08,-71.132947,42.380442
+Pedersen,Thomas Lin,Engineering,Denmark,Tidyverse,Software Engineer,2018-10-22,10,56
+Perman,Sam,Engineering,"Cambridge, MA",Hosted,Software Engineer,2019-03-04,-71.132947,42.380442
+Porras Luraschi,Javier,Engineering,"Carnation, WA","IDE, Modeling",Software Engineer,2016-01-04,-121.927236,47.661862
+Pylvainen,Ian,Support,"Jamaica Plain, MA",Support,Technical Support Engineer,2013-11-04,-71.121097,42.309661
+Regenstein,Jonathan,Sales,"Atlanta, GA","Customer Success, Financial Services",Director Financial Services Practice,2016-03-14,-84.47405,33.844371
+Richardson,Neal,Engineering,"San Francisco, CA",Ursa,"Engineering Director, Ursa Labs",2019-04-22,-122.727802,37.784827
+Rickert,Joseph,Marketing,"San Jose, CA",Marketing,Evangelist,2016-08-13,-121.705327,37.189396
+Ritchie,Gary,Engineering,"Sammamish, WA",IDE,Software Engineer,2016-09-26,-122.010131,47.669312
+Rodriguez,Daniel,Solutions Engineering,"Austin, TX",Solutions Engineering,Solutions Engineer,2019-04-29,-97.771258,30.326374
+Rodriguez,Ingrid,Engineering,"Doral, FL",Connect,Software Engineer,2018-12-03,-80.35533,25.81954
+Rohrbaugh,Nick,Sales,"Newport, PA","Customer Success, Financial Services",Customer Success Rep,2018-01-22,-80.354509,40.900063
+Ruiz,Edgar,Solutions Engineering,"Pass Christian, MS","Tidyverse, Solutions Engineering",Solutions Engineer,2016-10-17,-89.264327,30.426162
+Sager,William,Engineering,"McKinney, TX",Connect,Software Engineer,2018-06-11,-96.497182,33.181157
+Saint-Jacques,Francois,Engineering,"Montreal, QC",Ursa,Software Engineer,2018-11-19,-73.58781,45.50884
+Santos,Tony,Engineering,"Seattle, WA",Design,Design Technologist,2018-07-16,-122.332071,47.60621
+Schloerke,Barret,Engineering,"McLean, VA",Shiny,Software Engineer,2018-06-01,-77.18672,38.935202
+Semple Kaardal,Maria,Engineering,"BC, Canada",IDE,Software Engineer,2018-04-02,-125.0032,53.99983
+Shaver,Robby,Engineering,"Watertown, MA","Connect, RSPM, Hosted, Design",VP of Product Design,2016-03-28,-71.177998,42.372596
+Shellenberger,Katie,Sales,"Castle Rock, CO","Customer Success, Enterprise Advocate",Sales Operations Specialist,2018-12-03,-104.852987,39.445502
+Sievert,Carson,Engineering,"Eden Prairie, MN",Shiny,Software Engineer,2018-09-17,-93.440429,44.850563
+Sinha,Swati,Engineering,"Fremont, CA",RSPM,QA Engineer,2018-08-01,-121.988572,37.54827
+Sinnott,Sean,Engineering,"Sharon, MA",Hosted,Software Engineer,2017-04-26,-71.184785,42.105288
+Smith,Brian,Engineering,"San Diego, CA",Connect,Software Engineer,2019-04-22,-117.170912,32.724103
+Spiewak,Josh,Engineering,"Foxborough, MA","Hosted, Internal Systems",Engineering lead,2016-01-20,-71.24783,42.06538
+Staszuk,Paulina,Support,"Toronto, ON",Support,Head of Customer Solutions,2019-04-22,-79.4163,43.70011
+Stephens,Nathan,Solutions Engineering,"Elkridge, MD",Solutions Engineering,Director of Solutions Engineering,2015-07-07,-76.753093,39.205756
+Swinehart,Greg,Marketing,"Edmonds, WA","Marketing, Design",Creative Lead,2018-02-05,-122.372401,47.806068
+Tierney,Chris,Engineering,"Natick, MA",Connect,Software Engineer,2019-03-04,-71.3495,42.28343
+Tiwari,Shalu,Engineering,"Austin, TX",Shiny,QA Engineer,2017-10-10,-97.771258,30.326374
+Toet,Samantha,Marketing,"Charlottesville, VA","Marketing, Partners",Partners Marketing Specialist,2019-02-25,-78.556765,38.087663
+Tsang,Jason,Finance,"Quincy, MA",Finance,Junior Accounting Intern,2019-01-14,-71.006042,42.241799
+Ushey,Kevin,Engineering,"Kirkland, WA","IDE, Modeling",Software Engineer,2014-05-06,-122.208735,47.681488
+Vaughan,Davis,Engineering,"Huntersville, NC",Tidyverse,Software Engineer,2018-09-10,-80.898668,35.462187
+Vermeersch,Paige,Finance,"Shelby Township, MI",Finance,Accountant - Intern,2019-05-06,-83.006506,42.655416
+Vermeersch,Ann,Finance,"St Clair Shores, MI",Finance,Accountant,2017-11-15,-84.767911,43.937677
+Walker,Clay,IT,"San Diego, CA",Business Automation,Web Developer,2016-11-14,-117.170912,32.724103
+Wan,Steve,Support,"Victoria, BC",Support,Technical Support Engineer,2019-02-19,-123.3693,48.43294
+Wickham,Hadley,Engineering,"Houston, TX",Tidyverse,Chief Scientist,2012-08-20,-95.309789,29.813142
+Wilson,Greg,Education,"Toronto, ON",Education,Data Scientist and Professional Educator,2018-09-04,-79.4163,43.70011
+Xie,Yihui,Engineering,"Elkhorn, NE",Publishing,Software Engineer,2013-08-26,-96.238818,41.288631
+Yoder,Jonathan,Engineering,"Eggleston, VA",RSPM,Software Engineer,2016-03-01,-80.61867,37.287350000000004

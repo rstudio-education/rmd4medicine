@@ -1,0 +1,264 @@
+---
+title: 'Response and adverse events to chemotherapy: A mock study'
+author:
+- affiliation: RStudio
+  name: Alison Hill, Ph.D.
+- affiliation: University of Michigan
+  name: Peter Higgins, MD, Ph.D.
+output:
+  distill::distill_article: 
+    toc: TRUE
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, 
+                    message = FALSE)
+```
+
+
+```{r load-packages}
+library(janitor) # for tabyl
+library(skimr) # for EDA
+library(here) # for file paths
+library(glue) # for reporting
+library(tidyverse) # for all else
+theme_set(theme_minimal())
+```
+
+
+```{r import-data}
+mockdata <- read_csv(here("static/mockpaper/data/mockbsd.csv")) %>% 
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", 
+                             "Died" = "2"))  
+```
+
+```{r include=FALSE}
+glimpse(mockdata)
+```
+
+```{r}
+# confirm sites
+sites <- mockdata %>% 
+  distinct(site) %>% 
+  pull()
+
+# confirm arms
+arms <- mockdata %>% 
+  distinct(arm) %>% 
+  pull()
+```
+
+# Participation
+
+The dataset we analyzed on `r Sys.Date()` has `r nrow(mockdata)` rows and `r ncol(mockdata)` variables. We have data from `r length(sites)` sites: `r glue_collapse(sites, ", ", last = " and ")`. The number of participants per site is as follows: 
+
+```{r echo=FALSE}
+mockdata %>% 
+  count(site) %>% 
+  glue_data("{site} has {n} participants")
+```
+
+We have data from `r n_distinct(mockdata$arm)` arms: `r glue_collapse(arms, ", ", last = " and ")`. The number of participants per arm is as follows: 
+
+```{r echo=TRUE, results='asis'}
+mockdata %>% 
+  count(arm) %>% 
+  glue_data("{arm} has {n} participants") %>% 
+  glue_collapse(sep = "\n") %>% 
+  knitr::kable()
+
+mockdata %>% 
+  count(arm) %>% 
+  glue_data("{arm} has {n} participants") %>% 
+  glue_collapse(sep = "\n") %>% 
+  tibble::enframe() %>% 
+  knitr::kable()
+
+mockdata %>% 
+  count(arm) %>% 
+  glue_data("{arm} has {n} participants") %>% 
+  glue_collapse(sep = "  \n") 
+```
+
+
+# Summary
+
+```{r smell-tests, results="asis", echo = FALSE}
+# smell test (n's, NAs, etc)
+skimr::skim(mockdata) %>% 
+  skimr::kable()
+```
+
+```{r smell-by-arm, include=FALSE}
+# smell test by group (n's, NAs, etc)
+mockdata %>% 
+  group_by(arm) %>% 
+  skimr::skim() %>% 
+  skimr::kable()
+```
+
+```{r dupe-check, include=FALSE}
+# check for duplicates
+# hooray
+mockdata %>% 
+  janitor::get_dupes(case)
+```
+
+
+
+# Demographics
+
+## Age
+
+```{r}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white',
+                 fill = "#0D0887FF",
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count", 
+       title = "Age Distribution in the \nCholangiocarcinoma Mock Study") +
+  scale_y_continuous(breaks = scales::pretty_breaks())
+```
+
+## Sex
+
+```{r}
+# a 1-way tabyl
+mockdata %>% 
+  tabyl(sex) %>% 
+  adorn_totals("row") %>%
+  adorn_pct_formatting() %>% 
+  knitr::kable()
+```
+
+## Age x Sex
+
+```{r age-by-sex-density}
+ggplot(mockdata, aes(age)) +
+  geom_density(aes(fill = sex),
+                 color = 'white') +
+  labs(x = "Age", 
+       title = "Age Distribution in the \nCholangiocarcinoma Mock Study") +
+  scale_fill_viridis_d(option = "plasma", end = .7, alpha = .7) 
+  #scale_fill_scico_d(palette = 'lapaz', end = .4, alpha = .7) 
+```
+
+```{r age-by-sex}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(aes(fill = sex),
+                 color = 'white', 
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count", 
+       title = "Age Distribution in the \nCholangiocarcinoma Mock Study") +
+  facet_wrap(vars(sex)) +
+  scale_y_continuous(breaks = scales::pretty_breaks()) +
+  scale_fill_viridis_d(option = "plasma", end = .7, alpha = .7, guide = FALSE) 
+  # scale_fill_scico_d(guide = FALSE, palette = 'lapaz', end = .4) 
+```
+
+
+
+
+# Outcomes at follow-up
+
++ 1 = lived
++ 2 = died
+
+```{r}
+# followups, a 1-way tabyl
+mockdata %>% 
+  tabyl(fu_fct) %>% 
+  adorn_totals("row") %>%
+  adorn_pct_formatting() %>% 
+  knitr::kable()
+```
+
+```{r}
+# calculate proportion survived by arm
+prop_surv <- mockdata %>% 
+  count(arm, fu_fct, name = "by_surv", .drop = FALSE) %>% 
+  add_count(arm, wt = by_surv, name = "arm_total") %>% 
+  mutate(prop = by_surv/arm_total) %>% 
+  filter(fu_fct == 1)
+```
+
+
+
+```{r survival-prop}
+# barplot of percent survival by arm
+ggplot(prop_surv, aes(x = arm, y = prop, fill = arm)) +
+  geom_col(colour = "gray") +
+  labs(y= "Percent Survived", x= "Study Arm") +
+  scale_fill_viridis_d(option = "plasma") +
+  scale_y_continuous(labels = scales::percent_format(accuracy = .1))
+```
+
+
+
+```{r}
+# a 2-way tabyl
+mockdata %>% 
+  tabyl(fu_fct, sex) %>% 
+  adorn_totals("row") %>% # can also do "col", or c("row", "col")
+  adorn_percentages("row") %>% 
+  adorn_pct_formatting(digits = 2) %>% 
+  adorn_ns() %>% 
+  knitr::kable()
+```
+
+Arms (1 = lived, 2 = died)
+
+```{r}
+# a 2-way tabyl
+mockdata %>% 
+  tabyl(arm, fu_fct) %>% 
+  adorn_totals("row") %>% # can also do "col", or c("row", "col")
+  adorn_percentages("row") %>% 
+  adorn_pct_formatting(digits = 2) %>% 
+  adorn_ns() %>% 
+  knitr::kable()
+```
+
+geom_lollipop median survival time for each group
+
+make bar/lollipop chart of proportions here (% survived)
+
+
+Look at survival time now
+
+```{r survival-days}
+# distributions of survival time by arms (in days censored)
+ggplot(mockdata) +
+  aes(x=arm, y = fu_time, fill = arm) +
+  geom_violin(alpha = 0.8) +
+  geom_jitter(width = 0.25, alpha = 0.5) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Study Arm") +
+  scale_fill_viridis_d(option = "plasma", guide = FALSE)
+  #scale_fill_scico_d(palette = 'lapaz', guide = FALSE)
+```
+
+sites
+
+```{r}
+ggplot(mockdata,
+       aes(x = site, y = fu_time, fill = arm)) +
+  geom_boxplot(alpha = .8) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Site") +
+  scale_fill_viridis_d(option = "plasma")
+  #scale_fill_scico_d(palette = 'lapaz', guide = FALSE)
+```
+
+
+```{r}
+mockdata %>% 
+  group_by(arm) %>% 
+  select(fu_time) %>% 
+  summarise_all(list(~mean(.), ~median(.), ~min(.), ~max(.)))
+```
+

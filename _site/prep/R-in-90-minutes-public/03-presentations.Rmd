@@ -1,0 +1,129 @@
+---
+title: "Presentation Recipe Exercise"
+output: html_document
+params:
+  filename: "newco-employees.csv"
+  plot_color: "blue"
+---
+```{r setup, include=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(googlesheets)
+library(lubridate)
+library(glue)
+library(DT)
+knitr::opts_chunk$set(echo = TRUE,  warning = FALSE, message = FALSE)
+theme_set(theme_minimal())
+```
+
+## 0. Change the presentation
+
+This exercise will help you understand how to change the presentation of your data down in section 3. We'll use the same employee hiring by year data we started with in the Overview that we derived from `employees.csv`. However, your challenge will be to:
+
+1. Change the type of graph from bars to points by changing geom_col() to geom_point().
+2. Add another layer to the graph to draw lines between the points using geom_line()
+3. Add a trend line to the graph by adding a geom_smooth(method = "lm", se = FALSE) to the plot
+4. Add your own title by modifying labs("title") to something more your taste
+
+## 1. Gathering Data 
+
+```{r Read-Sheet}
+employees <- read_csv(params$filename)
+```
+
+## 2. Preparation of data
+
+Ignore this chunk for the moment. It simply creates a tibble showing how many employees were
+hired each year; we'll talk more about this type of code when we get to Data Preparation.
+
+```{r employee-stats}
+
+employees_hired_by_year <- employees %>% 
+  mutate(Year = year(HireDate)) %>% 
+  count(Year, sort = FALSE)
+
+employees_hired_by_year
+```
+
+## 3. Original Presentation of data
+
+This is the plot we originally showed in the overview. You'll be making modfications in the R code chunk after this one.
+
+```{r employees-hired-by-year-graph}
+ggplot(employees_hired_by_year, mapping = aes(x = Year, y = n)) +
+  geom_col(fill = "blue", color = "blue") +   
+  # Leave the line following alone;
+  # we added it so that your x-axis will still look pretty once you've made your changes.
+  scale_x_continuous(breaks = 2008:2020) +
+  labs(title = "Employees Hired By Year")
+```
+
+### 3.1 Changing columns to points
+
+The prior chart used a column geom. You can turn this into a point plot by changing the `geom_col` statement to `geom_point`. Try making that change below and then clicking the green right arrow to run the code and display the result.
+
+```{r employees-hired-by-year-graph-points}
+ggplot(employees_hired_by_year, mapping = aes(x = Year, y = n)) +
+  geom_col(fill = "blue", color = "blue") +   # change "geom_col" to "geom_point"
+  # Leave the line following alone;
+  # we added it so that your x-axis will still look pretty once you've made your changes.
+  scale_x_continuous(breaks = 2008:2020) +
+  labs(title = "Employees Hired By Year")
+```
+
+### 3.2 Changing points to lines
+
+We can similary change this code to create a line chart by changing `geom_point` to `geom_line`. Again, make the change in the code below and then click the green right arrow to see the result.
+
+```{r employees-hired-by-year-graph-lines}
+ggplot(employees_hired_by_year, mapping = aes(x = Year, y = n)) +
+  geom_point(fill = "blue", color = "blue") +   # change geom_point to geom_line
+  # Leave the line following alone;
+  # we added it so that your x-axis will still look pretty once you've made your changes.
+  scale_x_continuous(breaks = 2008:2020) +
+  labs(title = "Employees Hired By Year")
+```
+
+### 3.3 Adding geoms
+
+This exercise shows you how to add new geom layers to your plot to create a more complex chart.
+
+For this exercise, we want three layers of data:
+
+1. a layer of points,
+2. a layer of lines,
+3. a layer showing the linear trend over time.
+
+Make your changes in the chunk below. You can click the green right arrow below to run your chunk and your plot will appear below the chunk.
+
+1. Change the type of graph from bars to points by changing geom_blank() to geom_point().
+2. Add another layer to the graph to draw lines between the points using geom_line()
+3. Add a trend line to the graph by adding a geom_smooth(method = "lm", se = FALSE) to the plot
+4. Add your own title by modifying labs("title") to something more your taste
+
+
+```{r employees-hired-by-year-working-graphic}
+ggplot(employees_hired_by_year, mapping = aes(x = Year, y = n)) +
+  # 1. You'll want to change the geom_blank below to turn this into one that plots points.
+  # . Be sure to end it with a plus sign so that you'll keep the rest of the plot geoms.
+  geom_blank() +
+  # 2. Now add another geom that draws lines between the points. You might want to change
+  #    the color of the line by adding the argument color = params$plot_color.
+  geom_blank() +
+  # 3. Add your trend line code here
+  geom_blank() +
+    # Leave this alone; we added it so that your x-axis will still look pretty once you've made your changes.
+   scale_x_continuous(breaks = 2008:2020) +
+  # 4. Change the title of your plot to something more to your taste below.
+  labs(title = "Title")
+```
+
+### 4. Publishing
+
+This document has shown you only a few options for how you can present your data. However, this capability is most powerful if you can publish your output for others to view. 
+
+The RStudio IDE offers users one-button publishing to RStudio Connect and other platforms through the blue Publish button to the immediate right of the Run button at the top of the source code pane. You'll need login credentials for the publishing platform you use, but if you enter those once, all publishing to that platform from then on will happen with a single click.
+
+If you wish to publish your analysis after you have knit it, click the blue "Publish" button. You'll be asked for what server your wish to publish to. Interally, we use the server `connect.rstudioservices.com`. You'll then be asked to authenticate with your Google Docs login credentials. Once you've logged into the server once, RStudio Cloud will remember your credentials for that server from then on, thereby allowing one-button publishing of your analyses.
+
+
+

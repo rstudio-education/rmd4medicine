@@ -1,0 +1,13 @@
+name: "rmd4pharma"
+title: "rmd4pharma"
+description: |
+  R Markdown for R / Pharma 2020
+output_dir: "_site"
+creative_commons: CC BY-SA
+repository_url: https://github.com/apreshill/rmd4pharma
+output: distill::distill_article
+navbar:
+  right:
+    - icon: fab fa-github
+      href: https://github.com/apreshill/rmd4pharma
+

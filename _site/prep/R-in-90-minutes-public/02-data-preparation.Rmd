@@ -1,0 +1,132 @@
+---
+title: "Data Preparation Recipes"
+output: html_document
+params:
+  filename: "newco-employees.csv"
+  plot_color: "blue"
+---
+```{r setup, include=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(googlesheets)
+library(lubridate)
+library(glue)
+library(DT)
+knitr::opts_chunk$set(echo = TRUE,  warning = FALSE, message = FALSE)
+theme_set(theme_minimal())
+```
+
+## 0. Data Preparation
+
+Now that you know how to present your data, we'll work backwards to how we can prepare data for presentation. In this R Markdown document, we'll walk you through some basic counting, grouping, and assembly of data from our `employees` data set.
+
+We'll work through several slicing and dicing data tasks in this document. Your tasks will be to answer the following questions
+
+0. How many employees does NewCo have?
+1. How many employees are there in the Engineering department?
+2. How many employees are there in each department within NewCo?
+3. What are the most common first names in the company?
+4. What are the most common first names in Engineering?
+5. How many job functions does NewCo have?
+
+These tasks will get you comfortable with some of the basic data manipulation operators in the package `dplyr`, which is part of the `tidyverse`.
+
+## 1. Gathering Data 
+
+This is the same employees tibble we've been working with.
+
+```{r Read-Sheet}
+employees <- read_csv(params$filename)
+```
+
+## 2. Preparation of data
+
+Experienced data scientists will tell you that preparing your data is 90% of most analytical jobs. While data preparation can become quite complex, we're going to use simple counting and filtering to get started.
+
+Let's begin by using the pipe command and counting how many employees NewCo has. 
+
+```{r employee-count}
+
+employees %>% 
+    count()
+```
+
+We're now going to do a series of additional counting exercises using dplyr to flex your data preparation muscles. 
+
+### 2.1 Counting Engineering Employees
+
+Our first task is to answer the question "How many employees are there in Engineering?" We can answer this question by filtering our `employees` tibble to include only those rows where the Department is Engineering, and then counting those occurrances.
+
+This translates into a simple data pipeline as shown below.
+
+```{r education-employees}
+
+employees %>% 
+ filter(Department == "Engineering") %>%
+ count()
+```
+
+
+### 2.2.How many employees are there in each department?
+
+Our first task is to answer the question "How many employees are there in each department?" It turns out we can use the pattern above to answer this question without the "mutate" statement.
+
+One item of information you need is that the `employees` tibble contains a column named *Department*. Given that piece of information, try modifying the chunk below to create a new tibble named *employees_hired_by_department*.
+
+```{r employees-in-each-department}
+
+employees_hired_by_department <- employees %>% 
+  count(column_name_goes_here)       # this won't work until you change it.
+
+# the statement below just shows you the tibble you computed.
+print(employees_hired_by_department)
+```
+
+### 2.3. What are the most common first names in the company?
+
+Your second task is to answer the question "What are the most common first names in the company?" You should now know how to change the *count* statement to count the *FirstName* column. You can probably intuit how to change the statement to also sort the result.
+
+```{r common-names}
+
+most_common_names <- employees %>% 
+# fill in a count statement below that will count the values in the column FirstName and
+# sort the result.
+
+# Change this
+  count()
+# to something like count(column_name, sort = TRUE)
+  
+print(most_common_names)
+```
+
+### 2.4. What are the most common first names in Engineering?
+
+Now we want to know the most common first names in Engineering. That means we're going to
+have to select the rows where the Department column is equal to "Engineering". Try modifying the answer you created in the chunk above to add an appropriate filter statement that gives you the proper result.
+
+```{r common-names-in-engineering}
+
+most_common_engineering_names <- employees %>% 
+# First add a statement that selects only the rows where Department == "Engineering".
+# Don't forget to put a pipe sign (%>%) at the end.
+  
+# Secondly, add a statement to do a sorted count of the FirstNames column.
+
+print(most_common_engineering_names)
+```
+
+
+### 2.5. How many job functions does NewCo have?
+
+The employees tibble has a column named *Function* which represents the person's job title. How many unique job functions do we have?
+
+Hint: use the count operator twice. Also, more than one solution to this problem exists (which is true for all these exercises)
+
+```{r number-job-titles}
+
+job_functions <- employees %>% 
+# We'll leave it up to you to figure out how to do this.
+
+print(job_functions)
+```
+
+Congratulations! You've learned how to slice and dice data!

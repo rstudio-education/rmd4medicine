@@ -1,0 +1,163 @@
+---
+title: "Response and adverse events to chemotherapy: A mock study"
+author: 
+  - name: "Alison Hill, Ph.D."
+    url: https://alison.rbind.io
+    affiliation: RStudio
+    affiliation_url: https://www.rstudio.com
+  - name: "Peter Higgins, MD, Ph.D."
+    url: https://www.uofmhealth.org/profile/4/peter-doyle-higgins-md-phd
+    affiliation: University of Michigan
+    affiliation_url: https://www.uofmhealth.org/
+creative_commons: CC BY
+output: 
+  bookdown::word_document2: default
+  bookdown::html_document2: 
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+                      fig.path = here::here("static/mockpaper/03-figs/"))
+```
+
+
+```{r load-packages, include=FALSE}
+library(arsenal) # for table one
+library(janitor) # for tabyl
+library(skimr) # for EDA
+library(cowplot) # for multi-panel plot
+library(readxl) # for data importing
+library(here) # for file paths
+library(infer) # for tidy statistics
+library(scico) # for scicomm colors
+library(tidyverse) # for all else
+theme_set(theme_minimal())
+```
+
+
+```{r import-data, include=FALSE}
+mockdata <- read_xlsx(here("static/mockpaper/data/mockdata.xlsx"))
+```
+
+# Basic sanity checking/EDA here
+
+
+```{r}
+glimpse(mockdata)
+
+# skim(mockdata)
+
+mockdata %>% 
+  group_by(arm) %>% 
+  skim()
+```
+
+
+# Make table one here
+
+Let's make a basic Table 1 grouped by arm with details on sex and age in each group.
+
+```{r results="asis"}
+#summary by groups
+tab1 <- tableby(arm ~ sex + age, data = mockdata)
+summary(tab1, text=TRUE)
+```
+
+Let's make a Table 1 - but ungrouped, with stats on BMI, sex, Age in each group.
+
+```{r results="asis"}
+#summary without groups
+tab.noby <- tableby(~ bmi + sex + age, data = mockdata)
+summary(tab.noby)
+```
+
+Let's make a Table 1 but now control # of digits
+
+```{r results="asis"}
+summary(tableby(arm ~ sex + fu_time, data = mockdata), 
+        digits = 4, digits.p = 2, digits.pct = 1)
+```
+
+# Run some stats and make a table here
+
+Arm x fu_stat chi square table (1 = lived, 2 = died)
+
+```{r}
+mockdata %>% 
+  tabyl(arm, fu_stat) %>% 
+  adorn_totals("row") %>% # can also do "col", or c("row", "col")
+  adorn_percentages() %>% 
+  adorn_pct_formatting() %>% 
+  adorn_ns() %>% 
+  knitr::kable()
+```
+
+
+```{r eval = FALSE}
+mockdata %>% 
+  specify(fu_stat ~ arm) %>% # alt: response = fu_stat, explanatory = arm
+  calculate(stat = "Chisq")
+```
+
+
+```{r eval = FALSE}
+mockdata %>% 
+  specify(formula = fu_stat ~ arm, success = "1") %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 1000, type = "permute") %>% 
+  calculate(stat = "diff in props", order = c("1", "2"))
+```
+
+make bar/lollipop chart of proportions here (% survived)
+
+Start with a barplot
+for percent survival
+tag it as panel A for a multipanel plot
+
+```{r survival_barplot}
+mockdata %>% 
+  group_by(arm) %>% 
+  summarize(surv = length(which(fu_stat==1)),
+         died = length(which(fu_stat==2)),
+         pct_surv = surv*100/(died+surv)) %>% 
+  select(arm, surv, died, pct_surv) %>% 
+  ggplot() +
+  aes(x=arm, y = pct_surv, fill=arm) +
+  geom_col(colour = "gray") +
+  labs(y= "Percent Survived", x= "Study Arm", tag ="A") +
+  scale_fill_scico_d(palette = 'nuuk')  ->
+p1
+
+p1
+```
+
+Then distribution plot of survival time (in days censored)
+
+```{r}
+ggplot(mockdata) +
+  aes(x=arm, y = fu_time, fill=arm) +
+  geom_jitter(width =0.25, alpha=0.5) +
+  geom_violin(alpha =0.3) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Study Arm", tag = "B") +
+  theme_minimal() +
+  scale_fill_scico_d(palette = 'nuuk') ->
+p2
+
+p2
+```
+
+
+(for colors, maybe show `scale_fill_gray` + `scico`)
+
+# Make a multi-panel plot here
+
+## Acknowledgments {.appendix}
+
+This is a place to recognize people and institutions. It may also be a good place
+to acknowledge and cite software that makes your work possible.
+
+## Author Contributions {.appendix}
+
+We strongly encourage you to include an author contributions statement briefly 
+describing what each author did.

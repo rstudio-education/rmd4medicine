@@ -1,0 +1,10 @@
+arm,site,country,n_target,n
+A: IFL,Boston,USA,34,20
+A: IFL,Denver,USA,34,19
+A: IFL,Seattle,USA,34,24
+F: FOLFOX,Boston,USA,34,13
+F: FOLFOX,Denver,USA,34,21
+F: FOLFOX,Seattle,USA,34,26
+G: IROX,Boston,USA,34,17
+G: IROX,Denver,USA,34,22
+G: IROX,Seattle,USA,34,28

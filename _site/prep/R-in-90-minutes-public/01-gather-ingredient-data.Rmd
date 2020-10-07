@@ -1,0 +1,85 @@
+---
+title: "Gathering ingredient data"
+output: html_document
+params:
+  filename: "newco-employees.csv"
+  getsheet: TRUE
+---
+```{r setup, include=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(googlesheets)
+library(lubridate)
+library(glue)
+library(readxl)
+library(googledrive)
+library(googlesheets4)
+
+knitr::opts_chunk$set(echo = TRUE,  warning = FALSE, message = FALSE)
+theme_set(theme_minimal())
+```
+
+## 0. Overview
+Now that you know how to process your data, we'll now focus on how to get data into R from different sources.
+
+## 1. Gathering Data from .csv files
+This is where we read in tibbles to work with. We've already read in a lot of data using read_csv, so this shouldn't look weird at this point. Let's verify the size of the file by printing out the number of rows below, which we did earlier in the day.
+
+We print out the numbers using the *glue* function. Don't get hung up on how that works; glue just takes the values inside the curly braces and inserts them into the string that gets printed.
+
+```{r Read-Sheet}
+employees <- read_csv(params$filename)
+print(glue("The number of rows of {params$filename} is {nrow(employees)}"))
+```
+
+## 1.1 Change the file name
+Remember that we've been selecting the file we're reading through the filename parameter up in the YAML header. 
+Alternatively, we can specify it directly in the read_csv command itself. Let's change the file name being read to
+"employees-2030.csv" and see what we get.
+
+```{r Read-Another-Sheet}
+employees_2030 <- read_csv("employees-2030.csv")
+print(glue("The number of rows of employees_2030 is {nrow(employees_2030)}"))
+```
+
+Given that you already learned how to process the employees file to find out how many employees are in each department, you
+might want to put that to work now to see how big the various departments of NewCo have become.
+
+```{r Analyze-NewCo-2030}
+## You learned how to do this in 2. Preparation
+
+deparments_2030 <- employees_2030 %>% __________
+
+## You might even want to consider presenting a graph of those results. Remember ggplot?
+  
+ggplot(departments_2030, aes(x = _____, y = ____)) + 
+  geom_col(fill = "blue")
+
+```
+
+## 1.2 Read an Excel file
+The readr package (which is part of the tidyverse meta-package) knows how to read a variety of other file types, including tab-delimited files, fixed width files, tables formatted with white space, and a host of others. We won't take you through all of those, but you should know that if you have your data in a plain text file, readr probably has a function that will help you read it into a tibble.
+
+But what about Excel files? To read an Excel file, you need to load another package called `readxl`, but once you've done that, you are good to go.
+
+Just to test this out, try it out below. Replace read_csv with read_excel and change the filename in the call to "employees.xlsx". It should read in the identical tibble that our read_csv chunk did.
+
+```{r Read-Excel}
+employees <- read_excel("newco-employees.xlsx")
+print(glue("The number of rows of {params$filename} is {nrow(employees)}"))
+employees
+```
+
+## 1.3 Read Google Sheets
+R can read Google Sheets as well as Excel spreadsheets. As such it's nice to be able to read in those sheets as tibbles too.
+
+The package to read Google Sheets is called *googlesheets*, and we've already loaded it in the setup chunk. However, the process is a little different from the read functions we've encountered up to this point.
+
+
+```{r Read-Google-Sheets}
+# Make sure your URL doesn't have any extra material past the key such as edit?usp=sharing
+gs_deauth()
+access_token <- gs_url("https://docs.google.com/spreadsheets/d/1kgfkZWEh-UmK_XuPdAcTXOWGH3Z9y-lzKgFJE7778I0/")
+employees <- gs_read(access_token)
+print(glue("Tibble employees has {nrow(employees)} rows and {ncol(employees)} columns"))
+```
+

@@ -1,0 +1,123 @@
+---
+title: "Chisq and basic graphs from mockstudy"
+author: "Peter Higgins"
+date: "4/25/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(arsenal)
+library(survival)
+library(survminer)
+library(patchwork)
+library(tidyverse)
+library(janitor)
+library(gt)
+data("mockstudy")
+```
+
+### Take a look at the data
+
+
+
+```{r glimpse}
+glimpse(mockstudy)
+```
+### Set up a chisquared table
+with text interpretation with inline r code.
+
+```{r table, warning=FALSE}
+mockstudy %>% 
+  tabyl(arm, fu.stat) ->
+outcome_table
+names(outcome_table) <- c("Study Arm", "Lived", "Died")
+outcome_table %>% 
+  gt()
+```
+
+
+```{r chisq, messages=FALSE}
+mockstudy %>% 
+  tabyl(arm, fu.stat) %>% 
+  column_to_rownames('arm') %>% 
+  chisq.test() ->
+results
+
+results$statistic
+results$parameter
+```
+
+### Study Results
+
+This is a statement of study results. <br>
+
+In the evaluation of followup status by study arm, the null hypothesis of independence was rejected, with a chi-squared statistic of `r round(results$statistic,2)`, with `r results$parameter` degrees of freedom, and a p value of `r results$p.value`, using the `r results$method` method.
+
+```{r}
+
+
+
+```
+
+### Start with a barplot
+for percent survival
+tag it as panel A for a multipanel plot
+
+```{r survival_barplot}
+mockstudy %>% 
+  group_by(arm) %>% 
+  summarize(surv = length(which(fu.stat==1)),
+         died = length(which(fu.stat==2)),
+         pct_surv = surv*100/(died+surv)) %>% 
+  select(arm, surv, died, pct_surv) %>% 
+  ggplot() +
+  aes(x=arm, y = pct_surv, fill=arm) +
+  geom_bar(stat= 'identity') +
+  labs(y= "Percent Survived", x= "Study Arm", tag ="A") +
+  theme_minimal() +
+  scale_fill_manual(values = c("black", "blue", "grey80")) ->
+p1
+```
+
+### Now add a boxplot, make it multipanel
+tagged as panel B
+
+```{r survivaltime_boxplot}
+mockstudy %>% 
+  group_by(arm) %>% 
+ggplot() +
+  aes(x=arm, y = fu.time, fill=arm) +
+  geom_jitter(width =0.25, alpha=0.5) +
+  geom_violin(alpha =0.3) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Study Arm", tag = "B") +
+  theme_minimal() +
+  scale_fill_manual(values = c("black", "blue", "grey80")) ->
+p2
+
+p1 + p2   + plot_layout(ncol=1, heights = c(4,4))
+```
+
+
+
+### Now add a survival curve
+For some reason, patchwork does not work with this survival curve
+
+```{r survival_curves}
+survfit(formula = Surv(fu.time, fu.stat) ~ arm, data= mockstudy) ->
+fit
+
+ggsurvplot(fit,
+           pval = TRUE, conf.int = TRUE,
+           risk.table = TRUE,
+           risk.table.col = "strata",
+           linetype = "strata",
+           surv.median.line = "hv",
+           ggtheme = theme_bw(),
+           palette = c("red", "blue", "green")) 
+
+
+```
+
+
+

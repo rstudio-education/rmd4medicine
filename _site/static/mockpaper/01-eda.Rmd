@@ -1,0 +1,222 @@
+---
+title: 'Response and adverse events to chemotherapy: A mock study'
+author:
+- affiliation: RStudio
+  name: Alison Hill, Ph.D.
+- affiliation: University of Michigan
+  name: Peter Higgins, MD, Ph.D.
+output: distill::distill_article
+---
+
+to do: what is `fu_time` when `fu_stat` is 1?
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, 
+                      message = FALSE)
+```
+
+
+```{r load-packages, include=FALSE}
+library(janitor) # for tabyl
+library(skimr) # for EDA
+library(cowplot) # for multi-panel plot
+library(here) # for file paths
+library(infer) # for tidy statistics
+library(scico) # for scicomm colors
+library(tidyverse) # for all else
+theme_set(theme_minimal())
+```
+
+
+```{r import-data, include=FALSE}
+mockdata <- read_csv(here("static/mockpaper/data/mockdata.csv")) %>% 
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), "Lived" = "1", "Died" = "2"))
+```
+
+```{r include=FALSE}
+glimpse(mockdata)
+```
+
+```{r}
+# confirm only boston site data
+mockdata %>% 
+  distinct(site)
+```
+
+
+
+```{r smell-tests, results="asis"}
+# smell test (n's, NAs, etc)
+skimr::skim(mockdata) %>% 
+  skimr::kable()
+```
+
+```{r smell-by-arm, include=FALSE}
+# smell test by group (n's, NAs, etc)
+mockdata %>% 
+  group_by(arm) %>% 
+  skimr::skim() %>% 
+  skimr::kable()
+```
+
+```{r dupe-check}
+# check for duplicates
+# hooray
+mockdata %>% 
+  janitor::get_dupes(case)
+```
+
+Demographics
+
+```{r age-dist}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(color = 'white', 
+                 fill = scico(1, palette = 'lapaz'), 
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count", 
+       title = "Age Distribution in the \nCholangiocarcinoma Mock Study") +
+  scale_y_continuous(breaks = scales::pretty_breaks())
+```
+
+```{r age-by-sex}
+ggplot(mockdata, aes(age)) +
+  geom_histogram(aes(fill = sex),
+                 color = 'white', 
+                 bins = 20) +
+  labs(x = "Age", 
+       y = "Count", 
+       title = "Age Distribution in the \nCholangiocarcinoma Mock Study") +
+  facet_wrap(vars(sex)) +
+  scale_y_continuous(breaks = scales::pretty_breaks()) +
+  scale_fill_viridis_d(option = "plasma", end = .4, alpha = .7, guide = FALSE) 
+  # scale_fill_scico_d(guide = FALSE, palette = 'lapaz', end = .4) 
+```
+
+```{r age-by-sex-density}
+ggplot(mockdata, aes(age)) +
+  geom_density(aes(fill = sex),
+                 color = 'white') +
+  labs(x = "Age", 
+       title = "Age Distribution in the \nCholangiocarcinoma Mock Study") +
+  scale_fill_viridis_d(option = "plasma", end = .4, alpha = .7) 
+  #scale_fill_scico_d(palette = 'lapaz', end = .4, alpha = .7) 
+```
+
+
+```{r}
+# a 1-way tabyl
+mockdata %>% 
+  tabyl(sex) %>% 
+  adorn_totals("row") %>%
+  adorn_pct_formatting() %>% 
+  knitr::kable()
+```
+
+Follow-up stats
+
+
+```{r}
+# followups, a 1-way tabyl
+mockdata %>% 
+  tabyl(fu_fct) %>% 
+  adorn_totals("row") %>%
+  adorn_pct_formatting() %>% 
+  knitr::kable()
+```
+
+```{r}
+# calculate proportion survived by arm
+prop_surv <- mockdata %>% 
+  count(arm, fu_fct, name = "by_surv", .drop = FALSE) %>% 
+  add_count(arm, wt = by_surv, name = "arm_total") %>% 
+  mutate(prop = by_surv/arm_total) %>% 
+  filter(fu_fct == "Lived")
+```
+
+
+
+```{r survival-prop}
+# barplot of percent survival by arm
+ggplot(prop_surv, aes(x = arm, y = prop, fill = arm)) +
+  geom_col(colour = "gray") +
+  labs(y= "Percent Survived", x= "Study Arm") +
+  scale_fill_viridis_d(option = "plasma") +
+  scale_y_continuous(labels = scales::percent)
+```
+
+
+
+```{r}
+# a 2-way tabyl
+mockdata %>% 
+  tabyl(fu_fct, sex) %>% 
+  adorn_totals("row") %>% # can also do "col", or c("row", "col")
+  adorn_percentages("row") %>% 
+  adorn_pct_formatting(digits = 2) %>% 
+  adorn_ns() %>% 
+  knitr::kable()
+```
+
+Arms 
+
+```{r}
+# a 2-way tabyl
+mockdata %>% 
+  tabyl(arm, fu_fct) %>% 
+  adorn_totals("row") %>% # can also do "col", or c("row", "col")
+  adorn_percentages("row") %>% 
+  adorn_pct_formatting(digits = 2) %>% 
+  adorn_ns() %>% 
+  knitr::kable()
+```
+
+geom_lollipop median survival time for each group
+
+make bar/lollipop chart of proportions here (% survived)
+
+
+Look at survival time now
+
+```{r survival-days}
+# distributions of survival time by arms (in days censored)
+ggplot(mockdata) +
+  aes(x=arm, y = fu_time, fill = arm) +
+  geom_violin(alpha = 0.8) +
+  geom_jitter(width = 0.25, alpha = 0.5) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Study Arm") +
+  scale_fill_viridis_d(option = "plasma", guide = FALSE)
+  #scale_fill_scico_d(palette = 'lapaz', guide = FALSE)
+```
+
+sites
+
+```{r}
+ggplot(mockdata,
+       aes(x = site, y = fu_time, fill = arm)) +
+  geom_boxplot(alpha = .8, position = position_dodge2(preserve = "single")) +
+  labs(y= "Survival Time in \nDays (Censored)", x= "Site") +
+  scale_fill_viridis_d(option = "plasma") 
+  #scale_fill_scico_d(palette = 'lapaz', guide = FALSE)
+```
+
+
+```{r}
+median_days <- mockdata %>% 
+  group_by(arm, site) %>% 
+  summarize(med_fu = median(fu_time))
+
+ggplot(median_days,
+       aes(x = site, y = med_fu, fill = arm)) +
+  geom_linerange(aes(color = arm, 
+                     x = site, 
+                     ymin = 0, 
+                     ymax = med_fu),
+                 position = position_dodge(width = .5)) +
+  geom_point(colour = "black", shape = 21, position = position_dodge(width = .5)) +
+  coord_flip() +
+  scale_fill_viridis_d(option = "plasma", end = .8) +
+  scale_colour_viridis_d(option = "plasma", end = .8) 
+```
+
+

@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Outputs &amp; Tables</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <meta name="date" content="2020-10-06" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+class: title-slide, center, middle
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#3b4245;"&gt;02&lt;/strong&gt;
+&lt;/span&gt; 
+
+# Outputs &amp; Tables
+
+## R Markdown for Pharma
+
+### Alison Hill &amp;#183; RStudio
+
+#### [rmd4pharma.netlify.app/](https://rmd4pharma.netlify.app/)
+
+
+---
+class: middle, center
+
+# &lt;i class="fas fa-cloud"&gt;&lt;/i&gt;
+
+# Go here and log in (free):
+
+&lt;https://rstd.io/rmd4pharma-cloud&gt;
+
+---
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;https://rmd4pharma.netlify.app/&lt;/span&gt;&lt;/div&gt;
+
+
+---
+
+
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
+&lt;/span&gt; 
+]
+
+.right-column[
+
+# How does R Markdown work?
+
+1. 🤷
+
+1. I press knit, a document appears, and I believe that anything happening in between could be actual magic.
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want.
+
+]
+
+---
+class: top
+
+.left-column[
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #2f5275;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color: #fff;"&gt;?&lt;/strong&gt;
+&lt;/span&gt; 
+
+]
+
+
+.right-column[
+
+# How *does* R Markdown work?
+
+1. 🤷 (✔️)
+
+1. ["I press knit, a document appears, and I believe that anything happening in between could be actual magic."](https://twitter.com/allison_horst/status/1070323369600442368?s=20) (🧙‍♂️)
+
+1. `knitr` executes the code and converts `.Rmd` to `.md`; **Pandoc** renders the `.md` file to the output format you want. (✔️)
+
+]
+
+---
+class: middle, center
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+
+&gt; "In a nutshell, R Markdown stands on the shoulders of `knitr` and **Pandoc**.
+
+--
+
+&gt; The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown.
+
+--
+
+&gt; The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
+
+--
+
+&gt; &amp;mdash; [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+---
+class: center, middle
+
+# Foreshadowing
+
+
+&lt;img src="images/outputs.png" width="40%" /&gt;
+
+??? 
+
+but first a pop quiz...
+
+---
+class: pop-quiz
+
+# Pop quiz
+
+
+Which of the following is **NOT** a part of R Markdown basic anatomy?
+
+1. Metadata
+
+1. Text
+
+1. CSS
+
+1. Code
+
+1. Output
+
+
+---
+class: your-turn
+
+
+# Your turn
+
+## Mad libs style &amp;mdash; with a neighbor
+
+```markdown
+ ___________ is written at the top between `---` in ________.
+    noun                                             syntax
+                                                     
+  ______ is written in Markdown.
+   noun         
+  
+  ______ is written in R (or other programming language).
+   noun   
+   
+  The ______ package evaluates the code and produces the ______.
+       noun                                               noun
+```
+
+_psst: answers on next slide..._
+
+<div class="countdown" id="timer_5f7d3e3a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+
+# Your turn
+
+## Answers
+
+```markdown
+ Metadata is written at the top between `---` in YAML.
+   (noun)                                      (syntax)
+                                                     
+  Text is written in Markdown.
+ (noun)         
+  
+  Code is written in R (or other programming language).
+ (noun)   
+   
+  The knitr package evaluates the code and produces the output.
+     (noun)                                             (noun) 
+```
+
+---
+class: your-turn
+
+# Your turn
+
+Find a partner and look at `02-progress.Rmd` together. 
+Look at the source, then 🧶 **Knit**.
+
+Answer the following questions:
+
+1. What is the output **format**?
+
+1. Are there any output **options**?
+
+1. Are any `knitr` **global** chunk options set?
+
+1. Anything in the code look foreign to you? 
+
+1. Anything in the output (or not in the output) surprise you?
+
+<div class="countdown" id="timer_5f7d3c59" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;1 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Output formats
+
+
+---
+class: middle, center
+
+&lt;img src="images/outputs.png" width="50%" /&gt;
+
+???
+
+Built in formats (in the `rmarkdown` package)
+
+versus
+
+extensions (different packages that extend output formats available to you)
+
+---
+class: middle, center
+
+
+&lt;a href="https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats" target="_blank"&gt;&lt;img src="images/rmdbase-formats.png" width="40%" /&gt;&lt;/a&gt;
+
+https://rmarkdown.rstudio.com/docs/reference/index.html#section-output-formats
+
+---
+class: your-turn
+
+# Your turn
+
+## Use a different built-in format
+
+.pull-left[
+
+Use the drop-down menu for the 🧶 **Knit** button and try:
+
+1. Knit to Word
+
+1. Knit to PDF
+
+]
+
+.pull-right[
+&lt;img src="images/knit-dropdown.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+]
+
+<div class="countdown" id="timer_5f7d3c72" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+
+# Temp check 🌡
+
+Does your current YAML look like this?
+
+```yaml
+---
+author: Your name here
+title: Your title here
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+  word_document: default
+  pdf_document: default
+---
+```
+
+???
+
+This is a great way to "control" your knit button!
+
+Notice that when you knit, it respects those output options in your YAML.
+
+This way you "save" your output options
+
+---
+class: your-turn
+
+# Your turn
+
+## Add output options with your YAML
+
+.pull-left[
+
+You just used the drop-down 🧶 **Knit** button to knit to Word and PDF. 
+
+1. Change your YAML to the right...
+
+1. Be __very careful__ about indentation and `:` here!!
+
+1. 🧶 **Knit** to Word again- is there a TOC?
+
+]
+
+.pull-right[
+
+```yaml
+---
+author: Your name here
+title: Your title here
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+  word_document:
+    toc: true
+  pdf_document: default
+---
+```
+
+]
+
+
+<div class="countdown" id="timer_5f7d3bf4" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+# What is hard about YAML?
+
+.pull-left[
+![](https://media.giphy.com/media/Nt2cPxzpKhbCE/giphy.gif)
+]
+
+.pull-right[
++ Indentations matter
+
++ Rarely informative error messages
+
++ Knowing which output options are relevant for different formats (i.e., Word, PDF, HTML, etc.)
+
++ Easy to forget the right `key`
+
++ Easy to forget the possible `values` for a given `key`
+]
+---
+class: your-turn
+
+# Your turn
+
+## Use an extension package
+
+
+1. Edit your YAML again! Change the `output:` key to only `distill::distill_article` 
+
+1. Save the document; click on the dropdown 🧶 **Knit** button- what do you notice?
+
+1. 🧶 **Knit** to distill_article.
+
+**If this was easy**, add a table of contents too.
+
+_psst...answers on the next slide..._
+
+<div class="countdown" id="timer_5f7d3dac" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+.footnote[(note: this requires you to install the [`distill` package](https://rstudio.github.io/distill/) on your own computer)]
+
+???
+
+At this point, I'm going to stick with the distill_article output format for the rest of this session.
+
+---
+class: your-turn
+
+# Your turn
+
+## Answer
+
+.pull-left[
+```yaml
+---
+author: Your name here
+title: Your title here
+output: distill::distill_article
+---
+```
+]
+
+.pull-right[
+```yaml
+---
+author: Your name here
+title: Your title here
+output:
+  distill::distill_article:
+    toc: true
+---
+```
+]
+
+---
+class: middle
+
+# Pop quiz
+
+.pull-left[
+How do you add a single output **format** to your YAML?
+
+```yaml
+---
+output: html_document: default
+---
+output: html_document
+---
+```
+
+]
+
+--
+
+.pull-right[
+How do you add an output **option** to a format in your YAML?
+
+```yaml
+---
+output: 
+  html_document: 
+    toc: true
+---
+output: 
+  html_document(toc=true)
+---
+```
+
+]
+
+---
+class: middle
+
+# Pop quiz
+
+.pull-left[
+How do you add another output **format** to your YAML?
+
+```yaml
+---
+output: 
+  html_document: default
+  word_document: default
+---
+output: 
+  html_document()
+  word_document()
+---
+```
+
+]
+
+--
+
+
+.pull-right[
+How do you now add output **options** to your YAML?
+
+```yaml
+---
+output: 
+  html_document: 
+    toc: true
+  word_document: default
+---
+output: 
+  html_document(toc=true)
+  word_document(default)
+---
+```
+
+]
+
+---
+class: middle, center, inverse
+
+# Tables
+
+![](https://media.giphy.com/media/i9c6lFmOSXKZW/giphy.gif)
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;2 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Custom typed tables
+
+
+---
+class: center
+
+# Markdown tables
+
+.pull-left[
+
+```markdown
+| Time          | Session | Topic    |
+|:--------------|:-------:|---------:|
+| _left_        | _center_| _right_  |
+| 01:00 - 01:50 | 1       | Anatomy  |
+| 01:50 - 02:00 |         | *Break*  |
+| 02:00 - 02:45 | 2       | Tables   |
+| 02:45 - 03:00 |         | *Break*  |
+
+```
+]
+
+--
+
+.pull-right[
+
+| Time          | Session | Topic    |
+|:--------------|:-------:|---------:|
+| _left_        | _center_| _right_  |
+| 01:00 - 01:50 | 1       | Anatomy  |
+| 01:50 - 02:00 |         | *Break*  |
+| 02:00 - 02:45 | 2       | Tables   |
+| 02:45 - 03:00 |         | *Break*  |
+
+]
+
+---
+class: your-turn
+
+# Your turn
+
+## Type up a Markdown table
+
+Find this section:
+
+```markdown
+&lt;--TODO: add markdown table of treatment arms here--&gt;
+```
+
+.pull-left[
+
+Using pipes `|`, make this table:
+
+| Arm | Drug   |
+|:----|:-------|
+| A   | IFL    |
+| F   | FOLFOX |
+| G   | IROX   |
+
+]
+
+.pull-right[
+
+![](https://qph.fs.quoracdn.net/main-qimg-637b91293b153c5cd40419c0872c2186)
+
+]
+
+_psst...answers on the next slide..._
+
+<div class="countdown" id="timer_5f7d3dd8" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+# Your turn
+
+## Answers
+
+.pull-left[
+```markdown
+| Arm | Drug   |
+|:----|:-------|
+| A   | IFL    |
+| F   | FOLFOX |
+| G   | IROX   |
+```
+]
+
+.pull-right[
+```markdown
+|Arm|Drug|
+|:---|:---|
+|A|IFL|
+|F|FOLFOX|
+|G|IROX|
+```
+]
+
+Spacing actually doesn't matter - it mainly helps your eyeballs.
+
+---
+class: center, middle
+
+# Two table types
+
+
+.pull-left[
+
+### for your eyes mainly
+
+&lt;img src="images/tables-you.jpg" width="3691" /&gt;
+
+
+]
+
+--
+
+.pull-right[
+
+### for other people's eyes too
+
+&lt;img src="images/tables-them.jpg" width="3691" /&gt;
+]
+
+---
+
+.pull-left[
+
+![](images/imani-_TuIdedBPwQ-unsplash.jpg)
+]
+
+.pull-right[
+![](images/gear_shift.jpg)
+]
+
+.footnote[Images from [Unsplash](https://unsplash.com/photos/_TuIdedBPwQ) and [Wikipedia](https://commons.wikimedia.org/wiki/File:FIAT_500L_gear_shift.jpg)]
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;3 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# EDA Tables
+
+---
+
+# Let's try using data now
+
+
+```r
+mockdata &lt;- read_csv(here::here("static/mockpaper/data/mockdata.csv")) %&gt;%
+  mutate(fu_fct = fct_recode(as.factor(fu_stat), 
+                             "Lived" = "1", 
+                             "Died" = "2")) %&gt;% 
+  mutate_at(vars(starts_with("ae_")), ~as.factor(.))
+#&gt; Parsed with column specification:
+#&gt; cols(
+#&gt;   .default = col_double(),
+#&gt;   arm = col_character(),
+#&gt;   sex = col_character(),
+#&gt;   race = col_character(),
+#&gt;   age_ord = col_character(),
+#&gt;   site = col_character(),
+#&gt;   country = col_character(),
+#&gt;   ethnicity = col_character(),
+#&gt;   name = col_character(),
+#&gt;   first_name = col_character(),
+#&gt;   last_name = col_character()
+#&gt; )
+#&gt; See spec(...) for full column specifications.
+```
+
+---
+
+# EDA tables: `skimr`
+
+
+
+```r
+library(skimr)
+
+mockdata %&gt;% 
+  select(age, fu_fct) %&gt;% 
+  skimr::skim()
+```
+
+
+Table: Data summary
+
+|                         |           |
+|:------------------------|:----------|
+|Name                     |Piped data |
+|Number of rows           |1499       |
+|Number of columns        |2          |
+|_______________________  |           |
+|Column type frequency:   |           |
+|factor                   |1          |
+|numeric                  |1          |
+|________________________ |           |
+|Group variables          |           |
+
+
+**Variable type: factor**
+
+|skim_variable | n_missing| complete_rate|ordered | n_unique|top_counts          |
+|:-------------|---------:|-------------:|:-------|--------:|:-------------------|
+|fu_fct        |         0|             1|FALSE   |        2|Die: 1356, Liv: 143 |
+
+
+**Variable type: numeric**
+
+|skim_variable | n_missing| complete_rate|  mean|    sd| p0| p25| p50| p75| p100|hist  |
+|:-------------|---------:|-------------:|-----:|-----:|--:|---:|---:|---:|----:|:-----|
+|age           |         0|             1| 59.99| 11.52| 19|  52|  61|  68|   88|▁▂▇▇▂ |
+
+---
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  select(age, fu_fct) %&gt;% 
+  skimr::skim() %&gt;% 
+  kable()
+```
+````
+
+
+|skim_type |skim_variable | n_missing| complete_rate|factor.ordered | factor.n_unique|factor.top_counts   | numeric.mean| numeric.sd| numeric.p0| numeric.p25| numeric.p50| numeric.p75| numeric.p100|numeric.hist |
+|:---------|:-------------|---------:|-------------:|:--------------|---------------:|:-------------------|------------:|----------:|----------:|-----------:|-----------:|-----------:|------------:|:------------|
+|factor    |fu_fct        |         0|             1|FALSE          |               2|Die: 1356, Liv: 143 |           NA|         NA|         NA|          NA|          NA|          NA|           NA|NA           |
+|numeric   |age           |         0|             1|NA             |              NA|NA                  |     59.98532|   11.51877|         19|          52|          61|          68|           88|▁▂▇▇▂        |
+
+
+---
+
+# EDA tables: `janitor`
+
+Good for 1- and 2-way frequency tables with categorical variables
+
+Count number of participants by `arm`, then add by status (`fu_fct`) too
+
+.pull-left[
+
+
+```r
+mockdata %&gt;% 
+  tabyl(arm)
+#&gt;        arm   n   percent
+#&gt;     A: IFL 428 0.2855237
+#&gt;  F: FOLFOX 691 0.4609740
+#&gt;    G: IROX 380 0.2535023
+```
+
+] 
+
+--
+
+.pull-right[
+
+
+```r
+mockdata %&gt;% 
+  tabyl(arm) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_pct_formatting()
+#&gt;        arm    n percent
+#&gt;     A: IFL  428   28.6%
+#&gt;  F: FOLFOX  691   46.1%
+#&gt;    G: IROX  380   25.4%
+#&gt;      Total 1499  100.0%
+```
+
+]
+
+---
+
+.pull-left[
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  tabyl(arm, fu_fct) %&gt;%
+  knitr::kable()
+```
+````
+
+
+|arm       | Lived| Died|
+|:---------|-----:|----:|
+|A: IFL    |    18|  410|
+|F: FOLFOX |    99|  592|
+|G: IROX   |    26|  354|
+
+] 
+
+--
+
+.pull-right[
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  tabyl(arm, fu_fct) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_percentages("row") %&gt;%
+  adorn_pct_formatting(digits = 2) %&gt;%
+  adorn_ns() %&gt;%
+  knitr::kable()
+```
+````
+
+
+|arm       |Lived        |Died          |
+|:---------|:------------|:-------------|
+|A: IFL    |4.21%  (18)  |95.79%  (410) |
+|F: FOLFOX |14.33%  (99) |85.67%  (592) |
+|G: IROX   |6.84%  (26)  |93.16%  (354) |
+|Total     |9.54% (143)  |90.46% (1356) |
+
+]
+
+---
+class: your-turn
+
+# Your turn
+
+## Fix this `tabyl`
+
+Find this section:
+```markdown
+&lt;--TODO: make this print better with knitr::kable + code chunks--&gt;
+```
+
+Make this `tabyl` print nicely when knitted.
+
+
+```r
+mockdata %&gt;% 
+  tabyl(arm) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_pct_formatting() 
+```
+
+_psst: answers on next slide..._
+
+<div class="countdown" id="timer_5f7d3cb1" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+# Answer
+
+````
+```{r results='asis'}
+mockdata %&gt;% 
+  tabyl(arm) %&gt;% 
+  adorn_totals("row") %&gt;%
+  adorn_pct_formatting() %&gt;% 
+  knitr::kable()
+```
+````
+
+
+|arm       |    n|percent |
+|:---------|----:|:-------|
+|A: IFL    |  428|28.6%   |
+|F: FOLFOX |  691|46.1%   |
+|G: IROX   |  380|25.4%   |
+|Total     | 1499|100.0%  |
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;4 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Table One
+
+---
+
+# Table One from `arsenal`
+
+
+
+```r
+tableby(arm ~ sex, data = mockdata) 
+#&gt; tableby Object
+#&gt; 
+#&gt; Function Call:
+#&gt; tableby(formula = arm ~ sex, data = mockdata)
+#&gt; 
+#&gt; Variable(s):
+#&gt; arm ~ sex
+```
+
+--
+
+
+
+```r
+tableby(arm ~ sex, data = mockdata) %&gt;% 
+  summary()
+#&gt; 
+#&gt; 
+#&gt; |                         | A: IFL (N=428) | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499) | p value|
+#&gt; |:------------------------|:--------------:|:-----------------:|:---------------:|:--------------:|-------:|
+#&gt; |**sex**                  |                |                   |                 |                |   0.190|
+#&gt; |&amp;nbsp;&amp;nbsp;&amp;nbsp;Female |  151 (35.3%)   |    280 (40.5%)    |   152 (40.0%)   |  583 (38.9%)   |        |
+#&gt; |&amp;nbsp;&amp;nbsp;&amp;nbsp;Male   |  277 (64.7%)   |    411 (59.5%)    |   228 (60.0%)   |  916 (61.1%)   |        |
+```
+
+
+---
+
+# One more step!
+
+For R Markdown pretty printing...
+
+````
+```{r results='asis'}
+tableby(arm ~ sex, data = mockdata) %&gt;% 
+  summary()
+```
+````
+
+
+|                         | A: IFL (N=428) | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499) | p value|
+|:------------------------|:--------------:|:-----------------:|:---------------:|:--------------:|-------:|
+|**sex**                  |                |                   |                 |                |   0.190|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;Female |  151 (35.3%)   |    280 (40.5%)    |   152 (40.0%)   |  583 (38.9%)   |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;Male   |  277 (64.7%)   |    411 (59.5%)    |   228 (60.0%)   |  916 (61.1%)   |        |
+
+???
+
+This is a new knitr chunk option- the results option.
+
+---
+class: your-turn
+
+# Your turn
+
+## Make a table one
+
+Find this section:
+
+```markdown
+&lt;--TODO: add age and bmi here--&gt;
+```
+
+1. Add the variables `age` and `bmi` to the table. (__hint:__ use the formula `arm ~ sex + var1 + var2`)
+
+1. Look at the next code chunk. It uses a different package, `tableone::CreateTableOne`. You only need one "table one", so pick which one you using your code chunks (don't delete!).
+
+1. Add/subtract variables from your table one as you like.
+
+(Note: leave this `layout="l-body-outset"` part alone- I'll explain!)
+
+<div class="countdown" id="timer_5f7d3d3d" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+class: middle, center, inverse
+
+&lt;span class="fa-stack fa-4x"&gt;
+  &lt;i class="fa fa-circle fa-stack-2x" style="color: #fff;"&gt;&lt;/i&gt;
+  &lt;strong class="fa-stack-1x" style="color:#2f5275;"&gt;5 &lt;/strong&gt;
+&lt;/span&gt; 
+
+--
+
+# Table Two
+
+---
+class: your-turn
+
+# Your turn
+
+## Table two
+
+Find this section:
+```
+&lt;--TODO: add adverse events table--&gt;
+```
+
+1. Find the code chunk started for you. 
+
+1. Code and print a table called `ae_tab` that summarizes 2+ variables that start with `ae_`.
+
+__If this was easy__, edit the `summary()` function to modify the number of [digits](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html#modify-the-number-of-digits-used). Or add [labels](https://cran.r-project.org/web/packages/arsenal/vignettes/tableby.html#add-labels).
+
+_psst...answers on next slide..._
+
+<div class="countdown" id="timer_5f7d3f2d" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: your-turn
+
+# Answer
+
+````
+```{r results='asis', layout="l-body-outset"}
+ae_tab &lt;- mockdata %&gt;% 
+  tableby(
+    arm ~ ae_blood_clot + ae_vomiting + ae_diarrhea + ae_neuropathy + ae_low_wbc, 
+    data = .) %&gt;% 
+  summary(digits = 2, 
+          digits.p = 3, 
+          digits.pct = 1)
+ae_tab
+```
+````
+
+---
+
+
+|                    | A: IFL (N=428) | F: FOLFOX (N=691) | G: IROX (N=380) | Total (N=1499) | p value|
+|:-------------------|:--------------:|:-----------------:|:---------------:|:--------------:|-------:|
+|**ae_blood_clot**   |                |                   |                 |                |   0.742|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  411 (96.0%)   |    658 (95.2%)    |   365 (96.1%)   |  1434 (95.7%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   17 (4.0%)    |     33 (4.8%)     |    15 (3.9%)    |   65 (4.3%)    |        |
+|**ae_vomiting**     |                |                   |                 |                |   0.006|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  339 (79.2%)   |    571 (82.6%)    |   333 (87.6%)   |  1243 (82.9%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   89 (20.8%)   |    120 (17.4%)    |   47 (12.4%)    |  256 (17.1%)   |        |
+|**ae_diarrhea**     |                |                   |                 |                |   0.001|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  339 (79.2%)   |    546 (79.0%)    |   333 (87.6%)   |  1218 (81.3%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   89 (20.8%)   |    145 (21.0%)    |   47 (12.4%)    |  281 (18.7%)   |        |
+|**ae_neuropathy**   |                |                   |                 |                | &lt; 0.001|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  354 (82.7%)   |    580 (83.9%)    |   347 (91.3%)   |  1281 (85.5%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   74 (17.3%)   |    111 (16.1%)    |    33 (8.7%)    |  218 (14.5%)   |        |
+|**ae_low_wbc**      |                |                   |                 |                | &lt; 0.001|
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;0 |  354 (82.7%)   |    551 (79.7%)    |   347 (91.3%)   |  1252 (83.5%)  |        |
+|&amp;nbsp;&amp;nbsp;&amp;nbsp;1 |   74 (17.3%)   |    140 (20.3%)    |    33 (8.7%)    |  247 (16.5%)   |        |
+
+---
+class: middle, center
+
+# ⏱
+
+# Time for a break!
+
+<div class="countdown blink-colon noupdate-15" id="timer_5f7d3c9a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "dracula",
+"highlightLanguage": ["r", "yaml", "markdown"],
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

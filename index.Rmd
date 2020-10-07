@@ -1,3 +1,29 @@
 ---
-site: blogdown:::blogdown_site
+title: "rmd4pharma"
+description: |
+  Welcome to R Markdown for Pharma &mdash; R/Pharma 2020
+site: distill::distill_website
+author:
+- name: Alison Hill, Ph.D.
+  url: https://alison.rbind.io
+  affiliation: RStudio
+  affiliation_url: https://rstudio.com
+- name: Thomas Mock, Ph.D.
+  url: https://themockup.blog
+  affiliation: RStudio
+  affiliation_url: https://rstudio.com
 ---
+
+## Welcome
+
+This is the website for a four-hour workshop for R / Pharma 2020. In this workshop, we'll take you on a tour of how to get from data to manuscript using [R Markdown](https://rmarkdown.rstudio.com/). You'll learn:
+
++ The basics of [Markdown](https://daringfireball.net/projects/markdown/) & [`knitr`](https://yihui.name/knitr/)
++ How to add tables for different outputs
++ Workflows for working with data
++ How to include and style graphics
+
+## Slides
+
+TBD!
+

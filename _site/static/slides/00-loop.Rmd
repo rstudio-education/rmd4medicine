@@ -1,0 +1,102 @@
+---
+title: "Welcome"
+subtitle: "R Markdown for Medicine"
+author: Alison Hill
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      # autoplay: 5000
+      highlightStyle: dracula
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: [assets/loop.html, assets/header.html]
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r packages, include=FALSE}
+library(countdown)
+```
+
+
+class: title-slide, center, middle
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffffcc;"></i>
+  <strong class="fa-stack-1x" style="color:#3b4245;">Hi!</strong>
+</span> 
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` &#183; RStudio
+
+#### [rmd4medicine.netlify.com/](https://rmd4medicine.netlify.com/)
+
+
+---
+class: middle, center
+
+# <i class="fas fa-cloud"></i>
+
+# Go here and log in (free):
+
+https://rstd.io/rmd4medicine-cloud
+
+---
+class: middle, center
+
+.pull-left[
+# <i class="fas fa-wifi"></i>
+
+Wifi network name
+
+`Omni Meeting`
+]
+
+.pull-left[
+# <i class="fas fa-key"></i>
+
+Wifi password
+
+`rmedicine`
+]
+
+
+---
+class: center, middle
+
+# Do this! `r emo::ji("point_down")`
+
+# https://commonmark.org/help/tutorial/
+
+---
+
+```{r child="what-is-rmd.Rmd"}
+
+```
+
+---
+
+```{r child="how-rmd-works.Rmd"}
+
+```
+
+
+---
+
+```{r echo = FALSE, fig.cap="Artwork by @allison_horst"}
+knitr::include_graphics("images/rmarkdown_wizards.png")
+```
+
